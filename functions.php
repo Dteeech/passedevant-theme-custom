@@ -200,7 +200,12 @@ add_shortcode('meta', 'my_shortcode');
  * 
  */
 
- function customize_header_logos($wp_customize) {
+ function validate_logo_url($logo_url) {
+    // Vérifiez si l'URL du logo est valide et si le fichier existe
+    return ($logo_url && file_exists(str_replace(home_url('/'), ABSPATH, $logo_url))) ? $logo_url : false;
+}
+
+function customize_header_logos($wp_customize) {
     $wp_customize->add_section('header_settings', array(
         'title'    => __('Header Settings', 'mytheme'),
         'priority' => 30,
@@ -211,7 +216,7 @@ add_shortcode('meta', 'my_shortcode');
         'transport' => 'refresh',
     ));
 
-    $wp_customize->add_control(new WP_Customize_Image_control($wp_customize, 'header_logo_light', array(
+    $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'header_logo_light', array(
         'label'    => __('Light Logo', 'mytheme'),
         'section'  => 'header_settings',
         'settings' => 'header_logo_light',
@@ -222,13 +227,14 @@ add_shortcode('meta', 'my_shortcode');
         'transport' => 'refresh',
     ));
 
-    $wp_customize->add_control(new WP_Customize_Image_control($wp_customize, 'header_logo_dark', array(
+    $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'header_logo_dark', array(
         'label'    => __('Dark Logo', 'mytheme'),
         'section'  => 'header_settings',
         'settings' => 'header_logo_dark',
     )));
 }
 add_action('customize_register', 'customize_header_logos');
+
 
 /**
  * 
@@ -285,3 +291,5 @@ function save_header_color_metabox($post_id) {
     }
 }
 add_action('save_post', 'save_header_color_metabox');
+
+

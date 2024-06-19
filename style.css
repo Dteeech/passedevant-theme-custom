@@ -119,10 +119,6 @@ main {
   color: #1e1e1e;
 }
 
-.header-light #logo {
-  content: url("logo-dark.png");
-}
-
 .header-dark {
   background-color: #1e1e1e;
   color: white;
@@ -132,9 +128,6 @@ main {
   color: white;
 }
 
-.header-dark #logo {
-  content: url("logo-light.png");
-}
 /**
  * Correct the font size and margin on `h1` elements within `section` and
  * `article` contexts in Chrome, Firefox, and Safari.
