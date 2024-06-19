@@ -11,24 +11,45 @@
 
 ?>
 
-	<footer id="colophon" class="site-footer">
-		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'passedevant' ) ); ?>">
-				<?php
-				/* translators: %s: CMS name, i.e. WordPress. */
-				printf( esc_html__( 'Proudly powered by %s', 'passedevant' ), 'WordPress' );
-				?>
+<footer id="colophon" class="site-footer"
+	style="background-color: <?php echo get_theme_mod('footer_bg_color', '#000000'); ?>;">
+
+	<div class="footer_cta-section">
+		<div class="col content">
+			<h2><span class="gradient-text">Collaborons ensemble</span></h2>
+			<p>
+				Vous souhaitez faire connaissance avec nous et en savoir plus sur nos expertises ?
+				discutons ensemble de votre projet et de votre talent à faire connaître sur Google !
+			</p>
+		</div>
+		<div class="col button">
+
+			<a href="/contact" class="footer_cta-button">
+				<span class="cta-button-text">Contact</span>
 			</a>
-			<span class="sep"> | </span>
-				<?php
-				/* translators: 1: Theme name, 2: Theme author. */
-				printf( esc_html__( 'Theme: %1$s by %2$s.', 'passedevant' ), 'passedevant', '<a href="http://underscores.me/">Underscores.me</a>' );
-				?>
-		</div><!-- .site-info -->
-	</footer><!-- #colophon -->
+		</div>
+	</div>
+
+	<div class="footer-widgets">
+		<?php
+		$footer_columns = get_theme_mod('footer_columns', 4);
+		for ($i = 1; $i <= $footer_columns; $i++): ?>
+			<div class="footer-column">
+				<?php if (is_active_sidebar('footer-' . $i)): ?>
+					<?php dynamic_sidebar('footer-' . $i); ?>
+				<?php endif; ?>
+			</div>
+		<?php endfor; ?>
+	</div>
+	<div class="site-info">
+		<?php esc_html_e('Fait avec ❤️ par Passedevant', 'passedevant'); ?>
+	</div><!-- .site-info -->
+</footer><!-- #colophon -->
+
 </div><!-- #page -->
 
 <?php wp_footer(); ?>
 
 </body>
+
 </html>

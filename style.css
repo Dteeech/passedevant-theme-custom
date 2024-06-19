@@ -110,10 +110,9 @@ main {
 
 .header-light {
   background-color: white;
-  
 }
 .header-light .main-navigation a {
-	color: #1e1e1e;
+  color: #1e1e1e;
 }
 .header-light .menu-item {
   color: #1e1e1e;
@@ -961,6 +960,129 @@ textarea {
 /* Re-display the Theme Footer when Infinite Scroll has reached its end. */
 .infinity-end.neverending .site-footer {
   display: block;
+}
+
+.footer_cta-section {
+  height: 25vh;
+  display: flex;
+  position: absolute;
+  transition: ease-in-out 5s;
+  top: -100px;
+  right: 25%;
+  background-color: white;
+  color: black;
+  max-width: 50vw;
+  padding: 20px 65px;
+  border-radius: 12px;
+  border-image-slice: 1;
+  text-align: center;
+  align-items: center; /* Center the content vertically */
+  justify-content: space-between; /* Space between the columns */
+  margin: 20px auto;
+  align-content: center;
+}
+.footer_cta-section::before {
+  pointer-events: none;
+	content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 10px; /* Same border radius as the container */
+    padding: 4px; /* Width of the border */
+    background: linear-gradient(to right, #00b4d8, #ff0096); /* Gradient border */
+    -webkit-mask: 
+        linear-gradient(#fff 0 0) content-box, 
+        linear-gradient(#fff 0 0);
+    -webkit-mask-composite: destination-out;
+            mask-composite: exclude;
+}
+.footer_cta-section .col {
+  flex: 1;
+}
+
+.footer_cta-section .content {
+  flex: 3;
+  padding-right: 20px; 
+  text-align: start;
+}
+
+.footer_cta-section .button {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.footer_cta-section h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+.footer_cta-section .gradient-text {
+  background: linear-gradient(to right, #00b4d8, #ff0096);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+.footer_cta-section p {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+.footer_cta-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background: linear-gradient(to right, #00b4d8, #ff0096);
+  color: #fff;
+  border-radius: 20px;
+  text-decoration: none;
+  max-height: 45px;
+}
+.footer_cta-button:hover {
+  opacity: 0.8;
+}
+
+.site-footer {
+  margin-top: 150px;
+  padding: 25px 260px;
+  color: #ffffff;
+  position: relative;
+}
+
+.footer-widgets {
+  margin-top: 150px;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.footer-column {
+  display: flex;
+  flex-direction: column;
+  flex: content;
+  margin: 0 10px;
+}
+
+@media (max-width: 768px) {
+  .site-footer {
+    padding: 25px 45px;
+  }
+  .footer-column {
+    min-width: calc(100% / 2 - 20px);
+  }
+}
+
+@media (max-width: 480px) {
+  .site-footer {
+    padding: 25px 20px;
+  }
+  .footer-column {
+    min-width: 100%;
+  }
+}
+
+.site-info {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
 }
 
 /*--------------------------------------------------------------
