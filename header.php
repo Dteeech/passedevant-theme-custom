@@ -36,7 +36,7 @@
             }
             ?>
 
-            <nav id="site-navigation " class="main-navigation">
+            <nav id="site-navigation " class="main-navigation underline--gradient">
                 <a id="logo" href="/">
                     <img src="<?php echo esc_url($logo_url); ?>" alt="Logo">
                 </a>
@@ -51,9 +51,11 @@
                     )
                 );
                 ?>
-                <a class="header-cta flex items-center justify-center w-44 py-2 px-4 <?php echo esc_attr($cta_classes); ?>">
+                <a
+                    class="header-cta flex items-center justify-center w-44 py-2 px-4 <?php echo esc_attr($cta_classes); ?>">
                     Contact
-                    <img src="<?php echo get_template_directory_uri(); ?>/images/svg/<?php echo esc_attr($cta_image); ?>" class="ml-2 w-4 h-4" alt="Arrow Icon" />
+                    <img src="<?php echo get_template_directory_uri(); ?>/images/svg/<?php echo esc_attr($cta_image); ?>"
+                        class="ml-2 w-4 h-4" alt="Arrow Icon" />
                 </a>
             </nav><!-- #site-navigation -->
         </header><!-- #masthead -->

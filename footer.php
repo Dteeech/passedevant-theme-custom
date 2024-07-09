@@ -34,7 +34,7 @@
 		<?php
 		$footer_columns = get_theme_mod('footer_columns', 4);
 		for ($i = 1; $i <= $footer_columns; $i++): ?>
-			<div class="footer-column">
+			<div class="footer-column underline--gradient">
 				<?php if (is_active_sidebar('footer-' . $i)): ?>
 					<?php dynamic_sidebar('footer-' . $i); ?>
 				<?php endif; ?>

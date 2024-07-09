@@ -630,13 +630,13 @@ a {
   text-decoration: none;
   position:relative;
 }
-a:hover {
+.underline--gradient a:hover {
   color: transparent; /* Le texte est transparent pour que le dégradé soit visible */
   background: linear-gradient(to right, #00bfff, #ff69b4);
   background-clip: text;
   -webkit-background-clip: text; /* Nécessaire pour certains navigateurs */
 }
-a::after {
+.underline--gradient a::after {
   content: '';
   position: absolute;
   left: 0;
