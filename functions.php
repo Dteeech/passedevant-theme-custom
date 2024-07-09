@@ -155,22 +155,17 @@ add_action('widgets_init', 'passedevant_widgets_init');
  */
 function passedevant_scripts()
 {
-	wp_enqueue_style('passedevant-style', get_stylesheet_uri(), array(), _S_VERSION);
-	wp_style_add_data('passedevant-style', 'rtl', 'replace');
+    wp_enqueue_style('passedevant-style', get_stylesheet_uri(), array(), _S_VERSION);
+    wp_style_add_data('passedevant-style', 'rtl', 'replace');
+	wp_enqueue_style('tailwindcss_output', get_template_directory_uri() . '/src/output.css', array(), _S_VERSION);
+    wp_enqueue_style('fonts-css', get_template_directory_uri() . '/fonts.css', array(), '1.0', 'all');
+    wp_enqueue_script('passedevant-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true);
 
-	wp_enqueue_script('passedevant-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true);
-
-	if (is_singular() && comments_open() && get_option('thread_comments')) {
-		wp_enqueue_script('comment-reply');
-	}
+    if (is_singular() && comments_open() && get_option('thread_comments')) {
+        wp_enqueue_script('comment-reply');
+    }
 }
 add_action('wp_enqueue_scripts', 'passedevant_scripts');
-
-function passedevant_enqueue_styles() {
-    wp_enqueue_style('tailwindcss', get_template_directory_uri() . '/assets/css/tailwind-output.css', array(), '1.0', 'all');
-    wp_enqueue_style('custom-css', get_template_directory_uri() . '/assets/css/custom.css', array('tailwindcss'), '1.0', 'all');
-}
-add_action('wp_enqueue_scripts', 'passedevant_enqueue_styles');
 
 /**
  * Implement the Custom Header feature.
@@ -205,7 +200,9 @@ function my_shortcode($atts)
 		array(
 			'nom' => 'valeur1',
 			'mot' => 'valeur2'
-		), $atts);
+		),
+		$atts
+	);
 
 	$contenu = "<div>
 		<h2>Les infos de l'auteur :</h2>
@@ -233,37 +230,53 @@ function validate_logo_url($logo_url)
 
 function customize_header_logos($wp_customize)
 {
-	$wp_customize->add_section('header_settings', array(
-		'title' => __('Header Settings', 'mytheme'),
-		'priority' => 30,
-	)
+	$wp_customize->add_section(
+		'header_settings',
+		array(
+			'title' => __('Header Settings', 'mytheme'),
+			'priority' => 30,
+		)
 	);
 
-	$wp_customize->add_setting('header_logo_light', array(
-		'default' => '',
-		'transport' => 'refresh',
-	)
+	$wp_customize->add_setting(
+		'header_logo_light',
+		array(
+			'default' => '',
+			'transport' => 'refresh',
+		)
 	);
 
-	$wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'header_logo_light', array(
-		'label' => __('Light Logo', 'mytheme'),
-		'section' => 'header_settings',
-		'settings' => 'header_logo_light',
-	)
-	));
-
-	$wp_customize->add_setting('header_logo_dark', array(
-		'default' => '',
-		'transport' => 'refresh',
-	)
+	$wp_customize->add_control(
+		new WP_Customize_Image_Control(
+			$wp_customize,
+			'header_logo_light',
+			array(
+				'label' => __('Light Logo', 'mytheme'),
+				'section' => 'header_settings',
+				'settings' => 'header_logo_light',
+			)
+		)
 	);
 
-	$wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'header_logo_dark', array(
-		'label' => __('Dark Logo', 'mytheme'),
-		'section' => 'header_settings',
-		'settings' => 'header_logo_dark',
-	)
-	));
+	$wp_customize->add_setting(
+		'header_logo_dark',
+		array(
+			'default' => '',
+			'transport' => 'refresh',
+		)
+	);
+
+	$wp_customize->add_control(
+		new WP_Customize_Image_Control(
+			$wp_customize,
+			'header_logo_dark',
+			array(
+				'label' => __('Dark Logo', 'mytheme'),
+				'section' => 'header_settings',
+				'settings' => 'header_logo_dark',
+			)
+		)
+	);
 }
 add_action('customize_register', 'customize_header_logos');
 
@@ -335,31 +348,44 @@ add_action('save_post', 'save_header_color_metabox');
 function customize_footer($wp_customize)
 {
 	// Section Footer
-	$wp_customize->add_section('footer_settings', array(
-		'title' => __('Footer Settings', 'mytheme'),
-		'priority' => 120,
-	)
+	$wp_customize->add_section(
+		'footer_settings',
+		array(
+			'title' => __('Footer Settings', 'mytheme'),
+			'priority' => 120,
+		)
 	);
 
 	// Setting for footer background color
-	 // Setting for number of footer columns
-	 $wp_customize->add_setting('footer_columns', array(
-        'default'   => 4,
-        'transport' => 'refresh',
-    ));
+	// Setting for number of footer columns
+	$wp_customize->add_setting('footer_columns', array(
+		'default' => 4,
+		'transport' => 'refresh',
+	)
+	);
 
-    // Control for number of footer columns
-    $wp_customize->add_control('footer_columns', array(
-        'label'    => __('Nombre de colonnes dans le footer', 'mytheme'),
-        'section'  => 'footer_settings',
-        'settings' => 'footer_columns',
-        'type'     => 'number',
-        'input_attrs' => array(
-            'min' => 1,
-            'max' => 4,
-            'step' => 1,
-        ),
-    ));
+	// Control for number of footer columns
+	$wp_customize->add_control('footer_columns', array(
+		'label' => __('Nombre de colonnes dans le footer', 'mytheme'),
+		'section' => 'footer_settings',
+		'settings' => 'footer_columns',
+		'type' => 'number',
+		'input_attrs' => array(
+			'min' => 1,
+			'max' => 4,
+			'step' => 1,
+		),
+	)
+	);
 }
 add_action('customize_register', 'customize_footer');
+function enqueue_tailwind() {
+	wp_enqueue_style('tailwind-css', get_template_directory_uri() . '/src/output.css');
+}
+add_action('wp_enqueue_scripts','enqueue_tailwind');
+
+
+
+//custom menu hero 
+require get_template_directory() . '/shortcodes/custom-hero-menu/custom-hero-menu.php';
 

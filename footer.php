@@ -16,7 +16,7 @@
 
 	<div class="footer_cta-section">
 		<div class="col content">
-			<h2><span class="gradient-text">Collaborons ensemble</span></h2>
+			<h2><span class="gradient-text ">Collaborons ensemble</span></h2>
 			<p>
 				Vous souhaitez faire connaissance avec nous et en savoir plus sur nos expertises ?
 				discutons ensemble de votre projet et de votre talent à faire connaître sur Google !
@@ -24,7 +24,7 @@
 		</div>
 		<div class="col button">
 
-			<a href="/contact" class="footer_cta-button">
+			<a href="/contact" class="cta">
 				<span class="cta-button-text">Contact</span>
 			</a>
 		</div>

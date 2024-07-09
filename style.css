@@ -79,6 +79,7 @@ html {
  */
 body {
   margin: 0;
+  font-family: 'Labil Grotesk', sans-serif;
 }
 
 /* Header
@@ -118,13 +119,58 @@ main {
   color: #1e1e1e;
 }
 
+/* Style pour les liens du menu */
+.header-light .menu-item-has-children > a::before {
+  content: '';
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  background: url('./images/svg/chevron-down.svg') no-repeat center center;
+  background-size: contain;
+  position: absolute;
+  right: -20px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* Style pour les liens du menu avec fond sombre */
+.header-dark .menu-item-has-children > a::before {
+  content: '';
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  background: url('./images/svg/chevron-down-white.svg') no-repeat center center;
+  background-size: contain;
+  position: absolute;
+  right: -20px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
 .header-dark {
   background-color: #1e1e1e;
   color: white;
 }
 
+.header-dark .sub-menu {
+  background-color: #1e1e1e;
+}
+.header-light .sub-menu {
+  background-color: white;
+}
+
 .header-dark .menu-item {
   color: white;
+}
+
+header .sub-menu > li::before {
+  content: '→'; /* Flèche vers le bas */
+    position: absolute;
+    right: 205px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 0.8em; /* Ajuster la taille de la flèche si nécessaire */
+    color: inherit; /* Pour que la flèche hérite de la couleur du texte du lien */
 }
 
 /**
@@ -132,10 +178,14 @@ main {
  * `article` contexts in Chrome, Firefox, and Safari.
  */
 h1 {
+  
   font-size: 2em;
   margin: 0.67em 0;
 }
 
+title-alike, widget-title {
+  font-size: 1.5em;
+}
 /* Grouping content
 	 ========================================================================== */
 
@@ -447,7 +497,9 @@ textarea {
   font-size: 1rem;
   line-height: 1.5;
 }
-
+h1 {
+  font-size: 48px !important;
+}
 h1,
 h2,
 h3,
@@ -456,9 +508,10 @@ h5,
 h6 {
   clear: both;
 }
-
 p {
   margin-bottom: 1.5em;
+font-weight: 300;
+  font-size: 24px;
 }
 
 dfn,
@@ -573,14 +626,37 @@ table {
 /* Links
 --------------------------------------------- */
 a {
-  color: #4169e1;
+  color: white;
+  text-decoration: none;
+  position:relative;
+}
+a:hover {
+  color: transparent; /* Le texte est transparent pour que le dégradé soit visible */
+  background: linear-gradient(to right, #00bfff, #ff69b4);
+  background-clip: text;
+  -webkit-background-clip: text; /* Nécessaire pour certains navigateurs */
+}
+a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(to right, #00bfff, #ff69b4);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.5s ease-out;
+}
+
+a:hover::after {
+  transform: scaleX(1);
 }
 
 a:visited {
   color: #fff;
 }
 
-a:hover,
 a:focus,
 a:active {
   color: #191970;
@@ -590,7 +666,6 @@ a:focus {
   outline: thin dotted;
 }
 
-a:hover,
 a:active {
   outline: 0;
 }
@@ -695,7 +770,7 @@ textarea {
   width: 100%;
 }
 .menu-CTA {
-  background: linear-gradient(to right, #00bfff, #ff69b4);
+  
   border: none;
   border-radius: 30px;
   padding: 10px 30px;
@@ -709,20 +784,7 @@ textarea {
   min-width: 250px;
   margin-left: 150px;
 }
-.menu-CTA::after {
-  content: "\2192"; /* Unicode for the arrow icon */
-  font-size: 20px;
-  background: #ff1493; /* Pink color for the arrow */
-  border-radius: 50%;
-  padding: 10px;
-  margin-left: 10px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: white;
-  position: absolute;
-  right: 10px;
-}
+
 .main-navigation ul {
   display: none;
   list-style: none;
@@ -732,7 +794,6 @@ textarea {
 
 .main-navigation ul ul {
   box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
-  float: left;
   position: absolute;
   top: 100%;
   left: -999em;
@@ -873,6 +934,15 @@ textarea {
   display: inline-block;
 }
 
+#logo, .nogradient {
+  color: initial !important;
+  text-decoration: none !important;
+}
+
+#logo::after, .nogradient {
+  content: none !important;
+}
+
 /* Captions
 --------------------------------------------- */
 .wp-caption {
@@ -964,11 +1034,12 @@ textarea {
 
 .footer_cta-section {
   height: 25vh;
+  min-width: 80vw;
   display: flex;
   position: absolute;
-  transition: ease-in-out 5s;
   top: -100px;
-  right: 25%;
+  right: 5px ;
+  left: 5px ;
   background-color: white;
   color: black;
   max-width: 50vw;
@@ -1018,42 +1089,71 @@ textarea {
   font-size: 24px;
   margin-bottom: 10px;
 }
-.footer_cta-section .gradient-text {
-  background: linear-gradient(to right, #00b4d8, #ff0096);
-  -webkit-background-clip: text;
-  color: transparent;
+a.header-cta {
+  color: white; /* Couleur de texte pour les CTA */
+  background: transparent;
+  padding: 5px 20px;
+  border-radius: 25px;
+  border: 1px solid white;
+  display: flex;
+  height: 50%;
+  align-self: center;
 }
-.footer_cta-section p {
-  font-size: 16px;
-  margin-bottom: 20px;
+
+a.header-cta::after {
+  content: none;
 }
-.footer_cta-button {
-  display: inline-block;
+/* Styles spécifiques pour les liens CTA pour ne pas appliquer le soulignement */
+a.cta {
+  color: white; /* Couleur de texte pour les CTA */
+  background: linear-gradient(to right, #00bfff, #ff69b4);
   padding: 10px 20px;
-  background: linear-gradient(to right, #00b4d8, #ff0096);
-  color: #fff;
-  border-radius: 20px;
-  text-decoration: none;
-  max-height: 45px;
+  border-radius: 25px;
+  border: none;
+  display: flex;
 }
-.footer_cta-button:hover {
-  opacity: 0.8;
+
+a.cta:hover {
+  color: white; /* Couleur de texte sur hover pour les CTA */
+  background: linear-gradient(to right, #00bfff, #ff69b4);
+  text-decoration: none; /* Pas de soulignement sur hover */
 }
+
+a.cta::after {
+  content: none; /* Supprimer le soulignement pour les CTA */
+}
+/* Styles pour l'icône SVG à droite du texte */
 
 .site-footer {
   margin-top: 150px;
-  padding: 25px 260px;
+  padding: 25px 20px;
   color: #ffffff;
   position: relative;
 }
 
 .footer-widgets {
-  margin-top: 150px;
+  margin-top: 159px;
   display: flex;
   justify-content: space-evenly;
   flex-wrap: wrap;
+  text-align: start;
+}
+.footer-widgets ul, .footer-widgets ul li, .footer-widgets ul li a  {
+  list-style: none;
+  text-align: start;
+  margin: 0;
+  padding: 0;
 }
 
+.footer-newsletter form {
+  max-width: 100%;
+  padding: 40px !important;
+  border : 1px solid white !important;
+}
+.footer-newsletter_button {
+  background: linear-gradient(to right, #00bfff, #ff69b4) !important;
+  border-radius: 20px !important;
+}
 .footer-column {
   display: flex;
   flex-direction: column;
@@ -1088,7 +1188,13 @@ textarea {
 /*--------------------------------------------------------------
 # Utilities
 --------------------------------------------------------------*/
-
+/*Fonts and text colors*/
+.gradient-text_title {
+  font-size: 3rem;
+  background: linear-gradient(to right, #00b4d8, #ff0096);
+  -webkit-background-clip: text;
+  color: transparent;
+}
 /* Accessibility
 --------------------------------------------- */
 

@@ -1,19 +1,26 @@
 <!doctype html>
 <html <?php language_attributes(); ?>>
+
 <head>
     <meta charset="<?php bloginfo('charset'); ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="profile" href="https://gmpg.org/xfn/11">
     <?php wp_head(); ?>
 </head>
+
 <body <?php body_class(); ?>>
     <?php
     $header_color = get_post_meta(get_the_ID(), '_header_color', true);
     $header_class = ($header_color === 'dark') ? 'header-dark' : 'header-light';
+
+    // Définir les classes et l'image du bouton CTA en fonction de la couleur de l'en-tête
+    $cta_classes = $header_color === 'dark' ? 'bg-white text-black border-black border-slate-50' : 'bg-slate-700 text-white border-white';
+    $cta_image = $header_color === 'dark' ? 'arrow-right-rounded-white.svg' : 'arrow-right-rounded.svg';
     ?>
     <?php wp_body_open(); ?>
     <div id="page" class="site">
-        <a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e('Skip to content', 'passedevant'); ?></a>
+        <a class="skip-link screen-reader-text"
+            href="#primary"><?php esc_html_e('Skip to content', 'passedevant'); ?></a>
         <header id="masthead" class="site-header <?php echo esc_attr($header_class); ?>">
             <?php
             $logo_light = get_theme_mod('header_logo_light');
@@ -28,17 +35,25 @@
                 $logo_url = $default_logo_url ? $default_logo_url : get_template_directory_uri() . '/assets/images/default-logo.png';
             }
             ?>
-            <nav id="site-navigation" class="main-navigation">
-                <a href="/">
-                    <img id="logo" src="<?php echo esc_url($logo_url); ?>" alt="Logo">
+
+            <nav id="site-navigation " class="main-navigation">
+                <a id="logo" href="/">
+                    <img src="<?php echo esc_url($logo_url); ?>" alt="Logo">
                 </a>
-                <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e('Primary Menu', 'passedevant'); ?></button>
+                <button class="menu-toggle " aria-controls="primary-menu"
+                    aria-expanded="false"><?php esc_html_e('Primary Menu', 'passedevant'); ?></button>
                 <?php
-                wp_nav_menu(array(
-                    'theme_location' => 'menu-1',
-                    'menu_id' => 'primary-menu',
-                ));
+                wp_nav_menu(
+                    array(
+                        'theme_location' => 'menu-1',
+                        'menu_id' => 'primary-menu',
+                        'container' => 'nav'
+                    )
+                );
                 ?>
-                <button class="menu-CTA" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e('Contact', 'passedevant'); ?></button>
+                <a class="header-cta flex items-center justify-center w-44 py-2 px-4 <?php echo esc_attr($cta_classes); ?>">
+                    Contact
+                    <img src="<?php echo get_template_directory_uri(); ?>/images/svg/<?php echo esc_attr($cta_image); ?>" class="ml-2 w-4 h-4" alt="Arrow Icon" />
+                </a>
             </nav><!-- #site-navigation -->
         </header><!-- #masthead -->
