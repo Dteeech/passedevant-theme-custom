@@ -155,15 +155,15 @@ add_action('widgets_init', 'passedevant_widgets_init');
  */
 function passedevant_scripts()
 {
-    wp_enqueue_style('passedevant-style', get_stylesheet_uri(), array(), _S_VERSION);
-    wp_style_add_data('passedevant-style', 'rtl', 'replace');
+	wp_enqueue_style('passedevant-style', get_stylesheet_uri(), array(), _S_VERSION);
+	wp_style_add_data('passedevant-style', 'rtl', 'replace');
 	wp_enqueue_style('tailwindcss_output', get_template_directory_uri() . '/src/output.css', array(), _S_VERSION);
-    wp_enqueue_style('fonts-css', get_template_directory_uri() . '/fonts.css', array(), '1.0', 'all');
-    wp_enqueue_script('passedevant-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true);
+	wp_enqueue_style('fonts-css', get_template_directory_uri() . '/fonts.css', array(), '1.0', 'all');
+	wp_enqueue_script('passedevant-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true);
 
-    if (is_singular() && comments_open() && get_option('thread_comments')) {
-        wp_enqueue_script('comment-reply');
-    }
+	if (is_singular() && comments_open() && get_option('thread_comments')) {
+		wp_enqueue_script('comment-reply');
+	}
 }
 add_action('wp_enqueue_scripts', 'passedevant_scripts');
 
@@ -358,34 +358,42 @@ function customize_footer($wp_customize)
 
 	// Setting for footer background color
 	// Setting for number of footer columns
-	$wp_customize->add_setting('footer_columns', array(
-		'default' => 4,
-		'transport' => 'refresh',
-	)
+	$wp_customize->add_setting(
+		'footer_columns',
+		array(
+			'default' => 4,
+			'transport' => 'refresh',
+		)
 	);
 
 	// Control for number of footer columns
-	$wp_customize->add_control('footer_columns', array(
-		'label' => __('Nombre de colonnes dans le footer', 'mytheme'),
-		'section' => 'footer_settings',
-		'settings' => 'footer_columns',
-		'type' => 'number',
-		'input_attrs' => array(
-			'min' => 1,
-			'max' => 4,
-			'step' => 1,
-		),
-	)
+	$wp_customize->add_control(
+		'footer_columns',
+		array(
+			'label' => __('Nombre de colonnes dans le footer', 'mytheme'),
+			'section' => 'footer_settings',
+			'settings' => 'footer_columns',
+			'type' => 'number',
+			'input_attrs' => array(
+				'min' => 1,
+				'max' => 4,
+				'step' => 1,
+			),
+		)
 	);
 }
 add_action('customize_register', 'customize_footer');
-function enqueue_tailwind() {
+function enqueue_tailwind()
+{
 	wp_enqueue_style('tailwind-css', get_template_directory_uri() . '/src/output.css');
 }
-add_action('wp_enqueue_scripts','enqueue_tailwind');
+add_action('wp_enqueue_scripts', 'enqueue_tailwind');
 
 
 
 //custom menu hero 
 require get_template_directory() . '/shortcodes/custom-hero-menu/custom-hero-menu.php';
+
+//avis google (macaron)
+require get_template_directory() . '/shortcodes/google-api/avis-google-badge.php';
 

@@ -30,7 +30,7 @@
 		</div>
 	</div>
 
-	<div class="footer-widgets">
+	<div class="footer-widgets mt-52">
 		<?php
 		$footer_columns = get_theme_mod('footer_columns', 4);
 		for ($i = 1; $i <= $footer_columns; $i++): ?>
@@ -41,7 +41,7 @@
 			</div>
 		<?php endfor; ?>
 	</div>
-	<div class="site-info">
+	<div class="site-info text-">
 		<?php esc_html_e('Fait avec ❤️ par Passedevant', 'passedevant'); ?>
 	</div><!-- .site-info -->
 </footer><!-- #colophon -->

@@ -51,11 +51,14 @@
                     )
                 );
                 ?>
-                <a
-                    class="header-cta flex items-center justify-center w-44 py-2 px-4 <?php echo esc_attr($cta_classes); ?>">
-                    Contact
-                    <img src="<?php echo get_template_directory_uri(); ?>/images/svg/<?php echo esc_attr($cta_image); ?>"
-                        class="ml-2 w-4 h-4" alt="Arrow Icon" />
-                </a>
+                <div class="wp-block-button primary-button">
+
+                    <a
+                        class=" wp-block-button__link wp-element-button <?php echo esc_attr($cta_classes); ?>">
+                        Contact
+                        <img src="<?php echo get_template_directory_uri(); ?>/images/svg/<?php echo esc_attr($cta_image); ?>"
+                            class="ml-2 w-4 h-4" alt="Arrow Icon" />
+                    </a>
+                </div>
             </nav><!-- #site-navigation -->
         </header><!-- #masthead -->

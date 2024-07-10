@@ -79,7 +79,7 @@ html {
  */
 body {
   margin: 0;
-  font-family: 'Labil Grotesk', sans-serif;
+  font-family: "Labil Grotesk", sans-serif;
 }
 
 /* Header
@@ -109,6 +109,19 @@ main {
   display: block;
 }
 
+/*primary style*/
+.primary-button .wp-block-button__link {
+  background-color: transparent;
+  border: 1px solid white;
+  font-size: medium;
+
+}
+
+.primary-button .wp-block-button__link:hover {
+  background-color: #fff;
+  color: #1e1e1e;
+  transition: 0.3s;
+}
 .header-light {
   background-color: white;
 }
@@ -121,11 +134,11 @@ main {
 
 /* Style pour les liens du menu */
 .header-light .menu-item-has-children > a::before {
-  content: '';
+  content: "";
   display: inline-block;
   width: 10px;
   height: 10px;
-  background: url('./images/svg/chevron-down.svg') no-repeat center center;
+  background: url("./images/svg/chevron-down.svg") no-repeat center center;
   background-size: contain;
   position: absolute;
   right: -20px;
@@ -135,11 +148,11 @@ main {
 
 /* Style pour les liens du menu avec fond sombre */
 .header-dark .menu-item-has-children > a::before {
-  content: '';
+  content: "";
   display: inline-block;
   width: 10px;
   height: 10px;
-  background: url('./images/svg/chevron-down-white.svg') no-repeat center center;
+  background: url("./images/svg/chevron-down-white.svg") no-repeat center center;
   background-size: contain;
   position: absolute;
   right: -20px;
@@ -164,13 +177,13 @@ main {
 }
 
 header .sub-menu > li::before {
-  content: '→'; /* Flèche vers le bas */
-    position: absolute;
-    right: 205px;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 0.8em; /* Ajuster la taille de la flèche si nécessaire */
-    color: inherit; /* Pour que la flèche hérite de la couleur du texte du lien */
+  content: "→"; /* Flèche vers le bas */
+  position: absolute;
+  right: 205px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 0.8em; /* Ajuster la taille de la flèche si nécessaire */
+  color: inherit; /* Pour que la flèche hérite de la couleur du texte du lien */
 }
 
 /**
@@ -178,13 +191,13 @@ header .sub-menu > li::before {
  * `article` contexts in Chrome, Firefox, and Safari.
  */
 h1 {
-  
   font-size: 2em;
   margin: 0.67em 0;
 }
 
-title-alike, widget-title {
-  font-size: 1.5em;
+.title-alike,
+.widget-title {
+  font-size: 2em !important;
 }
 /* Grouping content
 	 ========================================================================== */
@@ -510,8 +523,9 @@ h6 {
 }
 p {
   margin-bottom: 1.5em;
-font-weight: 300;
+  font-weight: 300;
   font-size: 24px;
+  font-family: 'Labil Grotesk', sans-serif;
 }
 
 dfn,
@@ -628,7 +642,7 @@ table {
 a {
   color: white;
   text-decoration: none;
-  position:relative;
+  position: relative;
 }
 .underline--gradient a:hover {
   color: transparent; /* Le texte est transparent pour que le dégradé soit visible */
@@ -637,7 +651,7 @@ a {
   -webkit-background-clip: text; /* Nécessaire pour certains navigateurs */
 }
 .underline--gradient a::after {
-  content: '';
+  content: "";
   position: absolute;
   left: 0;
   bottom: -2px;
@@ -770,7 +784,6 @@ textarea {
   width: 100%;
 }
 .menu-CTA {
-  
   border: none;
   border-radius: 30px;
   padding: 10px 30px;
@@ -934,12 +947,14 @@ textarea {
   display: inline-block;
 }
 
-#logo, .nogradient {
+#logo,
+.nogradient {
   color: initial !important;
   text-decoration: none !important;
 }
 
-#logo::after, .nogradient {
+#logo::after,
+.nogradient {
   content: none !important;
 }
 
@@ -1038,8 +1053,8 @@ textarea {
   display: flex;
   position: absolute;
   top: -100px;
-  right: 5px ;
-  left: 5px ;
+  right: 5px;
+  left: 5px;
   background-color: white;
   color: black;
   max-width: 50vw;
@@ -1054,20 +1069,20 @@ textarea {
 }
 .footer_cta-section::before {
   pointer-events: none;
-	content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    border-radius: 10px; /* Same border radius as the container */
-    padding: 4px; /* Width of the border */
-    background: linear-gradient(to right, #00b4d8, #ff0096); /* Gradient border */
-    -webkit-mask: 
-        linear-gradient(#fff 0 0) content-box, 
-        linear-gradient(#fff 0 0);
-    -webkit-mask-composite: destination-out;
-            mask-composite: exclude;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 10px; /* Same border radius as the container */
+  padding: 4px; /* Width of the border */
+  background: linear-gradient(to right, #00b4d8, #ff0096); /* Gradient border */
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: destination-out;
+  mask-composite: exclude;
 }
 .footer_cta-section .col {
   flex: 1;
@@ -1075,7 +1090,7 @@ textarea {
 
 .footer_cta-section .content {
   flex: 3;
-  padding-right: 20px; 
+  padding-right: 20px;
   text-align: start;
 }
 
@@ -1138,7 +1153,9 @@ a.cta::after {
   flex-wrap: wrap;
   text-align: start;
 }
-.footer-widgets ul, .footer-widgets ul li, .footer-widgets ul li a  {
+.footer-widgets ul,
+.footer-widgets ul li,
+.footer-widgets ul li a {
   list-style: none;
   text-align: start;
   margin: 0;
@@ -1148,7 +1165,7 @@ a.cta::after {
 .footer-newsletter form {
   max-width: 100%;
   padding: 40px !important;
-  border : 1px solid white !important;
+  border: 1px solid white !important;
 }
 .footer-newsletter_button {
   background: linear-gradient(to right, #00bfff, #ff69b4) !important;
@@ -1161,6 +1178,26 @@ a.cta::after {
   margin: 0 10px;
 }
 
+/*FOOTER menu settings*/
+.footer-widgets .menu {
+  font-size: large;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  justify-content: center;
+  align-content: center;
+}
+
+.footer-widgets ul li .sub-menu {
+  display: flex;
+  flex-direction: column;
+  gap:4px;
+  margin-left: 5px;
+}
+
+.footer-widgets .widget-title  {
+  margin-bottom: 25px;
+}
 @media (max-width: 768px) {
   .site-footer {
     padding: 25px 45px;
