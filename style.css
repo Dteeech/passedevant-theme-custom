@@ -524,7 +524,7 @@ h6 {
 p {
   margin-bottom: 1.5em;
   font-weight: 300;
-  font-size: 24px;
+  font-size: 20px;
   font-family: 'Labil Grotesk', sans-serif;
 }
 
@@ -667,13 +667,14 @@ a:hover::after {
   transform: scaleX(1);
 }
 
-a:visited {
-  color: #fff;
-}
+/* a:visited {
+  color: defau;
+} */
+
 
 a:focus,
 a:active {
-  color: #191970;
+  /* color: #191970; */
 }
 
 a:focus {

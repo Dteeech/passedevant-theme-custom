@@ -194,26 +194,6 @@ if (defined('JETPACK__VERSION')) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
 
-function my_shortcode($atts)
-{
-	$a = shortcode_atts(
-		array(
-			'nom' => 'valeur1',
-			'mot' => 'valeur2'
-		),
-		$atts
-	);
-
-	$contenu = "<div>
-		<h2>Les infos de l'auteur :</h2>
-		<p>Le nom de l'auteur : <strong>" . $a['nom'] . "</strong></p>
-		<p>Le mot de l'auteur :  <strong>" . $a['mot'] . " </strong></p>
-	</div>";
-
-	return $contenu;
-}
-
-add_shortcode('meta', 'my_shortcode');
 
 /**
  * Fonction qui gère la possibilité d'ajouter une classe à une image
@@ -397,3 +377,5 @@ require get_template_directory() . '/shortcodes/custom-hero-menu/custom-hero-men
 //avis google (macaron)
 require get_template_directory() . '/shortcodes/google-api/avis-google-badge.php';
 
+//shortcode du menu nos expertises
+require get_template_directory() . '/shortcodes/menu-expertises/menu-expertises.php';

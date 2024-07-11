@@ -1,0 +1,73 @@
+{
+    "menu": [
+        {"id": "seo", "title": "Le référencement naturel"},
+        {"id": "sea", "title": "Le référencement payant"},
+        {"id": "crea-web", "title": "La création de sites web"},
+        {"id": "formation", "title": "La formation"}
+    ],
+    "content": {
+        "seo": [
+            {
+                "title": "Audit SEO",
+                "text": "Passedevant votre agence web expertisée en référencement naturel SEO,",
+                "link": {"text": "Nos audits SEO", "url": "#"}
+            },
+            {
+                "title": "Stratégie SEO",
+                "text": "Passedevant votre agence web expertisée en référencement naturel SEO,",
+                "link": {"text": "Nos stratégies SEO", "url": "#"}
+            },
+            {
+                "title": "Rédaction SEO",
+                "text": "Passedevant votre agence web expertisée en référencement naturel SEO,",
+                "link": {"text": "Nos rédactions SEO", "url": "#"}
+            },
+            {
+                "title": "Refonte de site",
+                "text": "Passedevant votre agence web expertisée en référencement naturel SEO,",
+                "link": {"text": "Nos refontes de site", "url": "#"}
+            },
+            {
+                "title": "Netlinking",
+                "text": "Passedevant votre agence web expertisée en référencement naturel SEO,",
+                "link": {"text": "Nos netlinking", "url": "#"}
+            }
+        ],
+        "sea": [
+            {
+                "title": "Campagnes SEA",
+                "text": "Passedevant votre agence web expertisée en référencement payant SEA,",
+                "link": {"text": "Nos campagnes SEA", "url": "#"}
+            },
+            {
+                "title": "Gestion de Budget",
+                "text": "Passedevant votre agence web expertisée en gestion de budget pour SEA,",
+                "link": {"text": "Notre gestion de budget", "url": "#"}
+            }
+        ],
+        "crea-web": [
+            {
+                "title": "Design de Sites Web",
+                "text": "Passedevant votre agence web expertisée en création de sites web,",
+                "link": {"text": "Nos designs de sites web", "url": "#"}
+            },
+            {
+                "title": "Développement Web",
+                "text": "Passedevant votre agence web expertisée en développement web,",
+                "link": {"text": "Nos services de développement", "url": "#"}
+            }
+        ],
+        "formation": [
+            {
+                "title": "Formations SEO",
+                "text": "Passedevant votre agence web expertisée en formation SEO,",
+                "link": {"text": "Nos formations SEO", "url": "#"}
+            },
+            {
+                "title": "Formations SEA",
+                "text": "Passedevant votre agence web expertisée en formation SEA,",
+                "link": {"text": "Nos formations SEA", "url": "#"}
+            }
+        ]
+    }
+}

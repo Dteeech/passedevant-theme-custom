@@ -36,9 +36,9 @@
             }
             ?>
 
-            <nav id="site-navigation " class="main-navigation underline--gradient">
+            <nav id="site-navigation" class="flex flex-row align-middle main-navigation underline--gradient">
                 <a id="logo" href="/">
-                    <img src="<?php echo esc_url($logo_url); ?>" alt="Logo">
+                    <img class="" src="<?php echo esc_url($logo_url); ?>" alt="Logo">
                 </a>
                 <button class="menu-toggle " aria-controls="primary-menu"
                     aria-expanded="false"><?php esc_html_e('Primary Menu', 'passedevant'); ?></button>
@@ -51,14 +51,13 @@
                     )
                 );
                 ?>
-                <div class="wp-block-button primary-button">
+               
 
                     <a
-                        class=" wp-block-button__link wp-element-button <?php echo esc_attr($cta_classes); ?>">
+                        class=" header-cta <?php echo esc_attr($cta_classes); ?>">
                         Contact
                         <img src="<?php echo get_template_directory_uri(); ?>/images/svg/<?php echo esc_attr($cta_image); ?>"
                             class="ml-2 w-4 h-4" alt="Arrow Icon" />
                     </a>
-                </div>
             </nav><!-- #site-navigation -->
         </header><!-- #masthead -->
