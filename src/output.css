@@ -727,14 +727,18 @@ video {
   margin-right: 2rem;
 }
 
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .my-8 {
   margin-top: 2rem;
   margin-bottom: 2rem;
 }
 
-.mx-auto {
-  margin-left: auto;
-  margin-right: auto;
+.mb-20 {
+  margin-bottom: 5rem;
 }
 
 .mb-4 {
@@ -745,12 +749,20 @@ video {
   margin-bottom: 2rem;
 }
 
+.me-12 {
+  margin-inline-end: 3rem;
+}
+
 .ml-2 {
   margin-left: 0.5rem;
 }
 
 .ms-10 {
   margin-inline-start: 2.5rem;
+}
+
+.ms-12 {
+  margin-inline-start: 3rem;
 }
 
 .ms-20 {
@@ -791,18 +803,6 @@ video {
 
 .mt-52 {
   margin-top: 13rem;
-}
-
-.mb-20 {
-  margin-bottom: 5rem;
-}
-
-.me-12 {
-  margin-inline-end: 3rem;
-}
-
-.ms-12 {
-  margin-inline-start: 3rem;
 }
 
 .block {
@@ -926,16 +926,16 @@ video {
   justify-content: center;
 }
 
+.gap-10 {
+  gap: 2.5rem;
+}
+
 .gap-11 {
   gap: 2.75rem;
 }
 
 .gap-4 {
   gap: 1rem;
-}
-
-.gap-10 {
-  gap: 2.5rem;
 }
 
 .justify-self-center {
@@ -970,16 +970,16 @@ video {
   border-bottom-width: 1px;
 }
 
+.border-l {
+  border-left-width: 1px;
+}
+
 .border-l-4 {
   border-left-width: 4px;
 }
 
 .border-r-8 {
   border-right-width: 8px;
-}
-
-.border-l {
-  border-left-width: 1px;
 }
 
 .border-black {
@@ -1050,32 +1050,32 @@ video {
   padding-bottom: 0px;
 }
 
-.pt-0 {
-  padding-top: 0px;
-}
-
 .pe-12 {
   padding-inline-end: 3rem;
-}
-
-.ps-12 {
-  padding-inline-start: 3rem;
-}
-
-.ps-24 {
-  padding-inline-start: 6rem;
-}
-
-.pe-24 {
-  padding-inline-end: 6rem;
 }
 
 .pe-14 {
   padding-inline-end: 3.5rem;
 }
 
+.pe-24 {
+  padding-inline-end: 6rem;
+}
+
+.ps-12 {
+  padding-inline-start: 3rem;
+}
+
 .ps-14 {
   padding-inline-start: 3.5rem;
+}
+
+.ps-24 {
+  padding-inline-start: 6rem;
+}
+
+.pt-0 {
+  padding-top: 0px;
 }
 
 .text-left {
@@ -1094,11 +1094,6 @@ video {
   vertical-align: middle;
 }
 
-.text-xl {
-  font-size: 1.25rem;
-  line-height: 1.75rem;
-}
-
 .text-2xl {
   font-size: 1.5rem;
   line-height: 2rem;
@@ -1109,14 +1104,19 @@ video {
   line-height: 2.5rem;
 }
 
+.text-5xl {
+  font-size: 3rem;
+  line-height: 1;
+}
+
 .text-7xl {
   font-size: 4.5rem;
   line-height: 1;
 }
 
-.text-5xl {
-  font-size: 3rem;
-  line-height: 1;
+.text-xl {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
 }
 
 .text-black {
