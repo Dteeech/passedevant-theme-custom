@@ -379,3 +379,6 @@ require get_template_directory() . '/shortcodes/google-api/avis-google-badge.php
 
 //shortcode du menu nos expertises
 require get_template_directory() . '/shortcodes/menu-expertises/menu-expertises.php';
+
+//shortcode du menu philosophie
+require get_template_directory() . '/shortcodes/philosophie-menu/shortcode-philosophie.php';

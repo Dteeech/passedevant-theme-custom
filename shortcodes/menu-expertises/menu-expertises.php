@@ -31,7 +31,7 @@ function custom_homepage_content_shortcode()
     <div class="container mx-auto"> 
         <h2 class="text-5xl text-black mb-20">Nos expertises</h2>
     </div>
-    <div id="desktop-content" class="wrapper flex">
+    <div id="expertise-content" class="wrapper flex">
         <div class="menu-links flex flex-col w-1/3 gap-11">
             <?php foreach ($menu_items as $index => $menu): ?>
                 <div
@@ -176,7 +176,7 @@ function custom_homepage_content_shortcode()
         }
 
         @media (max-width: 1024px) {
-            #desktop-content {
+            #expertise-content {
                 display: none;
             }
 
@@ -297,9 +297,9 @@ function custom_homepage_content_shortcode()
                 link.addEventListener('click', function (e) {
                     e.preventDefault();
                     const targetId = this.getAttribute('data-target');
-                    const contentSections = document.querySelectorAll('#desktop-content .content-section');
+                    const contentSections = document.querySelectorAll('#expertise-content .content-section');
 
-                    document.querySelectorAll('#desktop-content .menu-link').forEach(l => l.classList.remove('active'));
+                    document.querySelectorAll('#expertise-content .menu-link').forEach(l => l.classList.remove('active'));
                     contentSections.forEach(section => section.classList.remove('active'));
                     contentSections.forEach(section => section.classList.add('hidden'));
 

@@ -678,7 +678,7 @@ a:active {
 }
 
 a:focus {
-  outline: thin dotted;
+  /* outline: thin dotted; */
 }
 
 a:active {
