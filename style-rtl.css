@@ -1,9 +1,9 @@
 /*!
 Theme Name: passedevant
-Theme URI: https://underscores.me/
-Author: Automattic
-Author URI: https://automattic.com/
-Description: Hi. I'm a starter theme called <code>passedevant</code>, or <em>underscores</em>, if you like. I'm a theme meant for hacking so don't use me as a <em>Parent Theme</em>. Instead try turning me into the next, most awesome, WordPress theme out there. That's what I'm here for.
+Theme URI: http://underscores.me/
+Author: Underscores.me
+Author URI: http://underscores.me/
+Description: Description
 Version: 1.0.0
 Tested up to: 5.4
 Requires PHP: 5.6
@@ -67,8 +67,8 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
 html {
-	line-height: 1.15;
-	-webkit-text-size-adjust: 100%;
+  line-height: 1.15;
+  -webkit-text-size-adjust: 100%;
 }
 
 /* Sections
@@ -78,14 +78,112 @@ html {
  * Remove the margin in all browsers.
  */
 body {
-	margin: 0;
+  margin: 0;
+  font-family: "Labil Grotesk", sans-serif;
 }
 
+/* Header
+	 ========================================================================== */
+
+/**
+ * header proprietiesd
+ */
+header {
+  padding: 25px 8px;
+  display: flex;
+  transition: background-color 0.3s ease;
+}
+.site-header {
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+  padding: auto;
+}
+.site-title {
+  margin: 0;
+}
 /**
  * Render the `main` element consistently in IE.
  */
 main {
-	display: block;
+  display: block;
+}
+
+/*primary style*/
+.primary-button .wp-block-button__link {
+  background-color: transparent;
+  border: 1px solid white;
+  font-size: medium;
+
+}
+
+.primary-button .wp-block-button__link:hover {
+  background-color: #fff;
+  color: #1e1e1e;
+  transition: 0.3s;
+}
+.header-light {
+  background-color: white;
+}
+.header-light .main-navigation a {
+  color: #1e1e1e;
+}
+.header-light .menu-item {
+  color: #1e1e1e;
+}
+
+/* Style pour les liens du menu */
+.header-light .menu-item-has-children > a::before {
+  content: "";
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  background: url("./images/svg/chevron-down.svg") no-repeat center center;
+  background-size: contain;
+  position: absolute;
+  left: -20px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* Style pour les liens du menu avec fond sombre */
+.header-dark .menu-item-has-children > a::before {
+  content: "";
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  background: url("./images/svg/chevron-down-white.svg") no-repeat center center;
+  background-size: contain;
+  position: absolute;
+  left: -20px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.header-dark {
+  background-color: #1e1e1e;
+  color: white;
+}
+
+.header-dark .sub-menu {
+  background-color: #1e1e1e;
+}
+.header-light .sub-menu {
+  background-color: white;
+}
+
+.header-dark .menu-item {
+  color: white;
+}
+
+header .sub-menu > li::before {
+  content: "→"; /* Flèche vers le bas */
+  position: absolute;
+  left: 205px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 0.8em; /* Ajuster la taille de la flèche si nécessaire */
+  color: inherit; /* Pour que la flèche hérite de la couleur du texte du lien */
 }
 
 /**
@@ -93,10 +191,14 @@ main {
  * `article` contexts in Chrome, Firefox, and Safari.
  */
 h1 {
-	font-size: 2em;
-	margin: 0.67em 0;
+  font-size: 2em;
+  margin: 0.67em 0;
 }
 
+.title-alike,
+.widget-title {
+  font-size: 2em !important;
+}
 /* Grouping content
 	 ========================================================================== */
 
@@ -105,9 +207,9 @@ h1 {
  * 2. Show the overflow in Edge and IE.
  */
 hr {
-	box-sizing: content-box;
-	height: 0;
-	overflow: visible;
+  box-sizing: content-box;
+  height: 0;
+  overflow: visible;
 }
 
 /**
@@ -115,8 +217,8 @@ hr {
  * 2. Correct the odd `em` font sizing in all browsers.
  */
 pre {
-	font-family: monospace, monospace;
-	font-size: 1em;
+  font-family: monospace, monospace;
+  font-size: 1em;
 }
 
 /* Text-level semantics
@@ -126,7 +228,7 @@ pre {
  * Remove the gray background on active links in IE 10.
  */
 a {
-	background-color: transparent;
+  background-color: transparent;
 }
 
 /**
@@ -134,9 +236,9 @@ a {
  * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
  */
 abbr[title] {
-	border-bottom: none;
-	text-decoration: underline;
-	text-decoration: underline dotted;
+  border-bottom: none;
+  text-decoration: underline;
+  text-decoration: underline dotted;
 }
 
 /**
@@ -144,7 +246,7 @@ abbr[title] {
  */
 b,
 strong {
-	font-weight: bolder;
+  font-weight: bolder;
 }
 
 /**
@@ -154,15 +256,15 @@ strong {
 code,
 kbd,
 samp {
-	font-family: monospace, monospace;
-	font-size: 1em;
+  font-family: monospace, monospace;
+  font-size: 1em;
 }
 
 /**
  * Add the correct font size in all browsers.
  */
 small {
-	font-size: 80%;
+  font-size: 80%;
 }
 
 /**
@@ -171,18 +273,18 @@ small {
  */
 sub,
 sup {
-	font-size: 75%;
-	line-height: 0;
-	position: relative;
-	vertical-align: baseline;
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
 }
 
 sub {
-	bottom: -0.25em;
+  bottom: -0.25em;
 }
 
 sup {
-	top: -0.5em;
+  top: -0.5em;
 }
 
 /* Embedded content
@@ -192,7 +294,7 @@ sup {
  * Remove the border on images inside links in IE 10.
  */
 img {
-	border-style: none;
+  border-style: none;
 }
 
 /* Forms
@@ -207,10 +309,10 @@ input,
 optgroup,
 select,
 textarea {
-	font-family: inherit;
-	font-size: 100%;
-	line-height: 1.15;
-	margin: 0;
+  font-family: inherit;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0;
 }
 
 /**
@@ -219,7 +321,7 @@ textarea {
  */
 button,
 input {
-	overflow: visible;
+  overflow: visible;
 }
 
 /**
@@ -228,7 +330,7 @@ input {
  */
 button,
 select {
-	text-transform: none;
+  text-transform: none;
 }
 
 /**
@@ -238,7 +340,7 @@ button,
 [type="button"],
 [type="reset"],
 [type="submit"] {
-	-webkit-appearance: button;
+  -webkit-appearance: button;
 }
 
 /**
@@ -248,8 +350,8 @@ button::-moz-focus-inner,
 [type="button"]::-moz-focus-inner,
 [type="reset"]::-moz-focus-inner,
 [type="submit"]::-moz-focus-inner {
-	border-style: none;
-	padding: 0;
+  border-style: none;
+  padding: 0;
 }
 
 /**
@@ -259,14 +361,14 @@ button:-moz-focusring,
 [type="button"]:-moz-focusring,
 [type="reset"]:-moz-focusring,
 [type="submit"]:-moz-focusring {
-	outline: 1px dotted ButtonText;
+  outline: 1px dotted ButtonText;
 }
 
 /**
  * Correct the padding in Firefox.
  */
 fieldset {
-	padding: 0.35em 0.75em 0.625em;
+  padding: 0.35em 0.75em 0.625em;
 }
 
 /**
@@ -276,26 +378,26 @@ fieldset {
  *		`fieldset` elements in all browsers.
  */
 legend {
-	box-sizing: border-box;
-	color: inherit;
-	display: table;
-	max-width: 100%;
-	padding: 0;
-	white-space: normal;
+  box-sizing: border-box;
+  color: inherit;
+  display: table;
+  max-width: 100%;
+  padding: 0;
+  white-space: normal;
 }
 
 /**
  * Add the correct vertical alignment in Chrome, Firefox, and Opera.
  */
 progress {
-	vertical-align: baseline;
+  vertical-align: baseline;
 }
 
 /**
  * Remove the default vertical scrollbar in IE 10+.
  */
 textarea {
-	overflow: auto;
+  overflow: auto;
 }
 
 /**
@@ -304,8 +406,8 @@ textarea {
  */
 [type="checkbox"],
 [type="radio"] {
-	box-sizing: border-box;
-	padding: 0;
+  box-sizing: border-box;
+  padding: 0;
 }
 
 /**
@@ -313,7 +415,7 @@ textarea {
  */
 [type="number"]::-webkit-inner-spin-button,
 [type="number"]::-webkit-outer-spin-button {
-	height: auto;
+  height: auto;
 }
 
 /**
@@ -321,15 +423,15 @@ textarea {
  * 2. Correct the outline style in Safari.
  */
 [type="search"] {
-	-webkit-appearance: textfield;
-	outline-offset: -2px;
+  -webkit-appearance: textfield;
+  outline-offset: -2px;
 }
 
 /**
  * Remove the inner padding in Chrome and Safari on macOS.
  */
 [type="search"]::-webkit-search-decoration {
-	-webkit-appearance: none;
+  -webkit-appearance: none;
 }
 
 /**
@@ -337,8 +439,8 @@ textarea {
  * 2. Change font properties to `inherit` in Safari.
  */
 ::-webkit-file-upload-button {
-	-webkit-appearance: button;
-	font: inherit;
+  -webkit-appearance: button;
+  font: inherit;
 }
 
 /* Interactive
@@ -348,14 +450,14 @@ textarea {
  * Add the correct display in Edge, IE 10+, and Firefox.
  */
 details {
-	display: block;
+  display: block;
 }
 
 /*
  * Add the correct display in all browsers.
  */
 summary {
-	display: list-item;
+  display: list-item;
 }
 
 /* Misc
@@ -365,14 +467,14 @@ summary {
  * Add the correct display in IE 10+.
  */
 template {
-	display: none;
+  display: none;
 }
 
 /**
  * Add the correct display in IE 10.
  */
 [hidden] {
-	display: none;
+  display: none;
 }
 
 /* Box sizing
@@ -383,11 +485,11 @@ template {
 *,
 *::before,
 *::after {
-	box-sizing: inherit;
+  box-sizing: inherit;
 }
 
 html {
-	box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 /*--------------------------------------------------------------
@@ -402,157 +504,185 @@ input,
 select,
 optgroup,
 textarea {
-	color: #404040;
-	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
-	font-size: 1rem;
-	line-height: 1.5;
+  color: #404040;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  font-size: 1rem;
+  line-height: 1.5;
 }
-
+h1 {
+  font-size: 48px !important;
+}
 h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
-	clear: both;
+  clear: both;
 }
-
 p {
-	margin-bottom: 1.5em;
+  margin-bottom: 1.5em;
+  font-weight: 300;
+  font-size: 20px;
+  font-family: 'Labil Grotesk', sans-serif;
 }
 
 dfn,
 cite,
 em,
 i {
-	font-style: italic;
+  font-style: italic;
 }
 
 blockquote {
-	margin: 0 1.5em;
+  margin: 0 1.5em;
 }
 
 address {
-	margin: 0 0 1.5em;
+  margin: 0 0 1.5em;
 }
 
 pre {
-	background: #eee;
-	font-family: "Courier 10 Pitch", courier, monospace;
-	line-height: 1.6;
-	margin-bottom: 1.6em;
-	max-width: 100%;
-	overflow: auto;
-	padding: 1.6em;
+  background: #eee;
+  font-family: "Courier 10 Pitch", courier, monospace;
+  line-height: 1.6;
+  margin-bottom: 1.6em;
+  max-width: 100%;
+  overflow: auto;
+  padding: 1.6em;
 }
 
 code,
 kbd,
 tt,
 var {
-	font-family: monaco, consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+  font-family: monaco, consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
 }
 
 abbr,
 acronym {
-	border-bottom: 1px dotted #666;
-	cursor: help;
+  border-bottom: 1px dotted #666;
+  cursor: help;
 }
 
 mark,
 ins {
-	background: #fff9c0;
-	text-decoration: none;
+  background: #fff9c0;
+  text-decoration: none;
 }
 
 big {
-	font-size: 125%;
+  font-size: 125%;
 }
 
 /* Elements
 --------------------------------------------- */
 body {
-	background: #fff;
+  background: #fff;
 }
 
 hr {
-	background-color: #ccc;
-	border: 0;
-	height: 1px;
-	margin-bottom: 1.5em;
+  background-color: #ccc;
+  border: 0;
+  height: 1px;
+  margin-bottom: 1.5em;
 }
 
 ul,
 ol {
-	margin: 0 3em 1.5em 0;
+  margin: 0 3em 1.5em 0;
 }
 
 ul {
-	list-style: disc;
+  list-style: disc;
 }
 
 ol {
-	list-style: decimal;
+  list-style: decimal;
 }
 
 li > ul,
 li > ol {
-	margin-bottom: 0;
-	margin-right: 1.5em;
+  margin-bottom: 0;
+  margin-right: 1.5em;
 }
 
 dt {
-	font-weight: 700;
+  font-weight: 700;
 }
 
 dd {
-	margin: 0 1.5em 1.5em;
+  margin: 0 1.5em 1.5em;
 }
 
 /* Make sure embeds and iframes fit their containers. */
 embed,
 iframe,
 object {
-	max-width: 100%;
+  max-width: 100%;
 }
 
 img {
-	height: auto;
-	max-width: 100%;
+  height: auto;
+  max-width: 100%;
 }
 
 figure {
-	margin: 1em 0;
+  margin: 1em 0;
 }
 
 table {
-	margin: 0 0 1.5em;
-	width: 100%;
+  margin: 0 0 1.5em;
+  width: 100%;
 }
 
 /* Links
 --------------------------------------------- */
 a {
-	color: #4169e1;
+  color: white;
+  text-decoration: none;
+  position: relative;
+}
+.underline--gradient a:hover {
+  color: transparent; /* Le texte est transparent pour que le dégradé soit visible */
+  background: linear-gradient(to left, #00bfff, #ff69b4);
+  background-clip: text;
+  -webkit-background-clip: text; /* Nécessaire pour certains navigateurs */
+}
+.underline--gradient a::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: -2px;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(to left, #00bfff, #ff69b4);
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.5s ease-out;
 }
 
-a:visited {
-	color: #800080;
+a:hover::after {
+  transform: scaleX(1);
 }
 
-a:hover,
+/* a:visited {
+  color: defau;
+} */
+
+
 a:focus,
 a:active {
-	color: #191970;
+  /* color: #191970; */
 }
 
 a:focus {
-	outline: thin dotted;
+  /* outline: thin dotted; */
 }
 
-a:hover,
 a:active {
-	outline: 0;
+  outline: 0;
 }
 
 /* Forms
@@ -561,20 +691,20 @@ button,
 input[type="button"],
 input[type="reset"],
 input[type="submit"] {
-	border: 1px solid;
-	border-color: #ccc #ccc #bbb;
-	border-radius: 3px;
-	background: #e6e6e6;
-	color: rgba(0, 0, 0, 0.8);
-	line-height: 1;
-	padding: 0.6em 1em 0.4em;
+  border: 1px solid;
+  border-color: #ccc #ccc #bbb;
+  border-radius: 3px;
+  background: #e6e6e6;
+  color: rgba(0, 0, 0, 0.8);
+  line-height: 1;
+  padding: 0.6em 1em 0.4em;
 }
 
 button:hover,
 input[type="button"]:hover,
 input[type="reset"]:hover,
 input[type="submit"]:hover {
-	border-color: #ccc #bbb #aaa;
+  border-color: #ccc #bbb #aaa;
 }
 
 button:active,
@@ -585,7 +715,7 @@ input[type="reset"]:active,
 input[type="reset"]:focus,
 input[type="submit"]:active,
 input[type="submit"]:focus {
-	border-color: #aaa #bbb #bbb;
+  border-color: #aaa #bbb #bbb;
 }
 
 input[type="text"],
@@ -604,10 +734,10 @@ input[type="datetime"],
 input[type="datetime-local"],
 input[type="color"],
 textarea {
-	color: #666;
-	border: 1px solid #ccc;
-	border-radius: 3px;
-	padding: 3px;
+  color: #666;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  padding: 3px;
 }
 
 input[type="text"]:focus,
@@ -626,15 +756,15 @@ input[type="datetime"]:focus,
 input[type="datetime-local"]:focus,
 input[type="color"]:focus,
 textarea:focus {
-	color: #111;
+  color: #111;
 }
 
 select {
-	border: 1px solid #ccc;
+  border: 1px solid #ccc;
 }
 
 textarea {
-	width: 100%;
+  width: 100%;
 }
 
 /*--------------------------------------------------------------
@@ -648,143 +778,158 @@ textarea {
 /* Navigation
 --------------------------------------------- */
 .main-navigation {
-	display: block;
-	width: 100%;
+  padding-top: 24px;
+  display: flex;
+  justify-content: center;
+  gap: 8vw;
+  width: 100%;
+}
+.menu-CTA {
+  border: none;
+  border-radius: 30px;
+  padding: 10px 30px;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  min-width: 250px;
+  margin-right: 150px;
 }
 
 .main-navigation ul {
-	display: none;
-	list-style: none;
-	margin: 0;
-	padding-right: 0;
+  display: none;
+  list-style: none;
+  margin: 0;
+  padding-right: 0;
 }
 
 .main-navigation ul ul {
-	box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
-	float: right;
-	position: absolute;
-	top: 100%;
-	right: -999em;
-	z-index: 99999;
+  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+  position: absolute;
+  top: 100%;
+  right: -999em;
+  z-index: 99999;
 }
 
 .main-navigation ul ul ul {
-	right: -999em;
-	top: 0;
+  right: -999em;
+  top: 0;
 }
 
 .main-navigation ul ul li:hover > ul,
 .main-navigation ul ul li.focus > ul {
-	display: block;
-	right: auto;
+  display: block;
+  right: auto;
 }
 
 .main-navigation ul ul a {
-	width: 200px;
+  width: 200px;
 }
 
 .main-navigation ul li:hover > ul,
 .main-navigation ul li.focus > ul {
-	right: auto;
+  right: auto;
 }
 
 .main-navigation li {
-	position: relative;
+  position: relative;
+  margin: 25px;
 }
 
 .main-navigation a {
-	display: block;
-	text-decoration: none;
+  display: block;
+  text-decoration: none;
+  color: #fff;
 }
 
 /* Small menu. */
 .menu-toggle,
 .main-navigation.toggled ul {
-	display: block;
+  display: block;
 }
 
 @media screen and (min-width: 37.5em) {
+  .menu-toggle {
+    display: none;
+  }
 
-	.menu-toggle {
-		display: none;
-	}
-
-	.main-navigation ul {
-		display: flex;
-	}
+  .main-navigation ul {
+    display: flex;
+  }
 }
 
 .site-main .comment-navigation,
-.site-main
-.posts-navigation,
-.site-main
-.post-navigation {
-	margin: 0 0 1.5em;
+.site-main .posts-navigation,
+.site-main .post-navigation {
+  margin: 0 0 1.5em;
 }
 
 .comment-navigation .nav-links,
 .posts-navigation .nav-links,
 .post-navigation .nav-links {
-	display: flex;
+  display: flex;
 }
 
 .comment-navigation .nav-previous,
 .posts-navigation .nav-previous,
 .post-navigation .nav-previous {
-	flex: 1 0 50%;
+  flex: 1 0 50%;
 }
 
 .comment-navigation .nav-next,
 .posts-navigation .nav-next,
 .post-navigation .nav-next {
-	text-align: end;
-	flex: 1 0 50%;
+  text-align: end;
+  flex: 1 0 50%;
 }
 
 /* Posts and pages
 --------------------------------------------- */
 .sticky {
-	display: block;
+  display: block;
 }
 
 .post,
 .page {
-	margin: 0 0 1.5em;
+  margin: 0 0 1.5em;
 }
 
 .updated:not(.published) {
-	display: none;
+  display: none;
 }
 
 .page-content,
 .entry-content,
 .entry-summary {
-	margin: 1.5em 0 0;
+  margin: 1.5em 0 0;
 }
 
 .page-links {
-	clear: both;
-	margin: 0 0 1.5em;
+  clear: both;
+  margin: 0 0 1.5em;
 }
 
 /* Comments
 --------------------------------------------- */
 .comment-content a {
-	word-wrap: break-word;
+  word-wrap: break-word;
 }
 
 .bypostauthor {
-	display: block;
+  display: block;
 }
 
 /* Widgets
 --------------------------------------------- */
 .widget {
-	margin: 0 0 1.5em;
+  margin: 0 0 1.5em;
 }
 
 .widget select {
-	max-width: 100%;
+  max-width: 100%;
 }
 
 /* Media
@@ -792,86 +937,97 @@ textarea {
 .page-content .wp-smiley,
 .entry-content .wp-smiley,
 .comment-content .wp-smiley {
-	border: none;
-	margin-bottom: 0;
-	margin-top: 0;
-	padding: 0;
+  border: none;
+  margin-bottom: 0;
+  margin-top: 0;
+  padding: 0;
 }
 
 /* Make sure logo link wraps around logo image. */
 .custom-logo-link {
-	display: inline-block;
+  display: inline-block;
+}
+
+#logo,
+.nogradient {
+  color: initial !important;
+  text-decoration: none !important;
+}
+
+#logo::after,
+.nogradient {
+  content: none !important;
 }
 
 /* Captions
 --------------------------------------------- */
 .wp-caption {
-	margin-bottom: 1.5em;
-	max-width: 100%;
+  margin-bottom: 1.5em;
+  max-width: 100%;
 }
 
 .wp-caption img[class*="wp-image-"] {
-	display: block;
-	margin-right: auto;
-	margin-left: auto;
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 .wp-caption .wp-caption-text {
-	margin: 0.8075em 0;
+  margin: 0.8075em 0;
 }
 
 .wp-caption-text {
-	text-align: center;
+  text-align: center;
 }
 
 /* Galleries
 --------------------------------------------- */
 .gallery {
-	margin-bottom: 1.5em;
-	display: grid;
-	grid-gap: 1.5em;
+  margin-bottom: 1.5em;
+  display: grid;
+  grid-gap: 1.5em;
 }
 
 .gallery-item {
-	display: inline-block;
-	text-align: center;
-	width: 100%;
+  display: inline-block;
+  text-align: center;
+  width: 100%;
 }
 
 .gallery-columns-2 {
-	grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(2, 1fr);
 }
 
 .gallery-columns-3 {
-	grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3, 1fr);
 }
 
 .gallery-columns-4 {
-	grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(4, 1fr);
 }
 
 .gallery-columns-5 {
-	grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(5, 1fr);
 }
 
 .gallery-columns-6 {
-	grid-template-columns: repeat(6, 1fr);
+  grid-template-columns: repeat(6, 1fr);
 }
 
 .gallery-columns-7 {
-	grid-template-columns: repeat(7, 1fr);
+  grid-template-columns: repeat(7, 1fr);
 }
 
 .gallery-columns-8 {
-	grid-template-columns: repeat(8, 1fr);
+  grid-template-columns: repeat(8, 1fr);
 }
 
 .gallery-columns-9 {
-	grid-template-columns: repeat(9, 1fr);
+  grid-template-columns: repeat(9, 1fr);
 }
 
 .gallery-caption {
-	display: block;
+  display: block;
 }
 
 /*--------------------------------------------------------------
@@ -884,78 +1040,259 @@ textarea {
 /* Hide the Posts Navigation and the Footer when Infinite Scroll is in use. */
 .infinite-scroll .posts-navigation,
 .infinite-scroll.neverending .site-footer {
-	display: none;
+  display: none;
 }
 
 /* Re-display the Theme Footer when Infinite Scroll has reached its end. */
 .infinity-end.neverending .site-footer {
-	display: block;
+  display: block;
+}
+
+.footer_cta-section {
+  height: 25vh;
+  min-width: 80vw;
+  display: flex;
+  position: absolute;
+  top: -100px;
+  left: 5px;
+  right: 5px;
+  background-color: white;
+  color: black;
+  max-width: 50vw;
+  padding: 20px 65px;
+  border-radius: 12px;
+  border-image-slice: 1;
+  text-align: center;
+  align-items: center; /* Center the content vertically */
+  justify-content: space-between; /* Space between the columns */
+  margin: 20px auto;
+  align-content: center;
+}
+.footer_cta-section::before {
+  pointer-events: none;
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  border-radius: 10px; /* Same border radius as the container */
+  padding: 4px; /* Width of the border */
+  background: linear-gradient(to left, #00b4d8, #ff0096); /* Gradient border */
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: destination-out;
+  mask-composite: exclude;
+}
+.footer_cta-section .col {
+  flex: 1;
+}
+
+.footer_cta-section .content {
+  flex: 3;
+  padding-left: 20px;
+  text-align: start;
+}
+
+.footer_cta-section .button {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.footer_cta-section h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+a.header-cta {
+  color: white; /* Couleur de texte pour les CTA */
+  background: transparent;
+  padding: 5px 20px;
+  border-radius: 25px;
+  border: 1px solid white;
+  display: flex;
+  height: 50%;
+  align-self: center;
+}
+
+a.header-cta::after {
+  content: none;
+}
+/* Styles spécifiques pour les liens CTA pour ne pas appliquer le soulignement */
+a.cta {
+  color: white; /* Couleur de texte pour les CTA */
+  background: linear-gradient(to left, #00bfff, #ff69b4);
+  padding: 10px 20px;
+  border-radius: 25px;
+  border: none;
+  display: flex;
+}
+
+a.cta:hover {
+  color: white; /* Couleur de texte sur hover pour les CTA */
+  background: linear-gradient(to left, #00bfff, #ff69b4);
+  text-decoration: none; /* Pas de soulignement sur hover */
+}
+
+a.cta::after {
+  content: none; /* Supprimer le soulignement pour les CTA */
+}
+/* Styles pour l'icône SVG à droite du texte */
+
+.site-footer {
+  margin-top: 150px;
+  padding: 25px 20px;
+  color: #ffffff;
+  position: relative;
+}
+
+.footer-widgets {
+  margin-top: 159px;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  text-align: start;
+}
+.footer-widgets ul,
+.footer-widgets ul li,
+.footer-widgets ul li a {
+  list-style: none;
+  text-align: start;
+  margin: 0;
+  padding: 0;
+}
+
+.footer-newsletter form {
+  max-width: 100%;
+  padding: 40px !important;
+  border: 1px solid white !important;
+}
+.footer-newsletter_button {
+  background: linear-gradient(to left, #00bfff, #ff69b4) !important;
+  border-radius: 20px !important;
+}
+.footer-column {
+  display: flex;
+  flex-direction: column;
+  flex: content;
+  margin: 0 10px;
+}
+
+/*FOOTER menu settings*/
+.footer-widgets .menu {
+  font-size: large;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  justify-content: center;
+  align-content: center;
+}
+
+.footer-widgets ul li .sub-menu {
+  display: flex;
+  flex-direction: column;
+  gap:4px;
+  margin-right: 5px;
+}
+
+.footer-widgets .widget-title  {
+  margin-bottom: 25px;
+}
+@media (max-width: 768px) {
+  .site-footer {
+    padding: 25px 45px;
+  }
+  .footer-column {
+    min-width: calc(100% / 2 - 20px);
+  }
+}
+
+@media (max-width: 480px) {
+  .site-footer {
+    padding: 25px 20px;
+  }
+  .footer-column {
+    min-width: 100%;
+  }
+}
+
+.site-info {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
 }
 
 /*--------------------------------------------------------------
 # Utilities
 --------------------------------------------------------------*/
-
+/*Fonts and text colors*/
+.gradient-text_title {
+  font-size: 3rem;
+  background: linear-gradient(to left, #00b4d8, #ff0096);
+  -webkit-background-clip: text;
+  color: transparent;
+}
 /* Accessibility
 --------------------------------------------- */
 
 /* Text meant only for screen readers. */
 .screen-reader-text {
-	border: 0;
-	clip: rect(1px, 1px, 1px, 1px);
-	clip-path: inset(50%);
-	height: 1px;
-	margin: -1px;
-	overflow: hidden;
-	padding: 0;
-	position: absolute !important;
-	width: 1px;
-	word-wrap: normal !important;
+  border: 0;
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute !important;
+  width: 1px;
+  word-wrap: normal !important;
 }
 
 .screen-reader-text:focus {
-	background-color: #f1f1f1;
-	border-radius: 3px;
-	box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
-	clip: auto !important;
-	clip-path: none;
-	color: #21759b;
-	display: block;
-	font-size: 0.875rem;
-	font-weight: 700;
-	height: auto;
-	right: 5px;
-	line-height: normal;
-	padding: 15px 23px 14px;
-	text-decoration: none;
-	top: 5px;
-	width: auto;
-	z-index: 100000;
+  background-color: #f1f1f1;
+  border-radius: 3px;
+  box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+  clip: auto !important;
+  clip-path: none;
+  color: #21759b;
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 700;
+  height: auto;
+  right: 5px;
+  line-height: normal;
+  padding: 15px 23px 14px;
+  text-decoration: none;
+  top: 5px;
+  width: auto;
+  z-index: 100000;
 }
 
 /* Do not show the outline on the skip link target. */
 #primary[tabindex="-1"]:focus {
-	outline: 0;
+  outline: 0;
 }
 
 /* Alignments
 --------------------------------------------- */
 .alignleft {
-	float: left;
-	margin-right: 1.5em;
-	margin-bottom: 1.5em;
+  float: left;
+  margin-right: 1.5em;
+  margin-bottom: 1.5em;
 }
 
 .alignright {
-	float: right;
-	margin-left: 1.5em;
-	margin-bottom: 1.5em;
+  float: right;
+  margin-left: 1.5em;
+  margin-bottom: 1.5em;
 }
 
 .aligncenter {
-	clear: both;
-	display: block;
-	margin-right: auto;
-	margin-left: auto;
-	margin-bottom: 1.5em;
+  clear: both;
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 1.5em;
 }

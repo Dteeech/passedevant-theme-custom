@@ -36,6 +36,7 @@
     "map": false
   },
   "scripts": {
+    "build": "wp-scripts build && npm run compile:rtl && npm run lint:scss && npm run lint:js",
     "compile:rtl": "rtlcss style.css style-rtl.css",
     "lint:scss": "wp-scripts lint-style 'sass/**/*.scss'",
     "lint:js": "wp-scripts lint-js 'js/*.js'",
