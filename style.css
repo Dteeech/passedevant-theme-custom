@@ -69,6 +69,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 html {
   line-height: 1.15;
   -webkit-text-size-adjust: 100%;
+  
 }
 
 /* Sections
@@ -80,14 +81,17 @@ html {
 body {
   margin: 0;
   font-family: "Labil Grotesk", sans-serif;
+  overflow-x:hidden !important;
 }
 
 /* Header
 	 ========================================================================== */
 
 /**
- * header proprietiesd
+ * header proprieties
  */
+ 
+ 
 header {
   padding: 25px 8px;
   display: flex;
@@ -1050,7 +1054,7 @@ textarea {
 
 .footer_cta-section {
   height: 25vh;
-  min-width: 80vw;
+  max-width: 50vw;
   display: flex;
   position: absolute;
   top: -100px;
@@ -1301,4 +1305,20 @@ a.cta::after {
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 1.5em;
+}
+
+@media (max-width: 767px) {
+  .xs-invisible {
+      display: none !important;
+  }
+  p, .primary-button .wp-block-button__link, a, .link-item {
+    font-size:16px !important;
+  }
+  .site-footer, .footer-widgets {
+    margin-top:0px;
+  }
+  .footer_cta-section {
+    display: none;
+  }
+  
 }

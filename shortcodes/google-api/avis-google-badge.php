@@ -94,6 +94,25 @@ function get_google_my_business_rating($atts) {
             color: #777;
             font-size: 0.9em;
         }
+        @media (max-width: 768px) {
+            .google-rating-badge {
+                flex-direction:column;
+                flex-wrap:nowrap;
+                font-size:0.75rem;
+                margin:auto;
+            }
+            .google-logo {
+                padding:0;
+            }
+            .rating-info {
+                flex-direction:row;
+                flex-wrap:nowrap;
+            }
+            .stars {
+                border:none;
+                padding:0;
+            }
+        }
     </style>
     <?php
     return ob_get_clean();

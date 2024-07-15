@@ -36,9 +36,9 @@
             }
             ?>
 
-            <nav id="site-navigation" class="flex flex-row align-middle main-navigation underline--gradient">
+            <nav id="site-navigation" class="flex flex-row align-top main-navigation underline--gradient">
                 <a id="logo" href="/">
-                    <img class="" src="<?php echo esc_url($logo_url); ?>" alt="Logo">
+                    <img  src="<?php echo esc_url($logo_url); ?>" alt="Logo">
                 </a>
                 <button class="menu-toggle " aria-controls="primary-menu"
                     aria-expanded="false"><?php esc_html_e('Primary Menu', 'passedevant'); ?></button>

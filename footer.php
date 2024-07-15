@@ -30,7 +30,7 @@
 		</div>
 	</div>
 
-	<div class="footer-widgets mt-52">
+	<div class="footer-widgets sm:mt-5 lg:mt-52">
 		<?php
 		$footer_columns = get_theme_mod('footer_columns', 4);
 		for ($i = 1; $i <= $footer_columns; $i++): ?>
@@ -49,6 +49,16 @@
 </div><!-- #page -->
 
 <?php wp_footer(); ?>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    var burgerMenu = document.getElementById('burger-menu');
+    var overlay = document.getElementById('menu');
+    burgerMenu.addEventListener('click', function() {
+        this.classList.toggle("close");
+        overlay.classList.toggle("overlay");
+    });
+});
+</script>
 
 </body>
 
