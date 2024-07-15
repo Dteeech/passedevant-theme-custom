@@ -384,3 +384,5 @@ require get_template_directory() . '/shortcodes/menu-expertises/menu-expertises.
 require get_template_directory() . '/shortcodes/philosophie-menu/shortcode-philosophie.php';
 
 require get_template_directory() . '/shortcodes/menu-expertises/AJAX/ajax-handler.php';
+
+require get_template_directory() . '/shortcodes/philosophie-menu/AJAX/ajax-handler.php';
