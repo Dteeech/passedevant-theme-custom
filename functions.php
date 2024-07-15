@@ -382,3 +382,5 @@ require get_template_directory() . '/shortcodes/menu-expertises/menu-expertises.
 
 //shortcode du menu philosophie
 require get_template_directory() . '/shortcodes/philosophie-menu/shortcode-philosophie.php';
+
+require get_template_directory() . '/shortcodes/menu-expertises/AJAX/ajax-handler.php';

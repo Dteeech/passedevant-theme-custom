@@ -1,90 +1,12 @@
 <?php
-function custom_homepage_content_shortcode()
-{
-    $json_file_path = get_template_directory() . '/shortcodes/menu-expertises/data.json';
-
-    if (!file_exists($json_file_path)) {
-        return 'JSON file not found at ' . $json_file_path;
-    }
-
-    $json_data = file_get_contents($json_file_path);
-
-    if ($json_data === false) {
-        return 'Unable to read JSON file.';
-    }
-
-    $content_data = json_decode($json_data, true);
-
-    if (json_last_error() !== JSON_ERROR_NONE) {
-        return 'Error decoding JSON: ' . json_last_error_msg();
-    }
-
-    if (!isset($content_data['menu']) || !is_array($content_data['menu']) || !isset($content_data['content']) || !is_array($content_data['content'])) {
-        return 'Invalid JSON structure.';
-    }
-
-    $menu_items = $content_data['menu'];
-    $content_items = $content_data['content'];
-
+function custom_homepage_content_shortcode() {
     ob_start();
     ?>
-    <div class="container mx-auto"> 
+    <div class="container mx-auto">
         <h2 class="text-5xl text-black mb-20">Nos expertises</h2>
     </div>
-    <div id="expertise-content" class="wrapper flex">
-        <div class="menu-links flex flex-col w-1/3 gap-11">
-            <?php foreach ($menu_items as $index => $menu): ?>
-                <div
-                    class="menu-link <?php echo $menu['id']; ?> flex rounded-xl justify-end	 h-32 relative <?php echo $index === 0 ? 'active' : ''; ?>">
-                    <a class="full-link w-full text-left text-xl <?php echo $index === 0 ? 'active' : ''; ?>" href="#"
-                        data-target="<?php echo esc_attr($menu['id']); ?>">
-                        <?php echo esc_html($menu['title']); ?>
-                    </a>
-                </div>
-            <?php endforeach; ?>
-        </div>
-        <div class="separator mx-8"></div>
-        <div class="homepage-content mx-32">
-            <?php foreach ($content_items as $section_id => $items): ?>
-                <div id="desktop-<?php echo esc_attr($section_id); ?>"
-                    class="content-section <?php echo $section_id === 'seo' ? 'active' : 'hidden'; ?> <?php echo esc_attr($section_id); ?>">
-                    <?php foreach ($items as $item): ?>
-                        <div class="content-item">
-                            <h3 class="content-title title-<?php echo esc_attr($section_id); ?>">
-                                <?php echo esc_html($item['title']); ?>
-                            </h3>
-                            <p><?php echo esc_html($item['text']); ?></p>
-                            <a href="<?php echo esc_url($item['link']['url']); ?>"
-                                class="content-link"><?php echo esc_html($item['link']['text']); ?></a>
-                        </div>
-                    <?php endforeach; ?>
-                </div>
-            <?php endforeach; ?>
-        </div>
-    </div>
-    <div id="mobile-content" class="hidden">
-        <?php foreach ($menu_items as $index => $menu): ?>
-            <div class="accordion-item">
-                <button class="accordion-button <?php echo $index === 0 ? 'active' : ''; ?> <?php echo $menu['id']; ?>"
-                    data-target="<?php echo esc_attr($menu['id']); ?>">
-                    <?php echo esc_html($menu['title']); ?>
-                </button>
-                <div id="mobile-<?php echo esc_attr($menu['id']); ?>"
-                    class="accordion-content <?php echo $index === 0 ? 'active' : 'hidden'; ?> <?php echo esc_attr($menu['id']); ?>">
-                    <?php foreach ($content_items[$menu['id']] as $item): ?>
-                        <div class="content-item">
-                            <h2 class="content-title title-<?php echo esc_attr($menu['id']); ?>">
-                                <?php echo esc_html($item['title']); ?>
-                            </h2>
-                            <p><?php echo esc_html($item['text']); ?></p>
-                            <a href="<?php echo esc_url($item['link']['url']); ?>"
-                                class="content-link"><?php echo esc_html($item['link']['text']); ?></a>
-                        </div>
-                    <?php endforeach; ?>
-                </div>
-            </div>
-        <?php endforeach; ?>
-    </div>
+    <div id="expertise-content" class="wrapper flex"></div>
+
     <style>
         .separator {
             height: auto;
@@ -117,12 +39,9 @@ function custom_homepage_content_shortcode()
             content: "→";
             position: absolute;
             right: -30px;
-            /* Ajustez cette valeur pour le positionnement horizontal de la flèche */
             top: -8px;
             transition: right 0.3s ease-in-out;
-            /* Animation de la flèche */
             font-size: 1.5em;
-            /* Ajustez cette valeur pour la taille de la flèche */
             opacity: 1;
         }
 
@@ -139,11 +58,8 @@ function custom_homepage_content_shortcode()
             border-radius: 80px;
             transition: transform 0.3s ease-in-out;
             margin-left: -380px;
-            /* Décaler les bulles vers la gauche */
             width: calc(100% + 50px);
-            /* Ajuster la largeur pour maintenir la taille visible */
             justify-self: flex-end;
-
         }
 
         .menu-link:hover {
@@ -176,12 +92,10 @@ function custom_homepage_content_shortcode()
         }
 
         @media (max-width: 1024px) {
-            #expertise-content {
-                display: none;
-            }
 
-            #mobile-content {
+            .accordion {
                 display: block;
+                width: 100%;
             }
 
             .accordion-button {
@@ -275,39 +189,122 @@ function custom_homepage_content_shortcode()
     </style>
     <script>
         document.addEventListener('DOMContentLoaded', function () {
-            const menuLinks = document.querySelectorAll('.menu-link a');
-            const accordionButtons = document.querySelectorAll('.accordion-button');
+            const isMobile = window.innerWidth <= 1024;
 
-            accordionButtons.forEach(button => {
-                button.addEventListener('click', function () {
-                    const targetId = this.getAttribute('data-target');
-                    const content = document.getElementById('mobile-' + targetId);
+            fetch('<?php echo admin_url('admin-ajax.php?action=get_expertise_content'); ?>')
+                .then(response => response.json())
+                .then(data => {
+                    if (data.success) {
+                        const expertiseContent = document.getElementById('expertise-content');
+                        expertiseContent.innerHTML = ''; // Clear previous content
 
-                    document.querySelectorAll('.accordion-content').forEach(c => c.classList.remove('active'));
-                    document.querySelectorAll('.accordion-content').forEach(c => c.classList.add('hidden'));
-                    document.querySelectorAll('.accordion-button').forEach(b => b.classList.remove('active'));
-
-                    content.classList.add('active');
-                    content.classList.remove('hidden');
-                    button.classList.add('active');
+                        if (isMobile) {
+                            loadMobileContent(data.data);
+                        } else {
+                            loadDesktopContent(data.data);
+                        }
+                    } else {
+                        console.error(data.data);
+                    }
                 });
-            });
 
-            menuLinks.forEach(link => {
-                link.addEventListener('click', function (e) {
-                    e.preventDefault();
-                    const targetId = this.getAttribute('data-target');
-                    const contentSections = document.querySelectorAll('#expertise-content .content-section');
+            function loadDesktopContent(data) {
+                const expertiseContent = document.getElementById('expertise-content');
+                expertiseContent.innerHTML = `
+                    <div class="menu-links flex flex-col w-1/3 gap-11">
+                        ${data.menu.map((menu, index) => `
+                            <div class="menu-link ${menu.id} flex rounded-xl justify-end h-32 relative ${index === 0 ? 'active' : ''}">
+                                <a class="full-link w-full text-left text-xl ${index === 0 ? 'active' : ''}" href="#" data-target="${menu.id}">
+                                    ${menu.title}
+                                </a>
+                            </div>
+                        `).join('')}
+                    </div>
+                    <div class="separator mx-8"></div>
+                    <div class="homepage-content mx-32">
+                        ${Object.keys(data.content).map(section_id => `
+                            <div id="desktop-${section_id}" class="content-section ${section_id === 'seo' ? 'active' : 'hidden'} ${section_id}">
+                                ${data.content[section_id].map(item => `
+                                    <div class="content-item">
+                                        <h3 class="content-title title-${section_id}">
+                                            ${item.title}
+                                        </h3>
+                                        <p>${item.text}</p>
+                                        <a href="${item.link.url}" class="content-link">${item.link.text}</a>
+                                    </div>
+                                `).join('')}
+                            </div>
+                        `).join('')}
+                    </div>
+                `;
+                attachDesktopEvents();
+            }
 
-                    document.querySelectorAll('#expertise-content .menu-link').forEach(l => l.classList.remove('active'));
-                    contentSections.forEach(section => section.classList.remove('active'));
-                    contentSections.forEach(section => section.classList.add('hidden'));
+            function loadMobileContent(data) {
+                const expertiseContent = document.getElementById('expertise-content');
+                expertiseContent.innerHTML = `
+                    <div class="accordion">
+                        ${Object.keys(data.content).map(section_id => `
+                            <div class="accordion-item">
+                                <button class="accordion-button ${section_id === 'seo' ? 'active' : ''}" data-target="${section_id}">
+                                    ${data.menu.find(menu => menu.id === section_id).title}
+                                </button>
+                                <div id="mobile-${section_id}" class="accordion-content ${section_id === 'seo' ? 'active' : 'hidden'}">
+                                    ${data.content[section_id].map(item => `
+                                        <div class="content-item">
+                                            <h3 class="content-title title-${section_id}">
+                                                ${item.title}
+                                            </h3>
+                                            <p>${item.text}</p>
+                                            <a href="${item.link.url}" class="content-link">${item.link.text}</a>
+                                        </div>
+                                    `).join('')}
+                                </div>
+                            </div>
+                        `).join('')}
+                    </div>
+                `;
+                attachMobileEvents();
+            }
 
-                    document.getElementById('desktop-' + targetId).classList.add('active');
-                    document.getElementById('desktop-' + targetId).classList.remove('hidden');
-                    this.parentElement.classList.add('active');
+            function attachDesktopEvents() {
+                const menuLinks = document.querySelectorAll('.menu-link a');
+
+                menuLinks.forEach(link => {
+                    link.addEventListener('click', function (e) {
+                        e.preventDefault();
+                        const targetId = this.getAttribute('data-target');
+                        const contentSections = document.querySelectorAll('#expertise-content .content-section');
+
+                        document.querySelectorAll('#expertise-content .menu-link').forEach(l => l.classList.remove('active'));
+                        contentSections.forEach(section => section.classList.remove('active'));
+                        contentSections.forEach(section => section.classList.add('hidden'));
+
+                        document.getElementById('desktop-' + targetId).classList.add('active');
+                        document.getElementById('desktop-' + targetId).classList.remove('hidden');
+                        this.parentElement.classList.add('active');
+                    });
                 });
-            });
+            }
+
+            function attachMobileEvents() {
+                const accordionButtons = document.querySelectorAll('.accordion-button');
+
+                accordionButtons.forEach(button => {
+                    button.addEventListener('click', function () {
+                        const targetId = this.getAttribute('data-target');
+                        const content = document.getElementById('mobile-' + targetId);
+
+                        document.querySelectorAll('.accordion-content').forEach(c => c.classList.remove('active'));
+                        document.querySelectorAll('.accordion-content').forEach(c => c.classList.add('hidden'));
+                        document.querySelectorAll('.accordion-button').forEach(b => b.classList.remove('active'));
+
+                        content.classList.add('active');
+                        content.classList.remove('hidden');
+                        button.classList.add('active');
+                    });
+                });
+            }
         });
     </script>
     <?php
