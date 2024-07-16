@@ -716,6 +716,11 @@ video {
   margin: 2.5rem;
 }
 
+.mx-0 {
+  margin-left: 0px;
+  margin-right: 0px;
+}
+
 .mx-32 {
   margin-left: 8rem;
   margin-right: 8rem;
@@ -739,11 +744,6 @@ video {
 .my-8 {
   margin-top: 2rem;
   margin-bottom: 2rem;
-}
-
-.mx-0 {
-  margin-left: 0px;
-  margin-right: 0px;
 }
 
 .mb-20 {
@@ -911,16 +911,8 @@ video {
   width: 12rem;
 }
 
-.w-full {
-  width: 100%;
-}
-
-.w-screen {
-  width: 100vw;
-}
-
-.w-3\/4 {
-  width: 75%;
+.w-auto {
+  width: auto;
 }
 
 .w-fit {
@@ -928,13 +920,17 @@ video {
   width: fit-content;
 }
 
-.w-auto {
-  width: auto;
+.w-full {
+  width: 100%;
 }
 
 .w-max {
   width: -moz-max-content;
   width: max-content;
+}
+
+.w-screen {
+  width: 100vw;
 }
 
 .border-collapse {
@@ -1005,12 +1001,12 @@ video {
   gap: 1.25rem;
 }
 
-.gap-8 {
-  gap: 2rem;
-}
-
 .gap-7 {
   gap: 1.75rem;
+}
+
+.gap-8 {
+  gap: 2rem;
 }
 
 .justify-self-center {
@@ -1106,6 +1102,11 @@ video {
   padding: 1rem;
 }
 
+.px-0 {
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
 .px-4 {
   padding-left: 1rem;
   padding-right: 1rem;
@@ -1119,11 +1120,6 @@ video {
 .py-2 {
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
-}
-
-.px-0 {
-  padding-left: 0px;
-  padding-right: 0px;
 }
 
 .pb-0 {
@@ -1142,6 +1138,18 @@ video {
   padding-inline-end: 6rem;
 }
 
+.pe-32 {
+  padding-inline-end: 8rem;
+}
+
+.pe-5 {
+  padding-inline-end: 1.25rem;
+}
+
+.pe-52 {
+  padding-inline-end: 13rem;
+}
+
 .ps-12 {
   padding-inline-start: 3rem;
 }
@@ -1158,16 +1166,20 @@ video {
   padding-top: 0px;
 }
 
-.pe-5 {
-  padding-inline-end: 1.25rem;
+.pb-2 {
+  padding-bottom: 0.5rem;
 }
 
-.pe-52 {
-  padding-inline-end: 13rem;
+.pb-20 {
+  padding-bottom: 5rem;
 }
 
-.pe-32 {
-  padding-inline-end: 8rem;
+.pb-16 {
+  padding-bottom: 4rem;
+}
+
+.pb-14 {
+  padding-bottom: 3.5rem;
 }
 
 .text-left {
@@ -1272,18 +1284,6 @@ video {
 @media (min-width: 1024px) {
   .lg\:mt-52 {
     margin-top: 13rem;
-  }
-
-  .lg\:block {
-    display: block;
-  }
-
-  .lg\:flex {
-    display: flex;
-  }
-
-  .lg\:w-1\/4 {
-    width: 25%;
   }
 
   .lg\:w-3\/4 {

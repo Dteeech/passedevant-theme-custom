@@ -211,7 +211,7 @@ function custom_homepage_content_shortcode() {
             function loadDesktopContent(data) {
                 const expertiseContent = document.getElementById('expertise-content');
                 expertiseContent.innerHTML = `
-                    <div class="menu-links flex flex-col w-1/3 gap-11">
+                    <div class="menu-links pb-14 flex flex-col w-1/3 gap-11">
                         ${data.menu.map((menu, index) => `
                             <div class="menu-link ${menu.id} flex rounded-xl justify-end h-32 relative ${index === 0 ? 'active' : ''}">
                                 <a class="full-link w-full text-left text-xl ${index === 0 ? 'active' : ''}" href="#" data-target="${menu.id}">
