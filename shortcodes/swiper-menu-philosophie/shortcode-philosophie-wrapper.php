@@ -5,7 +5,7 @@ function custom_swiper_philosophie_swiper_shortcode() {
     <div class="container mx-auto">
         <h2 class="text-5xl text-black ">Notre philosophie</h2>
     </div>
-<div class="mx-auto px-0 w-100 flex flex-col lg:flex-row ">
+<div class="mx-auto px-0 w-100 flex flex-col lg:flex-row mb-20">
     <div class="menu w-1/4 flex align-middle justify-center">
         <ul class="underline--gradient flex flex-col align-middle justify-center gap-8">
             <li><a class=" text-2xl font-bold" href="#" data-slide="0">1.Objectifs</a></li>
@@ -225,6 +225,9 @@ function custom_swiper_philosophie_swiper_shortcode() {
 .swiper-button-next {
     right:20px;
     z-index: 92;
+}
+.swiper-pagination-bullet-active {
+    background:black;
 }
 @media (max-width: 1024px) {
     .menu {

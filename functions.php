@@ -389,7 +389,8 @@ require get_template_directory() . '/shortcodes/philosophie-menu/AJAX/ajax-handl
 
 require get_template_directory() . '/shortcodes/swiper-menu-philosophie/shortcode-philosophie-wrapper.php';
 
-//enqueue de la librairie swiper
+require get_template_directory() . '/shortcodes/3_blocks_reassurance_poles/shortcode_3_blocks_reassurance_poles.php';
+
 
 function enqueue_swiper_assets() {
     wp_enqueue_style('swiper-css', 'https://unpkg.com/swiper/swiper-bundle.min.css');

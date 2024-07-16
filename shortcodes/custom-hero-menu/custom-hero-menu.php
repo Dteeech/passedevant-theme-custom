@@ -5,13 +5,13 @@ function custom_hero_menu_shortcode()
     ?>
     <div class="custom-hero-menu absolute top-20 -right-40 w-1/4 flex flex-col md:flex md:flex-col">
         <div class="link-container seo">
-            <a href="#" class="link-item lg:text-xl">Le référencement</a>
+            <a href="#" class="link-item lg:text-2xl">Le référencement</a>
         </div>
         <div class="link-container crea-web ms-20">
-            <a href="#" class="link-item lg:text-xl">La création de site web</a>
+            <a href="#" class="link-item lg:text-2xl">La création de site web</a>
         </div>
         <div class="link-container formation ms-36">
-            <a href="#" class="link-item lg:text-xl">La formation</a>
+            <a href="#" class="link-item lg:text-2xl">La formation</a>
         </div>
     </div>
     <style>

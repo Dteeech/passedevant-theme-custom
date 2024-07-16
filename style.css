@@ -197,6 +197,7 @@ header .sub-menu > li::before {
 h1 {
   font-size: 2em;
   margin: 0.67em 0;
+  line-height: 55px;
 }
 
 .title-alike,
