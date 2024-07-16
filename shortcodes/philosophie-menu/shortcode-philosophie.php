@@ -96,6 +96,9 @@ function custom_philosophie_content_shortcode() {
     </style>
     <script>
         document.addEventListener('DOMContentLoaded', function () {
+
+                    
+
             const isMobile = window.innerWidth <= 1024;
 
             fetch('<?php echo admin_url('admin-ajax.php?action=get_philosophie_content'); ?>')
