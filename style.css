@@ -106,6 +106,10 @@ header {
 .site-title {
   margin: 0;
 }
+
+/* Assurez-vous que Tailwind CSS est bien configuré dans votre projet */
+
+
 /**
  * Render the `main` element consistently in IE.
  */
@@ -116,7 +120,7 @@ main {
 /*primary style*/
 .primary-button .wp-block-button__link {
   background-color: transparent;
-  border: 1px solid white;
+  border: 2px solid white;
   font-size: medium;
 
 }
@@ -803,7 +807,12 @@ textarea {
   min-width: 250px;
   margin-left: 150px;
 }
-
+.bloc-cta div div {
+  padding:10px 0px;
+}
+.bloc-cta div div p{
+  padding:10px 294px;
+}
 .main-navigation ul {
   display: none;
   list-style: none;
@@ -1205,12 +1214,29 @@ a.cta::after {
   margin-bottom: 25px;
 }
 @media (max-width: 768px) {
+  
   .site-footer {
     padding: 25px 45px;
   }
   .footer-column {
     min-width: calc(100% / 2 - 20px);
   }
+
+.bloc-cta p {
+  line-height:20px;
+  margin-bottom:20px;
+}
+.bloc-cta div div {
+  padding:0;
+  
+}
+.bloc-cta div div p{
+  padding:0;
+  font-size: small !important;
+}
+.bloc-cta .gradient-text_title {
+  font-size: larger !important;
+}
 }
 
 @media (max-width: 480px) {
@@ -1233,7 +1259,6 @@ a.cta::after {
 --------------------------------------------------------------*/
 /*Fonts and text colors*/
 .gradient-text_title {
-  font-size: 3rem;
   background: linear-gradient(to right, #00b4d8, #ff0096);
   -webkit-background-clip: text;
   color: transparent;

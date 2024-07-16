@@ -82,7 +82,7 @@ function custom_swiper_philosophie_swiper_shortcode() {
                     </div>
                     
                 </div>
-                <div class="swiper-slide">
+                <div class="swiper-slide px-">
                     <div class="title flex flex-col gap-7">
                         <h2 class="title__text gradient-text_title">accompagnement</h2>
                         <p>
@@ -232,6 +232,12 @@ function custom_swiper_philosophie_swiper_shortcode() {
 @media (max-width: 1024px) {
     .menu {
         display: none;
+    }
+}
+@media (max-width: 768px) {
+    .swiper-slide {
+        margin:0;
+        padding:0;
     }
 }
 </style>
