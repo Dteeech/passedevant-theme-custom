@@ -35,25 +35,30 @@
                 $logo_url = $default_logo_url ? $default_logo_url : get_template_directory_uri() . '/assets/images/default-logo.png';
             }
             ?>
-
-            <nav id="site-navigation" class="flex flex-row align-top main-navigation underline--gradient">
-                <a id="logo" href="/">
+            <div id="site-navigation" class="flex flex-row align-top underline--gradient">
+                <a id="logo" class="lg:invisible me-20" href="/">
                     <img src="<?php echo esc_url($logo_url); ?>" alt="Logo">
                 </a>
-                <div class="container mx-auto">
-
-                    <button class="menu-toggle " aria-controls="primary-menu"
-                        aria-expanded="false"><?php esc_html_e('Primary Menu', 'passedevant'); ?></button>
-                    <?php
-                wp_nav_menu(
-                    array(
-                        'theme_location' => 'menu-1',
-                        'menu_id' => 'primary-menu',
-                        'container' => 'nav'
-                    )
-                );
-                ?>
-                </div>
-
-            </nav><!-- #site-navigation -->
+                <nav class="main-navigation">
+                
+                <a id="logo" class="sm:me-20" href="/">
+                    <img src="<?php echo esc_url($logo_url); ?>" alt="Logo">
+                </a>
+    
+                        <button class="menu-toggle " aria-controls="primary-menu"
+                            aria-expanded="false"><?php esc_html_e('Primary Menu', 'passedevant'); ?></button>
+                        <?php
+                    wp_nav_menu(
+                        array(
+                            'theme_location' => 'menu-1',
+                            'menu_id' => 'primary-menu',
+                            'container' => 'nav'
+                        )
+                    );
+                    
+                    ?>
+                    
+    
+                </nav><!-- #site-navigation -->
+            </div>
         </header><!-- #masthead -->

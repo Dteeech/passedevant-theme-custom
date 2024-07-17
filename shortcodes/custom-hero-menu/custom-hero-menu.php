@@ -73,7 +73,6 @@ function custom_hero_menu_shortcode()
                 top: auto;
                 right: auto;
                 width: auto;
-                flex-direction: row;
                 justify-content: center;
                 margin-bottom: 20px;
             }
@@ -86,7 +85,7 @@ function custom_hero_menu_shortcode()
                 padding: 10px 15px;
                 text-align: center;
                 height: auto !important;
-                width: 55px !important;
+                width: 100%;
                 font-size: .75rem !important;
                 background: white !important;
                 color: black !important;

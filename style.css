@@ -522,6 +522,10 @@ textarea {
 h1 {
   font-size: 48px !important;
 }
+h2 {
+  font-size: 36px !important;
+}
+
 h1,
 h2,
 h3,
@@ -789,7 +793,8 @@ textarea {
 .main-navigation {
   padding-top: 24px;
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
+  align-items: center;
   gap: 8vw;
   width: 100%;
 }
@@ -857,6 +862,7 @@ textarea {
   display: block;
   text-decoration: none;
   color: #fff;
+  font-size: 20px;
 }
 
 /* Small menu. */
@@ -1213,8 +1219,16 @@ a.cta::after {
 .footer-widgets .widget-title  {
   margin-bottom: 25px;
 }
+
 @media (max-width: 768px) {
-  
+
+  .main-navigation {
+    justify-content: center;
+  }
+  .main-navigation .menu-menu-1-container{
+    display: flex;
+    flex-direction: column;
+  }
   .site-footer {
     padding: 25px 45px;
   }
@@ -1258,7 +1272,7 @@ a.cta::after {
 # Utilities
 --------------------------------------------------------------*/
 /*Fonts and text colors*/
-.gradient-text_title {
+.gradient-text_title{
   background: linear-gradient(to right, #00b4d8, #ff0096);
   -webkit-background-clip: text;
   color: transparent;

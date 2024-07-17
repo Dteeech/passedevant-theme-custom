@@ -290,13 +290,13 @@ function render_header_color_metabox($post)
 	$header_color = get_post_meta($post->ID, '_header_color', true);
 	wp_nonce_field('save_header_color_metabox', 'header_color_metabox_nonce');
 	?>
-	<label>
-		<input type="radio" name="header_color" value="light" <?php checked($header_color, 'light'); ?> /> Light
-	</label><br />
-	<label>
-		<input type="radio" name="header_color" value="dark" <?php checked($header_color, 'dark'); ?> /> Dark
-	</label>
-	<?php
+<label>
+    <input type="radio" name="header_color" value="light" <?php checked($header_color, 'light'); ?> /> Light
+</label><br />
+<label>
+    <input type="radio" name="header_color" value="dark" <?php checked($header_color, 'dark'); ?> /> Dark
+</label>
+<?php
 }
 
 function save_header_color_metabox($post_id)

@@ -99,7 +99,8 @@ function get_google_my_business_rating($atts) {
                 flex-direction:column;
                 flex-wrap:nowrap;
                 font-size:0.75rem;
-                margin:auto;
+                margin:0;
+                margin-top:20px;
             }
             .google-logo {
                 padding:0;
