@@ -8,7 +8,7 @@ function custom_swiper_philosophie_swiper_shortcode() {
 <div class="mx-auto px-0 w-100 flex flex-col lg:flex-row mb-20">
     <div class="menu w-1/4 flex align-middle justify-center">
         <ul class="underline--gradient flex flex-col align-middle justify-center gap-8">
-            <li><a class=" text-2xl font-bold" href="#" data-slide="0">1.Objectifs</a></li>
+            <li><a class=" text-2xl font-bold" href="#" data-slide="0">1.ahahahah ça marche</a></li>
             <li><a class=" text-2xl font-bold" href="#" data-slide="1">2.Audit</a></li>
             <li><a class=" text-2xl font-bold" href="#" data-slide="2">3.Stratégie</a></li>
             <li><a class=" text-2xl font-bold" href="#" data-slide="3">4.Dashboard</a></li>
