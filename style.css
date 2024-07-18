@@ -69,7 +69,6 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 html {
   line-height: 1.15;
   -webkit-text-size-adjust: 100%;
-  
 }
 
 /* Sections
@@ -81,7 +80,7 @@ html {
 body {
   margin: 0;
   font-family: "Labil Grotesk", sans-serif;
-  overflow-x:hidden !important;
+  overflow-x: hidden !important;
 }
 
 /* Header
@@ -90,8 +89,7 @@ body {
 /**
  * header proprieties
  */
- 
- 
+
 header {
   padding: 25px 8px;
   display: flex;
@@ -109,7 +107,6 @@ header {
 
 /* Assurez-vous que Tailwind CSS est bien configuré dans votre projet */
 
-
 /**
  * Render the `main` element consistently in IE.
  */
@@ -122,7 +119,6 @@ main {
   background-color: transparent;
   border: 2px solid white;
   font-size: medium;
-
 }
 
 .primary-button .wp-block-button__link:hover {
@@ -538,7 +534,7 @@ p {
   margin-bottom: 1.5em;
   font-weight: 300;
   font-size: 20px;
-  font-family: 'Labil Grotesk', sans-serif;
+  font-family: "Labil Grotesk", sans-serif;
 }
 
 dfn,
@@ -684,7 +680,6 @@ a:hover::after {
   color: defau;
 } */
 
-
 a:focus,
 a:active {
   /* color: #191970; */
@@ -813,10 +808,10 @@ textarea {
   margin-left: 150px;
 }
 .bloc-cta div div {
-  padding:10px 0px;
+  padding: 10px 0px;
 }
-.bloc-cta div div p{
-  padding:10px 294px;
+.bloc-cta div div p {
+  padding: 10px 294px;
 }
 .main-navigation ul {
   display: none;
@@ -864,7 +859,40 @@ textarea {
   color: #fff;
   font-size: 20px;
 }
+/**
+Custom pour le cta header
+**/
+/* Annuler les styles ::after pour le lien Contact */
+.main-navigation .menu-item-339 a::after {
+  content: none !important;
+}
 
+/* Ajouter des styles spécifiques pour le lien Contact */
+.main-navigation .menu-item-339 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0; /* Ajuster le padding si nécessaire */
+}
+
+.main-navigation .menu-item-339 a {
+  width: auto !important;
+  height: auto !important;
+  padding: calc(0.667em + 2px) calc(1.333em + 2px); /* Ajuster le padding si nécessaire */
+  background-color: #333; /* Exemple de couleur de fond */
+  color: #fff; /* Exemple de couleur du texte */
+  border-radius: 50px; /* Exemple de coin arrondis */
+  text-decoration: none; /* Supprimer la décoration du texte */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Styles supplémentaires pour le bouton Contact */
+.main-navigation .menu-item-339 a:hover {
+  background-color: white; /* Exemple de couleur de fond au survol */
+  color: #1e1e1e; /* Exemple de couleur du texte au survol */
+}
 /* Small menu. */
 .menu-toggle,
 .main-navigation.toggled ul {
@@ -1212,20 +1240,19 @@ a.cta::after {
 .footer-widgets ul li .sub-menu {
   display: flex;
   flex-direction: column;
-  gap:4px;
+  gap: 4px;
   margin-left: 5px;
 }
 
-.footer-widgets .widget-title  {
+.footer-widgets .widget-title {
   margin-bottom: 25px;
 }
 
 @media (max-width: 768px) {
-
   .main-navigation {
     justify-content: center;
   }
-  .main-navigation .menu-menu-1-container{
+  .main-navigation .menu-menu-1-container {
     display: flex;
     flex-direction: column;
   }
@@ -1236,21 +1263,20 @@ a.cta::after {
     min-width: calc(100% / 2 - 20px);
   }
 
-.bloc-cta p {
-  line-height:20px;
-  margin-bottom:20px;
-}
-.bloc-cta div div {
-  padding:0;
-  
-}
-.bloc-cta div div p{
-  padding:0;
-  font-size: small !important;
-}
-.bloc-cta .gradient-text_title {
-  font-size: larger !important;
-}
+  .bloc-cta p {
+    line-height: 20px;
+    margin-bottom: 20px;
+  }
+  .bloc-cta div div {
+    padding: 0;
+  }
+  .bloc-cta div div p {
+    padding: 0;
+    font-size: small !important;
+  }
+  .bloc-cta .gradient-text_title {
+    font-size: larger !important;
+  }
 }
 
 @media (max-width: 480px) {
@@ -1272,7 +1298,7 @@ a.cta::after {
 # Utilities
 --------------------------------------------------------------*/
 /*Fonts and text colors*/
-.gradient-text_title{
+.gradient-text_title {
   background: linear-gradient(to right, #00b4d8, #ff0096);
   -webkit-background-clip: text;
   color: transparent;
@@ -1349,16 +1375,19 @@ a.cta::after {
 
 @media (max-width: 767px) {
   .xs-invisible {
-      display: none !important;
+    display: none !important;
   }
-  p, .primary-button .wp-block-button__link, a, .link-item {
-    font-size:16px !important;
+  p,
+  .primary-button .wp-block-button__link,
+  a,
+  .link-item {
+    font-size: 16px !important;
   }
-  .site-footer, .footer-widgets {
-    margin-top:0px;
+  .site-footer,
+  .footer-widgets {
+    margin-top: 0px;
   }
   .footer_cta-section {
     display: none;
   }
-  
 }
