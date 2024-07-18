@@ -765,7 +765,7 @@ input[type="datetime"]:focus,
 input[type="datetime-local"]:focus,
 input[type="color"]:focus,
 textarea:focus {
-  color: #111;
+  color: white !important;
 }
 
 select {
@@ -944,12 +944,13 @@ Custom pour le cta header
 }
 
 .references_wrapper .references_button a {
-  color: black; /* Couleur par défaut du texte */
-  border: 1px solid black; /* Couleur par défaut de la bordure */
+  color: white; /* Couleur par défaut du texte */
+  border: 1px solid white; /* Couleur par défaut de la bordure */
   transition: color 0.5s ease-in-out, border 0.5s ease-in-out;
 }
 
-.references_wrapper .references_col:hover .references_button a {
+.references_wrapper .references_col .references_button a:hover {
+  transition: color 0.5s ease-in-out, border 0.5s ease-in-out;
   background-color: rgba(255, 255, 255, 0.7); /* Inverser la couleur du fond lors du survol */
   color: black; /* Inverser la couleur du texte lors du survol */
   border: 1px solid black; /* Inverser la couleur de la bordure lors du survol */
@@ -1273,13 +1274,38 @@ a.cta::after {
 }
 
 .footer-newsletter form {
-  max-width: 100%;
-  padding: 40px !important;
+  display: flex;
+  flex-direction: column;
+  max-width: 70%;
+  padding: 20px !important;
   border: 1px solid white !important;
+  justify-content: center;
+  text-align: center;
+}
+.footer-newsletter form > .wpforms-field-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 100%;
+  margin: auto;
+}
+.footer-newsletter form .wpforms-field-container {
+  display: flex;
+  width: 100% !important;
+  
+}
+.wpforms-field input {
+  color:white !important; 
+}
+.footer-newsletter .wpforms-field input{
+  background-color: #1e1e1e !important;
+  
 }
 .footer-newsletter_button {
   background: linear-gradient(to right, #00bfff, #ff69b4) !important;
   border-radius: 20px !important;
+  border: none !important;
+  border-color: white !important;
 }
 .footer-column {
   display: flex;
