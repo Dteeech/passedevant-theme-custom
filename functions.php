@@ -397,3 +397,39 @@ function enqueue_swiper_assets() {
     wp_enqueue_script('swiper-js', 'https://unpkg.com/swiper/swiper-bundle.min.js', array(), null, true);
 }
 add_action('wp_enqueue_scripts', 'enqueue_swiper_assets');
+
+
+/**
+ * Enqueue custom block scripts and styles.
+ */
+function register_references_block() {
+    // Register the block editor script.
+    wp_register_script(
+        'references-block-editor-script',
+        get_template_directory_uri() . '/blocks/references-block/build/index.js',
+        array( 'wp-blocks', 'wp-i18n', 'wp-element', 'wp-editor' ),
+        filemtime( get_template_directory() . '/blocks/references-block/build/index.js' )
+    );
+
+    // Register the block editor styles.
+    wp_register_style(
+        'references-block-editor-style',
+        get_template_directory_uri() . '/blocks/references-block/build/index.css',
+        array( 'wp-edit-blocks' ),
+        filemtime( get_template_directory() . '/blocks/references-block/build/index.css' )
+    );
+
+    // Register the front-end styles.
+    wp_register_style(
+        'references-block-style',
+        get_template_directory_uri() . '/blocks/references-block/build/style-index.css',
+        array(),
+        filemtime( get_template_directory() . '/blocks/references-block/build/style-index.css' )
+    );
+
+    // Register the block type.
+    register_block_type( get_template_directory() . '/blocks/references-block/build' );
+	
+}
+
+add_action( 'init', 'register_references_block' );
