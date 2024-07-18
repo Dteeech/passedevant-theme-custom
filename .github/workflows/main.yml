@@ -3,27 +3,20 @@ name: Deploy to Production
 on:
   push:
     branches:
-      - main  # ou la branche que vous utilisez pour la production
+      - main  # ou la branche que vous utilisez pour le déploiement
 
 jobs:
-  deploy:
+  ftp-deploy:
     runs-on: ubuntu-latest
-
     steps:
-    - name: Checkout code
-      uses: actions/checkout@v2
+      - name: Checkout code
+        uses: actions/checkout@v2
 
-    - name: Install dependencies
-      run: npm install  # ou autre commande d'installation de vos dépendances
-
-    - name: Build project
-      run: npm run build  # ou autre commande de build de votre projet
-
-    - name: Deploy to server via FTP
-      uses: SamKirkland/FTP-Deploy-Action@4.1.0
-      with:
-        ftp-server: ${{ secrets.FTP_SERVER }}
-        ftp-username: ${{ secrets.FTP_USERNAME }}
-        ftp-password: ${{ secrets.FTP_PASSWORD }}
-        local-dir: "dist/"  # ou autre dossier contenant les fichiers à déployer
-        server-dir: "/path/to/your/production/folder"  # le chemin vers votre dossier de production sur le serveur
+      - name: Upload to FTP
+        uses: SamKirkland/FTP-Deploy-Action@4.1.0
+        with:
+          ftp-server: ${{ secrets.FTP_SERVER }}
+          ftp-username: ${{ secrets.FTP_USERNAME }}
+          ftp-password: ${{ secrets.FTP_PASSWORD }}
+          local-dir: PASSEDEVANT  # Chemin vers le répertoire local du thème
+          server-dir: "/sites/refonte.passedevant.net/wp-content/themes/passedevant"  # Chemin sur le serveur de production
