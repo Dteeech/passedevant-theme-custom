@@ -20,4 +20,6 @@ jobs:
           password: ${{ secrets.FTP_PASSWORD }}
           local-dir: ./  # Chemin vers le répertoire local du thème
           server-dir: "/sites/refonte.passedevant.net/wp-content/themes/passedevant/"  # Chemin sur le serveur de production
+          ignore:
+            - "blocks/**"
           continue-on-error: true
