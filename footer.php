@@ -42,7 +42,7 @@
 		<?php endfor; ?>
 	</div>
 	<div class="site-info text-">
-		<?php esc_html_e('Fait avec ❤️ par Passedevant', 'passedevant'); ?>
+		<p><?php esc_html_e('Fait avec ❤️ par Passedevant', 'passedevant'); ?> - <a href="/mentions-legales">Mentions légales</a></p>
 	</div><!-- .site-info -->
 </footer><!-- #colophon -->
 

@@ -15,8 +15,8 @@ jobs:
       - name: Upload to FTP
         uses: SamKirkland/FTP-Deploy-Action@4.1.0
         with:
-          ftp-server: ${{ secrets.FTP_SERVER }}
-          ftp-username: ${{ secrets.FTP_USERNAME }}
-          ftp-password: ${{ secrets.FTP_PASSWORD }}
-          local-dir: PASSEDEVANT  # Chemin vers le répertoire local du thème
-          server-dir: "/sites/refonte.passedevant.net/wp-content/themes/passedevant"  # Chemin sur le serveur de production
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          local-dir: ./  # Chemin vers le répertoire local du thème
+          server-dir: "/sites/refonte.passedevant.net/wp-content/themes/passedevant/"  # Chemin sur le serveur de production

@@ -45,7 +45,8 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 # plugins
 	- Jetpack infinite scroll
 # Utilities
-	- Accessibility
+	- 
+  essibility
 	- Alignments
 
 --------------------------------------------------------------*/
@@ -764,7 +765,7 @@ input[type="datetime"]:focus,
 input[type="datetime-local"]:focus,
 input[type="color"]:focus,
 textarea:focus {
-  color: #111;
+  color: white !important;
 }
 
 select {
@@ -897,6 +898,67 @@ Custom pour le cta header
 .menu-toggle,
 .main-navigation.toggled ul {
   display: block;
+}
+.references_wrapper {
+  display: flex;
+  border: 3px solid white !important;
+  height: 740px; /* Hauteur explicite pour le conteneur */
+}
+
+.references_wrapper .references_col {
+  position: relative;
+  flex: 1;
+  overflow: hidden;
+  background-color: #1e1e1e;
+  border-right: 2px solid white !important;
+  height: 100%; /* S'assurer que la colonne prend toute la hauteur */
+}
+
+.references_button {
+  position: absolute;
+  bottom: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 999;
+}
+
+.references_button a {
+  border-radius: 20px !important;
+}
+
+.references_wrapper .references_col img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Assure que l'image couvre tout l'espace de la colonne */
+  opacity: 0;
+	transition: .6s ease-in-out;
+  
+}
+
+.references_wrapper .references_col:hover img {
+  opacity: 1;
+ 
+}
+
+.references_wrapper .references_button a {
+  color: white; /* Couleur par défaut du texte */
+  border: 1px solid white; /* Couleur par défaut de la bordure */
+  transition: color 0.5s ease-in-out, border 0.5s ease-in-out;
+}
+
+.references_wrapper .references_col .references_button a:hover {
+  transition: color 0.5s ease-in-out, border 0.5s ease-in-out;
+  background-color: rgba(255, 255, 255, 0.7); /* Inverser la couleur du fond lors du survol */
+  color: black; /* Inverser la couleur du texte lors du survol */
+  border: 1px solid black; /* Inverser la couleur de la bordure lors du survol */
+}
+
+.references_voirplus {
+  font-size: 212px;
+  line-height: 86%;
 }
 
 @media screen and (min-width: 37.5em) {
@@ -1212,13 +1274,38 @@ a.cta::after {
 }
 
 .footer-newsletter form {
-  max-width: 100%;
-  padding: 40px !important;
+  display: flex;
+  flex-direction: column;
+  max-width: 70%;
+  padding: 20px !important;
   border: 1px solid white !important;
+  justify-content: center;
+  text-align: center;
+}
+.footer-newsletter form > .wpforms-field-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 100%;
+  margin: auto;
+}
+.footer-newsletter form .wpforms-field-container {
+  display: flex;
+  width: 100% !important;
+  
+}
+.wpforms-field input {
+  color:white !important; 
+}
+.footer-newsletter .wpforms-field input{
+  background-color: #1e1e1e !important;
+  
 }
 .footer-newsletter_button {
   background: linear-gradient(to right, #00bfff, #ff69b4) !important;
   border-radius: 20px !important;
+  border: none !important;
+  border-color: white !important;
 }
 .footer-column {
   display: flex;
@@ -1303,7 +1390,8 @@ a.cta::after {
   -webkit-background-clip: text;
   color: transparent;
 }
-/* Accessibility
+/* 
+essibility
 --------------------------------------------- */
 
 /* Text meant only for screen readers. */
