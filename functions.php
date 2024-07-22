@@ -392,8 +392,18 @@ require get_template_directory() . '/shortcodes/swiper-menu-philosophie/shortcod
 require get_template_directory() . '/shortcodes/3_blocks_reassurance_poles/shortcode_3_blocks_reassurance_poles.php';
 
 
-function enqueue_swiper_assets() {
-    wp_enqueue_style('swiper-css', 'https://unpkg.com/swiper/swiper-bundle.min.css');
-    wp_enqueue_script('swiper-js', 'https://unpkg.com/swiper/swiper-bundle.min.js', array(), null, true);
+function enqueue_custom_swiper() {
+    // Check if Swiper.js is already enqueued
+    if (!wp_script_is('swiper-js', 'enqueued')) {
+        wp_enqueue_script('swiper-js', 'https://unpkg.com/swiper/swiper-bundle.min.js', array(), null, true);
+    }
+
+    // Enqueue your custom swiper script
+    wp_enqueue_script('custom-swiper-js', get_template_directory_uri() . '/shortcodes/swiper-menu-philosophie/swiper.js', array('swiper-js'), null, true);
+
+    // Check if Swiper.css is already enqueued
+    if (!wp_style_is('swiper-css', 'enqueued')) {
+        wp_enqueue_style('swiper-css', 'https://unpkg.com/swiper/swiper-bundle.min.css', array(), null);
+    }
 }
-add_action('wp_enqueue_scripts', 'enqueue_swiper_assets');
+add_action('wp_enqueue_scripts', 'enqueue_custom_swiper');

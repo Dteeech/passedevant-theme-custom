@@ -5,10 +5,12 @@
     <meta charset="<?php bloginfo('charset'); ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="profile" href="https://gmpg.org/xfn/11">
+    
     <?php wp_head(); ?>
 </head>
 
 <body <?php body_class(); ?>>
+    
     <?php
     $header_color = get_post_meta(get_the_ID(), '_header_color', true);
     $header_class = ($header_color === 'dark') ? 'header-dark' : 'header-light';
@@ -19,8 +21,7 @@
     ?>
     <?php wp_body_open(); ?>
     <div id="page" class="site">
-        <a class="skip-link screen-reader-text"
-            href="#primary"><?php esc_html_e('Skip to content', 'passedevant'); ?></a>
+        <a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e('Skip to content', 'passedevant'); ?></a>
         <header id="masthead" class="site-header <?php echo esc_attr($header_class); ?>">
             <?php
             $logo_light = get_theme_mod('header_logo_light');
@@ -40,25 +41,28 @@
                     <img src="<?php echo esc_url($logo_url); ?>" alt="Logo">
                 </a>
                 <nav class="main-navigation">
-                
-                <a id="logo" class="sm:me-20" href="/">
-                    <img src="<?php echo esc_url($logo_url); ?>" alt="Logo">
-                </a>
-    
-                        <button class="menu-toggle " aria-controls="primary-menu"
-                            aria-expanded="false"><?php esc_html_e('Primary Menu', 'passedevant'); ?></button>
-                        <?php
+
+                    <a id="logo" class="sm:me-20" href="/">
+                        <img src="<?php echo esc_url($logo_url); ?>" alt="Logo">
+                    </a>
+
+                    <button class="menu-toggle " aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e('Primary Menu', 'passedevant'); ?></button>
+                    <?php
                     wp_nav_menu(
                         array(
                             'theme_location' => 'menu-1',
                             'menu_id' => 'primary-menu',
-                            'container' => 'nav'
+                            'container' => 'nav',
+                            
                         )
                     );
                     
                     ?>
-                    
-    
+
+
                 </nav><!-- #site-navigation -->
             </div>
+            
         </header><!-- #masthead -->
+
+        

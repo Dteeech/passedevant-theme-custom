@@ -241,34 +241,6 @@ function custom_swiper_philosophie_swiper_shortcode() {
     }
 }
 </style>
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-    const settings = {
-        loop: true,
-        speed: 700,
-        pagination: {
-            el: ".swiper-pagination",
-            type: "bullets"
-        },
-        navigation: {
-            nextEl: ".swiper-button-next",
-            prevEl: ".swiper-button-prev"
-        }
-    };
-
-    const swiper = new Swiper(".mySwiper", settings);
-
-    // Add click event listener to menu items
-    const menuItems = document.querySelectorAll('.menu a');
-    menuItems.forEach((item, index) => {
-        item.addEventListener('click', (event) => {
-            event.preventDefault();
-            const slideIndex = parseInt(item.getAttribute('data-slide'), 10);
-            swiper.slideTo(slideIndex);
-        });
-    });
-});
-</script>
 <?php
     return ob_get_clean();
 }

@@ -819,6 +819,7 @@ textarea {
   list-style: none;
   margin: 0;
   padding-left: 0;
+  align-items: center;
 }
 
 .main-navigation ul ul {
@@ -1277,39 +1278,60 @@ a.cta::after {
   padding: 0;
 }
 
-.footer-newsletter form {
+#wpforms-form-57 {
+  background-color: transparent; /* Fond noir */
+  color: #fff; /* Texte blanc */
+  padding: 40px;
+  border: 1px solid #fff; /* Bordure blanche */
+}
+
+#wpforms-form-57 h3 {
+  color: #fff; /* Couleur du titre */
+}
+
+#wpforms-form-57 .wpforms-field input[type="text"],
+#wpforms-form-57 .wpforms-field input[type="email"] {
+  background-color: transparent;
+  border: none;
+  border-bottom: 2px solid #fff; /* Border bottom uniquement */
+  color: #fff;
+  padding: 10px;
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+#wpforms-form-57 .wpforms-field input[type="text"]::placeholder,
+#wpforms-form-57 .wpforms-field input[type="email"]::placeholder {
+  color: #fff;
+  opacity: 0.7;
+}
+
+#wpforms-form-57 .wpforms-field input[type="text"]:focus,
+#wpforms-form-57 .wpforms-field input[type="email"]:focus {
+  outline: none;
+  border-bottom: 2px solid #DF22F0; /* Bordure colorée au focus */
+}
+
+#wpforms-form-57 .wpforms-submit-container {
   display: flex;
-  flex-direction: column;
-  max-width: 70%;
-  padding: 20px !important;
-  border: 1px solid white !important;
-  justify-content: center;
-  text-align: center;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 20px;
 }
-.footer-newsletter form > .wpforms-field-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  max-width: 100%;
-  margin: auto;
+
+#wpforms-form-57 .wpforms-submit {
+  background-color: #fff; /* Bouton blanc */
+  color: #1e1e1e; /* Texte noir */
+  border: 1px solid #fff; /* Bordure blanche */
+  padding: 10px 20px;
+  border-radius: 50px;
+  transition: all 0.3s ease;
 }
-.footer-newsletter form .wpforms-field-container {
-  display: flex;
-  width: 100% !important;
-  
-}
-.wpforms-field input {
-  color:white !important; 
-}
-.footer-newsletter .wpforms-field input{
-  background-color: #1e1e1e !important;
-  
-}
-.footer-newsletter_button {
-  background: linear-gradient(to right, #00bfff, #ff69b4) !important;
-  border-radius: 20px !important;
-  border: none !important;
-  border-color: white !important;
+
+#wpforms-form-57 .wpforms-submit:hover {
+  background-color: #1e1e1e; /* Fond noir au hover */
+  color: #fff; /* Texte blanc au hover */
+  border: 1px solid #fff; /* Bordure blanche au hover */
 }
 .footer-column {
   display: flex;
@@ -1483,3 +1505,4 @@ essibility
     display: none;
   }
 }
+
