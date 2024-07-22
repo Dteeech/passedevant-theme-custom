@@ -916,8 +916,8 @@ Custom pour le cta header
 
 .references_button {
   position: absolute;
-  bottom: 10%;
-  left: 50%;
+  bottom: 30px;
+  right: 0px;
   transform: translateX(-50%);
   z-index: 999;
 }
@@ -960,7 +960,11 @@ Custom pour le cta header
   font-size: 212px;
   line-height: 86%;
 }
-
+.references_wrapper .references_title {
+  position: absolute;
+  bottom: 100px;
+  left: 45px;
+}
 @media screen and (min-width: 37.5em) {
   .menu-toggle {
     display: none;
