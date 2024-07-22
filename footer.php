@@ -40,6 +40,15 @@
 				<?php endif; ?>
 			</div>
 		<?php endfor; ?>
+		<div class="wrapper flex">
+			<div class=""><img src="<?php echo get_template_directory_uri() . '/images/logos-footer/google-analytics-logo.webp' ?>" alt="Logo Google analytics"></div>
+			<div class=""><img src="<?php echo get_template_directory_uri() . '/images/logos-footer/google-my-business-logo.webp' ?>" alt="Logo google my business"></div>
+			<div class=""><img src="<?php echo get_template_directory_uri() .'/images/logos-footer/google-tag-manager-logo.webp' ?>" alt="Logo google tag manager"></div>
+			<div class=""><img src="<?php echo get_template_directory_uri() . '/images/logos-footer/seranking.webp' ?>" alt="Logo seranking"></div>
+			<div class=""><img src="<?php echo get_template_directory_uri() . '/images/logos-footer/logo-wordpress.webp' ?>" alt="Logo WordPress"></div>
+			<div class=""><img src="<?php echo get_template_directory_uri() . '/images/logos-footer/logo-shopify.webp' ?>" alt="Logo Shopify"></div>
+			<div class=""><img src="<?php echo get_template_directory_uri() . '/images/logos-footer/logo-prestashop.webp' ?>" alt="Logo Prestashop"></div>
+		</div>
 	</div>
 	<div class="site-info text-">
 		<p><?php esc_html_e('Fait avec ❤️ par Passedevant', 'passedevant'); ?> - <a href="/mentions-legales">Mentions légales</a></p>
