@@ -1,0 +1,23 @@
+.partner-logo {
+    display: inline-block;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.partner-logo img {
+    display: block;
+    max-width: 100px;
+}
+
+.partner-logo .remove-logo {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: red;
+    color: white;
+    padding: 2px 5px;
+    text-decoration: none;
+    font-weight: bold;
+    cursor: pointer;
+}

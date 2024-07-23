@@ -391,7 +391,7 @@ require get_template_directory() . '/shortcodes/swiper-menu-philosophie/shortcod
 
 require get_template_directory() . '/shortcodes/3_blocks_reassurance_poles/shortcode_3_blocks_reassurance_poles.php';
 
-
+// Enqueue Swiper.js and Swiper.css
 function enqueue_custom_swiper() {
     // Check if Swiper.js is already enqueued
     if (!wp_script_is('swiper-js', 'enqueued')) {
@@ -407,3 +407,26 @@ function enqueue_custom_swiper() {
     }
 }
 add_action('wp_enqueue_scripts', 'enqueue_custom_swiper');
+
+// Inclure les fichiers de shortcodes
+require_once get_template_directory() . '/shortcodes/slider-partners-logos/slider-partners-logos.php';
+require_once get_template_directory() . '/shortcodes/slider-partners-logos/metabox.php';
+
+// Enqueue des scripts et styles pour le slider
+function enqueue_slider_assets() {
+    // Enqueue your custom swiper initialization script
+    wp_enqueue_script('custom-swiper-init', get_template_directory_uri() . '/shortcodes/slider-partners-logos/swiper.js', array('swiper-js'), null, true);
+}
+add_action('wp_enqueue_scripts', 'enqueue_slider_assets');
+
+// Enqueue des scripts et styles pour la metabox
+function enqueue_custom_metabox_scripts($hook) {
+    if ('post.php' !== $hook && 'post-new.php' !== $hook) {
+        return;
+    }
+	wp_enqueue_media();
+    wp_enqueue_script('custom-metabox-js', get_template_directory_uri() . '/shortcodes/slider-partners-logos/metabox.js', array('jquery'), null, true);
+    wp_enqueue_style('custom-metabox-css', get_template_directory_uri() . '/shortcodes/slider-partners-logos/metabox.css', array(), null);
+    wp_enqueue_script('custom-swiper-js', get_template_directory_uri() . '/shortcodes/slider-partners-logos/swiper.js', array(), null);
+}
+add_action('admin_enqueue_scripts', 'enqueue_custom_metabox_scripts');
