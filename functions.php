@@ -435,3 +435,11 @@ add_action('admin_enqueue_scripts', 'enqueue_custom_metabox_scripts');
 // Inclure les fichiers nécessaires
 require_once get_template_directory() . '/shortcodes/methodologie-seo/metabox-methodologie-seo.php';
 require_once get_template_directory() . '/shortcodes/methodologie-seo/methodologie-seo.php';
+
+//accrodeon wpt
+// WP Tutorials : Accordion
+// Inclure les fichiers de l'accordéon
+require_once get_stylesheet_directory() . '/accordion/wpt-accordion.css';
+require_once get_template_directory() . '/accordion/wpt-accordion.php';
+require_once get_template_directory() . '/accordion/wpt-accordion.js';
+

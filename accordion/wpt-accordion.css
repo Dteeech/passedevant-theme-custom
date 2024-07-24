@@ -1,0 +1,36 @@
+/**
+ * Headwall WP Tutorials : Accordion (WPTACC)
+ *
+ * wpt-accordion.css
+ * 
+ * https://wp-tutorials.tech/refine-wordpress/wordpress-accordion-without-a-plugin/
+ */
+ .wptac-container {
+    /* You can add CSS for the accordion container here */
+ }
+ .wptac-header {
+    cursor: pointer;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    border-bottom: 1px solid #000;
+ }
+ .wptac-toggler {
+    position: relative;
+    transition: 0.4s transform;
+ }
+ .wptac-header.expanded .wptac-toggler {
+    transform: rotate(180deg);
+ }
+ .wptac-pane {
+    overflow: hidden;
+    max-height: 0;
+    transition: 0.4s max-height;
+ }
+ .wptac-pane.expanded {
+    max-height: 200px; /* Or a value that works for your content */
+    overflow: visible;
+ }
+ 
