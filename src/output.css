@@ -948,6 +948,10 @@ video {
   width: 25%;
 }
 
+.w-1\/5 {
+  width: 20%;
+}
+
 .w-2 {
   width: 0.5rem;
 }
@@ -958,6 +962,10 @@ video {
 
 .w-3 {
   width: 0.75rem;
+}
+
+.w-3\/5 {
+  width: 60%;
 }
 
 .w-4 {
@@ -996,22 +1004,6 @@ video {
 
 .w-screen {
   width: 100vw;
-}
-
-.w-1\/5 {
-  width: 20%;
-}
-
-.w-1\/12 {
-  width: 8.333333%;
-}
-
-.w-1\/2 {
-  width: 50%;
-}
-
-.w-1\/6 {
-  width: 16.666667%;
 }
 
 .min-w-10 {
@@ -1266,16 +1258,16 @@ video {
   padding: 5rem;
 }
 
-.p-4 {
-  padding: 1rem;
-}
-
 .p-24 {
   padding: 6rem;
 }
 
 .p-32 {
   padding: 8rem;
+}
+
+.p-4 {
+  padding: 1rem;
 }
 
 .px-0 {

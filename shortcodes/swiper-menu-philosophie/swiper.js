@@ -12,5 +12,5 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     };
 
-    const swiper = new Swiper(".mySwiper", settings);
+    const swiper = new Swiper(".myPhilosophieSwiper", settings);
 });

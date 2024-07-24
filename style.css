@@ -205,6 +205,12 @@ h1 {
 .widget-title {
   font-size: 2em !important;
 }
+
+.title-seo {
+  background: linear-gradient(90deg, #0524A7 0%, #DF22F0 26.5%, #FDA9C0 54.5%, #430A8B 86.5%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
 /* Grouping content
 	 ========================================================================== */
 
@@ -935,24 +941,31 @@ Custom pour le cta header
   height: 100%;
   object-fit: cover; /* Assure que l'image couvre tout l'espace de la colonne */
   opacity: 0;
-	transition: .6s ease-in-out;
-  
+  transition: 0.6s ease-in-out;
 }
 
 .references_wrapper .references_col:hover img {
   opacity: 1;
- 
 }
 
 .references_wrapper .references_button a {
   color: white; /* Couleur par défaut du texte */
   border: 1px solid white; /* Couleur par défaut de la bordure */
-  transition: color 0.5s ease-in-out, border 0.5s ease-in-out;
+  transition:
+    color 0.5s ease-in-out,
+    border 0.5s ease-in-out;
 }
 
 .references_wrapper .references_col .references_button a:hover {
-  transition: color 0.5s ease-in-out, border 0.5s ease-in-out;
-  background-color: rgba(255, 255, 255, 0.7); /* Inverser la couleur du fond lors du survol */
+  transition:
+    color 0.5s ease-in-out,
+    border 0.5s ease-in-out;
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.7
+  ); /* Inverser la couleur du fond lors du survol */
   color: black; /* Inverser la couleur du texte lors du survol */
   border: 1px solid black; /* Inverser la couleur de la bordure lors du survol */
 }
@@ -1309,7 +1322,7 @@ a.cta::after {
 #wpforms-form-57 .wpforms-field input[type="text"]:focus,
 #wpforms-form-57 .wpforms-field input[type="email"]:focus {
   outline: none;
-  border-bottom: 2px solid #DF22F0; /* Bordure colorée au focus */
+  border-bottom: 2px solid #df22f0; /* Bordure colorée au focus */
 }
 
 #wpforms-form-57 .wpforms-submit-container {
@@ -1505,4 +1518,72 @@ essibility
     display: none;
   }
 }
+/* Reset CSS for Swiper Container */
+.customSwiperPrestation,
+.customSwiperPrestation * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
+.customSwiperPrestation {
+  width: 100%;
+  height: auto;
+  position: relative;
+}
+
+.customSwiperPrestation .swiper-wrapper {
+  display: flex;
+  transition-timing-function: linear !important;
+}
+
+.customSwiperPrestation .swiper-slide {
+  padding: 50px;
+  gap:40px;
+  border: 1px solid #1e1e1e;
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  width: 200px; /* Adjust the width as needed */
+  min-height: 450px; /* Adjust the height as needed */
+}
+
+.prestations .swiper-button-next,
+.prestations .swiper-button-prev {
+  color: #000; /* Change this color to match your design */
+  z-index: -5;
+}
+
+.prestations .swiper-button-prev {
+  position: absolute;
+  left: 140px !important;
+  z-index: -5;
+}
+
+.prestations .swiper-pagination {
+  position: absolute;
+  bottom: -80px !important;
+}
+.prestations .swiper-pagination-bullet-active {
+  background: linear-gradient(
+    90deg,
+    #0524a7 0%,
+    #df22f0 26.5%,
+    #fda9c0 54.5%,
+    #430a8b 86.5%
+  ) !important;
+  height: 20px !important;
+  width: 20px !important;
+}
+.prestations .swiper-pagination-bullet {
+  height: 20px;
+  width: 20px;
+  background-color: #6f0aaa;
+}
+.prestations .cta-svg {
+  right: 75px;
+  bottom: 80px;
+}
