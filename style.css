@@ -207,10 +207,12 @@ h1 {
 }
 
 .title-seo {
-  background: linear-gradient(90deg, #0524A7 0%, #DF22F0 26.5%, #FDA9C0 54.5%, #430A8B 86.5%);
+  background: linear-gradient(90deg, #05A9CF 0%, #5CB6E5 17.5%, #93BAEC 37%, #EDC3DF 57%, #F33585 74.5%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+
+
 /* Grouping content
 	 ========================================================================== */
 
@@ -527,6 +529,9 @@ h1 {
 }
 h2 {
   font-size: 36px !important;
+}
+h3 {
+  font-size: 25px !important;
 }
 
 h1,
@@ -1587,3 +1592,46 @@ essibility
   right: 75px;
   bottom: 80px;
 }
+
+/* les 3 blocks de cogestion */
+.cogestion-wrapper {
+  padding:50px 0 50px 0;
+  display: flex;
+  gap: 50px;
+  margin-left:35px ;
+  margin-right:35px ;
+}
+.cogestion-item {
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+  height: 550px;
+  border: 2px solid white;
+  justify-content: space-evenly !important;
+ 
+
+}
+.bloc-cta-dark-bg_container {
+  position: relative;
+  padding: 50px;
+}
+
+.bloc-cta-dark-bg_container::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 12px; 
+  padding: 3px; 
+  background:linear-gradient(90deg, #05A9CF 0%, #5CB6E5 17.5%, #93BAEC 37%, #EDC3DF 57%, #F33585 74.5%);
+  -webkit-mask: 
+     linear-gradient(#fff 0 0) content-box, 
+     linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+          mask-composite: exclude; 
+  
+}
+
+.cms-wrapper {
+  
+}
+
