@@ -439,7 +439,5 @@ require_once get_template_directory() . '/shortcodes/methodologie-seo/methodolog
 //accrodeon wpt
 // WP Tutorials : Accordion
 // Inclure les fichiers de l'accordéon
-require_once get_stylesheet_directory() . '/accordion/wpt-accordion.css';
 require_once get_template_directory() . '/accordion/wpt-accordion.php';
-require_once get_template_directory() . '/accordion/wpt-accordion.js';
 

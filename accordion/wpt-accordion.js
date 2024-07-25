@@ -1,10 +1,3 @@
-/**
- * Headwall WP Tutorials : Accordion (WPTACC)
- *
- * wpt-accordion.js
- *
- * https://wp-tutorials.tech/refine-wordpress/wordpress-accordion-without-a-plugin/
- */
 document.addEventListener('DOMContentLoaded', function() {
     'use strict';
     if (typeof wptacData !== 'undefined') {
@@ -22,12 +15,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 if (accordionHeader.classList.contains('expanded')) {
                    pane.classList.add('expanded');
                    pane.style.maxHeight = pane.scrollHeight + "px";
-                }
-                if (wptacData.togglerHtml) {
-                   const toggler = document.createElement('div');
-                   toggler.classList.add('wptac-toggler');
-                   toggler.innerHTML = wptacData.togglerHtml;
-                   accordionHeader.append(toggler);
                 }
                 accordionHeader.addEventListener('click', function() {
                    wptacData.toggle(accordionHeader);
