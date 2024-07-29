@@ -7,18 +7,18 @@ function methodologie_seo_shortcode()
         ob_start();
 ?>
         <div class="methodologie-container text-white container mx-auto">
-            <div class="flex w-full">
-                <div class="w-1/5">
+            <div class="flex w-full gap-44">
+                <div class=" min-w-44">
                     <?php foreach ($elements as $index => $element) : ?>
                         <button class="menu-button" data-content-id="content-<?php echo $index + 1; ?>" data-number-id="number-<?php echo $index + 1; ?>"><?php echo esc_html($element['button_text']); ?></button>
                     <?php endforeach; ?>
                 </div>
-                <div class="methodologie-number w-1/5">
+                <div class="methodologie-number ">
                     <?php foreach ($elements as $index => $element) : ?>
-                        <div id="number-<?php echo $index + 1; ?>" class="number-section" style="display: <?php echo $index === 0 ? 'flex' : 'none'; ?>"><?php echo $index + 1; ?></div>
+                        <div id="number-<?php echo $index + 1; ?>" class="number-section" style="display: <?php echo $index === 0 ? 'flex flex-row' : 'none'; ?>"><?php echo $index + 1; ?></div>
                     <?php endforeach; ?>
                 </div>
-                <div class="w-3/5 flex content-center items-center">
+                <div class=" flex content-center items-center ">
                     <?php foreach ($elements as $index => $element) : ?>
                         <div id="content-<?php echo $index + 1; ?>" class="content-section" style="display: <?php echo $index === 0 ? 'flex' : 'none'; ?>"><?php echo esc_html($element['content']); ?></div>
                     <?php endforeach; ?>

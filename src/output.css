@@ -948,10 +948,6 @@ video {
   width: 25%;
 }
 
-.w-1\/5 {
-  width: 20%;
-}
-
 .w-2 {
   width: 0.5rem;
 }
@@ -964,8 +960,8 @@ video {
   width: 0.75rem;
 }
 
-.w-3\/5 {
-  width: 60%;
+.w-3\/4 {
+  width: 75%;
 }
 
 .w-4 {
@@ -1006,8 +1002,16 @@ video {
   width: 100vw;
 }
 
+.w-2\/4 {
+  width: 50%;
+}
+
 .min-w-10 {
   min-width: 2.5rem;
+}
+
+.min-w-44 {
+  min-width: 11rem;
 }
 
 .flex-1 {
@@ -1126,6 +1130,14 @@ video {
 
 .gap-8 {
   gap: 2rem;
+}
+
+.gap-28 {
+  gap: 7rem;
+}
+
+.gap-44 {
+  gap: 11rem;
 }
 
 .space-x-4 > :not([hidden]) ~ :not([hidden]) {

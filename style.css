@@ -1630,8 +1630,169 @@ essibility
           mask-composite: exclude; 
   
 }
-
 .cms-wrapper {
-  
+  display: flex;
+  flex-direction: column;
+  height: 50vh;
+  padding: 0;
+  gap: 20px; /* Ajoute un espacement entre les éléments */
 }
 
+.cms-item {
+  display: flex;
+  flex-grow: 1; /* Permet à chaque carte de s'étendre pour occuper l'espace disponible */
+  align-items: center;
+  padding: 20px;
+  border: 1px solid #000; /* Ajustez selon vos besoins */
+  border-radius: 10px;
+  background-color: #fff; /* Couleur de fond pour les cartes */
+  margin-bottom: 10px; /* Espacement entre les cartes */
+}
+
+.cms-item img {
+  margin-right: 20px; /* Espacement entre l'image et le texte */
+  max-width: 50px; /* Ajustez selon vos besoins */
+}
+
+.cms-item p {
+  margin: 0;
+  flex-grow: 1; /* Permet au texte de grandir pour occuper l'espace disponible */
+}
+
+@media (max-width: 767px) {
+  .cms-wrapper {
+    flex-direction: column;
+  }
+
+  .cms-item {
+    position: relative;
+    flex-grow: 1; /* S'étend également sur les petits écrans */
+    margin-bottom: 10px; /* Espacement entre les cartes sur petits écrans */
+  }
+}
+
+.cas-clients_wrapper {
+
+}
+
+.cas-clients_item {
+  border: 1px solid transparent !important;
+  border-radius: 8px !important;
+}
+
+.bloc-cta_light {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  background: white;
+  border-radius: 8px;
+  padding: 20px;
+  text-align: center;
+  overflow: hidden; /* Ajouté pour les bordures en dégradé */
+}
+
+.bloc-cta_light::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+  padding: 2px; /* Espace pour la bordure dégradée */
+  background: linear-gradient(90deg, #0524A7 0%, #DF22F0 26.5%, #FDA9C0 54.5%, #430A8B 86.5%);
+  -webkit-mask: 
+    linear-gradient(#fff 0 0) content-box, 
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: destination-out;
+  mask-composite: exclude; /* Nouvelles propriétés pour la bordure dégradée */
+}
+
+.bloc-cta_light:hover::before {
+  background: linear-gradient(90deg, #430A8B 0%, #DF22F0 26.5%, #FDA9C0 54.5%, #0524A7 86.5%);
+}
+
+.bloc-cta_light h2, .bloc-cta_light h3, .bloc-cta_light p {
+  position: relative; /* Ajouté pour les bordures en dégradé */
+  z-index: 1; /* Ajouté pour les bordures en dégradé */
+}
+
+.bloc-cta_light h2 {
+  font-size: 2em;
+  font-weight: bold;
+  background: linear-gradient(90deg, #0524A7 0%, #DF22F0 26.5%, #FDA9C0 54.5%, #430A8B 86.5%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin: 10px 0;
+}
+
+.bloc-cta_light h3 {
+  font-size: 3em;
+  font-weight: bold;
+  background: linear-gradient(90deg, #5A00FF 0%, #FF6FFF 50%, #C800FF 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin: 10px 0;
+}
+
+.bloc-cta_light p {
+  font-size: 1em;
+  background: linear-gradient(90deg, #0524A7 0%, #DF22F0 26.5%, #FDA9C0 54.5%, #430A8B 86.5%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.bloc-cta_light a {
+  font-size: 1.2em;
+  color: #5A00FF;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.bloc-cta_light a:hover {
+  color: #430A8B;
+}
+
+.bloc-cta_light a.full-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+  color: inherit;
+  text-decoration: none;
+  border-radius: inherit;
+}
+
+.bloc-cta_light a.full-link:hover {
+  color: inherit;
+}
+
+/* Styles pour le curseur personnalisé */
+.cursor {
+  width: 50px;
+  height: 50px;
+  background-color: black;
+  border-radius: 50%;
+  position: fixed;
+  pointer-events: none;
+  z-index: 99999999;
+  transform: translate(-50%, -50%);
+  transition: transform 0.1s ease, background-color 0.3s ease, width 0.3s ease, height 0.3s ease;
+  display: none; /* Masquer le curseur personnalisé par défaut */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.bloc-cta_light:hover .cursor {
+  display: flex; /* Afficher le curseur personnalisé au survol */
+}
