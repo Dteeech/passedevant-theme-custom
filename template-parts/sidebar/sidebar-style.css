@@ -1,0 +1,66 @@
+/* Styles spécifiques à la sidebar des articles de blog */
+aside.sidebar {
+    width: 28%;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 20px;
+    align-self: flex-start;
+}
+
+aside.sidebar .widget {
+    background: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+aside.sidebar .widget .widget-title {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+aside.sidebar .cta-sidebar .widget {
+    background: #f9f9f9;
+    border: 2px solid #e0e0e0;
+}
+
+aside.sidebar .custom-sidebar .widget {
+    background: #f9f9f9;
+    border: 2px solid #e0e0e0;
+}
+
+aside.sidebar .custom-sidebar .widget_recent_entries h3 {
+    font-size: 1.2em;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+aside.sidebar .custom-sidebar .widget_recent_entries ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+aside.sidebar .custom-sidebar .widget_recent_entries li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+aside.sidebar .custom-sidebar .widget_recent_entries img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 4px;
+    margin-right: 10px;
+}
+
+aside.sidebar .custom-sidebar .widget_recent_entries a {
+    color: #0056b3;
+    text-decoration: none;
+}
+
+aside.sidebar .custom-sidebar .widget_recent_entries a:hover {
+    text-decoration: underline;
+}

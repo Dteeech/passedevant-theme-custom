@@ -40,7 +40,7 @@
                 <a id="logo" class="lg:invisible me-20" href="/">
                     <img src="<?php echo esc_url($logo_url); ?>" alt="Logo">
                 </a>
-                <nav class="main-navigation container mx-auto">
+                <nav class="main-navigation">
 
                     <a id="logo" class="sm:me-20" href="/">
                         <img src="<?php echo esc_url($logo_url); ?>" alt="Logo">

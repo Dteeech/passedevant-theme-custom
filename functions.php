@@ -1,4 +1,5 @@
 <?php
+
 /**
  * passedevant functions and definitions
  *
@@ -289,13 +290,13 @@ function render_header_color_metabox($post)
 	// Récupère la valeur actuelle de l'option
 	$header_color = get_post_meta($post->ID, '_header_color', true);
 	wp_nonce_field('save_header_color_metabox', 'header_color_metabox_nonce');
-	?>
-<label>
-    <input type="radio" name="header_color" value="light" <?php checked($header_color, 'light'); ?> /> Light
-</label><br />
-<label>
-    <input type="radio" name="header_color" value="dark" <?php checked($header_color, 'dark'); ?> /> Dark
-</label>
+?>
+	<label>
+		<input type="radio" name="header_color" value="light" <?php checked($header_color, 'light'); ?> /> Light
+	</label><br />
+	<label>
+		<input type="radio" name="header_color" value="dark" <?php checked($header_color, 'dark'); ?> /> Dark
+	</label>
 <?php
 }
 
@@ -392,19 +393,20 @@ require get_template_directory() . '/shortcodes/swiper-menu-philosophie/shortcod
 require get_template_directory() . '/shortcodes/3_blocks_reassurance_poles/shortcode_3_blocks_reassurance_poles.php';
 
 // Enqueue Swiper.js and Swiper.css
-function enqueue_custom_swiper() {
-    // Check if Swiper.js is already enqueued
-    if (!wp_script_is('swiper-js', 'enqueued')) {
-        wp_enqueue_script('swiper-js', 'https://unpkg.com/swiper/swiper-bundle.min.js', array(), null, true);
-    }
+function enqueue_custom_swiper()
+{
+	// Check if Swiper.js is already enqueued
+	if (!wp_script_is('swiper-js', 'enqueued')) {
+		wp_enqueue_script('swiper-js', 'https://unpkg.com/swiper/swiper-bundle.min.js', array(), null, true);
+	}
 
-    // Enqueue your custom swiper script
-    wp_enqueue_script('custom-swiper-js', get_template_directory_uri() . '/shortcodes/swiper-menu-philosophie/swiper.js', array('swiper-js'), null, true);
+	// Enqueue your custom swiper script
+	wp_enqueue_script('custom-swiper-js', get_template_directory_uri() . '/shortcodes/swiper-menu-philosophie/swiper.js', array('swiper-js'), null, true);
 
-    // Check if Swiper.css is already enqueued
-    if (!wp_style_is('swiper-css', 'enqueued')) {
-        wp_enqueue_style('swiper-css', 'https://unpkg.com/swiper/swiper-bundle.min.css', array(), null);
-    }
+	// Check if Swiper.css is already enqueued
+	if (!wp_style_is('swiper-css', 'enqueued')) {
+		wp_enqueue_style('swiper-css', 'https://unpkg.com/swiper/swiper-bundle.min.css', array(), null);
+	}
 }
 add_action('wp_enqueue_scripts', 'enqueue_custom_swiper');
 
@@ -413,22 +415,24 @@ require_once get_template_directory() . '/shortcodes/slider-partners-logos/slide
 require_once get_template_directory() . '/shortcodes/slider-partners-logos/metabox.php';
 
 // Enqueue des scripts et styles pour le slider
-function enqueue_slider_assets() {
+function enqueue_slider_assets()
+{
 	// Enqueue your custom swiper initialization script
-    wp_enqueue_script('custom-swiper-init', get_template_directory_uri() . '/shortcodes/slider-partners-logos/swiper.js', array('swiper-js'), null, true);
-    wp_enqueue_script('custom-swiper-prestations', get_template_directory_uri() . '/js/custom-swiper-prestations.js', array('swiper-js'), null, true);
+	wp_enqueue_script('custom-swiper-init', get_template_directory_uri() . '/shortcodes/slider-partners-logos/swiper.js', array('swiper-js'), null, true);
+	wp_enqueue_script('custom-swiper-prestations', get_template_directory_uri() . '/js/custom-swiper-prestations.js', array('swiper-js'), null, true);
 }
 add_action('wp_enqueue_scripts', 'enqueue_slider_assets');
 
 // Enqueue des scripts et styles pour la metabox
-function enqueue_custom_metabox_scripts($hook) {
+function enqueue_custom_metabox_scripts($hook)
+{
 	if ('post.php' !== $hook && 'post-new.php' !== $hook) {
 		return;
-    }
+	}
 	wp_enqueue_media();
-    wp_enqueue_script('custom-metabox-js', get_template_directory_uri() . '/shortcodes/slider-partners-logos/metabox.js', array('jquery'), null, true);
-    wp_enqueue_style('custom-metabox-css', get_template_directory_uri() . '/shortcodes/slider-partners-logos/metabox.css', array(), null);
-    wp_enqueue_script('custom-partners-swiper-js', get_template_directory_uri() . '/shortcodes/slider-partners-logos/swiper.js', array(), null);
+	wp_enqueue_script('custom-metabox-js', get_template_directory_uri() . '/shortcodes/slider-partners-logos/metabox.js', array('jquery'), null, true);
+	wp_enqueue_style('custom-metabox-css', get_template_directory_uri() . '/shortcodes/slider-partners-logos/metabox.css', array(), null);
+	wp_enqueue_script('custom-partners-swiper-js', get_template_directory_uri() . '/shortcodes/slider-partners-logos/swiper.js', array(), null);
 }
 add_action('admin_enqueue_scripts', 'enqueue_custom_metabox_scripts');
 
@@ -442,3 +446,39 @@ require_once get_template_directory() . '/shortcodes/methodologie-seo/methodolog
 require_once get_template_directory() . '/accordion/wpt-accordion.php';
 
 wp_enqueue_script('full-link-cta', get_template_directory_uri() . '/js/full-link-cta.js', array(), null);
+
+//sidebar articles blog
+function my_custom_sidebars()
+{
+	register_sidebar(
+		array(
+			'name' => esc_html__('CTA Sidebar', 'passedevant'),
+			'id' => 'cta-sidebar',
+			'description' => esc_html__('Add widgets here for the CTA.', 'passedevant'),
+			'before_widget' => '<section id="%1$s" class="widget %2$s">',
+			'after_widget' => '</section>',
+			'before_title' => '<h2 class="widget-title">',
+			'after_title' => '</h2>',
+		)
+	);
+	register_sidebar(
+		array(
+			'name' => esc_html__('Custom Sidebar', 'passedevant'),
+			'id' => 'custom-sidebar',
+			'description' => esc_html__('Add widgets here for the custom content.', 'passedevant'),
+			'before_widget' => '<section id="%1$s" class="widget %2$s">',
+			'after_widget' => '</section>',
+			'before_title' => '<h2 class="widget-title">',
+			'after_title' => '</h2>',
+		)
+	);
+}
+add_action('widgets_init', 'my_custom_sidebars');
+
+function enqueue_sidebar_styles()
+{
+	wp_enqueue_style('sidebar-styles', get_template_directory_uri() . '/template-parts/sidebar/sidebar-style.css');
+}
+add_action('wp_enqueue_scripts', 'enqueue_sidebar_styles');
+
+require get_template_directory() . '/template-parts/sidebar/sidebar-blog.php';

@@ -22,6 +22,7 @@
  .wptac-header::after {
     content: '';
     width: 60px; /* Taille du SVG */
+    min-width: 60px;
     height: 60px; /* Taille du SVG */
     background: url('../images/svg/Chevron-Right-Circle-Icon.svg') no-repeat center center; /* Chemin relatif */
     background-size: contain;
