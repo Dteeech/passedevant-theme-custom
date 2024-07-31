@@ -37,12 +37,12 @@
             }
             ?>
             <div id="site-navigation" class="flex flex-row align-top underline--gradient">
-                <a id="logo" class="lg:invisible me-20" href="/">
-                    <img src="<?php echo esc_url($logo_url); ?>" alt="Logo">
-                </a>
                 <nav class="main-navigation">
+                    <a id="logo" class="lg:invisible me-20" href="/">
+                        <img src="<?php echo esc_url($logo_url); ?>" alt="Logo">
+                    </a>
 
-                    <a id="logo" class="sm:me-20" href="/">
+                    <a id="logo" class="" href="/">
                         <img src="<?php echo esc_url($logo_url); ?>" alt="Logo">
                     </a>
 

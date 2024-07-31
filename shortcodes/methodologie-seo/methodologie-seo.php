@@ -7,7 +7,7 @@ function methodologie_seo_shortcode()
         ob_start();
 ?>
         <div class="methodologie-container text-white container mx-auto">
-            <div class="flex w-full gap-44">
+            <div class="flex justify-start w-full gap-44">
                 <div class=" min-w-44">
                     <?php foreach ($elements as $index => $element) : ?>
                         <button class="menu-button" data-content-id="content-<?php echo $index + 1; ?>" data-number-id="number-<?php echo $index + 1; ?>"><?php echo esc_html($element['button_text']); ?></button>
@@ -71,11 +71,17 @@ function methodologie_seo_shortcode()
                 display: none;
                 padding: 20px;
             }
-
+            .methodologie-number {
+                display: flex;
+                align-items: center;
+            }
             .number-section {
                 font-size: 186px;
+                width: 260px;
             }
-
+            .content-section {
+                width: 400px;
+            }
             .content-section:first-child,
             .number-section:first-child {
                 display: flex;
