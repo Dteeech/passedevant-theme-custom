@@ -206,11 +206,17 @@ h1 {
 }
 
 .title-seo {
-  background: linear-gradient(90deg, #05A9CF 0%, #5CB6E5 17.5%, #93BAEC 37%, #EDC3DF 57%, #F33585 74.5%);
+  background: linear-gradient(
+    90deg,
+    #05a9cf 0%,
+    #5cb6e5 17.5%,
+    #93baec 37%,
+    #edc3df 57%,
+    #f33585 74.5%
+  );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-
 
 /* Grouping content
 	 ========================================================================== */
@@ -1029,7 +1035,7 @@ Custom pour le cta header
 }
 .post,
 .page {
-  margin: 0 ;
+  margin: 0;
 }
 
 .updated:not(.published) {
@@ -1282,19 +1288,28 @@ a.cta::after {
 /* Styles pour l'icône SVG à droite du texte */
 
 .site-footer {
-  margin-top: 150px;
+  
   padding: 25px 20px;
   color: #ffffff;
   position: relative;
 }
+footer .no-gradient-underline:hover {
+  color: white;
 
+}
+footer .no-gradient-underline::after {
+  content: "";
+  background: white;
+}
 .footer-widgets {
-  
+  max-width: 1438px;
   display: flex;
   justify-content: space-evenly;
   flex-wrap: wrap;
   text-align: start;
-  margin:159px 200px 0 200px;
+  margin-top: 159px;
+  margin-left: auto;
+  margin-right: auto;
 }
 .footer-widgets ul,
 .footer-widgets ul li,
@@ -1304,17 +1319,28 @@ a.cta::after {
   margin: 0;
   padding: 0;
 }
+#block-60 {
+  border: 1px solid #fff;
+  padding: 20px 0px 0 20px;
+}
 
+.wpforms-container.inline-fields {
+  margin: 0 !important;
+  height: auto;
+}
 #wpforms-form-57 {
-  width: 70%;
+  width: 100%;
   background-color: transparent; /* Fond noir */
   color: #fff; /* Texte blanc */
-  padding: 40px;
-  border: 1px solid #fff; /* Bordure blanche */
+  height: 90px !important;
+  display: flex;
+  align-items: end;
+  justify-content: space-evenly;
 }
 
 #wpforms-form-57 h3 {
   color: #fff; /* Couleur du titre */
+  font-size: medium !important;
 }
 
 #wpforms-form-57 .wpforms-field input[type="text"],
@@ -1326,6 +1352,7 @@ a.cta::after {
   padding: 10px;
   margin-bottom: 10px;
   width: 100%;
+  border-radius: 0%;
 }
 
 #wpforms-form-57 .wpforms-field input[type="text"]::placeholder,
@@ -1337,14 +1364,12 @@ a.cta::after {
 #wpforms-form-57 .wpforms-field input[type="text"]:focus,
 #wpforms-form-57 .wpforms-field input[type="email"]:focus {
   outline: none;
-  border-bottom: 2px solid #df22f0; /* Bordure colorée au focus */
+  border-bottom: 2px solid #fff; /* Bordure colorée au focus */
 }
 
 #wpforms-form-57 .wpforms-submit-container {
   display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  margin-top: 20px;
+  justify-content: center;
 }
 
 #wpforms-form-57 .wpforms-submit {
@@ -1352,8 +1377,9 @@ a.cta::after {
   color: #1e1e1e; /* Texte noir */
   border: 1px solid #fff; /* Bordure blanche */
   padding: 10px 20px;
-  border-radius: 50px;
   transition: all 0.3s ease;
+  width: 100px;
+  height: 50px;
 }
 
 #wpforms-form-57 .wpforms-submit:hover {
@@ -1362,6 +1388,8 @@ a.cta::after {
   border: 1px solid #fff; /* Bordure blanche au hover */
 }
 .footer-column {
+  flex-basis: calc(100% / (12 / 3));
+  max-width: calc(100% / (12 / 3));
   display: flex;
   flex-direction: column;
   flex: content;
@@ -1373,7 +1401,7 @@ a.cta::after {
   font-size: large;
   display: flex;
   flex-direction: column;
-  gap: 25px;
+  gap: 5px;
   justify-content: center;
   align-content: center;
 }
@@ -1445,17 +1473,40 @@ a.cta::after {
   color: transparent;
 }
 .gradient-text_title_seo {
-  background: linear-gradient(to right, #0524A7 0%, #DF22F0 26.5%, #FDA9C0 54.5%, #430A8B 86.5%) 1;
+  background: linear-gradient(
+      to right,
+      #0524a7 0%,
+      #df22f0 26.5%,
+      #fda9c0 54.5%,
+      #430a8b 86.5%
+    )
+    1;
   -webkit-background-clip: text;
   color: transparent;
 }
 .gradient-text_title_dev {
-  background: linear-gradient(to right, #05A9CF 0%, #95DFD2 23%, #02FEBD 48%, #029679 66%, #02A382 72.87%, #02B08A 79.75%, #044876 92.5%);
+  background: linear-gradient(
+    to right,
+    #05a9cf 0%,
+    #95dfd2 23%,
+    #02febd 48%,
+    #029679 66%,
+    #02a382 72.87%,
+    #02b08a 79.75%,
+    #044876 92.5%
+  );
   -webkit-background-clip: text;
   color: transparent;
 }
 .gradient-text_title_formation {
-  background: linear-gradient(to right, #B6269D 0%, #FE48A4 33%, #FF36E4 59%, #F71729 86.5%) 1;
+  background: linear-gradient(
+      to right,
+      #b6269d 0%,
+      #fe48a4 33%,
+      #ff36e4 59%,
+      #f71729 86.5%
+    )
+    1;
   -webkit-background-clip: text;
   color: transparent;
 }
@@ -1569,7 +1620,7 @@ essibility
 
 .customSwiperPrestation .swiper-slide {
   padding: 50px;
-  gap:40px;
+  gap: 40px;
   border: 1px solid #1e1e1e;
   text-align: center;
   font-size: 18px;
@@ -1620,11 +1671,11 @@ essibility
 
 /* les 3 blocks de cogestion */
 .cogestion-wrapper {
-  padding:50px 0 50px 0;
+  padding: 50px 0 50px 0;
   display: flex;
   gap: 50px;
-  margin-left:35px ;
-  margin-right:35px ;
+  margin-left: 35px;
+  margin-right: 35px;
 }
 .cogestion-item {
   display: flex;
@@ -1633,8 +1684,6 @@ essibility
   height: 550px;
   border: 2px solid white;
   justify-content: space-evenly !important;
- 
-
 }
 .bloc-cta-dark-bg_container {
   position: relative;
@@ -1645,15 +1694,21 @@ essibility
   content: "";
   position: absolute;
   inset: 0;
-  border-radius: 12px; 
-  padding: 3px; 
-  background:linear-gradient(90deg, #05A9CF 0%, #5CB6E5 17.5%, #93BAEC 37%, #EDC3DF 57%, #F33585 74.5%);
-  -webkit-mask: 
-     linear-gradient(#fff 0 0) content-box, 
-     linear-gradient(#fff 0 0);
+  border-radius: 12px;
+  padding: 3px;
+  background: linear-gradient(
+    90deg,
+    #05a9cf 0%,
+    #5cb6e5 17.5%,
+    #93baec 37%,
+    #edc3df 57%,
+    #f33585 74.5%
+  );
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
   -webkit-mask-composite: xor;
-          mask-composite: exclude; 
-  
+  mask-composite: exclude;
 }
 .cms-wrapper {
   display: flex;
@@ -1703,96 +1758,120 @@ essibility
 
 .bloc-cta_light,
 .bloc-cta_dark {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    border: 2px solid transparent;
-    border-radius: 8px;
-    padding: 20px;
-    text-align: center;
-    transition: border-color 0.3s ease;
-    position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid transparent;
+  border-radius: 8px;
+  padding: 20px;
+  text-align: center;
+  transition: border-color 0.3s ease;
+  position: relative;
 }
 
 .bloc-cta_light {
-    background: white;
+  background: white;
 }
 
 .bloc-cta_dark {
-    background: #1e1e1e;
-    color: white;
+  background: #1e1e1e;
+  color: white;
 }
 
 .bloc-cta_light h2,
 .bloc-cta_dark h2 {
-    font-size: 2em;
-    font-weight: bold;
-    margin: 10px 0;
+  font-size: 2em;
+  font-weight: bold;
+  margin: 10px 0;
 }
 
 .bloc-cta_light h3,
 .bloc-cta_dark h3 {
-    font-size: 3em;
-    font-weight: bold;
-    margin: 10px 0;
+  font-size: 3em;
+  font-weight: bold;
+  margin: 10px 0;
 }
 
 .bloc-cta_light p,
 .bloc-cta_dark p {
-    font-size: 1em;
+  font-size: 1em;
 }
 
 .bloc-cta_light a,
 .bloc-cta_dark a {
-    font-size: 1.2em;
-    text-decoration: none;
-    transition: color 0.3s ease;
+  font-size: 1.2em;
+  text-decoration: none;
+  transition: color 0.3s ease;
 }
 
 .bloc-cta_light a:hover,
 .bloc-cta_dark a:hover {
-    color: inherit;
+  color: inherit;
 }
 
 .bloc-cta_light a.full-link,
 .bloc-cta_dark a.full-link {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 100%;
-    padding: 20px;
-    box-sizing: border-box;
-    color: inherit;
-    text-decoration: none;
-    border-radius: inherit;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+  color: inherit;
+  text-decoration: none;
+  border-radius: inherit;
 }
 
 .bloc-cta_light a.full-link:hover,
 .bloc-cta_dark a.full-link:hover {
-    color: inherit;
+  color: inherit;
 }
 
 .bloc-cta_light:hover,
 .bloc-cta_dark:hover {
-    border-color: transparent;
+  border-color: transparent;
 }
 
 .bloc-cta_seo .bloc-cta_light,
 .bloc-cta_seo .bloc-cta_dark {
-    border-image: linear-gradient(90deg, #0524A7 0%, #DF22F0 26.5%, #FDA9C0 54.5%, #430A8B 86.5%) 1;
+  border-image: linear-gradient(
+      90deg,
+      #0524a7 0%,
+      #df22f0 26.5%,
+      #fda9c0 54.5%,
+      #430a8b 86.5%
+    )
+    1;
 }
 
 .bloc-cta_formation .bloc-cta_light,
 .bloc-cta_formation .bloc-cta_dark {
-    border-image: linear-gradient(90deg, #B6269D 0%, #FE48A4 33%, #FF36E4 59%, #F71729 86.5%) 1;
+  border-image: linear-gradient(
+      90deg,
+      #b6269d 0%,
+      #fe48a4 33%,
+      #ff36e4 59%,
+      #f71729 86.5%
+    )
+    1;
 }
 
 .bloc-cta_dev .bloc-cta_light,
 .bloc-cta_dev .bloc-cta_dark {
-    border-image: linear-gradient(90deg, #05A9CF 0%, #95DFD2 23%, #02FEBD 48%, #029679 66%, #02A382 72.87%, #02B08A 79.75%, #044876 92.5%) 1;
+  border-image: linear-gradient(
+      90deg,
+      #05a9cf 0%,
+      #95dfd2 23%,
+      #02febd 48%,
+      #029679 66%,
+      #02a382 72.87%,
+      #02b08a 79.75%,
+      #044876 92.5%
+    )
+    1;
 }
 
 /* Gradient Text Styles */
@@ -1800,27 +1879,48 @@ essibility
 .bloc-cta_seo h3,
 .bloc-cta_seo p,
 .bloc-cta_seo a {
-    background: linear-gradient(90deg, #0524A7 0%, #DF22F0 26.5%, #FDA9C0 54.5%, #430A8B 86.5%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+  background: linear-gradient(
+    90deg,
+    #0524a7 0%,
+    #df22f0 26.5%,
+    #fda9c0 54.5%,
+    #430a8b 86.5%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .bloc-cta_formation h2,
 .bloc-cta_formation h3,
 .bloc-cta_formation p,
-.bloc-cta_formation a { 
-    background: linear-gradient(90deg, #B6269D 0%, #FE48A4 33%, #FF36E4 59%, #F71729 86.5%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+.bloc-cta_formation a {
+  background: linear-gradient(
+    90deg,
+    #b6269d 0%,
+    #fe48a4 33%,
+    #ff36e4 59%,
+    #f71729 86.5%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .bloc-cta_dev h2,
 .bloc-cta_dev h3,
 .bloc-cta_dev p,
 .bloc-cta_dev a {
-    background: linear-gradient(90deg, #05A9CF 0%, #95DFD2 23%, #02FEBD 48%, #029679 66%, #02A382 72.87%, #02B08A 79.75%, #044876 92.5%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+  background: linear-gradient(
+    90deg,
+    #05a9cf 0%,
+    #95dfd2 23%,
+    #02febd 48%,
+    #029679 66%,
+    #02a382 72.87%,
+    #02b08a 79.75%,
+    #044876 92.5%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 /* sidebar style */
 
@@ -1836,7 +1936,7 @@ essibility
   margin-left: 50px;
 }
 
-.site-main aside.widget-area > div{
+.site-main aside.widget-area > div {
   position: -webkit-sticky; /* Pour Safari */
   position: sticky;
   top: 20px; /* Ajuster en fonction de l'espace désiré entre le haut de la page et la sidebar */
@@ -1882,7 +1982,7 @@ aside.widget-area .widget li img {
 }
 
 aside.widget-area .widget li a {
-  color: #1E1E1E; 
+  color: #1e1e1e;
   text-decoration: none;
   font-size: 1em;
   height: fit-content;
@@ -1899,11 +1999,11 @@ aside.widget-area .widget li a:hover {
 }
 
 .cta-sidebar .widget-title {
-  color: #1E1E1E;  /* Couleur spécifique pour le titre du CTA */
+  color: #1e1e1e; /* Couleur spécifique pour le titre du CTA */
 }
 
 .cta-sidebar .widget a {
-  color: #1E1E1E; /* Couleur spécifique pour les liens du CTA */
+  color: #1e1e1e; /* Couleur spécifique pour les liens du CTA */
 }
 
 .cta-sidebar .widget a:hover {
@@ -1911,7 +2011,7 @@ aside.widget-area .widget li a:hover {
 }
 
 aside .recent-post-item {
-  border-bottom: 1px solid #1E1E1E;
+  border-bottom: 1px solid #1e1e1e;
   padding: 20px; /* Réduit pour éviter le débordement */
 }
 
@@ -1935,8 +2035,7 @@ aside .recent-post-item a .recent-post-thumbnail img {
 
 aside .recent-post-item a .recent-post-content {
   flex: 1;
-  color: #1E1E1E;
+  color: #1e1e1e;
   display: flex;
   flex-direction: column;
 }
-

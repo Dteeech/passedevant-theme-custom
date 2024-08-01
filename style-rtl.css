@@ -1169,7 +1169,7 @@ a.cta::after {
 }
 .footer-newsletter_button {
   background: linear-gradient(to left, #00bfff, #ff69b4) !important;
-  border-radius: 20px !important;
+  border-radius: 8px !important;
 }
 .footer-column {
   display: flex;

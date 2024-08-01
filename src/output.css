@@ -863,6 +863,10 @@ video {
   margin-top: 6rem;
 }
 
+.mt-28 {
+  margin-top: 7rem;
+}
+
 .mt-36 {
   margin-top: 9rem;
 }
@@ -885,6 +889,10 @@ video {
 
 .mt-8 {
   margin-top: 2rem;
+}
+
+.mb-28 {
+  margin-bottom: 7rem;
 }
 
 .block {

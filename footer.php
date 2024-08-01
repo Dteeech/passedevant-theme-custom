@@ -14,23 +14,8 @@
 <footer id="colophon" class="site-footer"
 	style="background-color: <?php echo get_theme_mod('footer_bg_color', '#000000'); ?>;">
 
-	<div class="footer_cta-section">
-		<div class="col content">
-			<h2><span class="gradient-text ">Collaborons ensemble</span></h2>
-			<p>
-				Vous souhaitez faire connaissance avec nous et en savoir plus sur nos expertises ?
-				discutons ensemble de votre projet et de votre talent à faire connaître sur Google !
-			</p>
-		</div>
-		<div class="col button">
 
-			<a href="/contact" class="cta">
-				<span class="cta-button-text">Contact</span>
-			</a>
-		</div>
-	</div>
-
-	<div class="footer-widgets sm:mt-5 lg:mt-52">
+	<div class="footer-widgets sm:mt-5">
 		<?php
 		$footer_columns = get_theme_mod('footer_columns', 4);
 		for ($i = 1; $i <= $footer_columns; $i++): ?>
@@ -40,7 +25,7 @@
 				<?php endif; ?>
 			</div>
 		<?php endfor; ?>
-		<div class="wrapper flex">
+		<div class="wrapper flex mt-20 mb-20">
 			<div class=""><img src="<?php echo get_template_directory_uri() . '/images/logos-footer/google-analytics-logo.webp' ?>" alt="Logo Google analytics"></div>
 			<div class=""><img src="<?php echo get_template_directory_uri() . '/images/logos-footer/google-my-business-logo.webp' ?>" alt="Logo google my business"></div>
 			<div class=""><img src="<?php echo get_template_directory_uri() .'/images/logos-footer/google-tag-manager-logo.webp' ?>" alt="Logo google tag manager"></div>
