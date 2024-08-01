@@ -1289,11 +1289,12 @@ a.cta::after {
 }
 
 .footer-widgets {
-  margin-top: 159px;
+  
   display: flex;
   justify-content: space-evenly;
   flex-wrap: wrap;
   text-align: start;
+  margin:159px 200px 0 200px;
 }
 .footer-widgets ul,
 .footer-widgets ul li,
@@ -1305,6 +1306,7 @@ a.cta::after {
 }
 
 #wpforms-form-57 {
+  width: 70%;
   background-color: transparent; /* Fond noir */
   color: #fff; /* Texte blanc */
   padding: 40px;
