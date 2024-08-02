@@ -1479,8 +1479,7 @@ footer .no-gradient-underline::after {
       #df22f0 26.5%,
       #fda9c0 54.5%,
       #430a8b 86.5%
-    )
-    1;
+    );
   -webkit-background-clip: text;
   color: transparent;
 }
@@ -1505,8 +1504,7 @@ footer .no-gradient-underline::after {
       #fe48a4 33%,
       #ff36e4 59%,
       #f71729 86.5%
-    )
-    1;
+    );
   -webkit-background-clip: text;
   color: transparent;
 }

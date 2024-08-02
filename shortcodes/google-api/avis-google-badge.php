@@ -38,6 +38,7 @@ function get_google_my_business_rating($atts)
     ob_start();
 ?>
     <a href="<?php echo esc_url($google_maps_url); ?>" target="_blank" class="ReviewBlock_rating ReviewBlock_black mt-10" rel="noreferrer">
+        
         <div class="ReviewBlock_rating_header">
             <span class="ReviewBlock_avis_client">Avis clients</span>
             <svg width="5em" height="3em" viewBox="0 0 465 206" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">

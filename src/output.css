@@ -783,6 +783,10 @@ video {
   margin-bottom: 5rem;
 }
 
+.mb-28 {
+  margin-bottom: 7rem;
+}
+
 .mb-4 {
   margin-bottom: 1rem;
 }
@@ -889,10 +893,6 @@ video {
 
 .mt-8 {
   margin-top: 2rem;
-}
-
-.mb-28 {
-  margin-bottom: 7rem;
 }
 
 .block {
@@ -1472,6 +1472,10 @@ video {
   text-decoration-line: underline;
 }
 
+.line-through {
+  text-decoration-line: line-through;
+}
+
 .outline {
   outline-style: solid;
 }
@@ -1511,10 +1515,6 @@ video {
 @media (min-width: 1024px) {
   .lg\:invisible {
     visibility: hidden;
-  }
-
-  .lg\:mt-52 {
-    margin-top: 13rem;
   }
 
   .lg\:w-3\/4 {
