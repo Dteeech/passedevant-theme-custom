@@ -1628,6 +1628,9 @@ essibility
   align-items: center;
   width: 200px; /* Adjust the width as needed */
   min-height: 450px; /* Adjust the height as needed */
+  max-height: 700px;
+  overflow-y: auto;
+  flex-wrap: nowrap;
 }
 
 .prestations .swiper-button-next,
