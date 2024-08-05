@@ -420,7 +420,6 @@ function enqueue_slider_assets()
 	// Enqueue your custom swiper initialization script
 	wp_enqueue_script('custom-swiper-init', get_template_directory_uri() . '/shortcodes/slider-partners-logos/swiper.js', array('swiper-js'), null, true);
 	wp_enqueue_script('custom-swiper-prestations', get_template_directory_uri() . '/js/custom-swiper-prestations.js', array('swiper-js'), null, true);
-	wp_enqueue_script('custom-swiper-blank', get_template_directory_uri() . '/js/custom-blank-swiper.js', array('swiper-js'), null, true);
 }
 add_action('wp_enqueue_scripts', 'enqueue_slider_assets');
 
@@ -450,3 +449,5 @@ wp_enqueue_script('full-link-cta', get_template_directory_uri() . '/js/full-link
 
 
 require get_template_directory() . '/inc/recent-posts-widget.php';
+
+wp_enqueue_script('custom-swiper-blank', get_template_directory_uri() . '/js/custom-blank-swiper.js', array('swiper-js'), null, true);
