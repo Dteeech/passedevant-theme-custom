@@ -1,6 +1,4 @@
-
 document.addEventListener('DOMContentLoaded', function () {
-    // Add dynamic styles
     const styles = `
       .customBlankSwiper,
       .customBlankSwiper * {
@@ -8,18 +6,18 @@ document.addEventListener('DOMContentLoaded', function () {
         padding: 0;
         box-sizing: border-box;
       }
-
+  
       .customBlankSwiper {
         width: 100%;
         height: auto;
         position: relative;
       }
-
+  
       .customBlankSwiper .swiper-wrapper {
         display: flex;
         transition-timing-function: linear !important;
       }
-
+  
       .customBlankSwiper .swiper-slide {
         padding: 50px;
         gap: 40px;
@@ -36,25 +34,23 @@ document.addEventListener('DOMContentLoaded', function () {
         overflow-y: auto;
         flex-wrap: nowrap;
       }
-
-      .prestations .swiper-button-next,
-      .prestations .swiper-button-prev {
+  
+      .customBlankSwiper .swiper-button-next,
+      .customBlankSwiper .swiper-button-prev {
         color: #000;
-        z-index: -5;
       }
-
-      .prestations .swiper-button-prev {
+  
+      .customBlankSwiper .swiper-button-prev {
         position: absolute;
         left: 140px !important;
-        z-index: -5;
       }
-
-      .prestations .swiper-pagination {
+  
+      .customBlankSwiper .swiper-pagination {
         position: absolute;
         bottom: -80px !important;
       }
-
-      .prestations .swiper-pagination-bullet-active {
+  
+      .customBlankSwiper .swiper-pagination-bullet-active {
         background: linear-gradient(
           90deg,
           #0524a7 0%,
@@ -65,20 +61,23 @@ document.addEventListener('DOMContentLoaded', function () {
         height: 20px !important;
         width: 20px !important;
       }
-
-      .prestations .swiper-pagination-bullet {
+  
+      .customBlankSwiper .swiper-pagination-bullet {
         height: 20px;
         width: 20px;
         background-color: #6f0aaa;
       }
-
-      .prestations .cta-svg {
+  
+      .customBlankSwiper .cta-svg {
         right: 75px;
         bottom: 80px;
       }
     `;
-    document.getElementById('dynamic-styles').textContent = styles;
-
+    const styleSheet = document.createElement("style");
+    styleSheet.type = "text/css";
+    styleSheet.innerText = styles;
+    document.head.appendChild(styleSheet);
+  
     // Initialize Swiper
     var swiper = new Swiper(".customBlankSwiper", {
       slidesPerView: 'auto',
@@ -112,3 +111,4 @@ document.addEventListener('DOMContentLoaded', function () {
       }
     });
   });
+  
