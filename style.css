@@ -96,6 +96,7 @@ header {
   transition: background-color 0.3s ease;
 }
 .site-header {
+  
   display: flex;
   padding: auto;
   justify-content: center;
@@ -132,6 +133,9 @@ main {
 }
 .header-light {
   background-color: white;
+}
+#site-navigation {
+  padding: 20px 0;
 }
 .header-light .main-navigation a {
   color: #1e1e1e;
@@ -2110,6 +2114,7 @@ aside .recent-post-item a .recent-post-content {
 .customBlankSwiper .swiper-wrapper {
   display: flex;
   transition-timing-function: linear !important;
+  overflow: hidden;
 }
 
 .customBlankSwiper .swiper-slide {
@@ -2122,7 +2127,6 @@ aside .recent-post-item a .recent-post-content {
 
 .customBlankSwiper .swiper-slide img {
   width: auto; /* L'image peut ajuster sa largeur */
-  max-width: 100%; /* Pour s'assurer que l'image ne dépasse pas la largeur de la slide */
   width: 100%;
   height: auto; /* Ajuste la hauteur de l'image en fonction de la largeur */
 }
