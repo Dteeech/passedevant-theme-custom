@@ -448,5 +448,15 @@ require_once get_template_directory() . '/accordion/wpt-accordion.php';
 
 wp_enqueue_script('full-link-cta', get_template_directory_uri() . '/js/full-link-cta.js', array(), null);
 
+function my_scripts_method() {
+	wp_enqueue_script(
+	'custom-script',
+	get_stylesheet_directory_uri() . '/js/topbutton.js',
+	array( 'jquery' )
+	);
+	}
+	
+	add_action( 'wp_enqueue_scripts', 'my_scripts_method' );
+
 
 require get_template_directory() . '/inc/recent-posts-widget.php';
