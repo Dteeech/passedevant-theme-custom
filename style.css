@@ -92,14 +92,29 @@ body {
  */
 
 header {
+<<<<<<< HEAD
   padding: 25px 8px;
+=======
+>>>>>>> main
   display: flex;
   transition: background-color 0.3s ease;
 }
 .site-header {
+<<<<<<< HEAD
   display: flex;
   padding: auto;
   justify-content: center;
+=======
+  
+  display: flex;
+  padding: auto;
+  justify-content: center;
+  position: fixed;
+  z-index: 999;
+  width: 100vw;
+  height:70px;
+  opacity: 0.95;
+>>>>>>> main
 }
 .site-title {
   margin: 0;
@@ -129,6 +144,12 @@ main {
 .header-light {
   background-color: white;
 }
+<<<<<<< HEAD
+=======
+#site-navigation {
+  padding: 20px 0;
+}
+>>>>>>> main
 .header-light .main-navigation a {
   color: #1e1e1e;
 }
@@ -168,7 +189,81 @@ main {
   background-color: #1e1e1e;
   color: white;
 }
+<<<<<<< HEAD
 
+=======
+.sub-menu {
+  display: flex;
+  flex-direction: column;
+  
+  
+}
+.sub-menu .menu-item{
+  
+  padding: 0px;
+}
+.menu-dev a:hover {
+  color: transparent; /* Le texte est transparent pour que le dégradé soit visible */
+  
+  background: linear-gradient(
+    90deg,
+    #05a9cf 0%,
+    #95dfd2 23%,
+    #02febd 48%,
+    #029679 66%,
+    #02a382 72.87%,
+    #02b08a 79.75%,
+    #044876 92.5%
+  );
+  background-clip: text;
+  -webkit-background-clip: text; /* Nécessaire pour certains navigateurs */
+}
+.menu-dev a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(
+    90deg,
+    #05a9cf 0%,
+    #95dfd2 23%,
+    #02febd 48%,
+    #029679 66%,
+    #02a382 72.87%,
+    #02b08a 79.75%,
+    #044876 92.5%
+  ) !important;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.5s ease-out;
+}
+
+.menu-seo a:hover {
+  color: transparent; /* Le texte est transparent pour que le dégradé soit visible */
+  
+  background: linear-gradient(90deg, #0524A7 0%, #DF22F0 26.5%, #FDA9C0 54.5%, #430A8B 86.5%);
+  background-clip: text;
+  -webkit-background-clip: text; /* Nécessaire pour certains navigateurs */
+}
+.menu-seo a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, #0524A7 0%, #DF22F0 26.5%, #FDA9C0 54.5%, #430A8B 86.5%);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.5s ease-out;
+}
+
+a:hover::after {
+  transform: scaleX(1);
+}
+>>>>>>> main
 .header-dark .sub-menu {
   background-color: #1e1e1e;
 }
@@ -184,7 +279,11 @@ header .sub-menu > li::before {
   content: "→"; /* Flèche vers le bas */
   position: absolute;
   right: 205px;
+<<<<<<< HEAD
   top: 50%;
+=======
+  bottom: -5px ;
+>>>>>>> main
   transform: translateY(-50%);
   font-size: 0.8em; /* Ajuster la taille de la flèche si nécessaire */
   color: inherit; /* Pour que la flèche hérite de la couleur du texte du lien */
@@ -670,6 +769,7 @@ a {
   text-decoration: none;
   position: relative;
 }
+<<<<<<< HEAD
 .underline--gradient a:hover {
   color: transparent; /* Le texte est transparent pour que le dégradé soit visible */
   background: linear-gradient(to right, #00bfff, #ff69b4);
@@ -688,6 +788,10 @@ a {
   transform-origin: left;
   transition: transform 0.5s ease-out;
 }
+=======
+
+
+>>>>>>> main
 
 a:hover::after {
   transform: scaleX(1);
@@ -1094,7 +1198,13 @@ Custom pour le cta header
   color: initial !important;
   text-decoration: none !important;
 }
+<<<<<<< HEAD
 
+=======
+#logo {
+  min-width: 180px ;
+}
+>>>>>>> main
 #logo img {
   width: 100%;
   height: 100%;
@@ -1288,14 +1398,20 @@ a.cta::after {
 /* Styles pour l'icône SVG à droite du texte */
 
 .site-footer {
+<<<<<<< HEAD
   
+=======
+>>>>>>> main
   padding: 25px 20px;
   color: #ffffff;
   position: relative;
 }
 footer .no-gradient-underline:hover {
   color: white;
+<<<<<<< HEAD
 
+=======
+>>>>>>> main
 }
 footer .no-gradient-underline::after {
   content: "";
@@ -1474,12 +1590,21 @@ footer .no-gradient-underline::after {
 }
 .gradient-text_title_seo {
   background: linear-gradient(
+<<<<<<< HEAD
       to right,
       #0524a7 0%,
       #df22f0 26.5%,
       #fda9c0 54.5%,
       #430a8b 86.5%
     );
+=======
+    to right,
+    #0524a7 0%,
+    #df22f0 26.5%,
+    #fda9c0 54.5%,
+    #430a8b 86.5%
+  );
+>>>>>>> main
   -webkit-background-clip: text;
   color: transparent;
 }
@@ -1499,12 +1624,21 @@ footer .no-gradient-underline::after {
 }
 .gradient-text_title_formation {
   background: linear-gradient(
+<<<<<<< HEAD
       to right,
       #b6269d 0%,
       #fe48a4 33%,
       #ff36e4 59%,
       #f71729 86.5%
     );
+=======
+    to right,
+    #b6269d 0%,
+    #fe48a4 33%,
+    #ff36e4 59%,
+    #f71729 86.5%
+  );
+>>>>>>> main
   -webkit-background-clip: text;
   color: transparent;
 }
@@ -1628,6 +1762,12 @@ essibility
   align-items: center;
   width: 200px; /* Adjust the width as needed */
   min-height: 450px; /* Adjust the height as needed */
+<<<<<<< HEAD
+=======
+  max-height: 700px;
+  overflow-y: auto;
+  flex-wrap: nowrap;
+>>>>>>> main
 }
 
 .prestations .swiper-button-next,
@@ -2037,3 +2177,60 @@ aside .recent-post-item a .recent-post-content {
   display: flex;
   flex-direction: column;
 }
+<<<<<<< HEAD
+=======
+
+/*Swiper general style par defaut*/
+
+.customBlankSwiper,
+.customBlankSwiper * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.customBlankSwiper {
+  width: 100%;
+  height: auto;
+  position: relative;
+}
+
+.customBlankSwiper .swiper-wrapper {
+  display: flex;
+  transition-timing-function: linear !important;
+
+}
+
+.customBlankSwiper .swiper-slide {
+  display: inline-flex; /* Utilisation de inline-flex pour ajuster la taille au contenu */
+  justify-content: center;
+  align-items: center;
+  height: auto; /* Pour ajuster la hauteur en fonction du contenu */
+  width: inherit;
+}
+
+.customBlankSwiper .swiper-slide img {
+  width: auto; /* L'image peut ajuster sa largeur */
+  width: 100%;
+  height: auto; /* Ajuste la hauteur de l'image en fonction de la largeur */
+}
+
+.topbutton {
+  height: 64px;
+  width: 64px;
+  position: fixed;
+  right: 35px;
+  bottom: 55px;
+  z-index: 99;
+  background: url("./images/svg/chevron_up_black.svg") center;
+
+  border-radius: 50%;
+    background-color: #fff;
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    mix-blend-mode: difference;
+  background-repeat: no-repeat;
+  display: none;
+}
+>>>>>>> main

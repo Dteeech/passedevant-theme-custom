@@ -6,7 +6,11 @@ document.addEventListener('DOMContentLoaded', function () {
       pagination: {
           el: ".swiper-pagination",
           clickable: true,
+<<<<<<< HEAD
       },
+=======
+      },    
+>>>>>>> main
       navigation: {
           nextEl: '.swiper-button-next',
           prevEl: '.swiper-button-prev',
