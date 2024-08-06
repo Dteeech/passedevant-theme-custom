@@ -92,7 +92,6 @@ body {
  */
 
 header {
-  padding: 25px 8px;
   display: flex;
   transition: background-color 0.3s ease;
 }
