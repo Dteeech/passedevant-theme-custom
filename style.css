@@ -179,8 +179,13 @@ main {
 .sub-menu {
   display: flex;
   flex-direction: column;
+  
+  
 }
-
+.sub-menu .menu-item{
+  
+  padding: 0px;
+}
 .menu-dev a:hover {
   color: transparent; /* Le texte est transparent pour que le dégradé soit visible */
   
@@ -257,7 +262,7 @@ header .sub-menu > li::before {
   content: "→"; /* Flèche vers le bas */
   position: absolute;
   right: 205px;
-  top: 50%;
+  bottom: -5px ;
   transform: translateY(-50%);
   font-size: 0.8em; /* Ajuster la taille de la flèche si nécessaire */
   color: inherit; /* Pour que la flèche hérite de la couleur du texte du lien */
@@ -1151,7 +1156,9 @@ Custom pour le cta header
   color: initial !important;
   text-decoration: none !important;
 }
-
+#logo {
+  min-width: 180px ;
+}
 #logo img {
   width: 100%;
   height: 100%;
