@@ -2114,7 +2114,7 @@ aside .recent-post-item a .recent-post-content {
 .customBlankSwiper .swiper-wrapper {
   display: flex;
   transition-timing-function: linear !important;
-  overflow: hidden;
+
 }
 
 .customBlankSwiper .swiper-slide {
