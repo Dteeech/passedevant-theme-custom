@@ -103,7 +103,7 @@ header {
   position: fixed;
   z-index: 999;
   width: 100vw;
-  height:80px;
+  height:70px;
   opacity: 0.95;
 }
 .site-title {
