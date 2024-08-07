@@ -15,7 +15,7 @@
 <footer id="colophon" class="site-footer" style="background-color: <?php echo get_theme_mod('footer_bg_color', '#1e1e1e'); ?>;">
 
 
-	<div class="footer-widgets sm:mt-5">e
+	<div class="footer-widgets sm:mt-5">
 		<?php
 		$footer_columns = get_theme_mod('footer_columns', 4);
 		for ($i = 1; $i <= $footer_columns; $i++) : ?>
