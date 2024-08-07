@@ -2157,6 +2157,6 @@ aside .recent-post-item a .recent-post-content {
   display: none;
 }
 
-.wp-block-list li {
+.wp-block-list li > * {
   font-size: 20px !important;
 }
