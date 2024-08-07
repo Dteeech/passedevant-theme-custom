@@ -1731,6 +1731,12 @@ essibility
   right: 75px;
   bottom: 80px;
 }
+.cta-svg a {
+  display: block;
+  width: 60px;
+  height: 60px;
+}
+
 .cta-svg a svg {
   width: 60px;
   height: 60px;
