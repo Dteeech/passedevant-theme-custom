@@ -5,4 +5,4 @@ dist/
 *.json
 deploy/
 blocks/
-.DS_Store
+.DS_Storegit push --force --set-upstream origin main
