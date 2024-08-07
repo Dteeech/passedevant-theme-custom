@@ -1731,7 +1731,10 @@ essibility
   right: 75px;
   bottom: 80px;
 }
-
+.cta-svg a svg {
+  width: 60px;
+  height: 60px;
+}
 /* les 3 blocks de cogestion */
 .cogestion-wrapper {
   padding: 50px 0 50px 0;
