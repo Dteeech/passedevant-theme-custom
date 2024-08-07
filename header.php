@@ -12,7 +12,10 @@
 <body <?php body_class(); ?>>
     
     <?php
+    // Vérifier la couleur de l'en-tête
     $header_color = get_post_meta(get_the_ID(), '_header_color', true);
+    echo "<!-- Header color: " . $header_color . " -->";
+
     $header_class = ($header_color === 'dark') ? 'header-dark' : 'header-light';
 
     // Définir les classes et l'image du bouton CTA en fonction de la couleur de l'en-tête
@@ -35,6 +38,10 @@
             if (!$logo_url) {
                 $logo_url = $default_logo_url ? $default_logo_url : get_template_directory_uri() . '/assets/images/default-logo.png';
             }
+
+            echo "<!-- Light logo: " . $logo_light . " -->";
+            echo "<!-- Dark logo: " . $logo_dark . " -->";
+            echo "<!-- Default logo: " . $default_logo_url . " -->";
             ?>
             <div id="site-navigation" class="flex flex-row align-top underline--gradient">
                 <nav class="main-navigation">
@@ -53,16 +60,9 @@
                             'theme_location' => 'menu-1',
                             'menu_id' => 'primary-menu',
                             'container' => 'nav',
-                            
                         )
                     );
-                    
                     ?>
-
-
                 </nav><!-- #site-navigation -->
             </div>
-            
         </header><!-- #masthead -->
-
-        

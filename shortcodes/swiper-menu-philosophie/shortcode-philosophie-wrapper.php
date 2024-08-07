@@ -9,14 +9,15 @@ function custom_swiper_philosophie_swiper_shortcode()
     <div class="mx-auto px-0 w-100 flex flex-col lg:flex-row mb-20 philosophie">
         <div class="menu w-1/4 flex align-middle justify-center">
             <ul class="underline--gradient flex flex-col align-middle justify-center gap-8">
-                <li><a class=" text-2xl font-bold" href="#" data-slide="0">1.Objectifs</a></li>
-                <li><a class=" text-2xl font-bold" href="#" data-slide="1">2.Audit</a></li>
-                <li><a class=" text-2xl font-bold" href="#" data-slide="2">3.Stratégie</a></li>
-                <li><a class=" text-2xl font-bold" href="#" data-slide="3">4.Dashboard</a></li>
-                <li><a class=" text-2xl font-bold" href="#" data-slide="4">5.Accompagnement</a></li>
-                <li><a class=" text-2xl font-bold" href="#" data-slide="5">6.Opérationnel</a></li>
-                <li><a class=" text-2xl font-bold" href="#" data-slide="6">7.Suivi</a></li>
+                <li><a class="text-2xl font-bold philosophie-link" href="#" data-slide="0">1.Objectifs</a></li>
+                <li><a class="text-2xl font-bold philosophie-link" href="#" data-slide="1">2.Audit</a></li>
+                <li><a class="text-2xl font-bold philosophie-link" href="#" data-slide="2">3.Stratégie</a></li>
+                <li><a class="text-2xl font-bold philosophie-link" href="#" data-slide="3">4.Dashboard</a></li>
+                <li><a class="text-2xl font-bold philosophie-link" href="#" data-slide="4">5.Accompagnement</a></li>
+                <li><a class="text-2xl font-bold philosophie-link" href="#" data-slide="5">6.Opérationnel</a></li>
+                <li><a class="text-2xl font-bold philosophie-link" href="#" data-slide="6">7.Suivi</a></li>
             </ul>
+
         </div>
         <div class="w-full lg:w-3/4 lg:pe-32">
             <div class="swiper myPhilosophieSwiper">
@@ -262,7 +263,7 @@ function custom_swiper_philosophie_swiper_shortcode()
                 },
             });
 
-            document.querySelectorAll('.menu a').forEach(function(link) {
+            document.querySelectorAll('.philosophie-link').forEach(function(link) {
                 link.addEventListener('click', function(e) {
                     e.preventDefault();
                     var slideIndex = this.getAttribute('data-slide');
@@ -271,6 +272,7 @@ function custom_swiper_philosophie_swiper_shortcode()
             });
         });
     </script>
+
 <?php
     return ob_get_clean();
 }
