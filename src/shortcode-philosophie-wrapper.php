@@ -276,8 +276,4 @@ function custom_swiper_philosophie_swiper_shortcode()
 }
 
 add_shortcode('custom_swiper_philosophie_swiper', 'custom_swiper_philosophie_swiper_shortcode');
-<<<<<<< HEAD
 ?>
-=======
-?>
->>>>>>> main
