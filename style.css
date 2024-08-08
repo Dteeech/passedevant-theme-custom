@@ -96,14 +96,13 @@ header {
   transition: background-color 0.3s ease;
 }
 .site-header {
-  
   display: flex;
   padding: auto;
   justify-content: center;
   position: fixed;
   z-index: 999;
   width: 100vw;
-  height:70px;
+  height: 70px;
   opacity: 0.95;
 }
 .site-title {
@@ -179,16 +178,13 @@ main {
 .sub-menu {
   display: flex;
   flex-direction: column;
-  
-  
 }
-.sub-menu .menu-item{
-  
+.sub-menu .menu-item {
   padding: 0px;
 }
 .menu-dev a:hover {
   color: transparent; /* Le texte est transparent pour que le dégradé soit visible */
-  
+
   background: linear-gradient(
     90deg,
     #05a9cf 0%,
@@ -226,8 +222,14 @@ main {
 
 .menu-seo a:hover {
   color: transparent; /* Le texte est transparent pour que le dégradé soit visible */
-  
-  background: linear-gradient(90deg, #0524A7 0%, #DF22F0 26.5%, #FDA9C0 54.5%, #430A8B 86.5%);
+
+  background: linear-gradient(
+    90deg,
+    #0524a7 0%,
+    #df22f0 26.5%,
+    #fda9c0 54.5%,
+    #430a8b 86.5%
+  );
   background-clip: text;
   -webkit-background-clip: text; /* Nécessaire pour certains navigateurs */
 }
@@ -238,7 +240,13 @@ main {
   bottom: -2px;
   width: 100%;
   height: 2px;
-  background: linear-gradient(90deg, #0524A7 0%, #DF22F0 26.5%, #FDA9C0 54.5%, #430A8B 86.5%);
+  background: linear-gradient(
+    90deg,
+    #0524a7 0%,
+    #df22f0 26.5%,
+    #fda9c0 54.5%,
+    #430a8b 86.5%
+  );
   transform: scaleX(0);
   transform-origin: left;
   transition: transform 0.5s ease-out;
@@ -262,7 +270,7 @@ header .sub-menu > li::before {
   content: "→"; /* Flèche vers le bas */
   position: absolute;
   right: 205px;
-  bottom: -5px ;
+  bottom: -5px;
   transform: translateY(-50%);
   font-size: 0.8em; /* Ajuster la taille de la flèche si nécessaire */
   color: inherit; /* Pour que la flèche hérite de la couleur du texte du lien */
@@ -749,8 +757,6 @@ a {
   position: relative;
 }
 
-
-
 a:hover::after {
   transform: scaleX(1);
 }
@@ -1024,15 +1030,11 @@ Custom pour le cta header
 .references_wrapper .references_button a {
   color: white; /* Couleur par défaut du texte */
   border: 1px solid white; /* Couleur par défaut de la bordure */
-  transition:
-    color 0.5s ease-in-out,
-    border 0.5s ease-in-out;
+  transition: color 0.5s ease-in-out, border 0.5s ease-in-out;
 }
 
 .references_wrapper .references_col .references_button a:hover {
-  transition:
-    color 0.5s ease-in-out,
-    border 0.5s ease-in-out;
+  transition: color 0.5s ease-in-out, border 0.5s ease-in-out;
   background-color: rgba(
     255,
     255,
@@ -1093,7 +1095,8 @@ Custom pour le cta header
   display: block;
 }
 .post {
-  width: 30vw;
+  width: 20vw;
+  padding: 20px;
 }
 .post,
 .page {
@@ -1157,7 +1160,7 @@ Custom pour le cta header
   text-decoration: none !important;
 }
 #logo {
-  min-width: 180px ;
+  min-width: 180px;
 }
 #logo img {
   width: 100%;
@@ -1290,9 +1293,7 @@ Custom pour le cta header
   border-radius: 10px; /* Same border radius as the container */
   padding: 4px; /* Width of the border */
   background: linear-gradient(to right, #00b4d8, #ff0096); /* Gradient border */
-  -webkit-mask:
-    linear-gradient(#fff 0 0) content-box,
-    linear-gradient(#fff 0 0);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
   -webkit-mask-composite: destination-out;
   mask-composite: exclude;
 }
@@ -1776,9 +1777,7 @@ essibility
     #edc3df 57%,
     #f33585 74.5%
   );
-  -webkit-mask:
-    linear-gradient(#fff 0 0) content-box,
-    linear-gradient(#fff 0 0);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
   -webkit-mask-composite: xor;
   mask-composite: exclude;
 }
@@ -2130,7 +2129,6 @@ aside .recent-post-item a .recent-post-content {
 .customBlankSwiper .swiper-wrapper {
   display: flex;
   transition-timing-function: linear !important;
-
 }
 
 .customBlankSwiper .swiper-slide {
@@ -2157,20 +2155,31 @@ aside .recent-post-item a .recent-post-content {
   background: url("./images/svg/chevron_up_black.svg") center;
 
   border-radius: 50%;
-    background-color: #fff;
-    position: fixed;
-    bottom: 25px;
-    right: 25px;
-    mix-blend-mode: difference;
+  background-color: #fff;
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  mix-blend-mode: difference;
   background-repeat: no-repeat;
   display: none;
 }
 
-.wp-block-list, .wp-block-list li {
+.wp-block-list,
+.wp-block-list li {
   font-size: 20px !important;
   font-weight: normal;
 }
 
 .single-content {
   padding-top: 110px;
+}
+.blog .site-main {
+  padding-top: 100px;
+}
+.blog .site-main .post {
+  border: 1px solid #1e1e1e;
+  max-height: 600px;
+  overflow: auto;
+}
+.blog .site-main .post .entry-header {
 }
