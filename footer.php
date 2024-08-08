@@ -12,7 +12,7 @@
 
 ?>
 
-<footer id="colophon" class="site-footer border-t-2 border-white" style="background-color: <?php echo get_theme_mod('footer_bg_color', '#1e1e1e'); ?>;">
+<footer id="colophon" class="site-footer" style="border-top:1px solid white; background-color: <?php echo get_theme_mod('footer_bg_color', '#1e1e1e'); ?>;">
 
 
 	<div class="footer-widgets sm:mt-5">
