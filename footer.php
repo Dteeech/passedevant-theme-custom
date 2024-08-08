@@ -38,10 +38,6 @@
 	<div class="site-info text-">
 		<p><?php esc_html_e('Fait avec ❤️ par Passedevant', 'passedevant'); ?> - <a href="/mentions-legales">Mentions légales</a></p>
 	</div><!-- .site-info -->
-	<footer id="colophon" class="site-footer" style="background-color: <?php echo get_theme_mod('footer_bg_color', '#000000'); ?>;">
-		<!-- Footer content here -->
-		<a href="#" class="topbutton"></a>
-	</footer>
 
 </footer><!-- #colophon -->
 
