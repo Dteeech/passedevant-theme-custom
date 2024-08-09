@@ -11,10 +11,10 @@ get_header();
 
 <main id="primary" class="site-main">
     <div class="blog-hero">
-        <div class="flex flex-col gap-8 container mt-20 lg:mt-0 lg:w-1/2 lg:h-full m-0 lg:ms-52">
+        <div class="flex flex-col gap-8 container mt-20 lg:mt-0 lg:w-1/2 lg:h-full lg:ms-52">
             <h1 class="text-5xl text-white">Le Blog de l'actu SEO</h1>
-            <div class="blog-hero_form_container container text-white flex flex-col gap-4">
-                <p class="text-2xl">Newsletter</p>
+            <div class="blog-hero_form_container container text-white flex flex-col gap-4>
+                <p class=" text-2xl">Newsletter</p>
                 <p class="text-xl">Inscrivez-vous et recevez les dernières actualités digitales directement dans votre boîte mail.</p>
                 <form class="blog-newsletter-form">
                     <?php echo do_shortcode('[wpforms id="57"]'); ?>

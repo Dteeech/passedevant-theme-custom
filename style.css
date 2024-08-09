@@ -2241,7 +2241,7 @@ aside .recent-post-item a .recent-post-content {
   .blog .blog-hero {
     /* padding: 40px 120px; */
     width: 100vw;
-    padding: 0%;
+    padding: 20px;
     gap: 0;
   }
   .blog-hero_form_container {
