@@ -2194,6 +2194,7 @@ aside .recent-post-item a .recent-post-content {
   position: relative;
 }
 .blog .blog-hero_form_container {
+  width: 600px;
   margin: 0;
   height: 100%;
   display: flex;
