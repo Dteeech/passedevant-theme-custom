@@ -1391,7 +1391,8 @@ footer .no-gradient-underline::after {
   margin: 0 !important;
   height: auto;
 }
-#wpforms-form-57 {
+#wpforms-form-57,
+.blog-newsletter-form form {
   width: 100%;
   background-color: transparent; /* Fond noir */
   color: #fff; /* Texte blanc */
@@ -1435,7 +1436,8 @@ footer .no-gradient-underline::after {
   justify-content: center;
 }
 
-#wpforms-form-57 .wpforms-submit {
+#wpforms-form-57 .wpforms-submit,
+.wpforms-submit {
   background-color: #fff; /* Bouton blanc */
   color: #1e1e1e; /* Texte noir */
   border: 1px solid #fff; /* Bordure blanche */
@@ -2194,7 +2196,7 @@ aside .recent-post-item a .recent-post-content {
   position: relative;
 }
 .blog .blog-hero_form_container {
-  width: 600px;
+  max-width: 600px;
   margin: 0;
   height: 100%;
   display: flex;
@@ -2218,20 +2220,7 @@ aside .recent-post-item a .recent-post-content {
   margin-bottom: 10px !important;
   border-radius: 0% !important;
 }
-.blog-newsletter-form .submit-button {
-  background-color: #fff;
-  color: #1e1e1e;
-  border: 1px solid #fff;
-  padding: 10px 20px;
-  transition: all 0.3s ease;
-  width: auto;
-  height: 50px;
-}
-.blog-newsletter-form .submit-button:hover {
-  background-color: #1e1e1e;
-  color: #fff;
-  border: 1px solid #fff;
-}
+
 .blog .categories {
   margin: 80px 10px;
 }
