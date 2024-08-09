@@ -10,6 +10,21 @@ get_header();
 ?>
 
 <main id="primary" class="site-main">
+    <div class="blog-hero">
+        <div class="flex flex-col gap-8 container mt-20 lg:mt-0 lg:w-1/2 lg:h-full m-0">
+            <h1 class="text-5xl text-white">Le Blog de l'actu SEO</h1>
+            <div class="blog-hero_form_container container text-white flex flex-col gap-4">
+                <p class="text-2xl">Newsletter</p>
+                <p class="text-xl">Inscrivez-vous et recevez les dernières actualités digitales directement dans votre boîte mail.</p>
+                <form class="blog-newsletter-form" action="">
+                    <div class="flex gap-8">
+                        <input type="text" placeholder="Mon email" name="email" id="email" />
+                        <button type="submit" class="submit-button">S'abonner</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
     <div class="categories mt-8">
         <div class="container mx-auto flex justify-center gap-4">
             <button class="category-filter bg-purple-600 text-white p-2 rounded">Tout</button>
@@ -22,7 +37,6 @@ get_header();
         </div>
     </div>
     <div class="container mx-auto ">
-        <h1 class="text-5xl text-black mb-8 ">Blog</h1>
 
         <!-- Boucle pour afficher les articles de blog -->
         <?php if (have_posts()) : ?>
@@ -34,7 +48,6 @@ get_header();
                                 <?php the_post_thumbnail('full', ['class' => 'w-full']); ?>
                             </a>
                         <?php endif; ?>
-
                         <div class="p-4">
                             <header class="entry-header">
                                 <h2 class="entry-title text-xl font-semibold">
@@ -43,11 +56,9 @@ get_header();
                                     </a>
                                 </h2>
                             </header><!-- .entry-header -->
-
                             <div class="entry-content">
                                 <?php the_excerpt(); ?>
                             </div><!-- .entry-content -->
-
                             <footer class="entry-footer mt-4">
                                 <a href="<?php the_permalink(); ?>" class="read-more text-blue-600 hover:text-blue-800">Lire la suite</a>
                             </footer><!-- .entry-footer -->
@@ -55,7 +66,6 @@ get_header();
                     </article><!-- #post-<?php the_ID(); ?> -->
                 <?php endwhile; ?>
             </div><!-- .grid -->
-
             <!-- Pagination -->
             <div class="pagination mt-8">
                 <?php
@@ -69,9 +79,39 @@ get_header();
             <p><?php _e('Aucun article trouvé.', 'passedevant'); ?></p>
         <?php endif; ?>
     </div><!-- .container -->
-
 </main><!-- #main -->
-
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Sélectionner tous les boutons de filtre
+        const filters = document.querySelectorAll('.category-filter');
+        // Ajouter un écouteur d'événement sur chaque bouton
+        filters.forEach(filter => {
+            filter.addEventListener('click', function() {
+                const category = this.getAttribute('data-category');
+                // Sélectionner tous les articles
+                const posts = document.querySelectorAll('.blog-post');
+                // Si la catégorie sélectionnée est "Tout", afficher tous les articles
+                if (category === null) {
+                    posts.forEach(post => {
+                        post.style.display = 'block';
+                    });
+                } else {
+                    // Sinon, afficher uniquement les articles de la catégorie sélectionnée
+                    posts.forEach(post => {
+                        if (post.classList.contains('category-' + category)) {
+                            post.style.display = 'block';
+                        } else {
+                            post.style.display = 'none';
+                        }
+                    });
+                }
+                // Optionnel : Modifier le style des boutons actifs
+                filters.forEach(f => f.classList.remove('bg-purple-600', 'text-white'));
+                this.classList.add('bg-purple-600', 'text-white');
+            });
+        });
+    });
+</script>
 <?php
 
 get_footer();

@@ -1095,7 +1095,7 @@ Custom pour le cta header
   display: block;
 }
 .post {
-  width: 20vw;
+  width: 45vw;
   padding: 20px;
 }
 .post,
@@ -2180,6 +2180,91 @@ aside .recent-post-item a .recent-post-content {
   border: 1px solid #1e1e1e;
   max-height: 600px;
   overflow: auto;
+  width: 100%;
 }
-.blog .site-main .post .entry-header {
+.blog .blog-hero {
+  padding: 20px 120px;
+  height: 50vh;
+  width: 100vw;
+  background-image: url("./images/Equipe\ Passedevant.webp");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  overflow: hidden;
+  position: relative;
+}
+.blog .blog-hero_form_container {
+  margin: 0;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 50px;
+  background: rgba(30, 30, 30, 0.92);
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.blog .blog-hero_content .blog-newsletter-form {
+  width: 100%;
+}
+.blog .blog-newsletter-form input {
+  width: 50%;
+  background-color: transparent !important;
+  border: none !important;
+  border-bottom: 2px solid #fff !important;
+  color: #fff !important;
+  padding: 10px !important;
+  margin-bottom: 10px !important;
+  border-radius: 0% !important;
+}
+.blog-newsletter-form .submit-button {
+  background-color: #fff;
+  color: #1e1e1e;
+  border: 1px solid #fff;
+  padding: 10px 20px;
+  transition: all 0.3s ease;
+  width: auto;
+  height: 50px;
+}
+.blog-newsletter-form .submit-button:hover {
+  background-color: #1e1e1e;
+  color: #fff;
+  border: 1px solid #fff;
+}
+.blog .categories {
+  margin: 80px 10px;
+}
+.blog .categories .category-filter {
+  padding: 10px;
+  border-radius: 16px;
+  border: 1px solid #1e1e1e;
+  background-color: white;
+  color: #1e1e1e;
+}
+.blog .categories .category-filter:hover {
+  color: #783eff;
+  border: 1px solid #783eff;
+}
+
+/*media queries*/
+@media (max-width: 768px) {
+  .blog .blog-hero {
+    /* padding: 40px 120px; */
+    width: 100vw;
+    padding: 0%;
+    gap: 0;
+  }
+  .blog-hero_form_container {
+    padding: 10px !important;
+  }
+  .site-header {
+    display: none !important;
+  }
+  .blog .site-main {
+    padding: 0;
+  }
+  .post {
+    width: 100vw;
+    padding: 20px;
+  }
 }
