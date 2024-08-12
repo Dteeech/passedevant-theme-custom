@@ -36,8 +36,8 @@ function display_partners_logos_shortcode($atts)
                 transition-timing-function:linear!important; 
             }
         .partners-swiper .swiper-slide {
-          width: 400px;
-  height: 200px;
+          width: 300px;
+  height: auto;
   text-align: center;
   font-size: 33px;
   display: flex;
@@ -46,6 +46,11 @@ function display_partners_logos_shortcode($atts)
   position: relative;
   overflow: hidden;
   padding: 0 50px;
+        }
+
+        .swiper-slide img {
+            height: auto;
+            max-width: 100%;
         }
         
     </style>';
