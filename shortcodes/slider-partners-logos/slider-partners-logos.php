@@ -48,7 +48,7 @@ function display_partners_logos_shortcode($atts)
   padding: 0 50px;
         }
 
-        .swiper-slide img {
+        .partners-swiper .swiper-slide img {
             height: auto;
             max-width: 100%;
         }

@@ -74,7 +74,6 @@ function display_google_reviews_slider($atts)
             display: flex;
             justify-content: start;
             flex-direction: column;
-            background-color: #f9f9f9;
             padding: 40px 40px 20px 40px;
             border-radius: 8px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
