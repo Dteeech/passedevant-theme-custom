@@ -1533,7 +1533,13 @@ footer .no-gradient-underline::after {
 --------------------------------------------------------------*/
 /*Fonts and text colors*/
 .gradient-text_title {
-  background: linear-gradient(to right, #00b4d8, #ff0096);
+  background: radial-gradient(
+    circle farthest-corner at 100% 0,
+    #f33585 25%,
+    #fcb7e5 50%,
+    #37cbf8 65%,
+    #1c36f1 96%
+  );
   -webkit-background-clip: text;
   color: transparent;
 }
