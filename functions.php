@@ -525,3 +525,6 @@ function save_category_custom_field($term_id)
 
 add_action('created_category', 'save_category_custom_field', 10, 2);
 add_action('edited_category', 'save_category_custom_field', 10, 2);
+
+require get_template_directory() . '/shortcodes/google-reviews/google-reviews.php';
+wp_enqueue_script('custom-partners-swiper-js', get_template_directory_uri() . '/shortcodes/google-reviews/swiper.js', array(), null);
