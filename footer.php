@@ -38,9 +38,27 @@
 	<div class="site-info text-">
 		<p><?php esc_html_e('Fait avec ❤️ par Passedevant', 'passedevant'); ?> - <a href="/mentions-legales">Mentions légales</a></p>
 	</div><!-- .site-info -->
-
+	<button id="back-to-top" title="Go to top">↑</button>
 </footer><!-- #colophon -->
+<script>
+	// Affiche le bouton lorsque l'utilisateur fait défiler vers le bas de 200px
+	window.onscroll = function() {
+		const backToTopButton = document.getElementById("back-to-top");
+		if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+			backToTopButton.style.display = "block";
+		} else {
+			backToTopButton.style.display = "none";
+		}
+	};
 
+	// Remonte en haut de la page lorsque l'utilisateur clique sur le bouton
+	document.getElementById("back-to-top").addEventListener("click", function() {
+		window.scrollTo({
+			top: 0,
+			behavior: 'smooth'
+		});
+	});
+</script>
 </div><!-- #page -->
 
 <?php wp_footer();

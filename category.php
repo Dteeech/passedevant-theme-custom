@@ -70,15 +70,14 @@ get_header(); ?>
                     </article><!-- #post-<?php the_ID(); ?> -->
                 <?php endwhile; ?>
             </div><!-- .grid -->
-            <!-- Pagination -->
-            <div class="pagination mt-8">
-                <?php
-                the_posts_pagination(array(
-                    'prev_text' => __('Précédent', 'passedevant'),
-                    'next_text' => __('Suivant', 'passedevant'),
-                ));
-                ?>
-            </div>
+            <?php
+            $category_custom_text = get_term_meta(get_queried_object()->term_id, 'category_custom_text', true);
+
+            if (!empty($category_custom_text)) {
+                echo '<div class="category-custom-text">' . wp_kses_post(wpautop($category_custom_text)) . '</div>';
+            }
+            ?>
+
         <?php else : ?>
             <p><?php _e('Aucun article trouvé.', 'passedevant'); ?></p>
         <?php endif; ?>

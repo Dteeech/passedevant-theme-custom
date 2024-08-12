@@ -2264,3 +2264,30 @@ aside .recent-post-item a .recent-post-content {
 .category section {
   padding: 150px 0 0 0;
 }
+
+#back-to-top {
+  padding: 10px;
+  height: 64px;
+  width: 64px;
+  border-radius: 50%;
+  background-color: #fff;
+  position: fixed;
+  bottom: 55px;
+  right: 35px;
+  mix-blend-mode: difference;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 998;
+  cursor: pointer;
+  text-align: center;
+  font-size: 24px;
+  color: #1e1e1e;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+#back-to-top:hover {
+  background-color: #000;
+  color: #fff;
+  transform: scale(1.8); /* Augmente la taille à 110% */
+}

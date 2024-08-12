@@ -448,15 +448,80 @@ require_once get_template_directory() . '/accordion/wpt-accordion.php';
 
 wp_enqueue_script('full-link-cta', get_template_directory_uri() . '/js/full-link-cta.js', array(), null);
 
-function my_scripts_method() {
+function my_scripts_method()
+{
 	wp_enqueue_script(
-	'custom-script',
-	get_stylesheet_directory_uri() . '/js/topbutton.js',
-	array( 'jquery' )
+		'custom-script',
+		get_stylesheet_directory_uri() . '/js/topbutton.js',
+		array('jquery')
 	);
-	}
-	
-	add_action( 'wp_enqueue_scripts', 'my_scripts_method' );
+}
+
+add_action('wp_enqueue_scripts', 'my_scripts_method');
 
 
 require get_template_directory() . '/inc/recent-posts-widget.php';
+
+function prefix_filter_widget_title_tag($params)
+{
+
+	$params[0]['before_title'] = '<span class="widget-title widgettitle">';
+
+	$params[0]['after_title']  = '</span>';
+
+	return $params;
+}
+add_filter('dynamic_sidebar_params', 'prefix_filter_widget_title_tag');
+
+
+/*categorie custom field*/
+function add_category_custom_field()
+{
+	// Ajoute un champ personnalisé à la page d'édition des catégories
+?>
+	<div class="form-field">
+		<label for="category_custom_text">Texte personnalisé</label>
+		<?php
+		wp_editor('', 'category_custom_text', array(
+			'textarea_name' => 'category_custom_text',
+			'textarea_rows' => 5,
+		));
+		?>
+		<p>Ajouter un texte personnalisé pour cette catégorie.</p>
+	</div>
+<?php
+}
+
+add_action('category_add_form_fields', 'add_category_custom_field', 10, 2);
+add_action('category_edit_form_fields', 'edit_category_custom_field', 10, 2);
+
+function edit_category_custom_field($term)
+{
+	// Récupère la valeur du champ personnalisé existant
+	$value = get_term_meta($term->term_id, 'category_custom_text', true);
+?>
+	<tr class="form-field">
+		<th scope="row" valign="top"><label for="category_custom_text">Texte personnalisé</label></th>
+		<td>
+			<?php
+			wp_editor(html_entity_decode($value), 'category_custom_text', array(
+				'textarea_name' => 'category_custom_text',
+				'textarea_rows' => 5,
+			));
+			?>
+			<p class="description">Modifier le texte personnalisé pour cette catégorie.</p>
+		</td>
+	</tr>
+<?php
+}
+
+function save_category_custom_field($term_id)
+{
+	if (isset($_POST['category_custom_text'])) {
+		$value = $_POST['category_custom_text'];
+		update_term_meta($term_id, 'category_custom_text', $value);
+	}
+}
+
+add_action('created_category', 'save_category_custom_field', 10, 2);
+add_action('edited_category', 'save_category_custom_field', 10, 2);
