@@ -2302,3 +2302,8 @@ aside .recent-post-item a .recent-post-content {
   border-top: 3px solid white;
   border-bottom: 3px solid white;
 }
+@media (max-width: 1130px) {
+  .references_wrapper {
+    display: none !important;
+  }
+}

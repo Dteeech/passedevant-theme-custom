@@ -81,7 +81,16 @@ function display_google_reviews_slider($atts)
             width: 100%;
             height: 450px;
             overflow: auto;
+
+            box-shadow: 20px 21px 0 0 #1E1E1E;
+            transition: box-shadow 0.1s ease-in-out 0.1s;
+
+            /* Added transition delay */
+        }
+
+        .review-slide:hover {
             box-shadow: 10px 11px 0 0 #1E1E1E;
+            cursor: grab;
         }
 
         .review-author-photo {
@@ -117,6 +126,24 @@ function display_google_reviews_slider($atts)
                     nextEl: '.swiper-button-next',
                     prevEl: '.swiper-button-prev',
                 },
+                breakpoints: {
+                    320: {
+                        slidesPerView: 1,
+                        spaceBetween: 40,
+                    },
+                    480: {
+                        slidesPerView: 2,
+                        spaceBetween: 20,
+                    },
+                    768: {
+                        slidesPerView: 3,
+                        spaceBetween: 30,
+                    },
+                    1024: {
+                        slidesPerView: 4,
+                        spaceBetween: 40,
+                    }
+                }
             });
 
             document.querySelectorAll('.philosophie-link').forEach(function(link) {
