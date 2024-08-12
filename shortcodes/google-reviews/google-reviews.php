@@ -74,15 +74,14 @@ function display_google_reviews_slider($atts)
             display: flex;
             justify-content: start;
             flex-direction: column;
+            border: 1px solid #1E1E1E;
             padding: 40px 40px 20px 40px;
             border-radius: 8px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             width: 100%;
             height: 450px;
             overflow: auto;
-            box-shadow: 9px 13px 5px 0px rgba(30, 30, 30, 0.1);
-            -webkit-box-shadow: 9px 13px 5px 0px rgba(30, 30, 30, 0.1);
-            -moz-box-shadow: 9px 13px 5px 0px rgba(30, 30, 30, 0.1);
+            box-shadow: 10px 11px 0 0 #1E1E1E;
         }
 
         .review-author-photo {
@@ -108,7 +107,7 @@ function display_google_reviews_slider($atts)
         document.addEventListener('DOMContentLoaded', function() {
             var swiper = new Swiper('.reviews-slider', {
                 slidesPerView: 4,
-                spaceBetween: 20,
+                spaceBetween: 40,
                 centeredSlides: true,
                 pagination: {
                     el: '.swiper-pagination',
