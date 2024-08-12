@@ -2297,3 +2297,8 @@ aside .recent-post-item a .recent-post-content {
   color: #fff;
   transform: scale(1.8); /* Augmente la taille à 110% */
 }
+
+.team-pic_accueil {
+  border-top: 3px solid white;
+  border-bottom: 3px solid white;
+}
