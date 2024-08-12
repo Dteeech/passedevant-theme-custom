@@ -1,9 +1,10 @@
 <?php
-function custom_homepage_content_shortcode() {
+function custom_homepage_content_shortcode()
+{
     ob_start();
-    ?>
+?>
     <div class="container mx-auto">
-        <h2 class="text-5xl text-black mb-20">Nos expertises</h2>
+
     </div>
     <div id="expertise-content" class="wrapper flex"></div>
 
@@ -188,7 +189,7 @@ function custom_homepage_content_shortcode() {
         }
     </style>
     <script>
-        document.addEventListener('DOMContentLoaded', function () {
+        document.addEventListener('DOMContentLoaded', function() {
             const isMobile = window.innerWidth <= 1024;
 
             fetch('<?php echo admin_url('admin-ajax.php?action=get_expertise_content'); ?>')
@@ -271,7 +272,7 @@ function custom_homepage_content_shortcode() {
                 const menuLinks = document.querySelectorAll('.menu-link a');
 
                 menuLinks.forEach(link => {
-                    link.addEventListener('click', function (e) {
+                    link.addEventListener('click', function(e) {
                         e.preventDefault();
                         const targetId = this.getAttribute('data-target');
                         const contentSections = document.querySelectorAll('#expertise-content .content-section');
@@ -291,7 +292,7 @@ function custom_homepage_content_shortcode() {
                 const accordionButtons = document.querySelectorAll('.accordion-button');
 
                 accordionButtons.forEach(button => {
-                    button.addEventListener('click', function () {
+                    button.addEventListener('click', function() {
                         const targetId = this.getAttribute('data-target');
                         const content = document.getElementById('mobile-' + targetId);
 
@@ -307,7 +308,7 @@ function custom_homepage_content_shortcode() {
             }
         });
     </script>
-    <?php
+<?php
     return ob_get_clean();
 }
 add_shortcode('custom_homepage_content', 'custom_homepage_content_shortcode');
