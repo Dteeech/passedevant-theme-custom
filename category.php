@@ -1,12 +1,11 @@
 <?php
 
 /**
- * Template Name: Blog Template
- *
- * @package passedevant
+ * A Simple Category Template
  */
 
-get_header();
+get_header(); ?>
+
 ?>
 
 <main id="primary" class="site-main">
@@ -24,8 +23,7 @@ get_header();
     </div>
     <div class="categories mt-8">
         <div class="container mx-auto flex justify-center gap-4">
-            <a href="/blog" class="category-filter active">Tout</a>
-
+            <a href="/blog" class="category-filter">Tout</a>
             <?php
             $current_category = get_queried_object();
             $args = array(
@@ -118,7 +116,5 @@ get_header();
         });
     });
 </script>
-<?php
 
-get_footer();
-?>
+<?php get_footer(); ?>

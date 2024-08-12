@@ -2178,13 +2178,14 @@ aside .recent-post-item a .recent-post-content {
 .blog .site-main {
   padding-top: 100px;
 }
-.blog .site-main .post {
+.blog .post,
+.category .post {
   border: 1px solid #1e1e1e;
   max-height: 600px;
   overflow: auto;
   width: 100%;
 }
-.blog .blog-hero {
+.blog-hero {
   padding: 90px 120px;
   height: 60vh;
   width: 100vw;
@@ -2195,7 +2196,7 @@ aside .recent-post-item a .recent-post-content {
   overflow: hidden;
   position: relative;
 }
-.blog .blog-hero_form_container {
+.blog-hero_form_container {
   max-width: 600px;
   margin: 0;
   height: 100%;
@@ -2207,10 +2208,10 @@ aside .recent-post-item a .recent-post-content {
   overflow: hidden;
 }
 
-.blog .blog-hero_content .blog-newsletter-form {
+.blog-hero_content .blog-newsletter-form {
   width: 100%;
 }
-.blog .blog-newsletter-form input {
+.blog-newsletter-form input {
   width: 50%;
   background-color: transparent !important;
   border: none !important;
@@ -2221,19 +2222,20 @@ aside .recent-post-item a .recent-post-content {
   border-radius: 0% !important;
 }
 
-.blog .categories {
+.categories {
   margin: 80px 10px;
 }
-.blog .categories .category-filter {
+.categories .category-filter {
   padding: 10px;
   border-radius: 16px;
   border: 1px solid #1e1e1e;
   background-color: white;
   color: #1e1e1e;
 }
-.blog .categories .category-filter:hover {
+.categories .category-filter:hover,
+.categories .category-filter.active {
   color: #783eff;
-  border: 1px solid #783eff;
+  border: 2px solid #783eff;
 }
 
 /*media queries*/
@@ -2253,8 +2255,12 @@ aside .recent-post-item a .recent-post-content {
   .blog .site-main {
     padding: 0;
   }
-  .post {
+  .blog .post,
+  .category .post {
     width: 100vw;
     padding: 20px;
   }
+}
+.category section {
+  padding: 150px 0 0 0;
 }

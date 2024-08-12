@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     const settings = {
         loop: true,
         speed: 700,
@@ -13,17 +13,4 @@ document.addEventListener('DOMContentLoaded', function() {
     };
 
     const swiper = new Swiper(".myPhilosophieSwiper", settings);
-<<<<<<< HEAD
-=======
-
-    document.addEventListener('DOMContentLoaded', function() {
-        document.querySelectorAll('.menu a').forEach(function(link) {
-            link.addEventListener('click', function(e) {
-                e.preventDefault();
-                var slideIndex = this.getAttribute('data-slide');
-                swiper.slideTo(slideIndex);
-            });
-        });
-     })
->>>>>>> main
 });
