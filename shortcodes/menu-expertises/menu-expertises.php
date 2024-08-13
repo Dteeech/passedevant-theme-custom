@@ -11,7 +11,7 @@ function custom_homepage_content_shortcode()
     <style>
         .separator {
             height: auto;
-            border-right: 3px solid black;
+            border-right: 1px solid black;
         }
 
         .homepage-content {
