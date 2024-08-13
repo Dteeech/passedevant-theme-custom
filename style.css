@@ -1718,7 +1718,6 @@ essibility
   justify-content: start;
   align-items: center;
   width: 200px; /* Adjust the width as needed */
-  min-height: 400px;
   overflow-y: auto;
   flex-wrap: nowrap;
 }
