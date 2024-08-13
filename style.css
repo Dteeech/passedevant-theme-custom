@@ -186,7 +186,7 @@ main {
   color: #1e1e1e;
   transition: 0.3s;
 }
-.primary-button .wp-block-button__link:hover,
+.secondary-button .wp-block-button__link:hover,
 .header_button:hover {
   background-color: #1e1e1e;
   color: #fff;
