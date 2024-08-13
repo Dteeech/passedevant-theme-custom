@@ -117,17 +117,50 @@ header {
 main {
   display: block;
 }
+.header_button {
+  border-radius: 20px;
+}
 
+.header_button:hover a {
+  color: #1e1e1e;
+  transition: 0.3s;
+}
 /*primary style*/
-.primary-button .wp-block-button__link {
+.primary-button .wp-block-button__link,
+.header_button {
   background-color: transparent;
   border: 2px solid white;
   font-size: medium;
+  color: white;
+  padding: 10px 20px;
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.primary-button .wp-block-button__link:hover {
+.primary-button .wp-block-button__link::after,
+.header_button::after {
+  content: "";
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  background-image: url("./images/svg/Flèche-blanche-petite.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  margin-left: 10px; /* Espace entre le texte et la flèche */
+  z-index: 50;
+}
+.primary-button .wp-block-button__link:hover,
+.header_button:hover {
   background-color: #fff;
   color: #1e1e1e;
+  transition: 0.3s;
+}
+.primary-button .wp-block-button__link:hover::after,
+.header_button:hover::after {
+  mix-blend-mode: difference;
   transition: 0.3s;
 }
 .header-light {
@@ -964,36 +997,9 @@ textarea {
 Custom pour le cta header
 **/
 /* Annuler les styles ::after pour le lien Contact */
-.main-navigation .menu-item-339 a::after {
-  content: none !important;
-}
-
-/* Ajouter des styles spécifiques pour le lien Contact */
-.main-navigation .menu-item-339 {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0; /* Ajuster le padding si nécessaire */
-}
-
-.main-navigation .menu-item-339 a {
-  width: auto !important;
-  height: auto !important;
-  padding: calc(0.667em + 2px) calc(1.333em + 2px); /* Ajuster le padding si nécessaire */
-  background-color: #333; /* Exemple de couleur de fond */
-  color: #fff; /* Exemple de couleur du texte */
-  border-radius: 50px; /* Exemple de coin arrondis */
-  text-decoration: none; /* Supprimer la décoration du texte */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
 
 /* Styles supplémentaires pour le bouton Contact */
-.main-navigation .menu-item-339 a:hover {
-  background-color: white; /* Exemple de couleur de fond au survol */
-  color: #1e1e1e; /* Exemple de couleur du texte au survol */
-}
+
 /* Small menu. */
 .menu-toggle,
 .main-navigation.toggled ul {
@@ -2320,4 +2326,12 @@ aside .recent-post-item a .recent-post-content {
   .references_wrapper {
     display: none !important;
   }
+}
+#rmp_menu_trigger-337.is-active {
+  background: #1e1e1e;
+}
+#rmp_menu_trigger-337.is-active .responsive-menu-pro-inner,
+#rmp_menu_trigger-337.is-active .responsive-menu-pro-inner::before,
+#rmp_menu_trigger-337.is-active .responsive-menu-pro-inner::after {
+  background-color: white;
 }
