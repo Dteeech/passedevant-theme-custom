@@ -139,6 +139,19 @@ main {
   justify-content: center;
 }
 
+.secondary-button .wp-block-button__link,
+.header_button {
+  background-color: transparent;
+  border: 2px solid #1e1e1e;
+  font-size: medium;
+  color: #1e1e1e;
+  padding: 10px 20px;
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .primary-button .wp-block-button__link::after,
 .header_button::after {
   content: "";
@@ -152,13 +165,36 @@ main {
   margin-left: 10px; /* Espace entre le texte et la flèche */
   z-index: 50;
 }
+.secondary-button .wp-block-button__link::after,
+.header_button::after {
+  content: "";
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  background-image: url("./images/svg/Flèche-blanche-petite.svg");
+  mix-blend-mode: difference;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  margin-left: 10px; /* Espace entre le texte et la flèche */
+  z-index: 50;
+}
+
 .primary-button .wp-block-button__link:hover,
 .header_button:hover {
   background-color: #fff;
   color: #1e1e1e;
   transition: 0.3s;
 }
+.primary-button .wp-block-button__link:hover,
+.header_button:hover {
+  background-color: #1e1e1e;
+  color: #fff;
+  transition: 0.3s;
+}
 .primary-button .wp-block-button__link:hover::after,
+.header_button:hover::after,
+.secondary-button .wp-block-button__link:hover::after,
 .header_button:hover::after {
   mix-blend-mode: difference;
   transition: 0.3s;
@@ -2326,4 +2362,8 @@ aside .recent-post-item a .recent-post-content {
 
 .cta-svg {
   margin-bottom: 20px;
+}
+
+.cta-svg a {
+  font-size: 52px !important;
 }
