@@ -2321,3 +2321,9 @@ aside .recent-post-item a .recent-post-content {
 #rmp_menu_trigger-337.is-active .responsive-menu-pro-inner::after {
   background-color: white;
 }
+
+/*svg des cta vers audite seo dans les sliders*/
+
+.cta-svg {
+  margin-bottom: 20px;
+}
