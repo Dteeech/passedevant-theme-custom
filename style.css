@@ -2146,8 +2146,9 @@ aside .recent-post-item a .recent-post-content {
 
 .customBlankSwiper .swiper-slide {
   display: inline-flex; /* Utilisation de inline-flex pour ajuster la taille au contenu */
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
+  min-height: 450px;
   height: auto; /* Pour ajuster la hauteur en fonction du contenu */
   width: inherit;
 }
