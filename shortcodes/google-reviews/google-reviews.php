@@ -81,7 +81,6 @@ function display_google_reviews_slider($atts)
             width: 100%;
             height: 450px;
             overflow: auto;
-
             box-shadow: 20px 21px 0 0 #1E1E1E;
             transition: box-shadow 0.1s ease-in-out 0.1s;
 

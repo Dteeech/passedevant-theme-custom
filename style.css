@@ -175,12 +175,27 @@ main {
   background-color: #1e1e1e;
   color: white;
 }
+.header-light ul ul {
+  box-shadow: 5px 4px 5px 0px rgba(30, 30, 30, 0.1);
+  -webkit-box-shadow: 5px 4px 5px 0px rgba(30, 30, 30, 0.1);
+  -moz-box-shadow: 5px 4px 5px 0px rgba(30, 30, 30, 0.1);
+}
+.header-dark ul ul {
+  box-shadow: 5px 4px 5px 0px rgba(255, 255, 255, 0.1) !important;
+  -webkit-box-shadow: 5px 4px 5px 0px rgba(255, 255, 255, 0.1) !important;
+  -moz-box-shadow: 5px 4px 5px 0px rgba(255, 255, 255, 0.1) !important;
+}
 .sub-menu {
   display: flex;
   flex-direction: column;
+  min-width: 400px;
+  justify-content: start;
+  align-items: start;
+  align-content: start;
 }
 .sub-menu .menu-item {
   padding: 0px;
+  align-self: start !important;
 }
 .menu-dev a:hover {
   color: transparent; /* Le texte est transparent pour que le dégradé soit visible */
@@ -269,7 +284,7 @@ a:hover::after {
 header .sub-menu > li::before {
   content: "→"; /* Flèche vers le bas */
   position: absolute;
-  right: 205px;
+  right: -20px;
   bottom: -5px;
   transform: translateY(-50%);
   font-size: 0.8em; /* Ajuster la taille de la flèche si nécessaire */
@@ -908,7 +923,6 @@ textarea {
 }
 
 .main-navigation ul ul {
-  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
   position: absolute;
   top: 100%;
   left: -999em;
@@ -927,7 +941,7 @@ textarea {
 }
 
 .main-navigation ul ul a {
-  width: 200px;
+  width: auto;
 }
 
 .main-navigation ul li:hover > ul,
@@ -937,7 +951,7 @@ textarea {
 
 .main-navigation li {
   position: relative;
-  margin: 25px;
+  margin: 17px 25px;
 }
 
 .main-navigation a {

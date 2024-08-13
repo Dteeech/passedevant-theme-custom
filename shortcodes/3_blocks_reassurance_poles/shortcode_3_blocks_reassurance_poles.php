@@ -3,7 +3,7 @@ function shortcote_3_blocks_reassurance_shortcode()
 {
     ob_start();
 ?>
-    <div class="container mx-auto flex lg:flex-row flex-wrap gap-40 justify-center pb-20">
+    <div class="container mx-auto flex lg:flex-row flex-wrap gap-20 justify-center pb-20">
         <div class="card border-2 border-white p-10">
             <div class="flex items-center space-x-4 justify-between">
                 <h3 class="text-2xl font-bold">Le SEO</h3>
