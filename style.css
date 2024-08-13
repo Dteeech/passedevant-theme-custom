@@ -1718,8 +1718,7 @@ essibility
   justify-content: start;
   align-items: center;
   width: 200px; /* Adjust the width as needed */
-  min-height: 450px; /* Adjust the height as needed */
-  max-height: 700px;
+  min-height: 400px;
   overflow-y: auto;
   flex-wrap: nowrap;
 }
@@ -1756,20 +1755,7 @@ essibility
   width: 20px;
   background-color: #6f0aaa;
 }
-.prestations .cta-svg {
-  right: 75px;
-  bottom: 80px;
-}
-.cta-svg a {
-  display: block;
-  width: 60px;
-  height: 60px;
-}
 
-.cta-svg a svg {
-  width: 60px;
-  height: 60px;
-}
 /* les 3 blocks de cogestion */
 .cogestion-wrapper {
   padding: 50px 0 50px 0;
