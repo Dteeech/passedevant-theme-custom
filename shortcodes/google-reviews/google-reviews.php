@@ -80,7 +80,6 @@ function display_google_reviews_slider($atts)
             width: 100%;
             height: auto;
             overflow: auto;
-            box-shadow: 20px 21px 0 0 #1E1E1E;
 
             /* Added transition delay */
         }
