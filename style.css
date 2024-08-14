@@ -102,7 +102,7 @@ header {
   position: fixed;
   z-index: 999;
   width: 100vw;
-  height: 70px;
+  height: 100px;
   opacity: 0.95;
 }
 .site-title {
@@ -202,9 +202,7 @@ main {
 .header-light {
   background-color: white;
 }
-#site-navigation {
-  padding: 20px 0;
-}
+
 .header-light .main-navigation a {
   color: #1e1e1e;
 }
@@ -956,12 +954,14 @@ textarea {
 --------------------------------------------- */
 #site-navigation {
   width: 100%;
+  height: auto;
 }
 .main-navigation {
   display: flex;
   align-items: center;
   width: 100%;
   gap: 8vw;
+  height: 100%;
 }
 .menu-CTA {
   border: none;
@@ -1791,6 +1791,9 @@ essibility
   background-color: #6f0aaa;
 }
 
+.prestations .secondary-button {
+  margin-left: 50px;
+}
 /* les 3 blocks de cogestion */
 .cogestion-wrapper {
   padding: 50px 0 50px 0;
