@@ -1061,7 +1061,7 @@ Custom pour le cta header
   bottom: 30px;
   right: 0px;
   transform: translateX(-50%);
-  z-index: 999;
+  z-index: 1;
 }
 
 .references_button a {
