@@ -66,7 +66,8 @@ function display_google_reviews_slider($atts)
     </div>
     <style>
         .reviews-slider {
-            height: 50vh;
+            height: 100%;
+
         }
 
         .review-slide {
