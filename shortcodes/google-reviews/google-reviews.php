@@ -77,18 +77,16 @@ function display_google_reviews_slider($atts)
             border: 1px solid #1E1E1E;
             padding: 40px 40px 20px 40px;
             border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             width: 100%;
-            height: 450px;
+            height: auto;
             overflow: auto;
             box-shadow: 20px 21px 0 0 #1E1E1E;
-            transition: box-shadow 0.1s ease-in-out 0.1s;
 
             /* Added transition delay */
         }
 
         .review-slide:hover {
-            box-shadow: 10px 11px 0 0 #1E1E1E;
+
             cursor: grab;
         }
 
