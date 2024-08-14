@@ -38,7 +38,7 @@
 	<div class="site-info text-">
 		<p><?php esc_html_e('Fait avec ❤️ par Passedevant', 'passedevant'); ?> - <a href="/mentions-legales">Mentions légales</a></p>
 	</div><!-- .site-info -->
-	<button id="back-to-top" title="Go to top">↑</button>
+	<button id="back-to-top" title="Go to top"> <img src=" <?php echo get_template_directory_uri() . '/images/svg/chevron_up_black.svg' ?>" alt=""></button>
 </footer><!-- #colophon -->
 <script>
 	// Affiche le bouton lorsque l'utilisateur fait défiler vers le bas de 200px
