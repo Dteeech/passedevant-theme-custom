@@ -7,18 +7,18 @@ function methodologie_seo_shortcode()
         ob_start();
 ?>
         <div class="methodologie-container text-white container mx-auto">
-            <div class="flex justify-start w-full gap-44">
+            <div class="flex flex-col lg:flex-row w-full justify-around">
                 <div class=" min-w-44">
                     <?php foreach ($elements as $index => $element) : ?>
                         <button class="menu-button" data-content-id="content-<?php echo $index + 1; ?>" data-number-id="number-<?php echo $index + 1; ?>"><?php echo esc_html($element['button_text']); ?></button>
                     <?php endforeach; ?>
                 </div>
-                <div class="methodologie-number ">
+                <div class="methodologie-number text-end">
                     <?php foreach ($elements as $index => $element) : ?>
                         <div id="number-<?php echo $index + 1; ?>" class="number-section" style="display: <?php echo $index === 0 ? 'flex flex-row' : 'none'; ?>"><?php echo $index + 1; ?></div>
                     <?php endforeach; ?>
                 </div>
-                <div class=" flex content-center items-center ">
+                <div class=" flex content-center items-center flex-grow w-full">
                     <?php foreach ($elements as $index => $element) : ?>
                         <div id="content-<?php echo $index + 1; ?>" class="content-section" style="display: <?php echo $index === 0 ? 'flex' : 'none'; ?>"><?php echo esc_html($element['content']); ?></div>
                     <?php endforeach; ?>
@@ -71,17 +71,22 @@ function methodologie_seo_shortcode()
                 display: none;
                 padding: 20px;
             }
+
             .methodologie-number {
                 display: flex;
                 align-items: center;
             }
+
             .number-section {
                 font-size: 186px;
                 width: 260px;
+                justify-content: end;
             }
+
             .content-section {
-                width: 400px;
+                width: 40vw;
             }
+
             .content-section:first-child,
             .number-section:first-child {
                 display: flex;
