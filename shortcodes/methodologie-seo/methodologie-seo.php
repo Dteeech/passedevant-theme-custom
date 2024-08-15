@@ -36,7 +36,7 @@ function methodologie_seo_shortcode()
                 background-color: transparent;
                 /* Couleur de fond transparent */
                 color: white;
-                padding: 10px 10px 10px 40px;
+                padding: 10px 10px 10px 10px;
                 /* Ajuster le padding pour faire de la place pour la bulle */
                 margin-bottom: 10px;
                 cursor: pointer;
@@ -53,8 +53,8 @@ function methodologie_seo_shortcode()
                 /* Ajuster la position */
                 top: 50%;
                 transform: translateY(-50%);
-                width: 30px;
-                height: 30px;
+                width: 15px;
+                height: 15px;
                 background: url('data:image/svg+xml,%3Csvg%20width%3D%2230%22%20height%3D%2230%22%20viewBox%3D%220%200%2030%2030%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Ccircle%20cx%3D%2215%22%20cy%3D%2215%22%20r%3D%2215%22%20fill%3D%22%23F8ACF0%22%2F%3E%3C%2Fsvg%3E') no-repeat center center;
                 background-size: contain;
                 background-size: contain;

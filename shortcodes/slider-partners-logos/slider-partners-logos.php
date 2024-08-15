@@ -30,13 +30,14 @@ function display_partners_logos_shortcode($atts)
             background: #1E1E1E !important;
             width:100%;
             
+            
         }
             .partners-swiper .swiper-wrapper {
                  -webkit-transition-timing-function:linear!important;
                 transition-timing-function:linear!important; 
             }
         .partners-swiper .swiper-slide {
-          width: 300px;
+          width: 280px;
   height: auto;
   text-align: center;
   font-size: 33px;
@@ -46,6 +47,7 @@ function display_partners_logos_shortcode($atts)
   position: relative;
   overflow: hidden;
   padding: 0 50px;
+  margin:0 40px ;
         }
 
         .partners-swiper .swiper-slide img {
