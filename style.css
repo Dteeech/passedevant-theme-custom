@@ -1084,7 +1084,6 @@ Custom pour le cta header
 
 .references_wrapper .references_button a {
   color: white; /* Couleur par défaut du texte */
-  border: 1px solid white; /* Couleur par défaut de la bordure */
   transition: color 0.5s ease-in-out, border 0.5s ease-in-out;
 }
 
