@@ -960,7 +960,6 @@ textarea {
   display: flex;
   align-items: center;
   width: 100%;
-  gap: 8vw;
   height: 100%;
 }
 .menu-CTA {
@@ -1061,7 +1060,7 @@ Custom pour le cta header
   bottom: 30px;
   right: 0px;
   transform: translateX(-50%);
-  z-index: 1;
+  z-index: 999;
 }
 
 .references_button a {
@@ -1217,6 +1216,7 @@ Custom pour le cta header
 }
 #logo {
   min-width: 180px;
+  margin-left: 6vw;
 }
 #logo img {
   width: 100%;
@@ -1317,61 +1317,50 @@ Custom pour le cta header
 .infinity-end.neverending .site-footer {
   display: block;
 }
-
+.footer_cta-section:hover {
+  transform: translateX(40px) scale(1.1) !important; /* Applique l'échelle sur le hover */
+}
 .footer_cta-section {
-  height: 25vh;
-  max-width: 50vw;
+  transform: translateX(-1000px);
+  transition: all 1s ease-in-out 0s; /* Ajout de la transition de l'échelle */
   display: flex;
+
+  display: flex;
+  align-items: center; /* Aligne la flèche et le texte verticalement au centre */
+  justify-content: space-between; /* Crée de l'espace entre le texte et la flèche */
   position: absolute;
-  top: -100px;
-  right: 5px;
-  left: 5px;
+  top: -70px;
+  left: -200px;
   background-color: white;
   color: black;
-  max-width: 50vw;
-  padding: 20px 65px;
-  border-radius: 12px;
-  border-image-slice: 1;
-  text-align: center;
-  align-items: center; /* Center the content vertically */
-  justify-content: space-between; /* Space between the columns */
-  margin: 20px auto;
-  align-content: center;
+  width: 70vw;
+  padding: 20px 65px 20px 190px;
+  border-radius: 150px;
+  z-index: 999;
+  background: linear-gradient(
+    90deg,
+    #05a9cf 0%,
+    #5cb6e5 17.5%,
+    #93baec 37%,
+    #edc3df 57%,
+    #f33585 74.5%
+  );
 }
-.footer_cta-section::before {
-  pointer-events: none;
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  border-radius: 10px; /* Same border radius as the container */
-  padding: 4px; /* Width of the border */
-  background: linear-gradient(to right, #00b4d8, #ff0096); /* Gradient border */
-  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-  -webkit-mask-composite: destination-out;
-  mask-composite: exclude;
+
+.footer_cta-section.visible {
+  transform: translateX(40px);
+}
+
+.footer_cta-section span {
+  font-size: 50px;
 }
 .footer_cta-section .col {
   flex: 1;
 }
-
-.footer_cta-section .content {
-  flex: 3;
-  padding-right: 20px;
-  text-align: start;
-}
-
-.footer_cta-section .button {
-  flex: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.footer_cta-section h2 {
-  font-size: 24px;
-  margin-bottom: 10px;
+.footer_cta-section img {
+  width: 100px;
+  height: auto;
+  margin-left: 100px;
 }
 a.header-cta {
   color: white; /* Couleur de texte pour les CTA */
@@ -1409,6 +1398,7 @@ a.cta::after {
 /* Styles pour l'icône SVG à droite du texte */
 
 .site-footer {
+  margin-top: 200px;
   padding: 25px 20px;
   color: #ffffff;
   position: relative;
@@ -1426,6 +1416,7 @@ footer .no-gradient-underline::after {
   justify-content: space-evenly;
   flex-wrap: wrap;
   text-align: start;
+  padding-top: 120px;
   margin-top: 159px;
   margin-left: auto;
   margin-right: auto;
@@ -1958,6 +1949,17 @@ essibility
   border-color: transparent;
 }
 
+.bloc-cta_officiel .bloc-cta_light,
+.bloc-cta_officiel .bloc-cta_dark {
+  background: linear-gradient(
+    90deg,
+    #05a9cf 0%,
+    #5cb6e5 17.5%,
+    #93baec 37%,
+    #edc3df 57%,
+    #f33585 74.5%
+  );
+}
 .bloc-cta_seo .bloc-cta_light,
 .bloc-cta_seo .bloc-cta_dark {
   border-image: linear-gradient(

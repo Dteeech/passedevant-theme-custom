@@ -14,6 +14,16 @@
 
 <footer id="colophon" class="site-footer" style="border-top:1px solid white; background-color: <?php echo get_theme_mod('footer_bg_color', '#1e1e1e'); ?>;">
 
+	<a footer_cta-section_link href="/demande">
+		<div class="footer_cta-section flex flex-row">
+
+			<div class="flex flex-col">
+				<span>Collaborons ensemble</span>
+				<p>Vous souhaitez faire connaissance avec nous et en savoir plus sur nos expertises ?</p>
+			</div>
+			<img height="150" width="150" src="<?php echo get_template_directory_uri() . '/images/Flèche-noir.png' ?>; " alt="">
+		</div>
+	</a>
 
 	<div class="footer-widgets sm:mt-5">
 		<?php
@@ -57,6 +67,15 @@
 			top: 0,
 			behavior: 'smooth'
 		});
+	});
+	document.addEventListener('scroll', function() {
+		const cta = document.querySelector('.footer_cta-section');
+		const ctaPosition = cta.getBoundingClientRect().top;
+		const screenPosition = window.innerHeight / 1.5; // Ajustez la position de déclenchement
+
+		if (ctaPosition < screenPosition) {
+			cta.classList.add('visible');
+		}
 	});
 </script>
 </div><!-- #page -->

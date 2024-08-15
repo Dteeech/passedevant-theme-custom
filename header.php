@@ -53,18 +53,28 @@
 					<a id="logo" class="" href="/">
 						<img src="<?php echo esc_url($logo_url); ?>" alt="Logo">
 					</a>
-
-					<button class="menu-toggle " aria-controls="primary-menu"
-						aria-expanded="false"><?php esc_html_e('Primary Menu', 'passedevant'); ?></button>
-					<?php
-					wp_nav_menu(
-						array(
-							'theme_location' => 'menu-1',
-							'menu_id' => 'primary-menu',
-							'container' => 'nav',
-						)
-					);
-					?>
+					<div class="container flex gap-32">
+						<button class="menu-toggle " aria-controls="primary-menu"
+							aria-expanded="false"><?php esc_html_e('Primary Menu', 'passedevant'); ?></button>
+						<?php
+						wp_nav_menu(
+							array(
+								'theme_location' => 'menu-1',
+								'menu_id' => 'primary-menu',
+								'container' => 'nav',
+							)
+						);
+						?>
+						<div class="wp-block-buttons <?php if (isset($header_class) && $header_class === 'header-light') {
+															echo 'secondary-button';
+														} else {
+															echo 'primary-button';
+														} ?> is-layout-flex wp-block-buttons-is-layout-flex">
+							<div class="wp-block-button  ">
+								<a href="/contact" class="wp-block-button__link wp-element-button"><?php esc_html_e('Contact'); ?></a>
+							</div>
+						</div>
+					</div>
 				</nav><!-- #site-navigation -->
 			</div>
 		</header><!-- #masthead -->
