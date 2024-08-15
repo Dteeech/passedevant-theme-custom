@@ -142,6 +142,19 @@ function custom_swiper_philosophie_swiper_shortcode()
         </div>
     </div>
     <style>
+        .philosophie-link::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -4px;
+            width: 100%;
+            height: 2px;
+            background: #1E1E1E;
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.5s ease-out;
+        }
+
         .philosophie .swiper {
             width: 100%;
             height: 80vh;

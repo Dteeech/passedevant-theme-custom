@@ -77,10 +77,10 @@ function display_google_reviews_slider($atts)
             flex-direction: column;
             border: 1px solid #1E1E1E;
             padding: 40px 40px 20px 40px;
-            border-radius: 8px;
             width: 100%;
             height: auto;
             overflow: auto;
+            height: 500px;
 
             /* Added transition delay */
         }
