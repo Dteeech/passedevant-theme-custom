@@ -994,7 +994,7 @@ textarea {
   position: absolute;
   top: 100%;
   left: -999em;
-  z-index: 99999;
+  z-index: 10;
 }
 
 .main-navigation ul ul ul {
@@ -1060,7 +1060,7 @@ Custom pour le cta header
   bottom: 30px;
   right: 0px;
   transform: translateX(-50%);
-  z-index: 999;
+  z-index: 9;
 }
 
 .references_button a {
@@ -1336,7 +1336,7 @@ Custom pour le cta header
   width: 70vw;
   padding: 20px 65px 20px 190px;
   border-radius: 150px;
-  z-index: 999;
+  z-index: 2;
   background: linear-gradient(
     90deg,
     #05a9cf 0%,
@@ -2376,4 +2376,14 @@ aside .recent-post-item a .recent-post-content {
 
 .cta-svg a {
   font-size: 52px !important;
+}
+
+/*image hero*/
+
+.hero_image {
+  position: absolute;
+  right: 200px;
+  top: 100px;
+}
+.check-list {
 }
