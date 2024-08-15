@@ -1329,7 +1329,7 @@ Custom pour le cta header
   align-items: center; /* Aligne la flèche et le texte verticalement au centre */
   justify-content: space-between; /* Crée de l'espace entre le texte et la flèche */
   position: absolute;
-  top: -70px;
+  top: -100px;
   left: -200px;
   background-color: white;
   color: black;
