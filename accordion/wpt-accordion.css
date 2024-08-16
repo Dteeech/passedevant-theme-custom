@@ -5,42 +5,49 @@
  * 
  * https://wp-tutorials.tech/refine-wordpress/wordpress-accordion-without-a-plugin/
  */
- .wptac-container {
-    /* Vous pouvez ajouter des styles pour le conteneur de l'accordéon ici */
- }
- 
- .wptac-header {
-    cursor: pointer;
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 10px;
-    border-bottom: 1px solid #000;
- }
- 
- .wptac-header::after {
-    content: '';
-    width: 60px; /* Taille du SVG */
-    min-width: 60px;
-    height: 60px; /* Taille du SVG */
-    background: url('../images/svg/Chevron-Right-Circle-Icon.svg') no-repeat center center; /* Chemin relatif */
-    background-size: contain;
-    transition: 0.4s transform;
- }
- 
- .wptac-header.expanded::after {
-    transform: rotate(90deg);
- }
- 
- .wptac-pane {
-    overflow: hidden;
-    max-height: 0;
-    transition: 0.4s max-height;
- }
- 
- .wptac-pane.expanded {
-    max-height: 200px; /* Ou une valeur qui fonctionne pour votre contenu */
-    overflow: visible;
- }
- 
+.wptac-container {
+  /* Vous pouvez ajouter des styles pour le conteneur de l'accordéon ici */
+}
+.wptac-voirplus-header {
+  cursor: pointer;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+}
+.wptac-header {
+  cursor: pointer;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  border-bottom: 1px solid #000;
+}
+
+.wptac-header::after {
+  content: "";
+  width: 60px; /* Taille du SVG */
+  min-width: 60px;
+  height: 60px; /* Taille du SVG */
+  background: url("../images/svg/Chevron-Right-Circle-Icon.svg") no-repeat
+    center center; /* Chemin relatif */
+  background-size: contain;
+  transition: 0.4s transform;
+}
+
+.wptac-header.expanded::after {
+  transform: rotate(90deg);
+}
+
+.wptac-pane {
+  overflow: hidden;
+  max-height: 0;
+  transition: 0.4s max-height;
+}
+
+.wptac-pane.expanded {
+  max-height: 200px; /* Ou une valeur qui fonctionne pour votre contenu */
+  overflow: visible;
+}

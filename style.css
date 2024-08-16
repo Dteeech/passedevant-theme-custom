@@ -1215,7 +1215,6 @@ Custom pour le cta header
 }
 #logo {
   min-width: 180px;
-  margin-left: 6vw;
 }
 #logo img {
   width: 100%;
@@ -1227,7 +1226,11 @@ Custom pour le cta header
 .nogradient {
   content: none !important;
 }
-
+@media screen and (min-width: 1400px) {
+  .main-navigation {
+    margin:0 20px;
+  }
+}
 /* Captions
 --------------------------------------------- */
 .wp-caption {
@@ -1781,7 +1784,13 @@ essibility
 }
 
 .prestations .secondary-button {
-  margin-left: 250px;
+  margin-left: 100px;
+}
+@media screen and (max-width: 1000px) {
+  .prestations .secondary-button {
+
+    margin-left: 0;
+  }
 }
 /* les 3 blocks de cogestion */
 .cogestion-wrapper {

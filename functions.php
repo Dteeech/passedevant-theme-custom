@@ -445,6 +445,7 @@ require_once get_template_directory() . '/shortcodes/methodologie-seo/methodolog
 // WP Tutorials : Accordion
 // Inclure les fichiers de l'accordéon
 require_once get_template_directory() . '/accordion/wpt-accordion.php';
+require_once get_template_directory() . '/voirplus/wpt-voirplus.php';
 
 wp_enqueue_script('full-link-cta', get_template_directory_uri() . '/js/full-link-cta.js', array(), null);
 

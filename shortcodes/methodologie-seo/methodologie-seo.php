@@ -83,6 +83,16 @@ function methodologie_seo_shortcode()
                 justify-content: end;
             }
 
+            @media screen and (max-width: 764px) {
+                .number-section {
+                    font-size: 180px;
+                    width: auto;
+                    justify-content: left;
+                    text-align: start;
+                }
+
+            }
+
             .content-section {
                 width: 40vw;
             }

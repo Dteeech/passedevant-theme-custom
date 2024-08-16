@@ -1,0 +1,26 @@
+.wptac-voirplus-container {
+  /* Vous pouvez ajouter des styles pour le conteneur de l'accordéon ici */
+}
+.wptac-voirplus-header {
+  cursor: pointer;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.wptac-voirplus-header.expanded::after {
+  transform: rotate(90deg);
+}
+
+.wptac-voirplus-pane {
+  overflow: hidden;
+  max-height: 0;
+  transition: 0.4s max-height;
+}
+
+.wptac-pane.expanded {
+  max-height: 200px; /* Ou une valeur qui fonctionne pour votre contenu */
+  overflow: visible;
+}
