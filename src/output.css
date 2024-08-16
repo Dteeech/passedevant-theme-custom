@@ -1684,11 +1684,19 @@ video {
   .sm\:mt-5 {
     margin-top: 1.25rem;
   }
+
+  .sm\:hidden {
+    display: none;
+  }
 }
 
 @media (min-width: 768px) {
   .md\:flex {
     display: flex;
+  }
+
+  .md\:hidden {
+    display: none;
   }
 
   .md\:grid-cols-2 {
@@ -1701,10 +1709,6 @@ video {
 }
 
 @media (min-width: 1024px) {
-  .lg\:invisible {
-    visibility: hidden;
-  }
-
   .lg\:ms-52 {
     margin-inline-start: 13rem;
   }

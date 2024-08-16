@@ -46,14 +46,11 @@
 			?>
 			<div id="site-navigation" class="flex flex-row align-top underline--gradient">
 				<nav class="main-navigation">
-					<a id="logo" class="lg:invisible" href="/">
-						<img src="<?php echo esc_url($logo_url); ?>" alt="Logo">
-					</a>
 
 					<a id="logo" class="" href="/">
 						<img src="<?php echo esc_url($logo_url); ?>" alt="Logo">
 					</a>
-					<div class="container flex gap-32">
+					<div class="container flex main-navigation_menu">
 						<button class="menu-toggle " aria-controls="primary-menu"
 							aria-expanded="false"><?php esc_html_e('Primary Menu', 'passedevant'); ?></button>
 						<?php
@@ -65,16 +62,16 @@
 							)
 						);
 						?>
-						<div class="wp-block-buttons <?php if (isset($header_class) && $header_class === 'header-light') {
-															echo 'secondary-button';
-														} else {
-															echo 'primary-button';
-														} ?> is-layout-flex wp-block-buttons-is-layout-flex">
-							<div class="wp-block-button  ">
-								<a href="/contact" class="wp-block-button__link wp-element-button"><?php esc_html_e('Contact'); ?></a>
-							</div>
-						</div>
 					</div>
 				</nav><!-- #site-navigation -->
+				<div class="header_nav-contact wp-block-buttons <?php if (isset($header_class) && $header_class === 'header-light') {
+																	echo 'secondary-button';
+																} else {
+																	echo 'primary-button';
+																} ?> is-layout-flex wp-block-buttons-is-layout-flex">
+					<div class="wp-block-button  ">
+						<a href="/contact" class="wp-block-button__link wp-element-button "><?php esc_html_e('Contact'); ?></a>
+					</div>
+				</div>
 			</div>
 		</header><!-- #masthead -->
