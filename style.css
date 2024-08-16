@@ -1660,7 +1660,7 @@ essibility
   text-decoration: none;
   top: 5px;
   width: auto;
-  z-index: 100000;
+  z-index: 100000;x
 }
 
 /* Do not show the outline on the skip link target. */
@@ -1781,7 +1781,7 @@ essibility
 }
 
 .prestations .secondary-button {
-  margin-left: 50px;
+  margin-left: 250px;
 }
 /* les 3 blocks de cogestion */
 .cogestion-wrapper {
