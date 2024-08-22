@@ -344,6 +344,10 @@ a:hover::after {
   background-color: white;
 }
 
+.header-dark-light .sub-menu {
+  background-color: #1E1E1E;
+}
+
 .header-dark .menu-item {
   color: white;
 }
@@ -357,6 +361,31 @@ header .sub-menu > li::before {
   font-size: 0.8em; /* Ajuster la taille de la flèche si nécessaire */
   color: inherit; /* Pour que la flèche hérite de la couleur du texte du lien */
 }
+
+/* Header dark & light */
+#header-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.header-dark-light {
+  margin-top: 20px;
+  max-width: 70vw;
+  background-color: #1E1E1E;
+  border-radius: 15px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header-dark-light .wp-block-button__link {
+  background: linear-gradient(to right, #00bfff, #ff69b4);
+  border-radius: 50px;
+  padding: 10px 20px;
+}
+
 
 /**
  * Correct the font size and margin on `h1` elements within `section` and
@@ -2391,4 +2420,47 @@ aside .recent-post-item a .recent-post-content {
   top: 100px;
 }
 .check-list {
+}
+
+
+/* Justification accompagnements */
+
+.colonnes-valeurs {
+  justify-content: space-around;
+  position: relative;
+}
+
+.card-valeurs {
+  border-radius: 15px;
+  position: absolute;
+  padding: 100px 150px;
+  top: -150px;
+  right: 100px;
+}
+
+.liste-valeurs {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.liste-valeurs li {
+  position: relative;
+  padding-left: 25px;
+  margin-bottom: 20px;
+}
+
+.liste-valeurs li::before {
+  content: "\2713";
+  position: absolute;
+  left: -10px;
+  top: 8px;
+  width: 18px;
+  height: 18px;
+  border: 2px solid #1E1E1E;
+  border-radius: 50%; 
+  text-align: center;
+  font-size: 14px;
+  color: #1E1E1E;
+  line-height: 16px;
+  background-color: transparent;
 }

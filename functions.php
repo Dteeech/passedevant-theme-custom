@@ -296,6 +296,9 @@ function render_header_color_metabox($post)
 	</label><br />
 	<label>
 		<input type="radio" name="header_color" value="dark" <?php checked($header_color, 'dark'); ?> /> Dark
+	</label><br />
+	<label>
+		<input type="radio" name="header_color" value="dark-light" <?php checked($header_color, 'dark-light'); ?> /> Dark Light
 	</label>
 <?php
 }
