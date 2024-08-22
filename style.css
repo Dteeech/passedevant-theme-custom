@@ -2452,7 +2452,7 @@ aside .recent-post-item a .recent-post-content {
 .liste-valeurs li::before {
   content: "\2713";
   position: absolute;
-  left: -15px;
+  left: -16px;
   top: 8px;
   width: 18px;
   height: 18px;
