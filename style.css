@@ -381,9 +381,18 @@ header .sub-menu > li::before {
 }
 
 .header-dark-light .wp-block-button__link {
-  background: linear-gradient(to left, #00bfff, #ff69b4);
+  background: linear-gradient(
+    90deg,
+    #05a9cf 0%,
+    #5cb6e5 17.5%,
+    #93baec 37%,
+    #edc3df 57%,
+    #f33585 74.5%
+  );
   border-radius: 50px;
-  padding: 10px 20px;
+  padding: 10px 30px;
+  color: #000;
+  font-size: 18px;
 }
 
 
