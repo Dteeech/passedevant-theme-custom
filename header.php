@@ -13,7 +13,9 @@
 
 	<?php
 	// Vérifier la couleur de l'en-tête
-	$header_color = get_post_meta(get_the_ID(), '_header_color', true);
+	if (!isset($header_color)) {
+		$header_color = get_post_meta(get_the_ID(), '_header_color', true);
+	}
 	echo "<!-- Header color: " . $header_color . " -->";
 
 	$header_class = ($header_color === 'dark') ? 'header-dark' : (($header_color === 'dark-light') ? 'header-dark-light' : 'header-light');
