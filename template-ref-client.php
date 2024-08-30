@@ -12,7 +12,6 @@ get_header();
 <div id="primary" class="content-area">
     <main id="main" class="site-main">
         <?php
-        // Affiche l'image mise en avant (featured image)
         if (has_post_thumbnail()) {
             $image_url = get_the_post_thumbnail_url(get_the_ID(), 'full');
             echo '<div class="ref-client-container">';
@@ -24,7 +23,7 @@ get_header();
         ?>
         
         <div class="ref-client-content">
-            <!-- Contenu éditable via Gutenberg -->
+            <!-- Contenu Gutenberg -->
             <?php
             while (have_posts()) :
                 the_post();

@@ -2477,6 +2477,7 @@ aside .recent-post-item a .recent-post-content {
 .ref-client-content {
   max-width: 70vw;
   padding: 0 20px;
+  margin: auto;
 }
 
 .ref-client-banner {
