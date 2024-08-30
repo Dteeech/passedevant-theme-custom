@@ -2473,11 +2473,14 @@ aside .recent-post-item a .recent-post-content {
 
 /* Template référence client */
 
-.ref-client-container,
-.ref-client-content {
-  max-width: 70vw;
-  padding: 0 20px;
+.ref-client-container {
   margin: auto;
+  max-width: 70vw;
+  position:relative;
+}
+
+.ref-client-section {
+  max-width: 70vw !important;
 }
 
 .ref-client-banner {
@@ -2485,7 +2488,8 @@ aside .recent-post-item a .recent-post-content {
   height: 450px;
   overflow: hidden;
   margin-top: 150px;
-  position: relative;
+  position: absolute;
+  
 }
 
 .ref-client-banner img {
@@ -2515,9 +2519,29 @@ aside .recent-post-item a .recent-post-content {
 
 .ref-client-sticky {
   position: sticky;
-  top:175px;
+  top: 175px;
+  padding: 50px;
+}
+
+@media (max-width: 1745px) {
+  .ref-client-sticky {
+    padding: 30px;
+  }
 }
 
 .sticky-card-container {
   justify-content: center;
+}
+
+.ref-client-cards-container {
+  justify-content: center;
+}
+
+.ref-client-card-resultat {
+  border-radius: 15px;
+}
+
+.ref-client-card-typo {
+  font-weight: 500;
+  font-family: 'Poppins', sans-serif;
 }

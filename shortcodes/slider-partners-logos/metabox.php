@@ -7,7 +7,7 @@ function add_partners_logos_metabox() {
         'partners_logos',
         'Logos des partenaires',
         'partners_logos_metabox_callback',
-        'page', // Changez cela si vous avez besoin d'un autre type de post
+        'page',
         'normal',
         'high'
     );
