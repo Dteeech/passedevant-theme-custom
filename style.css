@@ -2268,7 +2268,7 @@ aside .recent-post-item a .recent-post-content {
   position: absolute;
 }
 .refClientSwiper .swiper-button-prev {
-  left: -150px;
+  left: -100px;
 }
 .refClientSwiper .swiper-button-next {
   right: -100px;
