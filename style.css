@@ -2220,7 +2220,6 @@ aside .recent-post-item a .recent-post-content {
 .customBlankSwiper {
   width: 100%;
   height: auto;
-  position: relative;
 }
 
 .customBlankSwiper .swiper-wrapper {
@@ -2262,6 +2261,17 @@ aside .recent-post-item a .recent-post-content {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+.refClientSwiper .swiper-button-prev, .refClientSwiper .swiper-button-next {
+  color: #000;
+  position: absolute;
+}
+.refClientSwiper .swiper-button-prev {
+  left: -150px;
+}
+.refClientSwiper .swiper-button-next {
+  right: -100px;
 }
 /**/
 .topbutton {
