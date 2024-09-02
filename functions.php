@@ -424,6 +424,7 @@ function enqueue_slider_assets()
 	wp_enqueue_script('custom-swiper-init', get_template_directory_uri() . '/shortcodes/slider-partners-logos/swiper.js', array('swiper-js'), null, true);
 	wp_enqueue_script('custom-swiper-prestations', get_template_directory_uri() . '/js/custom-swiper-prestations.js', array('swiper-js'), null, true);
 	wp_enqueue_script('custom-swiper-blank', get_template_directory_uri() . '/js/custom-blank-swiper.js', array('swiper-js'), null, true);
+	wp_enqueue_script('ref-client-swiper', get_template_directory_uri() . '/js/ref-client-swiper.js', array('swiper-js'), null, true);
 }
 add_action('wp_enqueue_scripts', 'enqueue_slider_assets');
 
