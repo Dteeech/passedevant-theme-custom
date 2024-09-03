@@ -1803,7 +1803,7 @@ essibility
   bottom: -80px !important;
 }
 .prestations .swiper-pagination-bullet-active {
-  background-color: #1E1E1E;
+  background-color: #1E1E1E !important;
 }
 .prestations .swiper-pagination-bullet {
   height: 20px;
