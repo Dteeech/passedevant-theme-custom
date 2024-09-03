@@ -1803,20 +1803,12 @@ essibility
   bottom: -80px !important;
 }
 .prestations .swiper-pagination-bullet-active {
-  background: linear-gradient(
-    90deg,
-    #0524a7 0%,
-    #df22f0 26.5%,
-    #fda9c0 54.5%,
-    #430a8b 86.5%
-  ) !important;
-  height: 20px !important;
-  width: 20px !important;
+  background-color: #1E1E1E;
 }
 .prestations .swiper-pagination-bullet {
   height: 20px;
   width: 20px;
-  background-color: #6f0aaa;
+  background-color: #1e1e1e50;
 }
 
 .prestations .secondary-button {
