@@ -2347,14 +2347,16 @@ aside .recent-post-item a .recent-post-content {
 .categories .category-filter {
   padding: 10px;
   border-radius: 16px;
-  border: 1px solid #1e1e1e;
+  border: 2px solid #1e1e1ea5;
   background-color: white;
-  color: #1e1e1e;
+  color: #1e1e1ea5;
+  transition: all 0.5s;
 }
 .categories .category-filter:hover,
 .categories .category-filter.active {
-  color: #783eff;
-  border: 2px solid #783eff;
+  color: #FFF;
+  border: 2px solid #1E1E1E;
+  background-color: #1E1E1E;
 }
 
 /*media queries*/
