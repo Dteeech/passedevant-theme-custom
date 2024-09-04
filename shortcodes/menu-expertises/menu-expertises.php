@@ -97,30 +97,38 @@ function custom_homepage_content_shortcode()
             .accordion {
                 display: block;
                 width: 100%;
+                padding: 20px;
             }
 
             .accordion-button {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
                 width: 100%;
                 text-align: left;
-                background-color: #f0f0f0;
-                border: none;
+                background-color: transparent;
+                color: #1E1E1E;
+                border: 2px solid #1E1E1E;
                 padding: 10px;
                 font-size: 1.2em;
                 cursor: pointer;
                 outline: none;
-                transition: background-color 0.3s ease-in-out;
+                margin: 10px 0 10px 0;
             }
 
-            .accordion-button:hover {
-                background-color: #ddd;
+            .accordion-icon {
+                transition: transform 0.3s ease-in-out;
+            }
+
+            .accordion-button.active .accordion-icon {
+                transform: rotate(90deg);
             }
 
             .accordion-content {
                 display: none;
                 padding: 10px;
-                border: 1px solid #ddd;
                 border-top: none;
-                background-color: #f9f9f9;
+
             }
 
             .accordion-content.active {
@@ -248,7 +256,8 @@ function custom_homepage_content_shortcode()
                         ${Object.keys(data.content).map(section_id => `
                             <div class="accordion-item">
                                 <button class="accordion-button ${section_id === 'seo' ? 'active' : ''}" data-target="${section_id}">
-                                    ${data.menu.find(menu => menu.id === section_id).title}
+                                    <p>${data.menu.find(menu => menu.id === section_id).title}</p>
+                                    <img class="accordion-icon" width="50px" src="<?php echo get_template_directory_uri() . '/images/Chevron-Right-Circle-Icon.png'; ?>" />
                                 </button>
                                 <div id="mobile-${section_id}" class="accordion-content ${section_id === 'seo' ? 'active' : 'hidden'}">
                                     ${data.content[section_id].map(item => `
@@ -261,6 +270,8 @@ function custom_homepage_content_shortcode()
                                         </div>
                                     `).join('')}
                                 </div>
+                                
+
                             </div>
                         `).join('')}
                     </div>

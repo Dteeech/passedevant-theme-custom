@@ -930,7 +930,7 @@ input[type="submit"] {
   padding: 0.6em 1em 0.4em;
 }
 
-button:hover,
+/* button:hover,
 input[type="button"]:hover,
 input[type="reset"]:hover,
 input[type="submit"]:hover {
@@ -946,7 +946,7 @@ input[type="reset"]:focus,
 input[type="submit"]:active,
 input[type="submit"]:focus {
   border-color: #aaa #bbb #bbb;
-}
+} */
 
 input[type="text"],
 input[type="email"],
