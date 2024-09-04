@@ -2596,4 +2596,5 @@ aside .recent-post-item a .recent-post-content {
 
 #rmp_menu_trigger-337 {
   filter: invert(1);
+  mix-blend-mode: difference;
 }
