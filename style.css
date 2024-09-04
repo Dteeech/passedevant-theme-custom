@@ -301,7 +301,7 @@ main {
   transform-origin: left;
   transition: transform 0.5s ease-out;
 }
-.menu-classi a:hover {
+.menu-classic a:hover {
   color: transparent; /* Le texte est transparent pour que le dégradé soit visible */
   background: linear-gradient(90deg, #05a9cf 0%, #5cb6e5 17.5%, #93baec 37%, #edc3df 57%, #f33585 74.5%);
   background-clip: text;
