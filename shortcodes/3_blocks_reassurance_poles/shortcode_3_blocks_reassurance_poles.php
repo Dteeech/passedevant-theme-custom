@@ -4,7 +4,7 @@ function shortcote_3_blocks_reassurance_shortcode()
     ob_start();
 ?>
     <div class="container mx-auto flex lg:flex-row flex-wrap gap-20 justify-center pb-20">
-        <div class="card border-2 border-white p-10">
+        <div class="card border-2 border-white p-6">
             <div class="flex items-center space-x-4 justify-between">
                 <h3 class="text-2xl font-bold">Le SEO</h3>
                 <div class="background-img_3_blocks">
@@ -24,7 +24,7 @@ function shortcote_3_blocks_reassurance_shortcode()
                 <a href="" class="flex items-center justify-center w-20 h-20 rounded-full overflow-visible border-white border-4 p-4"><img width="100%" height="auto" src="<?php echo get_template_directory_uri() . '/images/svg/arrow-right-rounded-white.svg'; ?>" alt=""></a>
             </div>
         </div>
-        <div class="card border-2 border-white p-10">
+        <div class="card border-2 border-white p-6">
             <div class="flex items-center space-x-4 justify-between">
                 <h3 class="text-2xl font-bold">La Création <br />de sites web</h3>
                 <div class="background-img_3_blocks">
@@ -44,7 +44,7 @@ function shortcote_3_blocks_reassurance_shortcode()
                 <a href="" class="flex items-center justify-center w-20 h-20 rounded-full overflow-visible border-white border-4 p-4"><img width="100%" height="auto" src="<?php echo get_template_directory_uri() . '/images/svg/arrow-right-rounded-white.svg'; ?>" alt=""></a>
             </div>
         </div>
-        <div class="card border-2 border-white p-10">
+        <div class="card border-2 border-white p-6">
             <div class="flex items-center space-x-4 justify-between">
                 <h3 class="text-2xl font-bold">La Formation</h3>
                 <div class="background-img_3_blocks">

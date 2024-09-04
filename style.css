@@ -1484,7 +1484,7 @@ footer .no-gradient-underline::after {
   margin: 0;
   padding: 0;
 }
-#block-60 {
+#block-60, #block-64 {
   border: 1px solid #fff;
   padding: 20px 0px 0 20px;
 }
@@ -1753,6 +1753,7 @@ essibility
 }
 
 @media (max-width: 767px) {
+
   .xs-invisible {
     display: none !important;
   }
@@ -1765,9 +1766,10 @@ essibility
   .site-footer,
   .footer-widgets {
     margin-top: 0px;
+    padding-top: 20px;
   }
   .footer_cta-section {
-    display: none;
+    display: none !important;
   }
 }
 /* Reset CSS for Swiper Container */
@@ -2586,4 +2588,8 @@ aside .recent-post-item a .recent-post-content {
 .ref-client-card-typo {
   font-weight: 500;
   font-family: 'Poppins', sans-serif;
+}
+
+.trusted_partners {
+  padding: 0;
 }

@@ -63,11 +63,12 @@ function display_google_reviews_slider($atts)
                 </div>
             <?php endfor; ?>
         </div>
+        <div class="review-pagination"></div>
     </div>
+    .
     <style>
         .reviews-slider {
             height: 100%;
-
         }
 
         .review-slide {
@@ -81,12 +82,9 @@ function display_google_reviews_slider($atts)
             height: auto;
             overflow: auto;
             height: 500px;
-
-            /* Added transition delay */
         }
 
         .review-slide:hover {
-
             cursor: grab;
         }
 
@@ -108,6 +106,16 @@ function display_google_reviews_slider($atts)
 
 
         }
+
+        .review-pagination {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .review-pagination .swiper-pagination-bullet {
+            background-color: #1E1E1E;
+        }
     </style>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
@@ -116,12 +124,8 @@ function display_google_reviews_slider($atts)
                 spaceBetween: 40,
                 centeredSlides: true,
                 pagination: {
-                    el: '.swiper-pagination',
+                    el: '.review-pagination',
                     clickable: true,
-                },
-                navigation: {
-                    nextEl: '.swiper-button-next',
-                    prevEl: '.swiper-button-prev',
                 },
                 breakpoints: {
                     320: {
