@@ -2593,3 +2593,7 @@ aside .recent-post-item a .recent-post-content {
 .trusted_partners {
   padding: 0;
 }
+
+#rmp_menu_trigger-337 {
+  filter: invert(1);
+}
