@@ -2598,3 +2598,11 @@ aside .recent-post-item a .recent-post-content {
   filter: invert(1);
   mix-blend-mode: difference;
 }
+
+/*404*/
+.error-404 .page-content {
+  height: 80vh;
+  text-align: center;
+  padding: 20%;
+}
+
