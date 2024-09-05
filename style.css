@@ -2633,7 +2633,8 @@ aside .recent-post-item a .recent-post-content {
     margin: auto;
     position: absolute !important;
     top: -20px !important;
-
+    height: 100px;
+    overflow: visible;
   }
   .ref-client-banner img {
     object-fit: contain;
