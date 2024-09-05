@@ -1840,12 +1840,13 @@ essibility
   }
 }
 /* les 3 blocks de cogestion */
-.cogestion-wrapper {
+.cogestion-wrapper  {
   padding: 50px 0 50px 0;
   display: flex;
   gap: 50px;
   margin-left: 35px;
   margin-right: 35px;
+  flex-wrap: wrap !important;
 }
 .cogestion-item {
   display: flex;
@@ -1854,6 +1855,13 @@ essibility
   height: 550px;
   border: 2px solid white;
   justify-content: space-evenly !important;
+  min-width: 400px;
+}
+@media screen and (max-width: 748px) {
+ .cogestion-item  {
+
+  min-width: 200px;
+  }
 }
 .bloc-cta-dark-bg_container {
   position: relative;
@@ -2112,6 +2120,9 @@ essibility
   }
 }
 
+.cogestion-item {
+  height: auto;
+}
 .site-main aside.widget-area {
   position: relative;
   width: 20vw;
