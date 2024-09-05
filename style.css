@@ -2104,7 +2104,9 @@ essibility
 /* sidebar style */
 
 @media (max-width: 767px) {
-  
+  .site p, .site h1, .site h2, .site h3 {
+    max-width:100%;
+  }
   .site-main aside.widget-area {
     display: none;
   }
