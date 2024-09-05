@@ -2648,6 +2648,7 @@ aside .recent-post-item a .recent-post-content {
   }
   .ref-client-section {
     max-width: 100vw !important;
+    margin: 0 !important;
   }
   .ref-client-section {
     flex-direction: column-reverse;
