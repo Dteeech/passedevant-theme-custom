@@ -20,8 +20,8 @@ get_header();
 				<h1 class="page-title"><?php esc_html_e('Perdu(e) ?', 'passedevant'); ?></h1>
 			</header><!-- .page-header -->
 			<p>Il semble que rien n'ait été trouvé à cet endroit.
-				Cliquez ici pour revenir à l'accueil
 			</p>
+			<p>Cliquez ici pour revenir à l'accueil</p>
 			<img width="260px" src="<?php echo get_template_directory_uri() . '/images/404.jpg'; ?>" alt="">
 
 			<div class="wp-block-buttons is-layout-flex wp-block-buttons-is-layout-flex">
