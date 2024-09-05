@@ -21,7 +21,7 @@ get_header();
             echo '</div>';
         }
         ?>
-        
+
         <div class="ref-client-content">
             <!-- Contenu Gutenberg -->
             <?php
