@@ -2579,13 +2579,63 @@ aside .recent-post-item a .recent-post-content {
   top: 175px;
   padding: 50px;
 }
+.ref-client-objectifs ul, .ref-client-actions ul {
+  counter-reset: item; /* Réinitialise le compteur pour les numéros */
+  list-style-type: none; /* Supprimer les puces de liste */
+  padding-left: 0; /* Supprimer le padding à gauche */
+}
+
+.ref-client-objectifs ul li, .ref-client-actions ul li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.ref-client-objectifs ul li::before, .ref-client-actions ul li::before {
+  content: counter(item); /* Affiche le numéro */
+  counter-increment: item; /* Incrémente le numéro */
+  
+  width: 40px;
+  height: 40px;
+  border-radius: 100%; /* Assure que la forme est ronde */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  font-weight: bold;
+  color: #1E1E1E; /* Couleur du texte à l'intérieur */
+
+  /* Crée une bordure avec un dégradé mais garde le fond transparent */
+  border: 2px solid transparent;
+  background: linear-gradient(90deg, #05A9CF 0%, #95DFD2 23%, #02FEBD 48%, #029679 66%, #02A382 72.87%, #02B08A 79.75%, #044876 92.5%);
+  background-clip: border-box;
+  -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+
+  margin-right: 15px;
+}
 
 @media (max-width: 1745px) {
   .ref-client-sticky {
     padding: 30px;
   }
+  .ref-client-section {
+    max-width: 70vw !important;
+  }
 }
-
+@media (max-width: 850px) {
+  .sticky-card-container, .ref-client-sticky{
+   max-width: 100% !important;
+ 
+  }
+  .ref-client-section {
+    max-width: 100vw !important;
+  }
+  .ref-client-section {
+    flex-direction: column-reverse;
+  }
+}
 .sticky-card-container {
   justify-content: center;
 }
