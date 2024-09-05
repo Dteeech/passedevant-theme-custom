@@ -1453,7 +1453,7 @@ a.cta::after {
 /* Styles pour l'icône SVG à droite du texte */
 
 .site-footer {
-  margin-top: 200px;
+  margin-top: 0px;
   padding: 25px 20px;
   color: #ffffff;
   position: relative;
@@ -2104,6 +2104,7 @@ essibility
 /* sidebar style */
 
 @media (max-width: 767px) {
+  
   .site-main aside.widget-area {
     display: none;
   }
@@ -2606,3 +2607,6 @@ aside .recent-post-item a .recent-post-content {
   padding: 20%;
 }
 
+.wp-block-columns {
+  margin-bottom: 0;
+}
