@@ -40,7 +40,7 @@ get_header();
 					<p>Ne perdez pas de temps et prenez tout de suite rendez-vous avec nous.</p>
 					<div class="wp-block-buttons is-layout-flex wp-block-buttons-is-layout-flex">
 						<div class="wp-block-button secondary-button">
-							<a class="wp-block-button__link wp-element-button" href="/">Contactez-nous</a>
+							<a class="wp-block-button__link wp-element-button" href="/contact">Contactez-nous</a>
 						</div>
 					</div>
 				</div>
