@@ -46,7 +46,7 @@ get_header(); ?>
         <?php if (have_posts()) : ?>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <?php while (have_posts()) : the_post(); ?>
-                    <article id="post-<?php the_ID(); ?>" <?php post_class('blog-post border rounded-lg overflow-hidden shadow-lg'); ?>>
+                    <article id="post-<?php the_ID(); ?>" <?php post_class('blog-post border overflow-hidden shadow-lg'); ?>>
                         <?php if (has_post_thumbnail()) : ?>
                             <a href="<?php the_permalink(); ?>" class="post-thumbnail block">
                                 <?php the_post_thumbnail('full', ['class' => 'w-full']); ?>
