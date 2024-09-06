@@ -2729,3 +2729,8 @@ aside .recent-post-item a .recent-post-content {
 .wp-block-columns {
   margin-bottom: 0;
 }
+
+.bottom-home_rating {
+  padding-left: 290px;
+  margin-top: 50px;
+}
