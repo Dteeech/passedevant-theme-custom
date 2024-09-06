@@ -2326,9 +2326,7 @@ aside .recent-post-item a .recent-post-content {
 .single-content {
   padding-top: 110px;
 }
-.blog .site-main {
-  padding-top: 100px;
-}
+
 .blog .post,
 .category .post {
   border: 1px solid #1e1e1e;
@@ -2338,7 +2336,7 @@ aside .recent-post-item a .recent-post-content {
 }
 .blog-hero {
   padding: 90px 120px;
-  height: 60vh;
+  
   width: 100vw;
   background-image: url("./images/Equipe\ Passedevant.webp");
   background-repeat: no-repeat;
@@ -2378,7 +2376,9 @@ aside .recent-post-item a .recent-post-content {
 }
 .categories .category-filter {
   padding: 10px;
-  border-radius: 16px;
+  padding-left:30px ;
+  padding-right:30px ;
+  border-radius: 50px;
   border: 2px solid #1e1e1ea5;
   background-color: white;
   color: #1e1e1ea5;
