@@ -17,7 +17,10 @@
 		$header_color = get_post_meta(get_the_ID(), '_header_color', true);
 	}
 	echo "<!-- Header color: " . $header_color . " -->";
-
+	// Si aucune couleur n'est spécifiée dans les meta données, utiliser "dark-light" par défaut
+	if (!$header_color) {
+		$header_color = 'dark-light';
+	}
 	$header_class = ($header_color === 'dark') ? 'header-dark' : (($header_color === 'dark-light') ? 'header-dark-light' : 'header-light');
 
 	// Définir les classes et l'image du bouton CTA en fonction de la couleur de l'en-tête
@@ -25,12 +28,10 @@
 	if ($header_color === 'dark') {
 		$cta_classes = 'bg-white text-black border-black border-slate-50';
 		$cta_image = 'arrow-right-rounded-white.svg';
-	} 
-	elseif ($header_color === 'dark-light') {
+	} elseif ($header_color === 'dark-light') {
 		$cta_classes = 'bg-gradient-to-r from-blue-500 to-pink-500 text-white';
 		$cta_image = 'arrow-right-rounded.svg';
-	} 
-	else {
+	} else {
 		$cta_classes = 'bg-slate-700 text-white border-white';
 		$cta_image = 'arrow-right-rounded.svg';
 	}
@@ -51,8 +52,7 @@
 				// Définir l'URL du logo en fonction de la couleur du header
 				if ($header_color === 'dark' || $header_color === 'dark-light') {
 					$logo_url = $logo_light;
-				} 
-				else {
+				} else {
 					$logo_url = $logo_dark;
 				}
 				// Si aucun logo personnalisé n'est défini, utiliser le logo par défaut
@@ -86,11 +86,9 @@
 					</nav><!-- #site-navigation -->
 					<div class="header_nav-contact wp-block-buttons <?php if (isset($header_class) && $header_class === 'header-light') {
 																		echo 'secondary-button';
-																	} 
-																	elseif ($header_class === 'header-dark-light') {
+																	} elseif ($header_class === 'header-dark-light') {
 																		echo 'gradient-button';
-																	}
-																	else {
+																	} else {
 																		echo 'primary-button';
 																	} ?> is-layout-flex wp-block-buttons-is-layout-flex">
 						<div class="wp-block-button  ">
