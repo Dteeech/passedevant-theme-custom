@@ -2633,13 +2633,16 @@ aside .recent-post-item a .recent-post-content {
     margin: auto;
     position: absolute !important;
     top: -20px !important;
-    height: 100px;
+    height: auto;
     overflow: visible;
   }
   .ref-client-banner img {
     object-fit: contain;
     width: 100%;
     height: auto;
+  }
+  .sticky-card-container .wp-block-columns:not(.is-not-stacked-on-mobile)>.wp-block-column{
+    flex-basis: 0 !important;
   }
   .sticky-card-container, .ref-client-sticky{
    max-width: 100% !important;
