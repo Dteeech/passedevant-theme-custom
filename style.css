@@ -2664,12 +2664,12 @@ aside .recent-post-item a .recent-post-content {
     margin: 0 !important;
     
   }
-  .ref-client-section p {
-    
-    
+  .ref-client-section p, .ref-client-section h2, .ref-client-section h1 {
     height: auto;
     width: 100%;
     padding: 20px;
+    margin-left: 20px;
+
   }
   .noneMobile {
     display: none;
@@ -2690,6 +2690,8 @@ aside .recent-post-item a .recent-post-content {
     
     margin-bottom: 10px; /* Ajoute de l'espace sous le cercle pour le texte */
   }
+  
+  
 }
 .sticky-card-container {
   justify-content: center;
