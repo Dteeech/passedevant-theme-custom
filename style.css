@@ -2650,11 +2650,20 @@ aside .recent-post-item a .recent-post-content {
 
   }
   .ref-client-section {
-    max-width: 100vw !important;
+    max-width: 100% !important;
     margin: 0 !important;
+    
   }
+  
   .ref-client-section {
     flex-direction: column-reverse;
+  }
+
+  .ref-client-section p {
+    word-wrap: break-word !important;
+    height: auto;
+    width: 100%;
+    padding: 20px;
   }
   .noneMobile {
     display: none;
