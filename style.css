@@ -2657,10 +2657,16 @@ aside .recent-post-item a .recent-post-content {
   
   .ref-client-section {
     flex-direction: column-reverse;
+    flex-wrap: nowrap !important;
   }
-
+  .ref-client_texte {
+    box-sizing: border-box;
+    margin: 0 !important;
+    
+  }
   .ref-client-section p {
-    word-wrap: break-word !important;
+    
+    
     height: auto;
     width: 100%;
     padding: 20px;
