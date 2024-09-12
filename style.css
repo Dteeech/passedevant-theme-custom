@@ -2765,7 +2765,10 @@ aside .recent-post-item a .recent-post-content {
   border: 1px solid #1E1E1E;
   position: relative; /* Pour que la bulle soit positionnée correctement */
 }
-
+.team-wrapper .team-item .poste {
+  font-size: 18px;
+  text-decoration: underline;
+}
 /* Bulle transparente qui prend toute la carte au survol */
 .team-item .tooltip-full {
   position: absolute;
