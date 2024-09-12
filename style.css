@@ -2757,9 +2757,10 @@ aside .recent-post-item a .recent-post-content {
   flex-wrap: wrap;
   text-align: center;
   justify-content: center;
+  align-items: center;
   flex: 1 1 400px !important;
-  max-width: 350px !important; 
-  height: auto;
+  max-width: 280px !important; 
+  min-height: 390px;
   overflow: visible;
   border: 1px solid #1E1E1E;
   position: relative; /* Pour que la bulle soit positionnée correctement */
@@ -2772,9 +2773,7 @@ aside .recent-post-item a .recent-post-content {
   left: 0;
   width: 100%;
   height: 100%;
-  /* From https://css.glass */
 background: rgba(30, 30, 30, 0.80);
-
 box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
 backdrop-filter: blur(0.8px);
 -webkit-backdrop-filter: blur(3.2px);
@@ -2785,24 +2784,24 @@ backdrop-filter: blur(0.8px);
   opacity: 0;
   z-index: 1;
   transition: opacity 0.7s ease; /* Animation de transition pour l'apparition */
-  padding: 10px;
   text-align: center;
-  padding: 25px;
+  padding: 15px 25px;
+  overflow: hidden; /* Empêche le dépassement de contenu */
+    box-sizing: border-box; /* S'assure que le padding est inclus dans la taille */
+    
+}
+
+
+.team-item .tooltip-full p {
+  
+  font-size: 16px;
+  
 }
 
 /* Au survol de la carte, la bulle devient visible */
 .team-item:hover .tooltip-full {
   opacity: 1;
   z-index: 2; /* Assure que la bulle soit au-dessus de la carte */
+  
 }
 
-.team-wrapper .team-item .team-reseaux {
-  padding: 10px;
-}
-.team-wrapper .team-item .team-reseaux .wp-block-image{
-  
-  transition: transform 0.5s ease;
-}
-.team-wrapper .team-item .team-reseaux .wp-block-image:hover {
-transform: scale(1.5);
-}
