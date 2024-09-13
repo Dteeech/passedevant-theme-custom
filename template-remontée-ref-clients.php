@@ -11,8 +11,7 @@ $args = array(
     'meta_key' => '_wp_page_template',
     'meta_value' => 'template-ref-client.php',
     'posts_per_page' => -1,
-    'orderby' => 'title', // Trier par titre
-    'order' => 'ASC' // Ordre croissant (A-Z)
+    'order' => 'rand' // Ordre croissant (A-Z)
 );
 
 $ref_query = new WP_Query($args);
@@ -30,64 +29,43 @@ if ($ref_query->have_posts()) :
 
     while ($ref_query->have_posts()) : $ref_query->the_post();
         $image_url = get_the_post_thumbnail_url(get_the_ID(), 'full'); // Image à la une
-?>
 
-        <div class="reference-client-item">
-            <div class="reference-image" style="background-image: url('<?php echo esc_url($image_url); ?>');">
-                <div class="reference-overlay">
-                    <div class="reference-info">
-                        <h2><?php the_title(); ?></h2>
-                        <p><?php the_excerpt(); ?></p>
-                        <a href="<?php the_permalink(); ?>" class="reference-link">Voir plus</a>
-                    </div>
-                </div>
-            </div>
-        </div>
+        // Attribuer une classe aléatoire pour la taille
+        $sizes = array('small', 'medium', 'large');
+        $random_size = $sizes[array_rand($sizes)];
+?>
         <style>
-            .hero-remontee-ref-clients {
-                background-color: #1E1E1E;
-                color: white;
+            .reference-client-item {
+                position: relative;
+                overflow: hidden;
+                border: 5px solid white;
+                cursor: pointer;
+            }
+
+            .reference-client-item.small {
+                grid-column: span 1;
+                grid-row: span 1;
+                height: 200px;
+            }
+
+            .reference-client-item.medium {
+                grid-column: span 2;
+                grid-row: span 2;
                 height: 400px;
             }
 
-            .hero-remontee-ref-clients .container h1 {
-                padding-top: 200px;
-                height: 100%;
-                width: calc(65%);
-                margin: auto;
-            }
-
-            .references-client-grid {
-                width: 100%;
-                display: flex;
-                flex-wrap: wrap;
-                justify-content: space-between;
-                /* Ajoute de l'espace entre les colonnes */
-                align-items: flex-start;
-                /* Espace entre les éléments */
-                margin: 0px auto;
-                padding: 0;
-                /* Ajoute un padding pour que les colonnes ne soient pas collées aux bords */
-            }
-
-            .reference-client-item {
-                position: relative;
-                flex-basis: calc(33.333%);
-                /* 3 colonnes qui occupent toute la largeur, moins l'espace entre elles */
-                height: auto;
-                cursor: pointer;
-                align-self: flex-start;
-                border: 5px solid white;
+            .reference-client-item.large {
+                grid-column: span 3;
+                grid-row: span 3;
+                height: 600px;
             }
 
             .reference-image {
                 background-size: cover;
                 background-position: center;
-                height: 450px;
+                height: 100%;
                 position: relative;
                 transition: transform 0.7s ease, opacity 0.7s ease;
-                /* Animation de transition pour l'apparition */
-                ;
             }
 
             .reference-overlay {
@@ -97,9 +75,6 @@ if ($ref_query->have_posts()) :
                 right: 0;
                 bottom: 0;
                 background: rgba(30, 30, 30, 0.80);
-                box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-                backdrop-filter: blur(0.8px);
-                -webkit-backdrop-filter: blur(3.2px);
                 display: flex;
                 align-items: center;
                 justify-content: center;
@@ -110,36 +85,30 @@ if ($ref_query->have_posts()) :
             .reference-image:hover .reference-overlay {
                 opacity: 1;
             }
-
-            .reference-info {
-                color: white;
-                text-align: center;
-                padding: 20px;
-            }
-
-            .reference-info h2 {
-                font-size: 24px;
-                margin-bottom: 10px;
-            }
-
-            .reference-info p {
-                font-size: 16px;
-                margin-bottom: 20px;
-            }
-
-            .reference-link {
-                display: inline-block;
-                background-color: #fff;
-                color: #000;
-                padding: 10px 20px;
-                border-radius: 5px;
-                text-decoration: none;
-            }
-
-            .reference-link:hover {
-                background-color: #f5f5f5;
-            }
         </style>
+        <div class="reference-client-item <?php echo $random_size; ?>">
+            <div class="reference-image" style="background-image: url('<?php echo esc_url($image_url); ?>');">
+                <div class="reference-overlay">
+                    <div class="reference-info">
+                        <h2><?php the_title(); ?></h2>
+                        <p><?php the_excerpt(); ?></p>
+                        <a href="<?php the_permalink(); ?>" class="reference-link">Voir plus</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <?php
+        if (rand(0, 1)) : ?>
+            <div class="reference-client-item cta-block">
+                <div class="cta-content">
+                    <h2><?php the_field('cta_title'); ?></h2>
+                    <a href="<?php the_field('cta_link'); ?>" class="cta-button">
+                        <?php the_field('cta_text'); ?>
+                    </a>
+                </div>
+            </div>
+        <?php endif; ?>
+        ?>
 <?php
     endwhile;
     echo '
