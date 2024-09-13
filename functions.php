@@ -535,3 +535,33 @@ require get_template_directory() . '/shortcodes/google-reviews/google-reviews.ph
 wp_enqueue_script('custom-partners-swiper-js', get_template_directory_uri() . '/shortcodes/google-reviews/swiper.js', array(), null);
 
 /*Ajouter d'un champ catégorie à un projet*/
+
+
+function register_reference_category_taxonomy()
+{
+	// Enregistrer une taxonomie pour les références clients
+	$labels = array(
+		'name'              => 'Catégorie référence client',
+		'singular_name'     => 'Catégorie référence client',
+		'search_items'      => 'Rechercher des types',
+		'all_items'         => 'Toutes les catégories',
+		'edit_item'         => 'Modifier la catégorie',
+		'update_item'       => 'Mettre à jour la catégorie',
+		'add_new_item'      => 'Ajouter une nouvelle catégorie',
+		'new_item_name'     => 'Nouvelle catégorie de référence',
+		'menu_name'         => 'Catégories de référence client',
+	);
+
+	$args = array(
+		'labels'            => $labels,
+		'public'            => true,
+		'hierarchical'      => true,
+		'show_ui'           => true,
+		'show_in_menu'      => true,
+		'show_admin_column' => true,
+		'rewrite'           => array('slug' => 'type-reference'),
+	);
+
+	register_taxonomy('type-reference', 'page', $args); // Attacher la taxonomie aux pages
+}
+add_action('init', 'register_reference_category_taxonomy');
