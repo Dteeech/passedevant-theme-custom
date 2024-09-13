@@ -2765,10 +2765,14 @@ aside .recent-post-item a .recent-post-content {
   border: 1px solid #1E1E1E;
   position: relative; /* Pour que la bulle soit positionnée correctement */
 }
+.team-wrapper .team-item .nom_prenom {
+  line-height: 20px;
+}
 .team-wrapper .team-item .poste {
   font-size: 18px !important;
   text-decoration: underline;
 }
+
 /* Bulle transparente qui prend toute la carte au survol */
 .team-item .tooltip-full {
   position: absolute;
@@ -2776,10 +2780,7 @@ aside .recent-post-item a .recent-post-content {
   left: 0;
   width: 100%;
   height: 100%;
-background: rgba(30, 30, 30, 0.80);
-box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-backdrop-filter: blur(0.8px);
--webkit-backdrop-filter: blur(3.2px);
+  background-color: #1E1E1E;
   color: white;
   display: flex;
   justify-content: center;
