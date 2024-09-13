@@ -2789,7 +2789,7 @@ aside .recent-post-item a .recent-post-content {
   z-index: 1;
   transition: opacity 0.7s ease; /* Animation de transition pour l'apparition */
   text-align: center;
-  padding: 15px 25px;
+  padding: 25px;
   overflow: hidden; /* Empêche le dépassement de contenu */
     box-sizing: border-box; /* S'assure que le padding est inclus dans la taille */
     
