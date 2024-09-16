@@ -565,3 +565,27 @@ function register_reference_category_taxonomy()
 	register_taxonomy('type-reference', 'page', $args); // Attacher la taxonomie aux pages
 }
 add_action('init', 'register_reference_category_taxonomy');
+
+function custom_rewrite_references()
+{
+	add_rewrite_rule(
+		'^references/([^/]+)/?$',
+		'index.php?type-reference=$matches[1]',
+		'top'
+	);
+}
+add_action('init', 'custom_rewrite_references');
+
+function add_custom_query_vars($vars)
+{
+	$vars[] = 'type-reference';
+	return $vars;
+}
+add_filter('query_vars', 'add_custom_query_vars');
+
+function flush_rewrite_rules_on_activation()
+{
+	custom_rewrite_references();
+	flush_rewrite_rules();
+}
+add_action('after_switch_theme', 'flush_rewrite_rules_on_activation');

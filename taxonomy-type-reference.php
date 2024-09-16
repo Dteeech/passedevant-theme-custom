@@ -1,14 +1,10 @@
 <?php
-/*
-Template Name: page de remontée des références Clients
-*/
 
 get_header();
 
 
-$filter = get_query_var('type-reference');
 
-
+$current_category = get_queried_object();
 
 $args = array(
     'post_type' => 'page',
@@ -18,14 +14,12 @@ $args = array(
     'orderby' => 'title',
     'order' => 'ASC'
 );
-
-// Si un filtre (taxonomie) est sélectionné, on l'ajoute à la requête
-if (!empty($filter)) {
+if (!empty($current_category)) {
     $args['tax_query'] = array(
         array(
             'taxonomy' => 'type-reference', // Le slug de votre taxonomie
-            'field' => 'slug',
-            'terms' => $filter
+            'field'    => 'slug',
+            'terms'    => $current_category->slug,
         )
     );
 }
@@ -39,7 +33,7 @@ if ($ref_query->have_posts()) :
     <div class="categories">
         <div class="container mx-auto flex justify-center gap-4">
             <!-- Lien pour tout afficher -->
-            <a href="<?php echo site_url('/references'); ?>" class="category-filter <?php if (empty($filter)) echo 'active'; ?>">Tout</a>
+            <a href="<?php echo site_url('/references'); ?>" class="category-filter <?php if (is_archive() && !is_tax()) echo 'active'; ?>">Tout</a>
             <?php
             // Récupérer les termes de la taxonomie 'categorie_reference_client'
             $args = array(
@@ -52,12 +46,12 @@ if ($ref_query->have_posts()) :
             // Boucle pour afficher les liens de catégories
             foreach ($categories as $category) {
                 // Activer la classe active si le filtre correspond à la catégorie en cours
-                $active_class = ($filter == $category->slug) ? 'active' : '';
+                $active_class = ($current_category && $current_category->term_id == $category->term_id) ? 'active' : '';
 
                 // Générer l'URL avec le paramètre filter
                 $category_link = site_url('/references/' . $category->slug);
 
-                echo '<a href="' . esc_url($category_link) . '" class="category-filter ' . $active_class . '">' . $category->name . '</a>';
+                echo '<a href="' . esc_url($category_link) . '" class="category-filter ' . $active_class . '" data-category="' . $category->slug . '">' . $category->name . '</a>';
             }
             ?>
         </div>
@@ -98,7 +92,7 @@ if ($ref_query->have_posts()) :
             margin: 145px 0 45px 0;
         }
 
-        .category-filter {
+        .tax-type-reference .category-filter {
             padding: 10px;
             padding-left: 30px;
             padding-right: 30px;
@@ -107,10 +101,6 @@ if ($ref_query->have_posts()) :
             background-color: white !important;
             color: #1e1e1e;
             transition: all 0.5s;
-        }
-
-        .category-filter:hover {
-            color: #1e1e1e !important;
         }
 
         .category-filter.active {
@@ -123,7 +113,7 @@ if ($ref_query->have_posts()) :
             /* Ajouter une bordure pour indiquer la sélection */
         }
 
-        .page-template-template-remonte-ref-clients {
+        .tax-type-reference {
             background-color: #1E1E1E;
             color: white;
         }

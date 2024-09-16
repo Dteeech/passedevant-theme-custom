@@ -2333,6 +2333,10 @@ aside .recent-post-item a .recent-post-content {
   max-height: 600px;
   overflow: auto;
   width: 100%;
+  border-radius: 15px;
+}
+#wpforms-submit-57 {
+border-radius:50px ;
 }
 .blog-hero {
   padding: 90px 120px;
@@ -2354,6 +2358,7 @@ aside .recent-post-item a .recent-post-content {
   padding: 50px;
   background: rgba(30, 30, 30, 0.92);
   overflow: hidden;
+  border-radius: 15px;
 }
 
 .blog-hero_content .blog-newsletter-form {
@@ -2378,7 +2383,7 @@ aside .recent-post-item a .recent-post-content {
   padding-left:30px ;
   padding-right:30px ;
   border-radius: 50px;
-  border: 2px solid #1e1e1ea5;
+  border: 2px solid #1e1e1e;
   background-color: white;
   color: #1e1e1ea5;
   transition: all 0.5s;
