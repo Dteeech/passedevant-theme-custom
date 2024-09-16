@@ -7,7 +7,7 @@ function custom_swiper_philosophie_swiper_shortcode()
         <div class=" container mx-auto">
             <h2 class="text-5xl text-black ps-32">Notre philosophie</h2>
         </div>
-        <div class="mx-auto px-0 w-100 flex flex-col lg:flex-row mb-20 philosophie">
+        <div class="mx-auto px-0 w-100 flex flex-col lg:flex-row mb-20 philosophie relative">
             <div class="menu w-1/4 flex align-middle justify-center">
                 <ul class="underline--gradient flex flex-col align-middle justify-center gap-8">
                     <li><a class="text-2xl font-bold philosophie-link" href="#" data-slide="0">1.Objectifs</a></li>
@@ -135,12 +135,12 @@ function custom_swiper_philosophie_swiper_shortcode()
                         </div>
                     </div>
 
-                    <div class="swiper-pagination"></div>
-
-                    <div class="swiper-button-prev"></div>
-                    <div class="swiper-button-next"></div>
                 </div>
             </div>
+            <div class="swiper-pagination"></div>
+
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
         </div>
     </div>
     <style>
