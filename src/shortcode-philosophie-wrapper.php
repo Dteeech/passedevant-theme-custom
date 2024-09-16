@@ -3,10 +3,10 @@ function custom_swiper_philosophie_swiper_shortcode()
 {
     ob_start();
 ?>
-    <div class="container mx-auto">
+    <div class="container mx-auto philosophie-wrapper">
         <h2 class="text-5xl text-black ">Notre philosophie</h2>
     </div>
-    <div class="mx-auto px-0 w-100 flex flex-col lg:flex-row mb-20 philosophie">
+    <div class="mx-auto px-0 flex flex-col lg:flex-row mb-20 philosophie">
         <div class="menu w-1/4 flex align-middle justify-center">
             <ul class="underline--gradient flex flex-col align-middle justify-center gap-8">
                 <li><a class=" text-2xl font-bold" href="#" data-slide="0">1.Objectifs</a></li>
@@ -141,6 +141,10 @@ function custom_swiper_philosophie_swiper_shortcode()
         </div>
     </div>
     <style>
+        .philosophie-wrapper {
+            width: 50vw;
+        }
+
         .philosophie .swiper {
             width: 100%;
             height: 80vh;

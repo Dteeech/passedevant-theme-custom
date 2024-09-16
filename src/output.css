@@ -1094,6 +1094,10 @@ video {
   width: 100vw;
 }
 
+.w-56 {
+  width: 14rem;
+}
+
 .min-w-10 {
   min-width: 2.5rem;
 }
@@ -1477,6 +1481,10 @@ video {
   padding: 1.5rem;
 }
 
+.p-44 {
+  padding: 11rem;
+}
+
 .px-0 {
   padding-left: 0px;
   padding-right: 0px;
@@ -1611,6 +1619,18 @@ video {
 
 .pt-96 {
   padding-top: 24rem;
+}
+
+.ps-44 {
+  padding-inline-start: 11rem;
+}
+
+.ps-40 {
+  padding-inline-start: 10rem;
+}
+
+.ps-32 {
+  padding-inline-start: 8rem;
 }
 
 .text-left {
@@ -1799,6 +1819,10 @@ video {
 
   .lg\:w-3\/4 {
     width: 75%;
+  }
+
+  .lg\:w-2\/4 {
+    width: 50%;
   }
 
   .lg\:grid-cols-3 {

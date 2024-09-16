@@ -3,145 +3,152 @@ function custom_swiper_philosophie_swiper_shortcode()
 {
     ob_start();
 ?>
-    <div class="container mx-auto">
-        <h2 class="text-5xl text-black ">Notre philosophie</h2>
-    </div>
-    <div class="mx-auto px-0 w-100 flex flex-col lg:flex-row mb-20 philosophie">
-        <div class="menu w-1/4 flex align-middle justify-center">
-            <ul class="underline--gradient flex flex-col align-middle justify-center gap-8">
-                <li><a class="text-2xl font-bold philosophie-link" href="#" data-slide="0">1.Objectifs</a></li>
-                <li><a class="text-2xl font-bold philosophie-link" href="#" data-slide="1">2.Audit</a></li>
-                <li><a class="text-2xl font-bold philosophie-link" href="#" data-slide="2">3.Stratégie</a></li>
-                <li><a class="text-2xl font-bold philosophie-link" href="#" data-slide="3">4.Dashboard</a></li>
-                <li><a class="text-2xl font-bold philosophie-link" href="#" data-slide="4">5.Accompagnement</a></li>
-                <li><a class="text-2xl font-bold philosophie-link" href="#" data-slide="5">6.Opérationnel</a></li>
-                <li><a class="text-2xl font-bold philosophie-link" href="#" data-slide="6">7.Suivi</a></li>
-            </ul>
-
+    <div class="philosophie-wrapper">
+        <div class=" container mx-auto">
+            <h2 class="text-5xl text-black ps-32">Notre philosophie</h2>
         </div>
-        <div class="w-full lg:w-3/4 lg:pe-32">
-            <div class="swiper myPhilosophieSwiper">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide ">
-                        <div class="title flex flex-col gap-7">
-                            <h2 class="title__text gradient-text_title">Nous fixons et déterminons vos objectifs</h2>
-                            <p>Passedevant votre agence web expertisée en référencement naturel SEO, qui vous accompagne
-                                dans votre visibilité digitale pour acquérir des nouveaux clients. Passedevant votre agence
-                                web expertisée en référencement naturel SEO, qui vous accompagne dans votre visibilité
-                                digitale pour acquérir des nouveaux clients.
-                            </p>
-                            <div class="">
-                                <a href="#" class="content-link">lien</a>
+        <div class="mx-auto px-0 w-100 flex flex-col lg:flex-row mb-20 philosophie">
+            <div class="menu w-1/4 flex align-middle justify-center">
+                <ul class="underline--gradient flex flex-col align-middle justify-center gap-8">
+                    <li><a class="text-2xl font-bold philosophie-link" href="#" data-slide="0">1.Objectifs</a></li>
+                    <li><a class="text-2xl font-bold philosophie-link" href="#" data-slide="1">2.Audit</a></li>
+                    <li><a class="text-2xl font-bold philosophie-link" href="#" data-slide="2">3.Stratégie</a></li>
+                    <li><a class="text-2xl font-bold philosophie-link" href="#" data-slide="3">4.Dashboard</a></li>
+                    <li><a class="text-2xl font-bold philosophie-link" href="#" data-slide="4">5.Accompagnement</a></li>
+                    <li><a class="text-2xl font-bold philosophie-link" href="#" data-slide="5">6.Opérationnel</a></li>
+                    <li><a class="text-2xl font-bold philosophie-link" href="#" data-slide="6">7.Suivi</a></li>
+                </ul>
+
+            </div>
+            <div class="w-100 lg:w-3/4 lg:pe-32">
+                <div class="swiper myPhilosophieSwiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide ">
+                            <div class="title flex flex-col gap-7">
+                                <h2 class="title__text gradient-text_title">Nous fixons et déterminons vos objectifs</h2>
+                                <p>Passedevant votre agence web expertisée en référencement naturel SEO, qui vous accompagne
+                                    dans votre visibilité digitale pour acquérir des nouveaux clients. Passedevant votre agence
+                                    web expertisée en référencement naturel SEO, qui vous accompagne dans votre visibilité
+                                    digitale pour acquérir des nouveaux clients.
+                                </p>
+                                <div class="">
+                                    <a href="#" class="content-link">lien</a>
+                                </div>
                             </div>
                         </div>
-                    </div>
 
-                    <div class="swiper-slide">
-                        <div class="title flex flex-col gap-7">
-                            <h2 class="title__text gradient-text_title">Audit</h2>
-                            <p>
-                                Passedevant votre agence web expertisée en référencement naturel SEO, qui vous accompagne
-                                dans votre visibilité digitale pour acquérir des nouveaux clients. Passedevant votre agence
-                                web expertisée en référencement naturel SEO, qui vous accompagne dans votre visibilité
-                                digitale pour acquérir des nouveaux clients.
-                            </p>
-                            <div class="">
-                                <a href="#" class="content-link">lien</a>
-                            </div>
+                        <div class="swiper-slide">
+                            <div class="title flex flex-col gap-7">
+                                <h2 class="title__text gradient-text_title">Audit</h2>
+                                <p>
+                                    Passedevant votre agence web expertisée en référencement naturel SEO, qui vous accompagne
+                                    dans votre visibilité digitale pour acquérir des nouveaux clients. Passedevant votre agence
+                                    web expertisée en référencement naturel SEO, qui vous accompagne dans votre visibilité
+                                    digitale pour acquérir des nouveaux clients.
+                                </p>
+                                <div class="">
+                                    <a href="#" class="content-link">lien</a>
+                                </div>
 
-                        </div>
-
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="title flex flex-col gap-7">
-                            <h2 class="title__text gradient-text_title">stratégie</h2>
-                            <p>
-                                Passedevant votre agence web expertisée en référencement naturel SEO, qui vous accompagne
-                                dans votre visibilité digitale pour acquérir des nouveaux clients. Passedevant votre agence
-                                web expertisée en référencement naturel SEO, qui vous accompagne dans votre visibilité
-                                digitale pour acquérir des nouveaux clients.
-                            </p>
-                            <div class="">
-                                <a href="#" class="content-link">lien</a>
-                            </div>
-
-                        </div>
-
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="title flex flex-col gap-7">
-                            <h2 class="title__text gradient-text_title">dashboard</h2>
-                            <p>
-                                Passedevant votre agence web expertisée en référencement naturel SEO, qui vous accompagne
-                                dans votre visibilité digitale pour acquérir des nouveaux clients. Passedevant votre agence
-                                web expertisée en référencement naturel SEO, qui vous accompagne dans votre visibilité
-                                digitale pour acquérir des nouveaux clients.
-                            </p>
-                            <div class="">
-                                <a href="#" class="content-link">lien</a>
                             </div>
 
                         </div>
+                        <div class="swiper-slide">
+                            <div class="title flex flex-col gap-7">
+                                <h2 class="title__text gradient-text_title">stratégie</h2>
+                                <p>
+                                    Passedevant votre agence web expertisée en référencement naturel SEO, qui vous accompagne
+                                    dans votre visibilité digitale pour acquérir des nouveaux clients. Passedevant votre agence
+                                    web expertisée en référencement naturel SEO, qui vous accompagne dans votre visibilité
+                                    digitale pour acquérir des nouveaux clients.
+                                </p>
+                                <div class="">
+                                    <a href="#" class="content-link">lien</a>
+                                </div>
 
-                    </div>
-                    <div class="swiper-slide px-">
-                        <div class="title flex flex-col gap-7">
-                            <h2 class="title__text gradient-text_title">accompagnement</h2>
-                            <p>
-                                Passedevant votre agence web expertisée en référencement naturel SEO, qui vous accompagne
-                                dans votre visibilité digitale pour acquérir des nouveaux clients. Passedevant votre agence
-                                web expertisée en référencement naturel SEO, qui vous accompagne dans votre visibilité
-                                digitale pour acquérir des nouveaux clients.
-                            </p>
-                            <div class="">
-                                <a href="#" class="content-link">lien</a>
                             </div>
 
                         </div>
+                        <div class="swiper-slide">
+                            <div class="title flex flex-col gap-7">
+                                <h2 class="title__text gradient-text_title">dashboard</h2>
+                                <p>
+                                    Passedevant votre agence web expertisée en référencement naturel SEO, qui vous accompagne
+                                    dans votre visibilité digitale pour acquérir des nouveaux clients. Passedevant votre agence
+                                    web expertisée en référencement naturel SEO, qui vous accompagne dans votre visibilité
+                                    digitale pour acquérir des nouveaux clients.
+                                </p>
+                                <div class="">
+                                    <a href="#" class="content-link">lien</a>
+                                </div>
 
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="title flex flex-col gap-7">
-                            <h2 class="title__text gradient-text_title">opérationnel</h2>
-                            <p>
-                                Passedevant votre agence web expertisée en référencement naturel SEO, qui vous accompagne
-                                dans votre visibilité digitale pour acquérir des nouveaux clients. Passedevant votre agence
-                                web expertisée en référencement naturel SEO, qui vous accompagne dans votre visibilité
-                                digitale pour acquérir des nouveaux clients.
-                            </p>
-                            <div class="">
-                                <a href="#" class="content-link">lien</a>
                             </div>
 
                         </div>
+                        <div class="swiper-slide px-">
+                            <div class="title flex flex-col gap-7">
+                                <h2 class="title__text gradient-text_title">accompagnement</h2>
+                                <p>
+                                    Passedevant votre agence web expertisée en référencement naturel SEO, qui vous accompagne
+                                    dans votre visibilité digitale pour acquérir des nouveaux clients. Passedevant votre agence
+                                    web expertisée en référencement naturel SEO, qui vous accompagne dans votre visibilité
+                                    digitale pour acquérir des nouveaux clients.
+                                </p>
+                                <div class="">
+                                    <a href="#" class="content-link">lien</a>
+                                </div>
 
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="title flex flex-col gap-7">
-                            <h2 class="title__text gradient-text_title">suivi</h2>
-                            <p>
-                                Passedevant votre agence web expertisée en référencement naturel SEO, qui vous accompagne
-                                dans votre visibilité digitale pour acquérir des nouveaux clients. Passedevant votre agence
-                                web expertisée en référencement naturel SEO, qui vous accompagne dans votre visibilité
-                                digitale pour acquérir des nouveaux clients.
-                            </p>
-                            <div class="">
-                                <a href="#" class="content-link">lien</a>
                             </div>
 
                         </div>
+                        <div class="swiper-slide">
+                            <div class="title flex flex-col gap-7">
+                                <h2 class="title__text gradient-text_title">opérationnel</h2>
+                                <p>
+                                    Passedevant votre agence web expertisée en référencement naturel SEO, qui vous accompagne
+                                    dans votre visibilité digitale pour acquérir des nouveaux clients. Passedevant votre agence
+                                    web expertisée en référencement naturel SEO, qui vous accompagne dans votre visibilité
+                                    digitale pour acquérir des nouveaux clients.
+                                </p>
+                                <div class="">
+                                    <a href="#" class="content-link">lien</a>
+                                </div>
 
+                            </div>
+
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="title flex flex-col gap-7">
+                                <h2 class="title__text gradient-text_title">suivi</h2>
+                                <p>
+                                    Passedevant votre agence web expertisée en référencement naturel SEO, qui vous accompagne
+                                    dans votre visibilité digitale pour acquérir des nouveaux clients. Passedevant votre agence
+                                    web expertisée en référencement naturel SEO, qui vous accompagne dans votre visibilité
+                                    digitale pour acquérir des nouveaux clients.
+                                </p>
+                                <div class="">
+                                    <a href="#" class="content-link">lien</a>
+                                </div>
+
+                            </div>
+
+                        </div>
                     </div>
+
+                    <div class="swiper-pagination"></div>
+
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
                 </div>
-
-                <div class="swiper-pagination"></div>
-
-                <div class="swiper-button-prev"></div>
-                <div class="swiper-button-next"></div>
             </div>
         </div>
     </div>
     <style>
+        .philosophie-wrapper {
+            width: 80vw !important;
+            margin: auto;
+        }
+
         .philosophie-link::after {
             content: "";
             position: absolute;
@@ -153,6 +160,10 @@ function custom_swiper_philosophie_swiper_shortcode()
             transform: scaleX(0);
             transform-origin: left;
             transition: transform 0.5s ease-out;
+        }
+
+        .philosophie {
+            padding-left: 150px;
         }
 
         .philosophie .swiper {

@@ -769,14 +769,17 @@ h4,
 h5,
 h6 {
   clear: both;
+  margin-bottom: 1.5em !important;
 }
 p {
-  margin-bottom: 1.5em;
+  margin-bottom: 1.5em !important;
   font-weight: 300;
   font-size: 20px;
   font-family: "Labil Grotesk", sans-serif;
 }
-
+li {
+  list-style: inside;
+}
 dfn,
 cite,
 em,
@@ -844,7 +847,7 @@ ol {
 }
 
 ul {
-  list-style: disc;
+  list-style: inside;
 }
 
 ol {
@@ -1041,6 +1044,10 @@ textarea {
   margin: 0;
   padding-left: 0;
   align-items: center;
+}
+
+.main-navigation li {
+  list-style: none !important;
 }
 
 .main-navigation ul ul {
