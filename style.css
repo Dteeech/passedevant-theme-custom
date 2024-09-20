@@ -96,14 +96,14 @@ header {
   transition: background-color 0.3s ease;
 }
 .site-header {
-  
   display: flex;
   padding: auto;
   justify-content: center;
   position: fixed;
+  top: 30px;
   z-index: 999;
   width: 100vw;
-  height:70px;
+  height: 85px;
   opacity: 0.95;
 }
 .site-title {
@@ -179,90 +179,16 @@ main {
 .sub-menu {
   display: flex;
   flex-direction: column;
-  
-  
 }
-.sub-menu .menu-item{
-  
+.sub-menu .menu-item {
   padding: 0px;
-}
-.menu-dev a:hover {
-  color: transparent; /* Le texte est transparent pour que le dégradé soit visible */
-  
-  background: linear-gradient(
-    90deg,
-    #05a9cf 0%,
-    #95dfd2 23%,
-    #02febd 48%,
-    #029679 66%,
-    #02a382 72.87%,
-    #02b08a 79.75%,
-    #044876 92.5%
-  );
-  background-clip: text;
-  -webkit-background-clip: text; /* Nécessaire pour certains navigateurs */
-}
-.menu-dev a::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: -2px;
-  width: 100%;
-  height: 2px;
-  background: linear-gradient(
-    90deg,
-    #05a9cf 0%,
-    #95dfd2 23%,
-    #02febd 48%,
-    #029679 66%,
-    #02a382 72.87%,
-    #02b08a 79.75%,
-    #044876 92.5%
-  ) !important;
-  transform: scaleX(0);
-  transform-origin: left;
-  transition: transform 0.5s ease-out;
-}
-
-.menu-seo a:hover {
-  color: transparent; /* Le texte est transparent pour que le dégradé soit visible */
-  
-  background: linear-gradient(90deg, #0524A7 0%, #DF22F0 26.5%, #FDA9C0 54.5%, #430A8B 86.5%);
-  background-clip: text;
-  -webkit-background-clip: text; /* Nécessaire pour certains navigateurs */
-}
-.menu-seo a::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: -2px;
-  width: 100%;
-  height: 2px;
-  background: linear-gradient(90deg, #0524A7 0%, #DF22F0 26.5%, #FDA9C0 54.5%, #430A8B 86.5%);
-  transform: scaleX(0);
-  transform-origin: left;
-  transition: transform 0.5s ease-out;
-}
-
-a:hover::after {
-  transform: scaleX(1);
-}
-.header-dark .sub-menu {
-  background-color: #1e1e1e;
-}
-.header-light .sub-menu {
-  background-color: white;
-}
-
-.header-dark .menu-item {
-  color: white;
 }
 
 header .sub-menu > li::before {
   content: "→"; /* Flèche vers le bas */
   position: absolute;
   right: 205px;
-  bottom: -5px ;
+  bottom: -5px;
   transform: translateY(-50%);
   font-size: 0.8em; /* Ajuster la taille de la flèche si nécessaire */
   color: inherit; /* Pour que la flèche hérite de la couleur du texte du lien */
@@ -749,8 +675,6 @@ a {
   position: relative;
 }
 
-
-
 a:hover::after {
   transform: scaleX(1);
 }
@@ -1024,15 +948,11 @@ Custom pour le cta header
 .references_wrapper .references_button a {
   color: white; /* Couleur par défaut du texte */
   border: 1px solid white; /* Couleur par défaut de la bordure */
-  transition:
-    color 0.5s ease-in-out,
-    border 0.5s ease-in-out;
+  transition: color 0.5s ease-in-out, border 0.5s ease-in-out;
 }
 
 .references_wrapper .references_col .references_button a:hover {
-  transition:
-    color 0.5s ease-in-out,
-    border 0.5s ease-in-out;
+  transition: color 0.5s ease-in-out, border 0.5s ease-in-out;
   background-color: rgba(
     255,
     255,
@@ -1157,7 +1077,7 @@ Custom pour le cta header
   text-decoration: none !important;
 }
 #logo {
-  min-width: 180px ;
+  min-width: 180px;
 }
 #logo img {
   width: 100%;
@@ -1290,9 +1210,7 @@ Custom pour le cta header
   border-radius: 10px; /* Same border radius as the container */
   padding: 4px; /* Width of the border */
   background: linear-gradient(to right, #00b4d8, #ff0096); /* Gradient border */
-  -webkit-mask:
-    linear-gradient(#fff 0 0) content-box,
-    linear-gradient(#fff 0 0);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
   -webkit-mask-composite: destination-out;
   mask-composite: exclude;
 }
@@ -1767,9 +1685,7 @@ essibility
     #edc3df 57%,
     #f33585 74.5%
   );
-  -webkit-mask:
-    linear-gradient(#fff 0 0) content-box,
-    linear-gradient(#fff 0 0);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
   -webkit-mask-composite: xor;
   mask-composite: exclude;
 }
@@ -2121,7 +2037,6 @@ aside .recent-post-item a .recent-post-content {
 .customBlankSwiper .swiper-wrapper {
   display: flex;
   transition-timing-function: linear !important;
-
 }
 
 .customBlankSwiper .swiper-slide {
@@ -2148,11 +2063,11 @@ aside .recent-post-item a .recent-post-content {
   background: url("./images/svg/chevron_up_black.svg") center;
 
   border-radius: 50%;
-    background-color: #fff;
-    position: fixed;
-    bottom: 25px;
-    right: 25px;
-    mix-blend-mode: difference;
+  background-color: #fff;
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  mix-blend-mode: difference;
   background-repeat: no-repeat;
   display: none;
 }

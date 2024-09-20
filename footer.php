@@ -44,7 +44,29 @@
 	</footer>
 
 </footer><!-- #colophon -->
+<script>
+	document.querySelectorAll('.category-item').forEach(function(item) {
+		item.addEventListener('mouseenter', function() {
+			var menuId = this.getAttribute('data-menu');
 
+			// Supprimer la classe active de toutes les catégories parentes
+			document.querySelectorAll('.category-item').forEach(function(item) {
+				item.classList.remove('active');
+			});
+
+			// Ajouter la classe active à l'élément survolé
+			this.classList.add('active');
+
+			// Masquer tous les contenus des sous-menus
+			document.querySelectorAll('.menu-content').forEach(function(content) {
+				content.style.display = 'none';
+			});
+
+			// Afficher le contenu correspondant
+			document.getElementById(menuId).style.display = 'block';
+		});
+	});
+</script>
 </div><!-- #page -->
 
 <?php wp_footer();
