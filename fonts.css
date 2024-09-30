@@ -1,19 +1,17 @@
 @font-face {
-    font-family: 'Labil Grotesk';
-    src: url('../fonts/LabilGrotesk-Light.woff2') format('woff2');
-    font-weight: 300;
-    font-style: normal;
+  font-family: "Labil Grotesk";
+  src: url("./src/fonts/labil-grotesk/LabilGrotesk-Light.woff2") format("woff2");
+  font-weight: 300;
+  font-style: normal;
 }
 
 @font-face {
-    font-family: 'Labil Grotesk';
-    src: url('./src/fonts/labil-grotesk/LabilGrotesk-Light.woff2') format('woff2');
-    font-weight: 500;
-    font-style: normal;
+  font-family: "Labil Grotesk";
+  src: url("./src/fonts/labil-grotesk/LabilGrotesk-Light.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
 }
 
 body {
-    font-family: 'Labil Grotesk', sans-serif;
+  font-family: "Labil Grotesk", sans-serif;
 }
-
-
