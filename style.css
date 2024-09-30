@@ -1287,7 +1287,7 @@ Custom pour le cta header
   text-decoration: none !important;
 }
 #logo {
-  min-width: 180px;
+  flex: 0 0 200px; /* Taille fixe de 200px pour le logo */
 }
 #logo img {
   width: 100%;

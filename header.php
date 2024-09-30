@@ -115,20 +115,22 @@
 		/* Style de base */
 		.menu-wrapper {
 			position: relative;
-			justify-content: space-around;
+			justify-content: space-between;
+			align-items: center;
 			background-color: #1E1E1E;
-			padding: 10px;
-			padding: 20px;
+			padding: 10px 60px;
 			border-radius: 12px;
-			width: 815px;
+			width: 65vw;
 		}
 
 		.main-menu {
+			flex-grow: 1;
 			list-style: none;
 			display: flex;
 			padding: 0;
 			margin: 0;
 			align-items: center;
+			justify-content: space-evenly;
 		}
 
 		.main-menu>li::marker {
@@ -217,6 +219,9 @@
 			font-weight: normal;
 		}
 
+		.category-list .category-item:hover {
+			background-color: transparent !important;
+		}
 
 		.category-content {
 			width: 70%;
