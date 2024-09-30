@@ -37,6 +37,7 @@
   },
   "scripts": {
     "build": "wp-scripts build && npm run compile:rtl && npm run lint:scss && npm run lint:js",
+    "tailwind": "npx tailwindcss -i ./src/input.css -o ./dist/output.css --watch",
     "compile:rtl": "rtlcss style.css style-rtl.css",
     "lint:scss": "wp-scripts lint-style 'sass/**/*.scss'",
     "lint:js": "wp-scripts lint-js 'js/*.js'",

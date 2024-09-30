@@ -296,6 +296,9 @@ function render_header_color_metabox($post)
 	</label><br />
 	<label>
 		<input type="radio" name="header_color" value="dark" <?php checked($header_color, 'dark'); ?> /> Dark
+	</label><br />
+	<label>
+		<input type="radio" name="header_color" value="dark-light" <?php checked($header_color, 'dark-light'); ?> /> Dark Light
 	</label>
 <?php
 }
@@ -421,6 +424,7 @@ function enqueue_slider_assets()
 	wp_enqueue_script('custom-swiper-init', get_template_directory_uri() . '/shortcodes/slider-partners-logos/swiper.js', array('swiper-js'), null, true);
 	wp_enqueue_script('custom-swiper-prestations', get_template_directory_uri() . '/js/custom-swiper-prestations.js', array('swiper-js'), null, true);
 	wp_enqueue_script('custom-swiper-blank', get_template_directory_uri() . '/js/custom-blank-swiper.js', array('swiper-js'), null, true);
+	wp_enqueue_script('ref-client-swiper', get_template_directory_uri() . '/js/ref-client-swiper.js', array('swiper-js'), null, true);
 }
 add_action('wp_enqueue_scripts', 'enqueue_slider_assets');
 
@@ -445,18 +449,143 @@ require_once get_template_directory() . '/shortcodes/methodologie-seo/methodolog
 // WP Tutorials : Accordion
 // Inclure les fichiers de l'accordéon
 require_once get_template_directory() . '/accordion/wpt-accordion.php';
+require_once get_template_directory() . '/voirplus/wpt-voirplus.php';
 
 wp_enqueue_script('full-link-cta', get_template_directory_uri() . '/js/full-link-cta.js', array(), null);
 
-function my_scripts_method() {
+function my_scripts_method()
+{
 	wp_enqueue_script(
-	'custom-script',
-	get_stylesheet_directory_uri() . '/js/topbutton.js',
-	array( 'jquery' )
+		'custom-script',
+		get_stylesheet_directory_uri() . '/js/topbutton.js',
+		array('jquery')
 	);
-	}
-	
-	add_action( 'wp_enqueue_scripts', 'my_scripts_method' );
+}
+
+add_action('wp_enqueue_scripts', 'my_scripts_method');
 
 
 require get_template_directory() . '/inc/recent-posts-widget.php';
+
+function prefix_filter_widget_title_tag($params)
+{
+
+	$params[0]['before_title'] = '<span class="widget-title widgettitle">';
+
+	$params[0]['after_title']  = '</span>';
+
+	return $params;
+}
+add_filter('dynamic_sidebar_params', 'prefix_filter_widget_title_tag');
+
+
+/*categorie custom field*/
+function add_category_custom_field()
+{
+	// Ajoute un champ personnalisé à la page d'édition des catégories
+?>
+	<div class="form-field">
+		<label for="category_custom_text">Texte personnalisé</label>
+		<?php
+		wp_editor('', 'category_custom_text', array(
+			'textarea_name' => 'category_custom_text',
+			'textarea_rows' => 5,
+		));
+		?>
+		<p>Ajouter un texte personnalisé pour cette catégorie.</p>
+	</div>
+<?php
+}
+
+add_action('category_add_form_fields', 'add_category_custom_field', 10, 2);
+add_action('category_edit_form_fields', 'edit_category_custom_field', 10, 2);
+
+function edit_category_custom_field($term)
+{
+	// Récupère la valeur du champ personnalisé existant
+	$value = get_term_meta($term->term_id, 'category_custom_text', true);
+?>
+	<tr class="form-field">
+		<th scope="row" valign="top"><label for="category_custom_text">Texte personnalisé</label></th>
+		<td>
+			<?php
+			wp_editor(html_entity_decode($value), 'category_custom_text', array(
+				'textarea_name' => 'category_custom_text',
+				'textarea_rows' => 5,
+			));
+			?>
+			<p class="description">Modifier le texte personnalisé pour cette catégorie.</p>
+		</td>
+	</tr>
+<?php
+}
+
+function save_category_custom_field($term_id)
+{
+	if (isset($_POST['category_custom_text'])) {
+		$value = $_POST['category_custom_text'];
+		update_term_meta($term_id, 'category_custom_text', $value);
+	}
+}
+
+add_action('created_category', 'save_category_custom_field', 10, 2);
+add_action('edited_category', 'save_category_custom_field', 10, 2);
+
+require get_template_directory() . '/shortcodes/google-reviews/google-reviews.php';
+wp_enqueue_script('custom-partners-swiper-js', get_template_directory_uri() . '/shortcodes/google-reviews/swiper.js', array(), null);
+
+/*Ajouter d'un champ catégorie à un projet*/
+
+
+function register_reference_category_taxonomy()
+{
+	// Enregistrer une taxonomie pour les références clients
+	$labels = array(
+		'name'              => 'Catégorie référence client',
+		'singular_name'     => 'Catégorie référence client',
+		'search_items'      => 'Rechercher des types',
+		'all_items'         => 'Toutes les catégories',
+		'edit_item'         => 'Modifier la catégorie',
+		'update_item'       => 'Mettre à jour la catégorie',
+		'add_new_item'      => 'Ajouter une nouvelle catégorie',
+		'new_item_name'     => 'Nouvelle catégorie de référence',
+		'menu_name'         => 'Catégories de référence client',
+	);
+
+	$args = array(
+		'labels'            => $labels,
+		'public'            => true,
+		'hierarchical'      => true,
+		'show_ui'           => true,
+		'show_in_menu'      => true,
+		'show_admin_column' => true,
+		'rewrite'           => array('slug' => 'type-reference'),
+	);
+
+	register_taxonomy('type-reference', 'page', $args); // Attacher la taxonomie aux pages
+}
+add_action('init', 'register_reference_category_taxonomy');
+
+function custom_rewrite_references()
+{
+	add_rewrite_rule(
+		'^references/([^/]+)/?$',
+		'index.php?type-reference=$matches[1]',
+		'top'
+	);
+}
+add_action('init', 'custom_rewrite_references');
+
+function add_custom_query_vars($vars)
+{
+	$vars[] = 'type-reference';
+	return $vars;
+}
+add_filter('query_vars', 'add_custom_query_vars');
+
+function flush_rewrite_rules_on_activation()
+{
+	custom_rewrite_references();
+	flush_rewrite_rules();
+}
+add_action('after_switch_theme', 'flush_rewrite_rules_on_activation');

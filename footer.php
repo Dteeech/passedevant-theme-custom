@@ -12,8 +12,18 @@
 
 ?>
 
-<footer id="colophon" class="site-footer" style="background-color: <?php echo get_theme_mod('footer_bg_color', '#1e1e1e'); ?>;">
+<footer id="colophon" class="site-footer" style="border-top:1px solid white; background-color: <?php echo get_theme_mod('footer_bg_color', '#1e1e1e'); ?>;">
 
+	<a footer_cta-section_link href="/demande">
+		<div class="footer_cta-section flex flex-row">
+
+			<div class="flex flex-col">
+				<span>Collaborons ensemble</span>
+				<p>Vous souhaitez faire connaissance avec nous et en savoir plus sur nos expertises ?</p>
+			</div>
+			<img height="150" width="150" src="<?php echo get_template_directory_uri() . '/images/Flèche-noir.png' ?>; " alt="">
+		</div>
+	</a>
 
 	<div class="footer-widgets sm:mt-5">
 		<?php
@@ -38,33 +48,34 @@
 	<div class="site-info text-">
 		<p><?php esc_html_e('Fait avec ❤️ par Passedevant', 'passedevant'); ?> - <a href="/mentions-legales">Mentions légales</a></p>
 	</div><!-- .site-info -->
-	<footer id="colophon" class="site-footer" style="background-color: <?php echo get_theme_mod('footer_bg_color', '#000000'); ?>;">
-		<!-- Footer content here -->
-		<a href="#" class="topbutton"></a>
-	</footer>
-
+	<button id="back-to-top" title="Go to top"> <img src=" <?php echo get_template_directory_uri() . '/images/svg/chevron_up_black.svg' ?>" alt=""></button>
 </footer><!-- #colophon -->
 <script>
-	document.querySelectorAll('.category-item').forEach(function(item) {
-		item.addEventListener('mouseenter', function() {
-			var menuId = this.getAttribute('data-menu');
+	// Affiche le bouton lorsque l'utilisateur fait défiler vers le bas de 200px
+	window.onscroll = function() {
+		const backToTopButton = document.getElementById("back-to-top");
+		if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+			backToTopButton.style.display = "block";
+		} else {
+			backToTopButton.style.display = "none";
+		}
+	};
 
-			// Supprimer la classe active de toutes les catégories parentes
-			document.querySelectorAll('.category-item').forEach(function(item) {
-				item.classList.remove('active');
-			});
-
-			// Ajouter la classe active à l'élément survolé
-			this.classList.add('active');
-
-			// Masquer tous les contenus des sous-menus
-			document.querySelectorAll('.menu-content').forEach(function(content) {
-				content.style.display = 'none';
-			});
-
-			// Afficher le contenu correspondant
-			document.getElementById(menuId).style.display = 'block';
+	// Remonte en haut de la page lorsque l'utilisateur clique sur le bouton
+	document.getElementById("back-to-top").addEventListener("click", function() {
+		window.scrollTo({
+			top: 0,
+			behavior: 'smooth'
 		});
+	});
+	document.addEventListener('scroll', function() {
+		const cta = document.querySelector('.footer_cta-section');
+		const ctaPosition = cta.getBoundingClientRect().top;
+		const screenPosition = window.innerHeight / 1.5; // Ajustez la position de déclenchement
+
+		if (ctaPosition < screenPosition) {
+			cta.classList.add('visible');
+		}
 	});
 </script>
 </div><!-- #page -->

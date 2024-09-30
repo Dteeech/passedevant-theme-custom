@@ -7,18 +7,18 @@ function methodologie_seo_shortcode()
         ob_start();
 ?>
         <div class="methodologie-container text-white container mx-auto">
-            <div class="flex justify-start w-full gap-44">
+            <div class="flex flex-col lg:flex-row w-full justify-around">
                 <div class=" min-w-44">
                     <?php foreach ($elements as $index => $element) : ?>
                         <button class="menu-button" data-content-id="content-<?php echo $index + 1; ?>" data-number-id="number-<?php echo $index + 1; ?>"><?php echo esc_html($element['button_text']); ?></button>
                     <?php endforeach; ?>
                 </div>
-                <div class="methodologie-number ">
+                <div class="methodologie-number text-end">
                     <?php foreach ($elements as $index => $element) : ?>
                         <div id="number-<?php echo $index + 1; ?>" class="number-section" style="display: <?php echo $index === 0 ? 'flex flex-row' : 'none'; ?>"><?php echo $index + 1; ?></div>
                     <?php endforeach; ?>
                 </div>
-                <div class=" flex content-center items-center ">
+                <div class=" flex content-center items-center flex-grow w-full">
                     <?php foreach ($elements as $index => $element) : ?>
                         <div id="content-<?php echo $index + 1; ?>" class="content-section" style="display: <?php echo $index === 0 ? 'flex' : 'none'; ?>"><?php echo esc_html($element['content']); ?></div>
                     <?php endforeach; ?>
@@ -36,7 +36,7 @@ function methodologie_seo_shortcode()
                 background-color: transparent;
                 /* Couleur de fond transparent */
                 color: white;
-                padding: 10px 10px 10px 40px;
+                padding: 10px 10px 10px 10px;
                 /* Ajuster le padding pour faire de la place pour la bulle */
                 margin-bottom: 10px;
                 cursor: pointer;
@@ -53,8 +53,8 @@ function methodologie_seo_shortcode()
                 /* Ajuster la position */
                 top: 50%;
                 transform: translateY(-50%);
-                width: 30px;
-                height: 30px;
+                width: 15px;
+                height: 15px;
                 background: url('data:image/svg+xml,%3Csvg%20width%3D%2230%22%20height%3D%2230%22%20viewBox%3D%220%200%2030%2030%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Ccircle%20cx%3D%2215%22%20cy%3D%2215%22%20r%3D%2215%22%20fill%3D%22%23F8ACF0%22%2F%3E%3C%2Fsvg%3E') no-repeat center center;
                 background-size: contain;
                 background-size: contain;
@@ -71,17 +71,32 @@ function methodologie_seo_shortcode()
                 display: none;
                 padding: 20px;
             }
+
             .methodologie-number {
                 display: flex;
                 align-items: center;
             }
+
             .number-section {
                 font-size: 186px;
                 width: 260px;
+                justify-content: end;
             }
+
+            @media screen and (max-width: 764px) {
+                .number-section {
+                    font-size: 180px;
+                    width: auto;
+                    justify-content: left;
+                    text-align: start;
+                }
+
+            }
+
             .content-section {
-                width: 400px;
+                width: 40vw;
             }
+
             .content-section:first-child,
             .number-section:first-child {
                 display: flex;

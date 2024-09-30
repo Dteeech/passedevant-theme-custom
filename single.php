@@ -1,4 +1,5 @@
 <?php
+
 /**
  * The template for displaying all single posts
  *
@@ -11,7 +12,7 @@ get_header();
 ?>
 
 <main id="primary" class="site-main flex">
-    <div class="content container justify-center mx-auto flex flex-row gap-4">
+    <div class="single-content content container justify-center mx-auto flex flex-row gap-4">
         <?php
         while (have_posts()) :
             the_post();
@@ -34,8 +35,8 @@ get_header();
         ?>
         <?php get_sidebar('single'); ?>
     </div>
-    
-   
+
+
 </main><!-- #main -->
 
 <?php

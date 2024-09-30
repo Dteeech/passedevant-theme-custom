@@ -113,7 +113,6 @@ main {
   background-color: transparent;
   border: 1px solid white;
   font-size: medium;
-
 }
 
 .primary-button .wp-block-button__link:hover {
@@ -524,7 +523,7 @@ p {
   margin-bottom: 1.5em;
   font-weight: 300;
   font-size: 20px;
-  font-family: 'Labil Grotesk', sans-serif;
+  font-family: "Labil Grotesk";
 }
 
 dfn,
@@ -669,7 +668,6 @@ a:hover::after {
 /* a:visited {
   color: defau;
 } */
-
 
 a:focus,
 a:active {
@@ -1078,9 +1076,7 @@ textarea {
   border-radius: 10px; /* Same border radius as the container */
   padding: 4px; /* Width of the border */
   background: linear-gradient(to left, #00b4d8, #ff0096); /* Gradient border */
-  -webkit-mask:
-    linear-gradient(#fff 0 0) content-box,
-    linear-gradient(#fff 0 0);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
   -webkit-mask-composite: destination-out;
   mask-composite: exclude;
 }
@@ -1191,11 +1187,11 @@ a.cta::after {
 .footer-widgets ul li .sub-menu {
   display: flex;
   flex-direction: column;
-  gap:4px;
+  gap: 4px;
   margin-right: 5px;
 }
 
-.footer-widgets .widget-title  {
+.footer-widgets .widget-title {
   margin-bottom: 25px;
 }
 @media (max-width: 768px) {

@@ -1,8 +1,9 @@
 <?php
-function custom_philosophie_content_shortcode() {
+function custom_philosophie_content_shortcode()
+{
     ob_start();
-    ?>
-    <div class="container mx-auto">
+?>
+    <div class="container mx-auto philosophie-wrapper">
         <h2 class="text-black text-5xl mt-20 mb-20">Notre philosophie</h2>
     </div>
     <div id="philosophie-content" class="wrapper flex"></div>
@@ -95,9 +96,9 @@ function custom_philosophie_content_shortcode() {
         }
     </style>
     <script>
-        document.addEventListener('DOMContentLoaded', function () {
+        document.addEventListener('DOMContentLoaded', function() {
 
-                    
+
 
             const isMobile = window.innerWidth <= 1024;
 
@@ -108,7 +109,7 @@ function custom_philosophie_content_shortcode() {
                         const philosophieContent = document.getElementById('philosophie-content');
                         const mobileContent = document.getElementById('mobile-content');
                         philosophieContent.innerHTML = '';
-                        mobileContent.innerHTML = ''; 
+                        mobileContent.innerHTML = '';
 
                         if (isMobile) {
                             loadMobilePhilosophieContent(data.data);
@@ -176,7 +177,7 @@ function custom_philosophie_content_shortcode() {
                 const menuLinks = document.querySelectorAll('.philosophie_menu-link a');
 
                 menuLinks.forEach(link => {
-                    link.addEventListener('click', function (e) {
+                    link.addEventListener('click', function(e) {
                         e.preventDefault();
                         const targetId = this.getAttribute('data-target');
                         const contentSections = document.querySelectorAll('#philosophie-content .content-section');
@@ -196,7 +197,7 @@ function custom_philosophie_content_shortcode() {
                 const accordionButtons = document.querySelectorAll('.accordion-button');
 
                 accordionButtons.forEach(button => {
-                    button.addEventListener('click', function () {
+                    button.addEventListener('click', function() {
                         const targetId = this.getAttribute('data-target');
                         const content = document.getElementById('mobile-' + targetId);
 
@@ -212,7 +213,7 @@ function custom_philosophie_content_shortcode() {
             }
         });
     </script>
-    <?php
+<?php
     return ob_get_clean();
 }
 add_shortcode('custom_philosophie_content', 'custom_philosophie_content_shortcode');

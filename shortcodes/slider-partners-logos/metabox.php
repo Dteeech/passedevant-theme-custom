@@ -2,27 +2,29 @@
 add_action('add_meta_boxes', 'add_partners_logos_metabox');
 add_action('save_post', 'save_partners_logos_metabox', 10, 2);
 
-function add_partners_logos_metabox() {
+function add_partners_logos_metabox()
+{
     add_meta_box(
         'partners_logos',
         'Logos des partenaires',
         'partners_logos_metabox_callback',
-        'page', // Changez cela si vous avez besoin d'un autre type de post
+        'page',
         'normal',
         'high'
     );
 }
 
-function partners_logos_metabox_callback($post) {
+function partners_logos_metabox_callback($post)
+{
     wp_nonce_field(basename(__FILE__), 'partners_logos_nonce');
     $partners_logos = get_post_meta($post->ID, 'partners_logos', true);
-    ?>
+?>
     <div id="dynamic_form">
         <div id="field_wrap">
-            <?php 
+            <?php
             if (!empty($partners_logos)) {
                 foreach ($partners_logos as $logo) {
-                    ?>
+            ?>
                     <div class="field_row">
                         <div class="field_left">
                             <input type="text" class="meta_image_url" name="partners_logos[]" value="<?php echo esc_attr($logo); ?>" />
@@ -36,7 +38,7 @@ function partners_logos_metabox_callback($post) {
                         </div>
                         <div class="clear"></div>
                     </div>
-                    <?php
+            <?php
                 }
             }
             ?>
@@ -58,10 +60,11 @@ function partners_logos_metabox_callback($post) {
             <input class="button" type="button" value="Ajouter un champ" onclick="add_field_row();" />
         </div>
     </div>
-    <?php
+<?php
 }
 
-function save_partners_logos_metabox($post_id, $post) {
+function save_partners_logos_metabox($post_id, $post)
+{
     if (!isset($_POST['partners_logos_nonce']) || !wp_verify_nonce($_POST['partners_logos_nonce'], basename(__FILE__))) {
         return $post_id;
     }
