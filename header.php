@@ -91,7 +91,7 @@
 								</ul>
 							</div>
 
-							<div class="menu-content " id="formations">
+							<div class="menu-content" id="formations">
 								<ul>
 									<li class="menu-item"><a href="/404">Rien pour le moment</a></li>
 								</ul>
@@ -105,7 +105,7 @@
 				<li class="menu-item"><a href="/references">Références</a></li>
 				<li class="menu-item"><a href="/blog">Blog</a></li>
 			</ul>
-			<svg class="ham hamRotate ham1" viewBox="0 0 100 100" width="80" onclick="this.classList.toggle('active')">
+			<svg class="ham hamRotate ham1" viewBox="0 0 100 100" width="80" onclick="this.classList.toggle('active'); document.getElementById('mobileMenu').classList.toggle('show');">
 				<path
 					class="line top"
 					d="m 30,33 h 40 c 0,0 9.044436,-0.654587 9.044436,-8.508902 0,-7.854315 -8.024349,-11.958003 -14.89975,-10.85914 -6.875401,1.098863 -13.637059,4.171617 -13.637059,16.368042 v 40" />
@@ -486,12 +486,13 @@
 			z-index: 1000;
 		}
 
-		.main-menu.mobile.show {
-			display: flex;
-		}
 
 		/* Responsive */
 		@media (max-width: 768px) {
+			.main-menu.mobile.show {
+				display: flex;
+			}
+
 			.main-menu {
 				display: none;
 			}

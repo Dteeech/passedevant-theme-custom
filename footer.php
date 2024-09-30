@@ -105,25 +105,6 @@
 		categoryItems.forEach((el) => el.classList.remove('active'));
 		contentBlocks.forEach((block) => block.classList.remove('active'));
 	});
-
-	function toggleMenu() {
-		// Ajoute des messages pour vérifier l'exécution de la fonction
-		console.log("Toggle menu clicked");
-
-		const mobileMenu = document.getElementById('mobileMenu');
-		if (mobileMenu) {
-			console.log("Menu found. Toggling class.");
-			mobileMenu.classList.toggle('show');
-			document.querySelector('.ham').classList.toggle('active');
-		} else {
-			console.log("Menu not found");
-		}
-	}
-
-	// Attendre que le DOM soit chargé avant d'exécuter le script
-	document.addEventListener('DOMContentLoaded', function() {
-		console.log("DOM fully loaded and parsed");
-	});
 </script>
 </div><!-- #page -->
 
