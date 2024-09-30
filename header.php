@@ -34,7 +34,7 @@
 						<ul class="category-list">
 
 							<li class="category-item menu-item menu-seo" data-menu="seo">
-								<a href="/seo">SEO
+								<a href="/agence-referencement-naturel-seo/">SEO
 									<p>Lorem ipsum</p>
 								</a>
 							</li>

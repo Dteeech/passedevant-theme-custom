@@ -63,11 +63,13 @@ get_header();
                                 </h2>
                             </header><!-- .entry-header -->
                             <div class="entry-content">
-                                <?php the_excerpt(); ?>
+                                <?php
+                                $excerpt = get_the_excerpt();
+                                $excerpt = substr($excerpt, 0, 100);
+                                echo $excerpt;
+                                ?>
                             </div><!-- .entry-content -->
-                            <footer class="entry-footer mt-4">
-                                <a href="<?php the_permalink(); ?>" class="read-more text-blue-600 hover:text-blue-800">Lire la suite</a>
-                            </footer><!-- .entry-footer -->
+
                         </div>
                     </article><!-- #post-<?php the_ID(); ?> -->
                 <?php endwhile; ?>
