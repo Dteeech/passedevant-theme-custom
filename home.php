@@ -63,11 +63,15 @@ get_header();
                                 </h2>
                             </header><!-- .entry-header -->
                             <div class="entry-content">
-                                <?php
-                                $excerpt = get_the_excerpt();
-                                $excerpt = substr($excerpt, 0, 100);
-                                echo $excerpt;
-                                ?>
+                                <p>
+
+                                    <?php
+                                    $excerpt = get_the_excerpt();
+                                    $excerpt = substr($excerpt, 0, 100);
+                                    echo $excerpt;
+                                    ?>
+                                    ...
+                                </p>
                             </div><!-- .entry-content -->
 
                         </div>
