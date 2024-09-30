@@ -77,6 +77,34 @@
 			cta.classList.add('visible');
 		}
 	});
+
+	// Sélectionne toutes les catégories de menu
+	const categoryItems = document.querySelectorAll('.category-item');
+	const contentBlocks = document.querySelectorAll('.menu-content');
+
+	categoryItems.forEach((item) => {
+		// Ajoute un événement au clic sur chaque catégorie
+		item.addEventListener('mouseenter', () => {
+			// Retire la classe "active" de tous les contenus de sous-menu
+			contentBlocks.forEach((block) => block.classList.remove('active'));
+
+			// Retire la classe "active" de toutes les catégories
+			categoryItems.forEach((el) => el.classList.remove('active'));
+
+			// Ajoute la classe "active" à l'élément survolé
+			item.classList.add('active');
+
+			// Affiche le contenu correspondant basé sur le data-menu
+			const menuToShow = item.getAttribute('data-menu');
+			document.getElementById(menuToShow).classList.add('active');
+		});
+	});
+
+	// Retire la classe "active" lors du survol de l'ensemble du méga-menu
+	document.querySelector('.mega-menu').addEventListener('mouseleave', () => {
+		categoryItems.forEach((el) => el.classList.remove('active'));
+		contentBlocks.forEach((block) => block.classList.remove('active'));
+	});
 </script>
 </div><!-- #page -->
 

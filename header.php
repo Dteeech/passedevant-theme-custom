@@ -131,6 +131,11 @@
 			align-items: center;
 		}
 
+		.main-menu>li::marker {
+			content: '';
+			display: none;
+		}
+
 		.main-menu .menu-item {
 			position: relative;
 			padding: 15px 20px;
@@ -218,10 +223,20 @@
 			padding: 20px 20px 20px 35px;
 			background-color: rgba(0, 0, 0, 0.6);
 			border-radius: 0 12px 12px 0;
+			color: white !important;
 		}
 
 		.menu-content {
 			display: none;
+		}
+
+		.menu-content.active {
+			display: block;
+		}
+
+		.category-item.active {
+			background-color: rgba(255, 255, 255, 0.1);
+			/* Change l'arrière-plan de la catégorie active */
 		}
 
 		.menu-content ul {
@@ -241,14 +256,11 @@
 		}
 
 		/* Afficher le contenu actif au survol */
-		.category-item:hover~.category-content .menu-content {
-			display: none;
-		}
-
-		.category-item[data-menu="seo"]:hover~.category-content #seo,
-		.category-item[data-menu="creation"]:hover~.category-content #creation,
-		.category-item[data-menu="sea"]:hover~.category-content #sea,
-		.category-item[data-menu="formations"]:hover~.category-content #formations {
+		/* Afficher le contenu correspondant lors du survol de la catégorie */
+		.category-item:hover~.category-content #seo,
+		.category-item:hover~.category-content #creation,
+		.category-item:hover~.category-content #sea,
+		.category-item:hover~.category-content #formations {
 			display: block;
 		}
 

@@ -95,6 +95,7 @@ header {
   display: flex;
   transition: background-color 0.3s ease;
 }
+
 .site-header {
   display: flex;
   padding: auto;
