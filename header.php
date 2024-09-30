@@ -19,7 +19,7 @@
 				$logo = wp_get_attachment_image_src($custom_logo_id, 'full');
 
 				if (has_custom_logo()) {
-					echo '<img src="' . esc_url($logo[0]) . '" alt="' . get_bloginfo('name') . '">';
+					echo '<a href="/"><img src="' . esc_url($logo[0]) . '" alt="' . get_bloginfo('name') . '"></a>';
 				} else {
 					echo '<h1>' . get_bloginfo('name') . '</h1>';
 				}
@@ -101,6 +101,24 @@
 				</li>
 
 				<!-- Menus normaux -->
+				<li class="menu-item"><a href="/agence">L'agence</a></li>
+				<li class="menu-item"><a href="/references">Références</a></li>
+				<li class="menu-item"><a href="/blog">Blog</a></li>
+			</ul>
+			<svg class="ham hamRotate ham1" viewBox="0 0 100 100" width="80" onclick="this.classList.toggle('active')">
+				<path
+					class="line top"
+					d="m 30,33 h 40 c 0,0 9.044436,-0.654587 9.044436,-8.508902 0,-7.854315 -8.024349,-11.958003 -14.89975,-10.85914 -6.875401,1.098863 -13.637059,4.171617 -13.637059,16.368042 v 40" />
+				<path
+					class="line middle"
+					d="m 30,50 h 40" />
+				<path
+					class="line bottom"
+					d="m 30,67 h 40 c 12.796276,0 15.357889,-11.717785 15.357889,-26.851538 0,-15.133752 -4.786586,-27.274118 -16.667516,-27.274118 -11.88093,0 -18.499247,6.994427 -18.435284,17.125656 l 0.252538,40" />
+			</svg>
+
+			<!-- Menu mobile -->
+			<ul class="main-menu mobile" id="mobileMenu">
 				<li class="menu-item"><a href="/agence">L'agence</a></li>
 				<li class="menu-item"><a href="/references">Références</a></li>
 				<li class="menu-item"><a href="/blog">Blog</a></li>
@@ -370,6 +388,132 @@
 		/* Retirer le soulignement pour les sous-menus */
 		.mega-menu .menu-item a::after {
 			content: none;
+		}
+
+		/* Menu burger */
+		.burger-menu {
+			display: none;
+			flex-direction: column;
+			justify-content: space-around;
+			width: 30px;
+			height: 25px;
+			background: none;
+			border: none;
+			cursor: pointer;
+			margin-left: auto;
+			padding: 0;
+		}
+
+		.ham {
+			display: none;
+			cursor: pointer;
+			-webkit-tap-highlight-color: transparent;
+			transition: transform 400ms;
+			-moz-user-select: none;
+			-webkit-user-select: none;
+			-ms-user-select: none;
+			user-select: none;
+		}
+
+		.ham .line {
+			stroke: #fff;
+			/* Couleur blanche pour le SVG */
+		}
+
+		.hamRotate.active {
+			transform: rotate(45deg);
+		}
+
+		.hamRotate180.active {
+			transform: rotate(180deg);
+		}
+
+		.line {
+			fill: none;
+			transition: stroke-dasharray 400ms, stroke-dashoffset 400ms;
+			stroke: #000;
+			stroke-width: 5.5;
+			stroke-linecap: round;
+		}
+
+		.ham1 .top {
+			stroke-dasharray: 40 139;
+		}
+
+		.ham1 .bottom {
+			stroke-dasharray: 40 180;
+		}
+
+		.ham1.active .top {
+			stroke-dashoffset: -98px;
+		}
+
+		.ham1.active .bottom {
+			stroke-dashoffset: -138px;
+		}
+
+		.burger-menu div {
+			width: 100%;
+			height: 3px;
+			background-color: #ffffff;
+			border-radius: 2px;
+			transition: all 0.3s ease-in-out;
+		}
+
+		.burger-menu.open div:nth-child(1) {
+			transform: rotate(45deg) translate(5px, 5px);
+		}
+
+		.burger-menu.open div:nth-child(2) {
+			opacity: 0;
+		}
+
+		.burger-menu.open div:nth-child(3) {
+			transform: rotate(-45deg) translate(5px, -5px);
+		}
+
+		/* Menu mobile */
+		.main-menu.mobile {
+			display: none;
+			flex-direction: column;
+			position: absolute;
+			top: 100%;
+			left: 0;
+			width: 100%;
+			background: #1E1E1E;
+			border-radius: 12px;
+			padding: 20px 0;
+			z-index: 1000;
+		}
+
+		.main-menu.mobile.show {
+			display: flex;
+		}
+
+		/* Responsive */
+		@media (max-width: 768px) {
+			.main-menu {
+				display: none;
+			}
+
+			.ham {
+				display: block;
+				cursor: pointer;
+				-webkit-tap-highlight-color: transparent;
+				transition: transform 400ms;
+				-moz-user-select: none;
+				-webkit-user-select: none;
+				-ms-user-select: none;
+				user-select: none;
+			}
+
+			.burger-menu {
+				display: flex;
+			}
+
+			.menu-wrapper {
+				padding: 10px 15px;
+			}
 		}
 	</style>
 
