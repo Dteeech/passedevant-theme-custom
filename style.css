@@ -2419,7 +2419,10 @@ aside .recent-post-item a .recent-post-content {
   border: 2px solid #1e1e1e;
   background-color: #1e1e1e;
 }
-
+.blog .post,
+.category .post {
+  padding: 0px !important;
+}
 /*media queries*/
 @media (max-width: 768px) {
   .blog .blog-hero {
