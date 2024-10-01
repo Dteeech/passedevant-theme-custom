@@ -1224,7 +1224,7 @@ Custom pour le cta header
 }
 .post {
   width: 45vw;
-  padding: 20px;
+  padding: 0px;
 }
 .post,
 .page {
@@ -2437,7 +2437,7 @@ aside .recent-post-item a .recent-post-content {
   }
   .blog .post,
   .category .post {
-    padding: 20px;
+    padding: 0px !important;
   }
 }
 .category section {
