@@ -28,7 +28,7 @@
 			<ul class="main-menu">
 				<!-- Item Expertises avec un méga-menu -->
 				<li class="menu-item menu-classic">
-					<a href="#">Expertises</a>
+					<a href="/expertise">Expertise</a>
 					<div class="mega-menu">
 						<!-- Colonne gauche avec les catégories -->
 						<ul class="category-list">
