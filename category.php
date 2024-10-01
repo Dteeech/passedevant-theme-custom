@@ -61,6 +61,7 @@ get_header(); ?>
                                 </h2>
                             </header><!-- .entry-header -->
                             <div class="entry-content">
+                                <?php the_excerpt(); ?>
                             </div><!-- .entry-content -->
                             <footer class="entry-footer mt-4">
                                 <a href="<?php the_permalink(); ?>" class="read-more text-blue-600 hover:text-blue-800">Lire la suite</a>
@@ -69,14 +70,6 @@ get_header(); ?>
                     </article><!-- #post-<?php the_ID(); ?> -->
                 <?php endwhile; ?>
             </div><!-- .grid -->
-            <div class="pagination mt-8">
-                <?php
-                the_posts_pagination(array(
-                    'prev_text' => __('Précédent', 'passedevant'),
-                    'next_text' => __('Suivant', 'passedevant'),
-                ));
-                ?>
-            </div>
             <?php
             $category_custom_text = get_term_meta(get_queried_object()->term_id, 'category_custom_text', true);
 
@@ -84,12 +77,75 @@ get_header(); ?>
                 echo '<div class="category-custom-text">' . wp_kses_post(wpautop($category_custom_text)) . '</div>';
             }
             ?>
-
+            <div class="pagination mt-8">
+                <?php
+                the_posts_pagination(array(
+                    'prev_text' => __('←', 'passedevant'),
+                    'next_text' => __('→', 'passedevant'),
+                ));
+                ?>
+            </div>
         <?php else : ?>
             <p><?php _e('Aucun article trouvé.', 'passedevant'); ?></p>
         <?php endif; ?>
     </div><!-- .container -->
 </main><!-- #main -->
+
+<style>
+    .archive .pagination .navigation .nav-links {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 52px 0;
+    }
+
+    .archive .pagination .navigation .nav-links .page-numbers {
+        padding: 10px;
+        padding-left: 30px;
+        padding-right: 30px;
+        border-radius: 50px;
+        border: 2px solid #1e1e1e;
+        background-color: white;
+        color: #1e1e1ea5;
+        transition: all 0.5s;
+        margin: 0px 30px;
+    }
+
+    /* Style des boutons au survol */
+    .archive .pagination .navigation .nav-links .page-numbers:hover {
+        background-color: #1e1e1e;
+        color: white;
+    }
+
+    /* Style du bouton correspondant à la page active */
+    .archive .pagination .navigation .nav-links .page-numbers.current {
+        background-color: #1e1e1e;
+        /* Fond noir */
+        color: white;
+        /* Texte blanc */
+        border: 2px solid #1e1e1e;
+    }
+
+    /* Style des boutons Précédent et Suivant */
+    .archive .pagination .navigation .nav-links .page-numbers.prev,
+    .archive .pagination .navigation .nav-links .page-numbers.next {
+        padding: 10px;
+        padding-left: 30px;
+        padding-right: 30px;
+        border-radius: 50px;
+        border: 2px solid #1e1e1e;
+        background-color: white;
+        color: #1e1e1ea5;
+        transition: all 0.5s;
+        margin: 0px 30px;
+    }
+
+    .archive .pagination .navigation .nav-links .page-numbers.prev:hover,
+    .archive .pagination .navigation .nav-links .page-numbers.next:hover {
+        background-color: #1e1e1e;
+        color: white;
+    }
+</style>
 <script>
     document.addEventListener('DOMContentLoaded', function() {
         // Sélectionner tous les boutons de filtre
@@ -99,7 +155,7 @@ get_header(); ?>
             filter.addEventListener('click', function() {
                 const category = this.getAttribute('data-category');
                 // Sélectionner tous les articles
-                const posts = document.querySelectorAll('.blog-post');
+                const posts = document.querySelectorAll('.archive-post');
                 // Si la catégorie sélectionnée est "Tout", afficher tous les articles
                 if (category === null) {
                     posts.forEach(post => {
