@@ -139,6 +139,7 @@
 			padding: 10px 60px;
 			border-radius: 12px;
 			width: 65vw;
+
 		}
 
 		.main-menu {
@@ -161,13 +162,18 @@
 			padding: 15px 20px;
 			cursor: pointer;
 			font-size: 20px;
+			list-style: none;
 		}
 
 		.main-menu .menu-item a {
 			text-decoration: none;
 			color: #fff;
-			font-weight: bold;
+			font-weight: 300 !important;
 			font-size: 20px;
+		}
+
+		.main-menu .menu-item .category-list .category-item {
+			list-style: none !important;
 		}
 
 		.mega-menu {
@@ -196,7 +202,7 @@
 		}
 
 		.category-list {
-			width: 35%;
+			width: 40%;
 			padding: 20px;
 		}
 
@@ -218,6 +224,7 @@
 			transform: translateX(0);
 		}
 
+
 		.category-list .category-item {
 			padding: 10px 0;
 			cursor: pointer;
@@ -229,12 +236,14 @@
 
 		.category-list .category-item a {
 			font-size: 20px;
+			line-height: 10px !important;
 		}
 
 		.category-list .category-item p {
 			color: white;
 			font-size: small;
 			font-weight: normal;
+
 		}
 
 		.category-list .category-item:hover {

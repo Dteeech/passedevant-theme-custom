@@ -96,6 +96,7 @@ function shortcote_3_blocks_reassurance_shortcode()
             padding-left: 35px;
             /* Espace pour l'icône */
             margin-bottom: 15px;
+            list-style: none;
         }
 
         .list-item_reassurance::before {

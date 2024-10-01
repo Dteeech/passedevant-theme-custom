@@ -105,6 +105,7 @@ header {
   width: 100vw;
   height: 100px;
   opacity: 0.95;
+  font-family: "Labil Grotesk", sans-serif;
 }
 .site-title {
   margin: 0;
@@ -435,6 +436,7 @@ h1 {
   font-size: 2em;
   margin: 0.67em 0;
   line-height: 55px;
+  font-weight: 700 !important;
 }
 
 .title-alike,
