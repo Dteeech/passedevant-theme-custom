@@ -67,7 +67,7 @@ get_header();
 
                                     <?php
                                     $excerpt = get_the_excerpt();
-                                    $excerpt = substr($excerpt, 0, 100);
+                                    $excerpt = substr($excerpt, 0, 40);
                                     echo $excerpt;
                                     ?>
                                     ...
