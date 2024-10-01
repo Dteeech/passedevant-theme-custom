@@ -62,9 +62,7 @@ get_header();
                                     </a>
                                 </h2>
                             </header><!-- .entry-header -->
-                            <div class="entry-content">
 
-                            </div><!-- .entry-content -->
 
                         </div>
                     </article><!-- #post-<?php the_ID(); ?> -->

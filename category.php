@@ -60,9 +60,7 @@ get_header(); ?>
                                     </a>
                                 </h2>
                             </header><!-- .entry-header -->
-                            <div class="entry-content">
-                                <?php the_excerpt(); ?>
-                            </div><!-- .entry-content -->
+
                             <footer class="entry-footer mt-4">
                                 <a href="<?php the_permalink(); ?>" class="read-more text-blue-600 hover:text-blue-800">Lire la suite</a>
                             </footer><!-- .entry-footer -->
