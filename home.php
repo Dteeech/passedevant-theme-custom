@@ -63,15 +63,7 @@ get_header();
                                 </h2>
                             </header><!-- .entry-header -->
                             <div class="entry-content">
-                                <p>
 
-                                    <?php
-                                    $excerpt = get_the_excerpt();
-                                    $excerpt = substr($excerpt, 0, 40);
-                                    echo $excerpt;
-                                    ?>
-                                    ...
-                                </p>
                             </div><!-- .entry-content -->
 
                         </div>
@@ -82,8 +74,8 @@ get_header();
             <div class="pagination mt-8">
                 <?php
                 the_posts_pagination(array(
-                    'prev_text' => __('Précédent', 'passedevant'),
-                    'next_text' => __('Suivant', 'passedevant'),
+                    'prev_text' => __('←', 'passedevant'),
+                    'next_text' => __('→', 'passedevant'),
                 ));
                 ?>
             </div>
@@ -92,6 +84,62 @@ get_header();
         <?php endif; ?>
     </div><!-- .container -->
 </main><!-- #main -->
+
+<style>
+    .blog .pagination .navigation .nav-links {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 52px 0;
+    }
+
+    .blog .pagination .navigation .nav-links .page-numbers {
+        padding: 10px;
+        padding-left: 30px;
+        padding-right: 30px;
+        border-radius: 50px;
+        border: 2px solid #1e1e1e;
+        background-color: white;
+        color: #1e1e1ea5;
+        transition: all 0.5s;
+        margin: 0px 30px;
+    }
+
+    /* Style des boutons au survol */
+    .blog .pagination .navigation .nav-links .page-numbers:hover {
+        background-color: #1e1e1e;
+        color: white;
+    }
+
+    /* Style du bouton correspondant à la page active */
+    .blog .pagination .navigation .nav-links .page-numbers.current {
+        background-color: #1e1e1e;
+        /* Fond noir */
+        color: white;
+        /* Texte blanc */
+        border: 2px solid #1e1e1e;
+    }
+
+    /* Style des boutons Précédent et Suivant */
+    .blog .pagination .navigation .nav-links .page-numbers.prev,
+    .blog .pagination .navigation .nav-links .page-numbers.next {
+        padding: 10px;
+        padding-left: 30px;
+        padding-right: 30px;
+        border-radius: 50px;
+        border: 2px solid #1e1e1e;
+        background-color: white;
+        color: #1e1e1ea5;
+        transition: all 0.5s;
+        margin: 0px 30px;
+    }
+
+    .blog .pagination .navigation .nav-links .page-numbers.prev:hover,
+    .blog .pagination .navigation .nav-links .page-numbers.next:hover {
+        background-color: #1e1e1e;
+        color: white;
+    }
+</style>
 <script>
     document.addEventListener('DOMContentLoaded', function() {
         // Sélectionner tous les boutons de filtre

@@ -7,7 +7,8 @@
 
 @font-face {
   font-family: "Labil Grotesk";
-  src: url("./src/fonts/labil-grotesk/LabilGrotesk-Light.woff2") format("woff2");
+  src: url("./src/fonts/labil-grotesk/LabilGrotesk-Medium.woff2")
+    format("woff2");
   font-weight: 500;
   font-style: normal;
 }

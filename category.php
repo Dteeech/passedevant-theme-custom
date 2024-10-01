@@ -61,7 +61,6 @@ get_header(); ?>
                                 </h2>
                             </header><!-- .entry-header -->
                             <div class="entry-content">
-                                <?php the_excerpt(); ?>
                             </div><!-- .entry-content -->
                             <footer class="entry-footer mt-4">
                                 <a href="<?php the_permalink(); ?>" class="read-more text-blue-600 hover:text-blue-800">Lire la suite</a>
@@ -70,6 +69,14 @@ get_header(); ?>
                     </article><!-- #post-<?php the_ID(); ?> -->
                 <?php endwhile; ?>
             </div><!-- .grid -->
+            <div class="pagination mt-8">
+                <?php
+                the_posts_pagination(array(
+                    'prev_text' => __('Précédent', 'passedevant'),
+                    'next_text' => __('Suivant', 'passedevant'),
+                ));
+                ?>
+            </div>
             <?php
             $category_custom_text = get_term_meta(get_queried_object()->term_id, 'category_custom_text', true);
 
