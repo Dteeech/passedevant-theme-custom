@@ -138,7 +138,7 @@
 			background-color: #1E1E1E;
 			padding: 10px 60px;
 			border-radius: 12px;
-			width: 65vw;
+			width: 75vw;
 
 		}
 
