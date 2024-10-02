@@ -100,7 +100,7 @@ function shortcode_remontee_services()
         :root {
             /*========== Colors ==========*/
             --text-color: #000000;
-            --bg-color: #222222;
+            --bg-color: #1E1E1E;
 
             /*========== Font and typography ==========*/
             --body-font: "Labil Grotesk", sans-serif;
@@ -155,7 +155,7 @@ function shortcode_remontee_services()
         }
 
         .card__bx {
-            --dark-color: #2e2e2e;
+            --dark-color: #1E1E1E;
             --dark-alt-color: #777777;
             --white-color: #ffffff;
             --button-color: #333333;
@@ -171,6 +171,7 @@ function shortcode_remontee_services()
             background: var(--dark-color);
             transition: var(--transition);
             border-radius: 12px;
+            border: 1px solid white;
         }
 
 
