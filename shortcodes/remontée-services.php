@@ -122,17 +122,12 @@ function shortcode_remontee_services()
             box-sizing: border-box;
         }
 
-        body {
-            font-size: var(--normal-font-size);
-            background-color: var(--bg-color);
-            color: var(--text-color);
-            font-weight: 400;
-            font-family: var(--body-font);
-            transition: all 0.2s ease;
-        }
+
 
         /*==================== REUSABLE CSS CLASSES ====================*/
         .container {
+            background-color: var(--bg-color);
+            color: var(--text-color);
             max-width: 1140px;
             width: 100%;
             margin: 0 auto;
@@ -160,7 +155,6 @@ function shortcode_remontee_services()
             --white-color: #ffffff;
             --button-color: #333333;
             --transition: 0.5s ease-in-out;
-
             font-family: inherit;
             height: 350px;
             width: 350px;
@@ -173,8 +167,6 @@ function shortcode_remontee_services()
             border-radius: 12px;
             border: 1px solid white;
         }
-
-
 
         .card__bx::after {
             inset: 60px -10px;
