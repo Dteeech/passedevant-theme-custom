@@ -130,7 +130,6 @@
 
 
 	<style>
-		/* Style de base */
 		.menu-wrapper {
 			position: relative;
 			justify-content: space-between;
@@ -523,7 +522,18 @@
 
 			.menu-wrapper {
 				padding: 10px 15px;
+				width: 100vw;
+				border-radius: 0;
 			}
+
+			.site-header {
+				width: 100vw;
+			}
+
+			.menu-wrapper #logo img {
+				width: 100px;
+			}
+
 		}
 	</style>
 
