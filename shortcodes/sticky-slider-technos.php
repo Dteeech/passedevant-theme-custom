@@ -109,7 +109,7 @@ function shortcode_slider_technos()
         }
 
         .sticky-slider-item img {
-            border-radius: 12px 12px 0 0;
+            border-radius: 8px 8px 0 0;
             object-fit: contain;
 
 
