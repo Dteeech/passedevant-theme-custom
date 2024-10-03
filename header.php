@@ -109,7 +109,7 @@
 
 
 			</ul>
-			<div class="!hidden lg:block wp-block-buttons is-layout-flex wp-block-buttons-is-layout-flex">
+			<div class="header-cta wp-block-buttons is-layout-flex wp-block-buttons-is-layout-flex">
 				<div class="wp-block-button primary-button"><a class="wp-block-button__link wp-element-button" href="/contact">Je fonce !</a></div>
 			</div>
 			<!-- <svg class="ham hamRotate ham1" viewBox="0 0 100 100" width="80" onclick="this.classList.toggle('active'); document.getElementById('mobileMenu').classList.toggle('show');">
@@ -504,6 +504,10 @@
 
 		/* Responsive */
 		@media (max-width: 768px) {
+			header .header-cta {
+				display: none;
+			}
+
 			.main-menu.mobile.show {
 				display: flex;
 			}
