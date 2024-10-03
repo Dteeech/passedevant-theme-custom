@@ -138,6 +138,7 @@ main {
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  word-break: keep-all;
 }
 
 .secondary-button .wp-block-button__link,
@@ -151,6 +152,7 @@ main {
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  word-break: keep-all;
 }
 
 .primary-button .wp-block-button__link::after,
