@@ -32,6 +32,13 @@ function shortcode_slider_technos()
                     performances en ligne.</p>
             </figure>
             <figure class="sticky-slider-item ">
+                <img src="<?php echo get_template_directory_uri() . '/images/Mockup-WooCommerce-Accessory.webp'; ?>" alt="#">
+                <span>Woocommerce
+                </span>
+                <p>Passedevant vous accompagne dans la création et l’optimisation de votre e-commerce avec WooCommerce, vous offrant une solution flexible et entièrement personnalisable. Profitez de ses nombreuses fonctionnalités pour gérer facilement vos produits, paiements, et expéditions, tout en optimisant l’expérience client pour maximiser vos conversions.
+                </p>
+            </figure>
+            <figure class="sticky-slider-item ">
                 <img src="<?php echo get_template_directory_uri() . '/images/Mockup-WordPress-Westoptic.webp'; ?>" alt="#">
                 <span>Wordpress
                 </span>
