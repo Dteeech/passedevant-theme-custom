@@ -396,6 +396,9 @@ require get_template_directory() . '/shortcodes/swiper-menu-philosophie/shortcod
 require get_template_directory() . '/shortcodes/3_blocks_reassurance_poles/shortcode_3_blocks_reassurance_poles.php';
 
 require get_template_directory() . '/shortcodes/remontée-services.php';
+
+require get_template_directory() . '/shortcodes/sticky-slider-technos.php';
+
 // Enqueue Swiper.js and Swiper.css
 function enqueue_custom_swiper()
 {
