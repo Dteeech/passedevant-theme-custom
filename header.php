@@ -531,7 +531,7 @@
 			}
 
 			.menu-wrapper #logo img {
-				width: 100px;
+				width: 120px;
 			}
 
 		}
