@@ -101,10 +101,17 @@
 				</li>
 
 				<!-- Menus normaux -->
+
 				<li class="menu-item"><a href="/agence">L'agence</a></li>
 				<li class="menu-item"><a href="/references">Références</a></li>
 				<li class="menu-item"><a href="/blog">Blog</a></li>
+
+
+
 			</ul>
+			<div class="!hidden lg:block wp-block-buttons is-layout-flex wp-block-buttons-is-layout-flex">
+				<div class="wp-block-button primary-button"><a class="wp-block-button__link wp-element-button" href="/contact">Je fonce !</a></div>
+			</div>
 			<!-- <svg class="ham hamRotate ham1" viewBox="0 0 100 100" width="80" onclick="this.classList.toggle('active'); document.getElementById('mobileMenu').classList.toggle('show');">
 				<path
 					class="line top"
@@ -148,7 +155,7 @@
 			padding: 0;
 			margin: 0;
 			align-items: center;
-			justify-content: space-evenly;
+			justify-content: center;
 		}
 
 		.main-menu>li::marker {
