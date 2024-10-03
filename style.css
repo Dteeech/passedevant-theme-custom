@@ -142,10 +142,10 @@ main {
 
 .secondary-button .wp-block-button__link,
 .header_button {
-  background-color: transparent;
+  background-color: #1e1e1e !important;
   border: 2px solid #1e1e1e;
   font-size: medium;
-  color: #1e1e1e;
+  color: white !important;
   padding: 10px 20px;
   position: relative;
   display: inline-flex;
@@ -190,8 +190,8 @@ main {
 }
 .secondary-button .wp-block-button__link:hover,
 .header_button:hover {
-  background-color: #1e1e1e;
-  color: #fff;
+  background-color: transparent !important;
+  color: #1e1e1e !important;
   transition: 0.3s;
 }
 .primary-button .wp-block-button__link:hover::after,
