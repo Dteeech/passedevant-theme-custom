@@ -89,7 +89,7 @@ if ($ref_query->have_posts()) :
     <style>
         .categories {
 
-            margin: 145px 0 45px 0;
+            padding-top: 145px;
         }
 
         .tax-type-reference .category-filter {
