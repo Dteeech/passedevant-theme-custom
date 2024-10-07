@@ -2860,3 +2860,18 @@ aside .recent-post-item a .recent-post-content {
   margin-bottom: 0 !important;
   line-height: 80px;
 }
+
+footer a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px; /* Distance par rapport au texte */
+  width: 0;
+  height: 2px;
+  background-color: white;
+  transition: width 0.8s ease; /* Animation pour rendre le soulignement progressif */
+}
+
+footer a:hover::after {
+  width: 100%; /* Le soulignement s'étend sur toute la largeur */
+}
