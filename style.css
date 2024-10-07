@@ -94,8 +94,8 @@ body {
 header {
   display: flex;
   transition: background-color 0.3s ease;
+  padding-top: 15px;
 }
-
 .site-header {
   display: flex;
   padding: auto;
@@ -103,7 +103,7 @@ header {
   position: fixed;
   z-index: 999;
   width: 100vw;
-  height: 100px;
+  height: 120px;
   opacity: 0.98;
 }
 .site-title {
@@ -2404,7 +2404,7 @@ aside .recent-post-item a .recent-post-content {
 }
 
 .categories {
-  margin: 80px 10px;
+  padding: 80px 10px;
 }
 .categories .category-filter {
   padding: 10px;
