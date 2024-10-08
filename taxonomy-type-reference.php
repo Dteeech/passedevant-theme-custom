@@ -66,9 +66,15 @@ if ($ref_query->have_posts()) :
             $ref_link = get_permalink();
         ?>
             <a href="<?php echo esc_url($ref_link); ?>">
-                <div class="ref-item">
+                <div class="ref-item ">
                     <div class="ref-image" style="background-image: url('<?php echo esc_url($image_url); ?>');">
-                        <div class="ref-overlay">
+                        <div class="ref-overlay flex-col">
+                            <div class="ref-description">
+                                <?php
+                                $excerpt = get_the_excerpt(); // Récupère l'excerpt.
+                                echo wp_trim_words($excerpt, 15, '...'); // Limite à 3 mots ou vous pouvez adapter la longueur.
+                                ?>
+                            </div>
                             <div class="ref-title">
 
                                 <p class="view-project">Voir le projet</p>
@@ -162,22 +168,35 @@ if ($ref_query->have_posts()) :
             left: 0;
             right: 0;
             bottom: 0;
-            background: rgba(0, 0, 0, 0.2);
+            background: rgba(30, 30, 30, 0.95);
             display: flex;
             align-items: center;
             justify-content: center;
             opacity: 0;
-            transition: opacity 0.3s ease;
+            transition: opacity 0.5s ease;
         }
 
         .ref-item:hover .ref-overlay {
             opacity: 1;
         }
 
+        .ref-title {
+            display: flex;
+            justify-content: start;
+            width: 70%;
+            position: absolute;
+            bottom: 10px;
+        }
+
         .ref-title h2 {
             color: white;
             font-size: 1.5rem;
             margin: 0;
+            text-align: start;
+        }
+
+        .ref-title:hover {
+            text-decoration: underline;
         }
 
         .view-project {
@@ -186,11 +205,32 @@ if ($ref_query->have_posts()) :
             text-transform: uppercase;
             letter-spacing: 1px;
             margin-top: 10px;
+            text-align: start;
 
+        }
+
+        .view-project::after {
+            content: "";
+            display: inline-block;
+            width: 24px;
+            height: 24px;
+            background-image: url("<?php echo get_template_directory_uri() . '/images/svg/Flèche-blanche-petite.svg'; ?>");
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
+            margin-left: 5px;
+            top: 5px;
+            position: relative;
+
+            /* Ajoutez cette ligne pour tester */
         }
 
         .ref-item:hover .ref-image {
             transform: scale(1.05);
+        }
+
+        .ref-description {
+            width: 70%;
         }
 
         .project-title {

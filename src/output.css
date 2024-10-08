@@ -975,12 +975,12 @@ video {
   display: contents;
 }
 
-.hidden {
-  display: none;
-}
-
 .\!hidden {
   display: none !important;
+}
+
+.hidden {
+  display: none;
 }
 
 .h-12 {
@@ -1816,10 +1816,6 @@ video {
   .sm\:mt-5 {
     margin-top: 1.25rem;
   }
-
-  .sm\:hidden {
-    display: none;
-  }
 }
 
 @media (min-width: 768px) {
@@ -1839,14 +1835,6 @@ video {
 @media (min-width: 1024px) {
   .lg\:ms-52 {
     margin-inline-start: 13rem;
-  }
-
-  .lg\:block {
-    display: block;
-  }
-
-  .lg\:flex {
-    display: flex;
   }
 
   .lg\:h-full {
