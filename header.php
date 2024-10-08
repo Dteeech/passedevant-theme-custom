@@ -49,19 +49,19 @@
 
 
 							<li class="category-item menu-item menu-classic" data-menu="sea">
-								<a href="/sea">SEA
+								<a href="/agence-sea">SEA
 
 									<p>Lorem ipsum</p>
 								</a>
 							</li>
 
 
-							<li class="category-item menu-item" data-menu="formations">
+							<!-- <li class="category-item menu-item" data-menu="formations">
 								<a href="/formations">Formations
 									<p>Lorem ipsum</p>
 
 								</a>
-							</li>
+							</li> -->
 
 						</ul>
 
@@ -69,19 +69,21 @@
 						<div class="category-content">
 							<div class="menu-content" id="seo">
 								<ul>
-									<li class="menu-item menu-seo"><a href="/audit-seo">Audit SEO</a></li>
-									<li class="menu-item menu-seo"><a href="/redaction-web">Rédaction web</a></li>
-									<li class="menu-item menu-seo"><a href="/refonte-seo">Refonte SEO</a></li>
-									<li class="menu-item menu-seo"><a href="/accompagnements">Accompagnement SEO</a></li>
-									<li class="menu-item menu-seo"><a href="/seo-local">SEO Local</a></li>
+									<li class="menu-item menu-seo"><a href="/agence-audit-seo">Audit SEO</a>
+										<p class="w-1/2">Faites un état des lieux du référencement de votre site</p>
+									</li>
+									<li class="menu-item menu-seo"><a href="/agence-redaction-web">Rédaction web</a></li>
+									<li class="menu-item menu-seo"><a href="/agence-refonte-seo">Refonte SEO</a></li>
+									<li class="menu-item menu-seo"><a href="/accompagnement-seo">Accompagnement SEO</a></li>
+									<li class="menu-item menu-seo"><a href="/agence-seo-local">SEO Local</a></li>
 								</ul>
 							</div>
 
 							<div class="menu-content" id="creation">
 								<ul>
-									<li class="menu-item menu-dev"><a href="/site-vitrine">Site Vitrine</a></li>
-									<li class="menu-item menu-dev"><a href="/e-commerce">Site E-commerce</a></li>
-									<li class="menu-item menu-dev"><a href="/blog">Blog</a></li>
+									<li class="menu-item menu-dev"><a href="/agence-creation-site-vitrine">Site Vitrine</a></li>
+									<li class="menu-item menu-dev"><a href="/agence-creation-site-ecommerce">Site E-commerce</a></li>
+									<li class="menu-item menu-dev"><a href="/agence-creation-site-blog">Blog</a></li>
 								</ul>
 							</div>
 
@@ -180,6 +182,7 @@
 
 		.main-menu .menu-item .category-list .category-item {
 			list-style: none !important;
+
 		}
 
 		.mega-menu {
@@ -198,7 +201,7 @@
 
 		.mega-menu {
 			display: none;
-			width: 524px;
+			width: 760px;
 		}
 
 		/* Afficher le méga-menu au survol de "Expertises" */
@@ -259,13 +262,14 @@
 		.category-content {
 			width: 70%;
 			padding: 20px 20px 20px 35px;
-			background-color: rgba(0, 0, 0, 0.6);
+			background-color: #fff;
 			border-radius: 0 12px 12px 0;
 			color: white !important;
 		}
 
 		.menu-content {
 			display: none;
+
 		}
 
 		.menu-content.active {
@@ -284,13 +288,15 @@
 		}
 
 		.menu-content ul li {
-			margin-bottom: 10px;
+			margin-bottom: 0px;
 		}
 
-		.menu-content ul li a {
+		.menu-content ul li a,
+		.menu-content ul li p {
 			text-decoration: none;
-			color: #555;
+			color: #1E1E1E !important;
 			font-size: 14px;
+			margin-bottom: 0 !important;
 		}
 
 		/* Afficher le contenu actif au survol */
