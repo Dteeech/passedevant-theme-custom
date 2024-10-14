@@ -143,6 +143,10 @@ get_header(); ?>
         background-color: #1e1e1e;
         color: white;
     }
+
+    .archive .blog-post h2 {
+        font-size: 20px !important;
+    }
 </style>
 <script>
     document.addEventListener('DOMContentLoaded', function() {

@@ -56,7 +56,7 @@ get_header();
                         <?php endif; ?>
                         <div class="p-4">
                             <header class="entry-header">
-                                <h2 class=" mt-4 entry-title text-xl leading-none">
+                                <h2 class=" mt-4 entry-title leading-none">
                                     <a href="<?php the_permalink(); ?>" class="text-black no-underline hover:underline">
                                         <?php the_title(); ?>
                                     </a>
@@ -136,6 +136,10 @@ get_header();
     .blog .pagination .navigation .nav-links .page-numbers.next:hover {
         background-color: #1e1e1e;
         color: white;
+    }
+
+    .blog .blog-post h2 {
+        font-size: 20px !important;
     }
 </style>
 <script>
