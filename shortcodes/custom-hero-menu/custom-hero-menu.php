@@ -19,6 +19,7 @@ function custom_hero_menu_shortcode()
             display: flex;
             flex-direction: column;
             gap: 10px;
+            padding-top: 30px;
         }
 
         .link-container {
