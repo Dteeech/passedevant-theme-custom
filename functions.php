@@ -596,39 +596,30 @@ function flush_rewrite_rules_on_activation()
 }
 add_action('after_switch_theme', 'flush_rewrite_rules_on_activation');
 
-function generate_table_of_contents_with_dom($content)
+function add_anchor_to_headings($content)
 {
-	// Créer une instance de DOMDocument
-	$dom = new DOMDocument();
+	if (is_singular('post')) { // Vérifier si on est sur un article de blog
+		$dom = new DOMDocument();
+		libxml_use_internal_errors(true); // Ignorer les erreurs HTML mal formées
+		$dom->loadHTML(mb_convert_encoding($content, 'HTML-ENTITIES', 'UTF-8'));
 
-	// Charger le contenu de l'article en tant que HTML
-	libxml_use_internal_errors(true); // Ignorer les erreurs HTML mal formées
-	$dom->loadHTML(mb_convert_encoding($content, 'HTML-ENTITIES', 'UTF-8'));
+		// Rechercher toutes les balises <h2> dans le document
+		$headings = $dom->getElementsByTagName('h2');
 
-	// Rechercher toutes les balises <h2> dans le document
-	$headings = $dom->getElementsByTagName('h2');
-	$toc = '<div class="table-of-contents"><h3>Sommaire</h3><ul>';
+		foreach ($headings as $index => $heading) {
+			if ($heading->nodeType == XML_ELEMENT_NODE) {
+				// Créer un ID unique pour chaque <h2>
+				$anchor_id = 'heading-' . $index;
+				// Ajouter l'attribut id à chaque <h2>
+				$heading->setAttribute('id', $anchor_id);
+			}
+		}
 
-	// Boucler à travers chaque balise <h2> trouvée
-	foreach ($headings as $index => $heading) {
-		// Créer un ID unique pour chaque <h2>
-		$anchor_id = 'heading-' . $index;
-
-		// Ajouter l'attribut id au <h2>
-		$heading->setAttribute('id', $anchor_id);
-
-		// Ajouter un lien dans la table des matières
-		$toc .= '<li><a href="#' . $anchor_id . '">' . $heading->textContent . '</a></li>';
+		// Sauvegarder le contenu modifié
+		$content = $dom->saveHTML();
 	}
 
-	$toc .= '</ul></div>';
-
-	// Sauvegarder le contenu modifié
-	$content = $dom->saveHTML();
-
-	// Retourner la table des matières suivie du contenu modifié
-	return $toc . $content;
+	return $content;
 }
 
-// Appliquer le filtre pour injecter la table des matières et les ancres
-add_filter('the_content', 'generate_table_of_contents_with_dom');
+add_filter('the_content', 'add_anchor_to_headings');
