@@ -19,6 +19,12 @@ $args = array(
     'order' => 'ASC'
 );
 
+if (have_posts()) :
+    while (have_posts()) : the_post();
+        the_content();
+    endwhile;
+endif;
+
 // Si un filtre (taxonomie) est sélectionné, on l'ajoute à la requête
 if (!empty($filter)) {
     $args['tax_query'] = array(
@@ -87,7 +93,7 @@ if ($ref_query->have_posts()) :
                             </div>
                         </div>
                     </div>
-                    <h3 class="project-title"><?php the_title(); ?></h3>
+                    <h2 class="project-title"><?php the_title(); ?></h2>
                     <!-- <div class="project-tags"> a voir pour les tags si on les utilises
                     <?php echo get_the_term_list(get_the_ID(), 'type-reference', '<span class="tag">', '</span><span class="tag">', '</span>'); ?>
                 </div> -->
@@ -184,6 +190,7 @@ if ($ref_query->have_posts()) :
             justify-content: center;
             opacity: 0;
             transition: opacity 0.5s ease;
+
         }
 
         .ref-item:hover .ref-overlay {
