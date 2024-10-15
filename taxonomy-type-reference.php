@@ -60,9 +60,18 @@ if ($ref_query->have_posts()) :
     <!-- Boucle pour afficher les références clients -->
     <div class="refs-grid">
         <?php
-
         while ($ref_query->have_posts()) : $ref_query->the_post();
-            $image_url = get_the_post_thumbnail_url(get_the_ID(), 'full'); // Image à la une
+
+            // Récupérer l'image du champ personnalisé "listing_image_url"
+            $custom_image_url = get_post_meta(get_the_ID(), 'listing_image_url', true);
+
+            if (!empty($custom_image_url)) {
+                $image_url = $custom_image_url;
+            } else {
+                // Si aucune image personnalisée n'est définie, utiliser l'image mise en avant
+                $image_url = get_the_post_thumbnail_url(get_the_ID(), 'full');
+            }
+
             $ref_link = get_permalink();
         ?>
             <a href="<?php echo esc_url($ref_link); ?>">

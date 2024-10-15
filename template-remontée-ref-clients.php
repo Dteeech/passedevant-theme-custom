@@ -172,19 +172,21 @@ if ($ref_query->have_posts()) :
 
         .ref-item {
             position: relative;
-            background-color: transparent;
+            background-color: white;
             overflow: hidden;
             transition: transform 0.3s ease;
+            height: 100%;
+            border-radius: 12px;
         }
 
         .ref-image {
             width: 100%;
-            padding-top: 150%;
-            background-size: cover;
+            padding-top: 80%;
+            background-size: auto;
             background-position: center;
+            background-repeat: no-repeat;
             transition: all 0.6s ease;
-            border-radius: 26px;
-            max-height: 500px;
+            height: 100%;
         }
 
         .ref-overlay {
@@ -199,7 +201,10 @@ if ($ref_query->have_posts()) :
             justify-content: center;
             opacity: 0;
             transition: opacity 0.5s ease;
-
+            height: 100%;
+            /* Prend toute la hauteur du parent */
+            width: 100%;
+            border-radius: 26px;
         }
 
         .ref-item:hover .ref-overlay {
