@@ -62,16 +62,12 @@ get_header(); ?>
                         <?php endif; ?>
                         <div class="p-4">
                             <header class="entry-header">
-                                <h2 class="mt-4 entry-title leading-none">
+                                <h2 class="entry-title">
                                     <a href="<?php the_permalink(); ?>" class="text-black no-underline hover:underline">
                                         <?php the_title(); ?>
                                     </a>
                                 </h2>
                             </header><!-- .entry-header -->
-
-                            <footer class="entry-footer mt-4">
-                                <a href="<?php the_permalink(); ?>" class="read-more text-blue-600 hover:text-blue-800">Lire la suite</a>
-                            </footer><!-- .entry-footer -->
                         </div>
                     </article><!-- #post-<?php the_ID(); ?> -->
                 <?php endwhile; ?>
