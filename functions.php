@@ -401,6 +401,8 @@ require get_template_directory() . '/shortcodes/sticky-slider-technos.php';
 
 require get_template_directory() . '/shortcodes/generate_table_of_contents/generate_table_of_contents.php';
 
+require get_template_directory() . '/metaboxes/metabox_listing_image_ref_clients.php';
+
 // Enqueue Swiper.js and Swiper.css
 function enqueue_custom_swiper()
 {
