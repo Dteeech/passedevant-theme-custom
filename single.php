@@ -36,7 +36,8 @@ get_header();
         <?php get_sidebar('single'); ?>
     </div>
     <style>
-        .single-content .post-thumbnail {
+        .single-content .post-thumbnail,
+        .post-thumbnail img {
             border-radius: 12px;
         }
     </style>
