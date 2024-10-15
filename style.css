@@ -2374,10 +2374,9 @@ aside .recent-post-item a .recent-post-content {
   border-radius: 50px;
 }
 .blog-hero {
-  padding: 90px 120px;
-
+  padding: 20px 120px;
   width: 100vw;
-  background-image: url("./images/Equipe\ Passedevant.webp");
+  background-color: #1e1e1e;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -2394,6 +2393,7 @@ aside .recent-post-item a .recent-post-content {
   background: rgba(30, 30, 30, 0.92);
   overflow: hidden;
   border-radius: 15px;
+  border: 1px solid white;
 }
 
 .blog-hero_content .blog-newsletter-form {
