@@ -3,7 +3,7 @@ function shortcote_3_blocks_reassurance_shortcode()
 {
     ob_start();
 ?>
-    <div class="container mx-auto flex lg:flex-row flex-wrap gap-20 justify-center pb-20">
+    <div class="reassurance container mx-auto flex lg:flex-row flex-wrap gap-20 justify-center pb-20">
         <div class="card border-2 border-white p-10">
             <div class="flex items-center space-x-4 justify-between">
                 <h3 class="text-2xl font-bold">Le SEO</h3>
@@ -82,6 +82,10 @@ function shortcote_3_blocks_reassurance_shortcode()
             justify-content: center;
             overflow: hidden;
             /* Ajouté pour cacher tout dépassement de l'image */
+        }
+
+        .reassurance .card {
+            border-radius: 12px;
         }
 
         .inner-logo {
