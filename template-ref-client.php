@@ -16,7 +16,7 @@ get_header();
             $image_url = get_the_post_thumbnail_url(get_the_ID(), 'full');
             echo '<div class="ref-client-container">';
             echo '<div class="ref-client-banner">';
-            echo '<img src="' . esc_url($image_url) . '" alt="' . get_the_title() . '">';
+            echo '<img class="ref-client-img" src="' . esc_url($image_url) . '" alt="' . get_the_title() . '">';
             echo '</div>';
             echo '</div>';
         }
@@ -33,6 +33,9 @@ get_header();
         </div>
     </main>
 </div>
+<style>
+    .ref-client-img {}
+</style>
 
 <?php
 get_footer();
