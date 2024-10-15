@@ -269,6 +269,14 @@ function custom_swiper_philosophie_swiper_shortcode()
                 margin: 0;
                 padding: 0;
             }
+
+            .philosophie {
+                padding-left: 0px;
+            }
+
+            .philosophie-wrapper h2 {
+                font-size: 25px;
+            }
         }
     </style>
     <script>
