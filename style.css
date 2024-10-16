@@ -2435,7 +2435,8 @@ aside .recent-post-item a .recent-post-content {
 }
 /*media queries*/
 @media (max-width: 768px) {
-  .blog .blog-hero {
+  .blog .blog-hero,
+  .category .blog-hero {
     /* padding: 40px 120px; */
     width: 100vw;
     padding: 20px;

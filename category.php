@@ -17,9 +17,9 @@ get_header(); ?>
 
             </div>
         </div>
-        <div class="flex flex-col container lg:w-1/3 lg:h-full lg:ms-52 mt-28">
+        <div class="blog-hero_newsletter_form flex flex-col container lg:w-1/3 lg:h-full lg:ms-52 mt-28">
 
-            <div class="blog-hero_form_container container text-white flex flex-col gap-4">
+            <div class="blog-hero_form_container container text-white flex flex-col gap-4 flex-wrap">
 
                 <p class=" text-2xl">Newsletter</p>
                 <p class="text-xl">Inscrivez-vous et recevez les dernières actualités digitales directement dans votre boîte mail.</p>
@@ -150,6 +150,12 @@ get_header(); ?>
 
     .archive .blog-post h2 {
         font-size: 20px !important;
+    }
+
+    @media (max-width: 768px) {
+        .blog-hero_newsletter_form {
+            margin: 50px 0;
+        }
     }
 </style>
 <script>

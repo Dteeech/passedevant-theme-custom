@@ -11,16 +11,16 @@ get_header();
 
 <main id="primary" class="site-main">
     <div class="blog-hero flex flex-col md:flex-row justify-center items-center">
-        <div class=" flex flex-col container lg:w-1/4 lg:h-full lg:ms-52 mt-28">
+        <div class="flex flex-col container lg:w-1/4 lg:h-full lg:ms-52 mt-28">
             <h1 class="text-5xl text-white">Le Blog de l'actu SEO</h1>
             <div class=" container text-white flex flex-col gap-4 items-center justify-center">
                 <p class="text-xl">Petit texte à propos du blog</p>
 
             </div>
         </div>
-        <div class="flex flex-col container lg:w-1/3 lg:h-full lg:ms-52 mt-28">
+        <div class="blog-hero_newsletter_form flex flex-col container lg:w-1/3 lg:h-full lg:ms-52 mt-28">
 
-            <div class="blog-hero_form_container container text-white flex flex-col gap-4">
+            <div class="blog-hero_form_container container text-white flex flex-col gap-4 flex-wrap">
 
                 <p class=" text-2xl">Newsletter</p>
                 <p class="text-xl">Inscrivez-vous et recevez les dernières actualités digitales directement dans votre boîte mail.</p>
@@ -146,6 +146,13 @@ get_header();
 
     .blog .blog-post h2 {
         font-size: 20px !important;
+    }
+
+    @media (max-width: 768px) {
+        .blog-hero_newsletter_form {
+
+            margin: 50px 0;
+        }
     }
 </style>
 <script>
