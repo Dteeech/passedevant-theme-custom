@@ -116,7 +116,7 @@ if ($ref_query->have_posts()) :
     <style>
         .categories {
 
-            padding-top: 145px;
+            padding-top: 60px;
         }
 
         .category-filter {
@@ -153,7 +153,7 @@ if ($ref_query->have_posts()) :
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             grid-gap: 20px;
-            padding: 20px;
+            padding: 20px 20px 100px 20px;
             max-width: 70vw;
             margin: auto;
         }

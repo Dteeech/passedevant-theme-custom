@@ -35,7 +35,7 @@
 				<?php endif; ?>
 			</div>
 		<?php endfor; ?>
-		<div class="wrapper flex mt-20 mb-20">
+		<div class="wrapper flex my-12">
 			<div class=""><img src="<?php echo get_template_directory_uri() . '/images/logos-footer/google-analytics-logo.webp' ?>" alt="Logo Google analytics"></div>
 			<div class=""><img src="<?php echo get_template_directory_uri() . '/images/logos-footer/google-my-business-logo.webp' ?>" alt="Logo google my business"></div>
 			<div class=""><img src="<?php echo get_template_directory_uri() . '/images/logos-footer/google-tag-manager-logo.webp' ?>" alt="Logo google tag manager"></div>

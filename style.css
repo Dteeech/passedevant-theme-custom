@@ -1498,8 +1498,8 @@ footer .no-gradient-underline::after {
   justify-content: space-evenly;
   flex-wrap: wrap;
   text-align: start;
-  padding-top: 120px;
-  margin-top: 159px;
+  padding-top: 80px;
+  margin-top: 120px;
   margin-left: auto;
   margin-right: auto;
 }
