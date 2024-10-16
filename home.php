@@ -31,7 +31,7 @@ get_header();
         </div>
     </div>
     <div class="categories mt-8">
-        <div class="container mx-auto flex justify-center gap-4">
+        <div class="container mx-auto flex justify-center gap-4 flex-wrap">
             <a href="/blog" class="category-filter active">Tout</a>
 
             <?php
