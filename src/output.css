@@ -744,20 +744,20 @@ video {
   z-index: 50;
 }
 
-.m-0 {
-  margin: 0px;
-}
-
-.m-10 {
-  margin: 2.5rem;
-}
-
 .\!m-0 {
   margin: 0px !important;
 }
 
 .\!m-10 {
   margin: 2.5rem !important;
+}
+
+.m-0 {
+  margin: 0px;
+}
+
+.m-10 {
+  margin: 2.5rem;
 }
 
 .mx-0 {
@@ -790,11 +790,6 @@ video {
   margin-right: auto;
 }
 
-.my-8 {
-  margin-top: 2rem;
-  margin-bottom: 2rem;
-}
-
 .my-10 {
   margin-top: 2.5rem;
   margin-bottom: 2.5rem;
@@ -805,8 +800,26 @@ video {
   margin-bottom: 3rem;
 }
 
+.my-8 {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.my-20 {
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+}
+
+.\!mb-10 {
+  margin-bottom: 2.5rem !important;
+}
+
 .mb-0 {
   margin-bottom: 0px;
+}
+
+.mb-10 {
+  margin-bottom: 2.5rem;
 }
 
 .mb-20 {
@@ -977,12 +990,12 @@ video {
   margin-top: auto;
 }
 
-.\!mb-10 {
-  margin-bottom: 2.5rem !important;
+.mt-3 {
+  margin-top: 0.75rem;
 }
 
-.mb-10 {
-  margin-bottom: 2.5rem;
+.mb-12 {
+  margin-bottom: 3rem;
 }
 
 .block {
@@ -1198,6 +1211,10 @@ video {
   flex-wrap: wrap;
 }
 
+.\!flex-wrap {
+  flex-wrap: wrap !important;
+}
+
 .flex-nowrap {
   flex-wrap: nowrap;
 }
@@ -1316,6 +1333,10 @@ video {
 
 .gap-8 {
   gap: 2rem;
+}
+
+.gap-1 {
+  gap: 0.25rem;
 }
 
 .space-x-4 > :not([hidden]) ~ :not([hidden]) {
@@ -1862,10 +1883,6 @@ video {
 @media (min-width: 640px) {
   .sm\:mt-5 {
     margin-top: 1.25rem;
-  }
-
-  .sm\:mt-2 {
-    margin-top: 0.5rem;
   }
 }
 
