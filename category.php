@@ -9,7 +9,7 @@ get_header(); ?>
 
 
 <main id="primary" class="site-main">
-    <div class="blog-hero flex flex-row justify-center items-center">
+    <div class="blog-hero flex flex-col md:flex-row justify-center items-center">
         <div class="flex flex-col container lg:w-1/4 lg:h-full lg:ms-52 mt-28">
             <h1 class="text-5xl text-white">Le Blog de l'actu SEO</h1>
             <div class=" container text-white flex flex-col gap-4 items-center justify-center">
