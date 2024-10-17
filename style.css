@@ -74,6 +74,8 @@ html {
 }
 * {
   box-sizing: border-box;
+  overflow-x: hidden !important;
+  -webkit-overflow-scrolling: hidden !important;
 }
 /* Sections
 	 ========================================================================== */
@@ -84,7 +86,6 @@ html {
 body {
   margin: 0;
   font-family: "Labil Grotesk", sans-serif;
-  overflow-x: hidden !important;
 }
 
 /* Header
