@@ -2,6 +2,7 @@
 function methodologie_seo_shortcode()
 {
     global $post;
+    // Retrieve the elements of the methodology from post meta
     $elements = get_post_meta($post->ID, 'elements_de_la_methodologie', true);
     if ($elements) {
         ob_start();
@@ -11,13 +12,15 @@ function methodologie_seo_shortcode()
             <div class="flex">
                 <div class="menu-wrapper">
                     <?php foreach ($elements as $index => $element) : ?>
-                        <button class="menu-button" data-content-id="content-<?php echo $index + 1; ?>" data-number-id="number-<?php echo $index + 1; ?>">
+                        <!-- Button to display the content for each element in the methodology -->
+                        <button class="menu-button <?php echo $index === 0 ? 'active' : ''; ?>" data-content-id="content-<?php echo $index + 1; ?>" data-number-id="number-<?php echo $index + 1; ?>">
                             <?php echo esc_html($element['button_text']); ?>
                         </button>
                     <?php endforeach; ?>
                 </div>
                 <div class="methodologie-number text-end">
                     <?php foreach ($elements as $index => $element) : ?>
+                        <!-- Number corresponding to each section, initially showing only the first -->
                         <div id="number-<?php echo $index + 1; ?>" class="number-section" style="display: <?php echo $index === 0 ? 'block' : 'none'; ?>;">
                             <?php echo $index + 1; ?>
                         </div>
@@ -25,6 +28,7 @@ function methodologie_seo_shortcode()
                 </div>
                 <div class="content-wrapper">
                     <?php foreach ($elements as $index => $element) : ?>
+                        <!-- Content for each element, initially showing only the first -->
                         <div id="content-<?php echo $index + 1; ?>" class="content-section" style="display: <?php echo $index === 0 ? 'block' : 'none'; ?>;">
                             <?php echo esc_html($element['content']); ?>
                         </div>
@@ -38,7 +42,8 @@ function methodologie_seo_shortcode()
             <div class="accordion-wrapper">
                 <?php foreach ($elements as $index => $element) : ?>
                     <div class="accordion-item flex flex-col">
-                        <div class="accordion-header block" data-content-id="content-<?php echo $index + 1; ?>">
+                        <!-- Accordion header for each element -->
+                        <div class="accordion-header block <?php echo $index === 0 ? 'active' : ''; ?>" data-content-id="content-<?php echo $index + 1; ?>">
                             <div class="number-section">
                                 <?php echo $index + 1; ?>
                             </div>
@@ -46,7 +51,8 @@ function methodologie_seo_shortcode()
                                 <?php echo esc_html($element['button_text']); ?>
                             </button>
                         </div>
-                        <div id="content-<?php echo $index + 1; ?>" class="accordion-content">
+                        <!-- Accordion content, initially showing only the first -->
+                        <div id="content-<?php echo $index + 1; ?>" class="accordion-content" style="display: <?php echo $index === 0 ? 'block' : 'none'; ?>;">
                             <div class="content-section">
                                 <?php echo esc_html($element['content']); ?>
                             </div>
@@ -108,7 +114,6 @@ function methodologie_seo_shortcode()
             .content-section,
             .number-section {
                 padding: 20px;
-
             }
 
             .methodologie-number {
@@ -122,8 +127,6 @@ function methodologie_seo_shortcode()
                 justify-content: end;
                 text-align: center;
             }
-
-
 
             .accordion-wrapper {
                 width: 100%;
@@ -184,8 +187,6 @@ function methodologie_seo_shortcode()
                     mix-blend-mode: difference;
                 }
 
-
-
                 .methodologie-container_mobile .content-section {
                     display: block !important;
                 }
@@ -204,24 +205,31 @@ function methodologie_seo_shortcode()
                 var buttons = document.querySelectorAll('.menu-button');
                 buttons.forEach(function(button) {
                     button.addEventListener('click', function() {
+                        // Get the content ID and number ID for the clicked button
                         var contentId = this.getAttribute('data-content-id');
                         var numberId = this.getAttribute('data-number-id');
+
+                        // Hide all content sections before showing the selected one
                         document.querySelectorAll('.content-section').forEach(function(section) {
                             section.style.display = 'none';
                         });
                         document.getElementById(contentId).style.display = 'block';
+
+                        // Hide all number sections before showing the selected one
                         document.querySelectorAll('.number-section').forEach(function(section) {
                             section.style.display = 'none';
                         });
                         document.getElementById(numberId).style.display = 'block';
 
+                        // Remove 'active' class from all buttons
                         buttons.forEach(function(btn) {
                             btn.classList.remove('active');
                         });
+                        // Add 'active' class to the clicked button
                         this.classList.add('active');
                     });
                 });
-                // Select all accordion headers for adding click event listeners
+
                 // Select all accordion headers for adding click event listeners
                 var headers = document.querySelectorAll('.accordion-header');
                 headers.forEach(function(header) {
@@ -235,7 +243,7 @@ function methodologie_seo_shortcode()
                             section.style.display = 'none';
                         });
 
-                        // Remove the 'active' class from all headers
+                        // Remove 'active' class from all headers
                         headers.forEach(function(btn) {
                             btn.classList.remove('active');
                         });
@@ -247,10 +255,11 @@ function methodologie_seo_shortcode()
                         }
                     });
                 });
-
             });
         </script>
 <?php
+
+
         return ob_get_clean();
     }
 }
