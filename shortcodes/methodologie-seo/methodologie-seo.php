@@ -7,9 +7,9 @@ function methodologie_seo_shortcode()
         ob_start();
 ?>
         <!-- Desktop Version -->
-        <div class="methodologie-container text-white w-full hidden lg:flex">
-            <div class="flex flex-col lg:flex-row w-full justify-around">
-                <div class="container menu-wrapper">
+        <div class="methodologie-container text-white w-full flex">
+            <div class="flex">
+                <div class="menu-wrapper">
                     <?php foreach ($elements as $index => $element) : ?>
                         <button class="menu-button" data-content-id="content-<?php echo $index + 1; ?>" data-number-id="number-<?php echo $index + 1; ?>">
                             <?php echo esc_html($element['button_text']); ?>
@@ -18,14 +18,14 @@ function methodologie_seo_shortcode()
                 </div>
                 <div class="methodologie-number text-end">
                     <?php foreach ($elements as $index => $element) : ?>
-                        <div id="number-<?php echo $index + 1; ?>" class="number-section" style="display: <?php echo $index === 0 ? 'flex' : 'none'; ?>;">
+                        <div id="number-<?php echo $index + 1; ?>" class="number-section" style="display: <?php echo $index === 0 ? 'block' : 'none'; ?>;">
                             <?php echo $index + 1; ?>
                         </div>
                     <?php endforeach; ?>
                 </div>
                 <div class="content-wrapper">
                     <?php foreach ($elements as $index => $element) : ?>
-                        <div id="content-<?php echo $index + 1; ?>" class="content-section" style="display: <?php echo $index === 0 ? 'flex' : 'none'; ?>;">
+                        <div id="content-<?php echo $index + 1; ?>" class="content-section" style="display: <?php echo $index === 0 ? 'block' : 'none'; ?>;">
                             <?php echo esc_html($element['content']); ?>
                         </div>
                     <?php endforeach; ?>
@@ -38,7 +38,7 @@ function methodologie_seo_shortcode()
             <div class="accordion-wrapper">
                 <?php foreach ($elements as $index => $element) : ?>
                     <div class="accordion-item flex flex-col">
-                        <div class="accordion-header flex flex-row" data-content-id="content-<?php echo $index + 1; ?>">
+                        <div class="accordion-header block" data-content-id="content-<?php echo $index + 1; ?>">
                             <div class="number-section">
                                 <?php echo $index + 1; ?>
                             </div>
@@ -64,6 +64,9 @@ function methodologie_seo_shortcode()
             .methodologie-container {
                 display: flex;
                 align-items: flex-start;
+                justify-content: center;
+                width: 60vw;
+                margin: auto;
             }
 
             .methodologie-container .menu-wrapper {
@@ -84,7 +87,7 @@ function methodologie_seo_shortcode()
                 border: none;
                 text-align: left;
                 position: relative;
-                min-width: 240px;
+                width: 240px;
                 margin: 0;
             }
 
@@ -98,9 +101,14 @@ function methodologie_seo_shortcode()
                 border-radius: 10px;
             }
 
+            .methodologie-container .content-section {
+                width: 700px;
+            }
+
             .content-section,
             .number-section {
                 padding: 20px;
+
             }
 
             .methodologie-number {
@@ -112,6 +120,7 @@ function methodologie_seo_shortcode()
                 font-size: 186px;
                 width: 260px;
                 justify-content: end;
+                text-align: center;
             }
 
 
