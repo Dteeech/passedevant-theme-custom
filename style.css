@@ -92,7 +92,7 @@ body {
 body,
 html {
   position: relative;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 /* Header
