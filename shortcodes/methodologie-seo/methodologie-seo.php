@@ -122,7 +122,7 @@ function methodologie_seo_shortcode()
             }
 
             .number-section {
-                font-size: 186px;
+                font-size: 145px;
                 width: 260px;
                 justify-content: end;
                 text-align: center;
