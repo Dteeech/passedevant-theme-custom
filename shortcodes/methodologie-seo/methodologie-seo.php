@@ -44,7 +44,7 @@ function methodologie_seo_shortcode()
                     <div class="accordion-item flex flex-col">
                         <!-- Accordion header for each element -->
                         <div class="accordion-header block <?php echo $index === 0 ? 'active' : ''; ?>" data-content-id="content-<?php echo $index + 1; ?>">
-                            <div class="number-section">
+                            <div class="number-section" style="display: <?php echo $index === 0 ? 'block' : 'none'; ?>;">
                                 <?php echo $index + 1; ?>
                             </div>
                             <button class="menu-button">
@@ -83,7 +83,7 @@ function methodologie_seo_shortcode()
                 width: fit-content;
             }
 
-            .menu-button {
+            .methodologie-container .menu-button {
                 display: flex;
                 background-color: transparent;
                 color: white;
@@ -104,8 +104,8 @@ function methodologie_seo_shortcode()
 
             .menu-button.active {
                 background-color: white;
-                color: #1E1E1E;
-                border-radius: 10px;
+                color: #1E1E1E !important;
+                border: none;
             }
 
             .methodologie-container .content-section {
@@ -158,6 +158,7 @@ function methodologie_seo_shortcode()
                 margin-right: 10px;
             }
 
+            .accordion-header:hover,
             .accordion-header.active {
                 background-color: white;
                 color: #1E1E1E;
@@ -198,6 +199,12 @@ function methodologie_seo_shortcode()
                 .methodologie-container_mobile .menu-button:hover {
                     background-color: white;
                     color: #1E1E1E !important;
+
+                }
+
+                .methodologie-container_mobile .menu-button {
+
+                    border: none !important;
                 }
             }
         </style>
