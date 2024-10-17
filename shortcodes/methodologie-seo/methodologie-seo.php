@@ -6,74 +6,105 @@ function methodologie_seo_shortcode()
     if ($elements) {
         ob_start();
 ?>
-        <div class="methodologie-container text-white container mx-auto">
+        <!-- Desktop Version -->
+        <div class="methodologie-container text-white w-full hidden lg:flex">
             <div class="flex flex-col lg:flex-row w-full justify-around">
-                <div class=" min-w-44">
+                <div class="container menu-wrapper">
                     <?php foreach ($elements as $index => $element) : ?>
-                        <button class="menu-button" data-content-id="content-<?php echo $index + 1; ?>" data-number-id="number-<?php echo $index + 1; ?>"><?php echo esc_html($element['button_text']); ?></button>
+                        <button class="menu-button" data-content-id="content-<?php echo $index + 1; ?>" data-number-id="number-<?php echo $index + 1; ?>">
+                            <?php echo esc_html($element['button_text']); ?>
+                        </button>
                     <?php endforeach; ?>
                 </div>
                 <div class="methodologie-number text-end">
                     <?php foreach ($elements as $index => $element) : ?>
-                        <div id="number-<?php echo $index + 1; ?>" class="number-section" style="display: <?php echo $index === 0 ? 'flex flex-row' : 'none'; ?>"><?php echo $index + 1; ?></div>
+                        <div id="number-<?php echo $index + 1; ?>" class="number-section" style="display: <?php echo $index === 0 ? 'flex' : 'none'; ?>;">
+                            <?php echo $index + 1; ?>
+                        </div>
                     <?php endforeach; ?>
                 </div>
-                <div class=" flex content-center items-center flex-grow w-full">
+                <div class="content-wrapper">
                     <?php foreach ($elements as $index => $element) : ?>
-                        <div id="content-<?php echo $index + 1; ?>" class="content-section" style="display: <?php echo $index === 0 ? 'flex' : 'none'; ?>"><?php echo esc_html($element['content']); ?></div>
+                        <div id="content-<?php echo $index + 1; ?>" class="content-section" style="display: <?php echo $index === 0 ? 'flex' : 'none'; ?>;">
+                            <?php echo esc_html($element['content']); ?>
+                        </div>
                     <?php endforeach; ?>
                 </div>
             </div>
         </div>
+
+        <!-- Mobile Version -->
+        <div class="methodologie-container_mobile text-white w-full lg:hidden">
+            <div class="accordion-wrapper">
+                <?php foreach ($elements as $index => $element) : ?>
+                    <div class="accordion-item flex flex-col">
+                        <div class="accordion-header flex flex-row" data-content-id="content-<?php echo $index + 1; ?>">
+                            <div class="number-section">
+                                <?php echo $index + 1; ?>
+                            </div>
+                            <button class="menu-button">
+                                <?php echo esc_html($element['button_text']); ?>
+                            </button>
+                        </div>
+                        <div id="content-<?php echo $index + 1; ?>" class="accordion-content">
+                            <div class="content-section">
+                                <?php echo esc_html($element['content']); ?>
+                            </div>
+                        </div>
+                    </div>
+                <?php endforeach; ?>
+            </div>
+        </div>
+
         <style>
+            .methodologie-container_mobile {
+                display: none;
+            }
+
             .methodologie-container {
                 display: flex;
                 align-items: flex-start;
             }
 
+            .methodologie-container .menu-wrapper {
+                border: 1px solid white;
+                border-radius: 12px;
+                height: fit-content;
+                padding: 0;
+                width: fit-content;
+            }
+
             .menu-button {
                 display: flex;
                 background-color: transparent;
-                /* Couleur de fond transparent */
                 color: white;
-                padding: 10px 10px 10px 10px;
-                /* Ajuster le padding pour faire de la place pour la bulle */
+                padding: 40px;
                 margin-bottom: 10px;
                 cursor: pointer;
                 border: none;
                 text-align: left;
                 position: relative;
-                /* Pour positionner le pseudo-élément */
+                min-width: 240px;
+                margin: 0;
             }
 
-            .menu-button::before {
-                content: '';
-                position: absolute;
-                left: -20px;
-                /* Ajuster la position */
-                top: 50%;
-                transform: translateY(-50%);
-                width: 15px;
-                height: 15px;
-                background: url('data:image/svg+xml,%3Csvg%20width%3D%2230%22%20height%3D%2230%22%20viewBox%3D%220%200%2030%2030%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Ccircle%20cx%3D%2215%22%20cy%3D%2215%22%20r%3D%2215%22%20fill%3D%22%23F8ACF0%22%2F%3E%3C%2Fsvg%3E') no-repeat center center;
-                background-size: contain;
-                background-size: contain;
-                transition: background 0.3s ease;
+            .menu-button:hover {
+                background-color: rgba(255, 255, 255, 0.5);
             }
 
-            .menu-button.active::before {
-                background: url('data:image/svg+xml,%3Csvg%20width%3D%2230%22%20height%3D%2230%22%20viewBox%3D%220%200%2030%2030%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Ccircle%20cx%3D%2215%22%20cy%3D%2215%22%20r%3D%2215%22%20fill%3D%22%237f00ff%22%2F%3E%3C%2Fsvg%3E') no-repeat center center;
-                background-size: contain;
+            .menu-button.active {
+                background-color: white;
+                color: #1E1E1E;
+                border-radius: 10px;
             }
 
             .content-section,
             .number-section {
-                display: none;
                 padding: 20px;
             }
 
             .methodologie-number {
-                display: flex;
+                display: block;
                 align-items: center;
             }
 
@@ -83,24 +114,80 @@ function methodologie_seo_shortcode()
                 justify-content: end;
             }
 
-            @media screen and (max-width: 764px) {
-                .number-section {
-                    font-size: 180px;
-                    width: auto;
-                    justify-content: left;
-                    text-align: start;
+
+
+            .accordion-wrapper {
+                width: 100%;
+                border: 1px solid white;
+                border-radius: 12px;
+                overflow: hidden;
+            }
+
+            .accordion-item {
+                border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+            }
+
+            .accordion-header {
+                width: 100%;
+                background-color: transparent;
+                color: white;
+                padding: 20px;
+                cursor: pointer;
+                border: none;
+                text-align: left;
+                display: flex;
+                align-items: center;
+            }
+
+            .accordion-header .number-section {
+                font-size: 24px;
+                font-weight: bold;
+                margin-right: 10px;
+            }
+
+            .accordion-header.active {
+                background-color: white;
+                color: #1E1E1E;
+            }
+
+            .accordion-content {
+                display: none;
+                padding: 20px;
+                background-color: rgba(255, 255, 255, 0.1);
+            }
+
+            @media screen and (max-width: 768px) {
+                .methodologie-container {
+                    display: none;
                 }
 
-            }
+                .methodologie-container_mobile {
+                    display: block;
+                }
 
-            .content-section {
-                width: 40vw;
-            }
+                .methodologie-container_mobile {
+                    max-width: 100% !important;
+                }
 
-            .content-section:first-child,
-            .number-section:first-child {
-                display: flex;
-                /* Afficher le premier contenu et numéro par défaut */
+                .methodologie-container_mobile .number-section {
+                    width: auto !important;
+                    color: #FFF;
+                    mix-blend-mode: difference;
+                }
+
+
+
+                .methodologie-container_mobile .content-section {
+                    display: block !important;
+                }
+
+                .accordion-header:hover,
+                .accordion-header:active,
+                .methodologie-container_mobile .menu-button:active,
+                .methodologie-container_mobile .menu-button:hover {
+                    background-color: white;
+                    color: #1E1E1E !important;
+                }
             }
         </style>
         <script>
@@ -125,6 +212,33 @@ function methodologie_seo_shortcode()
                         this.classList.add('active');
                     });
                 });
+                // Select all accordion headers for adding click event listeners
+                // Select all accordion headers for adding click event listeners
+                var headers = document.querySelectorAll('.accordion-header');
+                headers.forEach(function(header) {
+                    header.addEventListener('click', function() {
+                        // Get the next element sibling (the content) of the clicked header
+                        var content = this.nextElementSibling;
+                        var isOpen = content.style.display === 'block';
+
+                        // Hide all accordion contents before showing the selected one
+                        document.querySelectorAll('.accordion-content').forEach(function(section) {
+                            section.style.display = 'none';
+                        });
+
+                        // Remove the 'active' class from all headers
+                        headers.forEach(function(btn) {
+                            btn.classList.remove('active');
+                        });
+
+                        // Toggle the selected accordion content
+                        if (!isOpen) {
+                            content.style.display = 'block';
+                            this.classList.add('active');
+                        }
+                    });
+                });
+
             });
         </script>
 <?php
