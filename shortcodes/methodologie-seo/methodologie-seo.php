@@ -99,6 +99,7 @@ function methodologie_seo_shortcode()
 
             .menu-button:hover {
                 background-color: rgba(255, 255, 255, 0.5);
+                color: #1E1E1E;
             }
 
             .menu-button.active {

@@ -537,9 +537,9 @@
 				display: flex;
 			}
 
-			.menu-wrapper {
+			header .menu-wrapper {
 				padding: 10px 15px;
-				width: 100vw;
+				width: 100vw !important;
 				border-radius: 0;
 			}
 
