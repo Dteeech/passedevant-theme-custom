@@ -1262,9 +1262,7 @@ Custom pour le cta header
   }
   .wp-container-core-column-is-layout-4
     > :where(:not(.alignleft):not(.alignright):not(.alignfull)) {
-    max-width: 100%;
-    margin-left: auto !important;
-    margin-right: auto !important;
+    max-width: 100% !important;
   }
 }
 .updated:not(.published) {
