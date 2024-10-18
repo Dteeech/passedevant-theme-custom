@@ -1260,6 +1260,12 @@ Custom pour le cta header
     width: 90vw;
     padding: 0px;
   }
+  .wp-container-core-column-is-layout-4
+    > :where(:not(.alignleft):not(.alignright):not(.alignfull)) {
+    max-width: 100%;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
 }
 .updated:not(.published) {
   display: none;
