@@ -1262,16 +1262,19 @@ Custom pour le cta header
   }
   h2,
   h3 {
-    padding: 0 !important;
+    padding: 2% !important;
   }
   .wp-block-columns,
   .wp-block-heading,
   p {
     max-width: 100% !important;
-    padding: 0 !important;
+    padding: 2% !important;
   }
   .planete_footer {
     display: none !important;
+  }
+  .cta_title {
+    margin: 20px;
   }
 }
 .updated:not(.published) {
@@ -2900,7 +2903,6 @@ aside .recent-post-item a .recent-post-content {
 .footer_cta {
   border-top: 1px solid white;
   border-bottom: 1px solid white;
-  padding: 20px 0;
 }
 .cta_title {
   font-size: 80px !important;
