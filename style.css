@@ -1270,6 +1270,9 @@ Custom pour le cta header
     max-width: 100% !important;
     padding: 0 !important;
   }
+  .planete_footer {
+    display: none !important;
+  }
 }
 .updated:not(.published) {
   display: none;
