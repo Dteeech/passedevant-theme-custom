@@ -61,7 +61,7 @@ get_header();
 
 			<div class="wp-block-columns alignwide are-vertically-aligned-center is-layout-flex wp-container-core-columns-is-layout-4 wp-block-columns-is-layout-flex">
 				<div class="wp-block-column is-vertically-aligned-center is-layout-flow wp-block-column-is-layout-flow">
-					<p class="cta_title" style="font-size:90px">On discute de vos ambitions ?</p>
+					<p class="cta_title">On discute de vos ambitions ?</p>
 
 
 
