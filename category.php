@@ -156,6 +156,10 @@ get_header(); ?>
         .blog-hero_newsletter_form {
             margin: 50px 0;
         }
+
+        .blog-hero_newsletter_form .wpforms-container.inline-fields .wpforms-field-container {
+            width: calc(100%) !important;
+        }
     }
 </style>
 <script>
