@@ -1239,11 +1239,17 @@ Custom pour le cta header
   width: 45vw;
   padding: 0px;
 }
+
 .post,
 .page {
   margin: 0;
 }
-
+@media (max-width: 767px) {
+  .post {
+    width: 90vw;
+    padding: 0px;
+  }
+}
 .updated:not(.published) {
   display: none;
 }
@@ -1720,6 +1726,7 @@ footer .no-gradient-underline::after {
   color: transparent;
   background-size: 90%;
 }
+
 /* 
 essibility
 --------------------------------------------- */

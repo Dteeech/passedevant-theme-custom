@@ -130,7 +130,7 @@ function display_google_reviews_slider($atts)
                 breakpoints: {
                     320: {
                         slidesPerView: 1,
-                        spaceBetween: 40,
+                        spaceBetween: 10,
                     },
                     480: {
                         slidesPerView: 2,

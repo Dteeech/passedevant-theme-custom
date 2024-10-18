@@ -12,7 +12,7 @@ get_header();
 ?>
 
 <main id="primary" class="site-main flex">
-    <div class="single-content content container justify-center mx-auto pt-44 flex flex-row gap-4">
+    <div class="single-content content container justify-center mx-auto pt-44 block lg:flex flex-row gap-4 !w-full">
         <?php
         while (have_posts()) :
             the_post();

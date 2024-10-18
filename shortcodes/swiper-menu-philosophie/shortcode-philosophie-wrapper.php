@@ -275,7 +275,7 @@ function custom_swiper_philosophie_swiper_shortcode()
             }
 
             .philosophie-wrapper h2 {
-                font-size: 25px;
+                font-size: 25px !important;
             }
         }
     </style>
@@ -293,6 +293,7 @@ function custom_swiper_philosophie_swiper_shortcode()
                     nextEl: '.swiper-button-next',
                     prevEl: '.swiper-button-prev',
                 },
+
             });
 
             document.querySelectorAll('.philosophie-link').forEach(function(link) {
