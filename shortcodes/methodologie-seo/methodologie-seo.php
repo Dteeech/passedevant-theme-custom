@@ -52,7 +52,7 @@ function methodologie_seo_shortcode()
                             </button>
                         </div>
                         <!-- Accordion content, initially showing only the first -->
-                        <div id="content-<?php echo $index + 1; ?>" class="accordion-content" style="display: <?php echo $index === 0 ? 'block' : 'none'; ?>;">
+                        <div id="content-<?php echo $index + 1; ?>" class="accordion-content">
                             <div class="content-section">
                                 <?php echo esc_html($element['content']); ?>
                             </div>
