@@ -1260,7 +1260,10 @@ Custom pour le cta header
     width: 90vw;
     padding: 0px;
   }
-
+  h2,
+  h3 {
+    padding: 0 !important;
+  }
   .wp-block-columns,
   .wp-block-heading,
   p {
