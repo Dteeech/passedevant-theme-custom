@@ -21,7 +21,7 @@ get_header(); ?>
 
             <div class="blog-hero_form_container container text-white flex flex-col gap-4 flex-wrap">
 
-                <p class=" text-2xl">Newsletter</p>
+                <p class="!text-2xl">Newsletter</p>
                 <p class="text-xl">Inscrivez-vous et recevez les dernières actualités digitales directement dans votre boîte mail.</p>
                 <form class="blog-newsletter-form">
                     <?php echo do_shortcode('[wpforms id="57"]'); ?>
