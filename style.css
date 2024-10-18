@@ -1275,7 +1275,7 @@ Custom pour le cta header
   }
   .cta_title {
     margin: 20px;
-    font-size: 70px;
+    font-size: 70px !important;
   }
 }
 .updated:not(.published) {
