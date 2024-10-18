@@ -1261,7 +1261,8 @@ Custom pour le cta header
     padding: 0px;
   }
 
-  .wp-block-columns {
+  .wp-block-columns,
+  .wp-block-heading {
     max-width: 100% !important;
   }
 }
