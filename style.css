@@ -1261,10 +1261,7 @@ Custom pour le cta header
     padding: 0px;
   }
 
-  .wp-container-core-column-is-layout-4
-    > :where(:not(.alignleft):not(.alignright):not(.alignfull)),
-  .wp-container-core-column-is-layout-7
-    > :where(:not(.alignleft):not(.alignright):not(.alignfull)) {
+  .wp-block-columns {
     max-width: 100% !important;
   }
 }
