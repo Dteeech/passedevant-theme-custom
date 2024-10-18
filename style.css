@@ -1262,7 +1262,8 @@ Custom pour le cta header
   }
 
   .wp-block-columns,
-  .wp-block-heading {
+  .wp-block-heading,
+  p {
     max-width: 100% !important;
   }
 }
