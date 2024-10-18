@@ -538,7 +538,7 @@
 			}
 
 			header .menu-wrapper {
-				padding: 10px 15px;
+				padding: 0 !important;
 				width: 100vw !important;
 				border-radius: 0;
 			}
