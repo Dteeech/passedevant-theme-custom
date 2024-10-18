@@ -44,7 +44,7 @@ function methodologie_seo_shortcode()
                     <div class="accordion-item flex flex-col">
                         <!-- Accordion header for each element -->
                         <div class="accordion-header block <?php echo $index === 0 ? 'active' : ''; ?>" data-content-id="content-<?php echo $index + 1; ?>">
-                            <div class="number-section" style="display: <?php echo $index === 0 ? 'block' : 'none'; ?>;">
+                            <div class="number-section" style="display: <?php echo $index !== 0 ? 'block' : 'none'; ?>;">
                                 <?php echo $index + 1; ?>
                             </div>
                             <button class="menu-button">
