@@ -3,7 +3,7 @@ name: Deploy to Production
 on:
   push:
     branches:
-      - main  # ou la branche que vous utilisez pour le déploiement
+      - main # ou la branche que vous utilisez pour le déploiement
 
 jobs:
   ftp-deploy:
@@ -18,8 +18,7 @@ jobs:
           server: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
-          local-dir: ./  # Chemin vers le répertoire local du thème
-          server-dir: "/sites/refonte.passedevant.net/wp-content/themes/passedevant-theme-custom/"  # Chemin sur le serveur de production
+          local-dir: ./ # Chemin vers le répertoire local du thème
+          server-dir: "/sites/refonte.passedevant.net/wp-content/themes/passedevant-theme-custom/" # Chemin sur le serveur de production
           exclude: |
-            **/register_technos_post_type/
             blocks/
