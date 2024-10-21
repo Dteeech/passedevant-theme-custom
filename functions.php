@@ -398,7 +398,6 @@ require get_template_directory() . '/shortcodes/3_blocks_reassurance_poles/short
 require get_template_directory() . '/shortcodes/remontée-services.php';
 
 
-
 require get_template_directory() . '/shortcodes/generate_table_of_contents/generate_table_of_contents.php';
 
 require get_template_directory() . '/metaboxes/metabox_listing_image_ref_clients.php';
