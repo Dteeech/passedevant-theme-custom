@@ -2662,6 +2662,7 @@ aside .recent-post-item a .recent-post-content {
   top: 175px;
   padding: 50px;
 }
+
 .ref-client-objectifs ul,
 .ref-client-actions ul {
   counter-reset: item; /* Réinitialise le compteur pour les numéros */
@@ -2744,6 +2745,9 @@ aside .recent-post-item a .recent-post-content {
   .ref-client-sticky {
     max-width: 100% !important;
     position: relative;
+  }
+  .ref-client-sticky {
+    margin-top: 160px !important;
   }
   .ref-client-section {
     max-width: 100% !important;
