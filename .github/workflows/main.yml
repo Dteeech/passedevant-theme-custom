@@ -18,10 +18,8 @@ jobs:
           server: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
-          local-dir: ./wp-content/themes/passedevant-theme-custom  # Chemin vers le répertoire local du thème
+          local-dir: ./  # Chemin vers le répertoire local du thème
           server-dir: "/sites/refonte.passedevant.net/wp-content/themes/passedevant-theme-custom/"  # Chemin sur le serveur de production
-          dangerous-clean-slate: true  # Nettoyer le serveur avant le déploiement
           exclude: |
-            **/.git**
-            **/.gitignore**
+            **/register_technos_post_type/
             blocks/
