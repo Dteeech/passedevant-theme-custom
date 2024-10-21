@@ -21,4 +21,5 @@ jobs:
           local-dir: ./  # Chemin vers le répertoire local du thème
           server-dir: "/sites/refonte.passedevant.net/wp-content/themes/passedevant-theme-custom/"  # Chemin sur le serveur de production
           exclude: |
+            **/register_technos_post_type/
             blocks/
