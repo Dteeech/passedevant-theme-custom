@@ -22,4 +22,4 @@ jobs:
           server-dir: "/sites/refonte.passedevant.net/wp-content/themes/passedevant-theme-custom/" # Chemin sur le serveur de production
           exclude: |
             blocks/
-  continue-on-error: true
+        continue-on-error: true
