@@ -12,13 +12,11 @@ function custom_swiper_philosophie_swiper_shortcode()
         <div class="mx-auto px-0 w-100 flex flex-col lg:flex-row mb-20 philosophie relative">
             <div class="menu w-1/4 flex align-middle justify-center">
                 <ul class="underline--gradient flex flex-col align-middle justify-center gap-8">
-                    <li><a class="text-2xl font-bold philosophie-link" href="#" data-slide="0">1.Objectifs</a></li>
-                    <li><a class="text-2xl font-bold philosophie-link" href="#" data-slide="1">2.Audit</a></li>
-                    <li><a class="text-2xl font-bold philosophie-link" href="#" data-slide="2">3.Stratégie</a></li>
-                    <li><a class="text-2xl font-bold philosophie-link" href="#" data-slide="3">4.Dashboard</a></li>
-                    <li><a class="text-2xl font-bold philosophie-link" href="#" data-slide="4">5.Accompagnement</a></li>
-                    <li><a class="text-2xl font-bold philosophie-link" href="#" data-slide="5">6.Opérationnel</a></li>
-                    <li><a class="text-2xl font-bold philosophie-link" href="#" data-slide="6">7.Suivi</a></li>
+                    <li><a class="text-2xl font-bold philosophie-link" href="#" data-slide="0">1.Stratégie</a></li>
+                    <li><a class="text-2xl font-bold philosophie-link" href="#" data-slide="1">2.Objectifs</a></li>
+                    <li><a class="text-2xl font-bold philosophie-link" href="#" data-slide="2">3.Flexibilité</a></li>
+                    <li><a class="text-2xl font-bold philosophie-link" href="#" data-slide="3">4.Sur-mesure</a></li>
+                    <li><a class="text-2xl font-bold philosophie-link" href="#" data-slide="4">5.Collaboration</a></li>
                 </ul>
 
             </div>
@@ -27,12 +25,8 @@ function custom_swiper_philosophie_swiper_shortcode()
                     <div class="swiper-wrapper">
                         <div class="swiper-slide ">
                             <div class="title flex flex-col gap-7">
-                                <h2 class="title__text gradient-text_title">Nous fixons et déterminons vos objectifs</h2>
-                                <p>Passedevant votre agence web expertisée en référencement naturel SEO, qui vous accompagne
-                                    dans votre visibilité digitale pour acquérir des nouveaux clients. Passedevant votre agence
-                                    web expertisée en référencement naturel SEO, qui vous accompagne dans votre visibilité
-                                    digitale pour acquérir des nouveaux clients.
-                                </p>
+                                <h2 class="title__text gradient-text_title">La stratégie la clé de votre positionnement</h2>
+                                <p>Toute la différence réside dans une stratégie d’acquisition bien pensée et maitrisée. Par le biai d’une stratégie globale, chaque opération est justifiée pour atteindre nos objectifs. C’est la stratégie qui nous guide à court terme, moyen terme et long terme. Tout en restant flexible, elle définit notre plan d’actions. Notre coeur de métier est la stratégie : elle est le reflet de toute notre expertise.</p>
                                 <div class="">
                                     <a href="#" class="content-link">lien</a>
                                 </div>
@@ -41,12 +35,11 @@ function custom_swiper_philosophie_swiper_shortcode()
 
                         <div class="swiper-slide">
                             <div class="title flex flex-col gap-7">
-                                <h2 class="title__text gradient-text_title">Audit</h2>
+                                <h2 class="title__text gradient-text_title">Les objectifs définissent la faisabilité du projet</h2>
                                 <p>
-                                    Passedevant votre agence web expertisée en référencement naturel SEO, qui vous accompagne
-                                    dans votre visibilité digitale pour acquérir des nouveaux clients. Passedevant votre agence
-                                    web expertisée en référencement naturel SEO, qui vous accompagne dans votre visibilité
-                                    digitale pour acquérir des nouveaux clients.
+
+                                    Tous les projets ne sont pas réalisables. Les objectifs : positions, mots clés à positionner, pages à positionner, ROI…sont toujours soumis aux contraintes de temps, de budget, de concurrence. Les objectifs sont définis en début de mission en fonction de la faisabilité estimée. Une fois les objectifs définis, ils deviennent ensuite un indicateur de performance pour mesurer la réussite de la campagne.
+
                                 </p>
                                 <div class="">
                                     <a href="#" class="content-link">lien</a>
@@ -57,12 +50,11 @@ function custom_swiper_philosophie_swiper_shortcode()
                         </div>
                         <div class="swiper-slide">
                             <div class="title flex flex-col gap-7">
-                                <h2 class="title__text gradient-text_title">stratégie</h2>
+                                <h2 class="title__text gradient-text_title">La flexibilité est l’intelligence d’un bon projet !</h2>
                                 <p>
-                                    Passedevant votre agence web expertisée en référencement naturel SEO, qui vous accompagne
-                                    dans votre visibilité digitale pour acquérir des nouveaux clients. Passedevant votre agence
-                                    web expertisée en référencement naturel SEO, qui vous accompagne dans votre visibilité
-                                    digitale pour acquérir des nouveaux clients.
+
+                                    La flexibilité dans une stratégie d’acquisition SEO et / SEA est très importante ! Nous ne sommes jamais sûre des actions mises en place par la concurrence. Grâce à une analyse des résultats au jour le jour et de la veille concurrentielle, nous pouvons à tout moment intervenir pour modifier notre stratégie. Notre objectif étant la réussite de nos objectifs !
+
                                 </p>
                                 <div class="">
                                     <a href="#" class="content-link">lien</a>
@@ -73,12 +65,9 @@ function custom_swiper_philosophie_swiper_shortcode()
                         </div>
                         <div class="swiper-slide">
                             <div class="title flex flex-col gap-7">
-                                <h2 class="title__text gradient-text_title">dashboard</h2>
+                                <h2 class="title__text gradient-text_title">Chaque projet est unique, il n'existe pas de stratégie toute faite !</h2>
                                 <p>
-                                    Passedevant votre agence web expertisée en référencement naturel SEO, qui vous accompagne
-                                    dans votre visibilité digitale pour acquérir des nouveaux clients. Passedevant votre agence
-                                    web expertisée en référencement naturel SEO, qui vous accompagne dans votre visibilité
-                                    digitale pour acquérir des nouveaux clients.
+                                    Nous abordons chacun de nos projets, comme un projet unique, nous sommes en quelque sorte les artisans du web qui venons chaque fois que nécessaire parfaire notre travail ! A la fois, créatifs et stratégiques, nous maîtrisons l’Art de vous rendre visible dans Google auprès de votre cible. Chez nous, il n’existe aucun forfait, chaque objectif, chaque contraintes sont propres à chaque site, nous créons votre projet, votre budget.
                                 </p>
                                 <div class="">
                                     <a href="#" class="content-link">lien</a>
@@ -89,44 +78,11 @@ function custom_swiper_philosophie_swiper_shortcode()
                         </div>
                         <div class="swiper-slide px-">
                             <div class="title flex flex-col gap-7">
-                                <h2 class="title__text gradient-text_title">accompagnement</h2>
+                                <h2 class="title__text gradient-text_title">Derrière chaque site se cache des entrepreneurs
+                                </h2>
                                 <p>
-                                    Passedevant votre agence web expertisée en référencement naturel SEO, qui vous accompagne
-                                    dans votre visibilité digitale pour acquérir des nouveaux clients. Passedevant votre agence
-                                    web expertisée en référencement naturel SEO, qui vous accompagne dans votre visibilité
-                                    digitale pour acquérir des nouveaux clients.
-                                </p>
-                                <div class="">
-                                    <a href="#" class="content-link">lien</a>
-                                </div>
+                                    Sensibles au monde de l'entreprenariat, nous savons à quel point l’entrepreneur à besoin d’être rassuré. Nous savons que de notre travail peut dépendre en grande partie votre réussite. Ces questions ne sont pas prises à la légère. Nous sommes vos collaborateurs de proximité qui avons les mêmes objectifs que les vôtres ! Alors nous vous écoutons, car c’est un travail d’équipe.
 
-                            </div>
-
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="title flex flex-col gap-7">
-                                <h2 class="title__text gradient-text_title">opérationnel</h2>
-                                <p>
-                                    Passedevant votre agence web expertisée en référencement naturel SEO, qui vous accompagne
-                                    dans votre visibilité digitale pour acquérir des nouveaux clients. Passedevant votre agence
-                                    web expertisée en référencement naturel SEO, qui vous accompagne dans votre visibilité
-                                    digitale pour acquérir des nouveaux clients.
-                                </p>
-                                <div class="">
-                                    <a href="#" class="content-link">lien</a>
-                                </div>
-
-                            </div>
-
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="title flex flex-col gap-7">
-                                <h2 class="title__text gradient-text_title">suivi</h2>
-                                <p>
-                                    Passedevant votre agence web expertisée en référencement naturel SEO, qui vous accompagne
-                                    dans votre visibilité digitale pour acquérir des nouveaux clients. Passedevant votre agence
-                                    web expertisée en référencement naturel SEO, qui vous accompagne dans votre visibilité
-                                    digitale pour acquérir des nouveaux clients.
                                 </p>
                                 <div class="">
                                     <a href="#" class="content-link">lien</a>
