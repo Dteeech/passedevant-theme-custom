@@ -235,6 +235,10 @@ function custom_swiper_philosophie_swiper_shortcode()
             .philosophie-wrapper h2 {
                 font-size: 25px !important;
             }
+
+            .philosophie p {
+                font-size: 14px !important;
+            }
         }
     </style>
     <script>
