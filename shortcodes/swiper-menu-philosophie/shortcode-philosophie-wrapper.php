@@ -5,7 +5,9 @@ function custom_swiper_philosophie_swiper_shortcode()
 ?>
     <div class="philosophie-wrapper">
         <div class=" container mx-auto">
-            <h2 class="text-5xl text-black ps-32">Notre philosophie</h2>
+            <h2 class="text-5xl text-black ps-32">Une gestion
+                maitrisée de votre stratégie d’acquisition dans Google
+            </h2>
         </div>
         <div class="mx-auto px-0 w-100 flex flex-col lg:flex-row mb-20 philosophie relative">
             <div class="menu w-1/4 flex align-middle justify-center">
