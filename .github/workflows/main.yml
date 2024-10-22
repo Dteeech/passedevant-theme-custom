@@ -13,7 +13,7 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Upload to FTP
-        uses: SamKirkland/FTP-Deploy-Action@4.1.0
+        uses: SamKirkland/FTP-Deploy-Action@4.0.0
         with:
           server: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.FTP_USERNAME }}
@@ -22,5 +22,5 @@ jobs:
           server-dir: "/sites/refonte.passedevant.net/wp-content/themes/passedevant-theme-custom/" # Chemin sur le serveur de production
           exclude: |
             blocks/
-            shortcodes/register_technos_post_type
+            shortcodes/register_technos_post_type/
         continue-on-error: true
