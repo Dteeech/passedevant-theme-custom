@@ -228,6 +228,10 @@ function custom_swiper_philosophie_swiper_shortcode()
                 padding: 0;
             }
 
+            .philosophie .title {
+                padding: 0px 2vw;
+            }
+
             .philosophie {
                 padding-left: 0px;
             }
