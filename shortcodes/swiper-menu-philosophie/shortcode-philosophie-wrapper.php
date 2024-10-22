@@ -234,6 +234,7 @@ function custom_swiper_philosophie_swiper_shortcode()
 
             .philosophie-wrapper span {
                 font-size: 25px !important;
+                margin: 0 !important;
             }
 
             .philosophie p {
