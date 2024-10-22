@@ -23,5 +23,4 @@ jobs:
           exclude: |
             blocks/
             shortcodes/register_technos_post_type
-        dangerous-clean-slate: true
         continue-on-error: true
