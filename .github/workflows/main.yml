@@ -22,4 +22,3 @@ jobs:
           server-dir: "/sites/refonte.passedevant.net/wp-content/themes/passedevant-theme-custom/" # Chemin sur le serveur de production
           exclude: |
             blocks/
-            shortcodes/register_technos_post_type/
