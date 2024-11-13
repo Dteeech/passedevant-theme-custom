@@ -12,7 +12,13 @@
   font-weight: 500;
   font-style: normal;
 }
-
+@font-face {
+  font-family: "Abril-Fatface";
+  src: url("./src/fonts/Abril_Fatface/AbrilFatface-Regular.woff2")
+    format("woff2");
+  font-weight: 500;
+  font-size: normal;
+}
 body {
   font-family: "Labil Grotesk", sans-serif;
   font-weight: 300;

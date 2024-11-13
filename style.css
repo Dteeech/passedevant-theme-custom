@@ -456,9 +456,10 @@ header .sub-menu > li::before {
 h1 {
   font-size: 2em;
   margin: 0.67em 0;
-  line-height: 55px;
 }
-
+.home h1 {
+  margin-bottom: 0px !important;
+}
 .title-alike,
 .widget-title {
   font-size: 2em !important;
